@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Apprenticeship and Basic Knowledge",
+    "description": "While formal education beyond O/L is not required, a good understanding of basic science and math is helpful. The best way to start is by working as a helper or apprentice to an experienced plumber.",
+    "duration": "1-2 years",
+    "qualifications": ["Basic literacy and numeracy"],
+    "skills": ["Identifying pipes and fittings", "Basic tool usage (wrenches, cutters)", "Safety practices", "Assisting with installations", "Hard work"],
+    "salaryRangeLKR": "Daily wage (LKR 1,500 - 2,500) as an apprentice",
+    "institutes": ["Apprenticeship with a local plumber or construction company"]
+  },
+  {
+    "step": 2,
+    "title": "Vocational Training (NVQ Level 3 & 4)",
+    "description": "To gain professional recognition and structured knowledge, enroll in a Plumbing course at a vocational training institute. This will teach you the theory behind plumbing systems, standards, and best practices, leading to an NVQ qualification.",
+    "duration": "1 year",
+    "qualifications": ["NVQ Level 4 in Plumbing"],
+    "skills": ["Water supply systems", "Drainage systems (waste and sewer)", "Pipe joining techniques (PVC, PPR)", "Reading plumbing drawings", "Fixture installation (sinks, toilets)"],
+    "salaryRangeLKR": "LKR 40,000 - 60,000 (as a semi-skilled plumber)",
+    "institutes": ["Vocational Training Authority (VTA)", "NAITA", "German Tech (CGTTI)"]
+  },
+  {
+    "step": 3,
+    "title": "Qualified Plumber",
+    "description": "Work as a qualified plumber for a construction company, a maintenance department, or as a self-employed professional. You will be responsible for installing, maintaining, and repairing water, drainage, and sanitation systems in buildings.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven practical skills and experience"],
+    "skills": ["Troubleshooting leaks and blockages", "Full bathroom and kitchen plumbing", "Water pump installation and repair", "Adherence to building codes", "Customer service"],
+    "salaryRangeLKR": "LKR 70,000 - 120,000",
+    "institutes": ["Construction firms (Maga, Access)", "Hotels and factories (maintenance dept.)", "Self-employed"]
+  },
+  {
+    "step": 4,
+    "title": "Master Plumber / Specialization",
+    "description": "Become a master plumber, capable of handling large and complex plumbing systems for commercial buildings, hotels, or factories. You can specialize in areas like fire sprinkler systems, water treatment plants, or solar hot water systems.",
+    "duration": "5+ years",
+    "qualifications": ["Specialized training certificates"],
+    "skills": ["Large-scale pipe laying", "Advanced system design and layout", "Managing a team of plumbers", "Project estimation and costing", "Specialized installations"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000+",
+    "institutes": ["N/A - On-the-job specialization"]
+  },
+  {
+    "step": 5,
+    "title": "Plumbing Contractor / Business Owner",
+    "description": "With a strong reputation and business skills, you can establish your own plumbing contracting company. This involves bidding for projects, managing teams of plumbers, handling finances, and ensuring the successful completion of plumbing work for large construction projects.",
+    "duration": "5+ years",
+    "qualifications": ["Business registration", "Strong industry network"],
+    "skills": ["Business Management", "Tendering and Quotation", "Project Management", "Client Negotiation", "Team Leadership"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

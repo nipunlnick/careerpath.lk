@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Identify a Product Niche and Source Products",
+    "description": "Research and identify a niche product with good demand and reasonable competition. Decide whether to source products from local suppliers, import, or create your own (e.g., handicrafts, custom apparel).",
+    "duration": "3-6 months",
+    "qualifications": ["A selected product or product line"],
+    "skills": ["Market Research", "Product Sourcing", "Supplier Negotiation", "Niche Selection", "Financial Planning (initial investment)"],
+    "salaryRangeLKR": "N/A (Investment phase)",
+    "institutes": ["Local wholesale markets", "Alibaba.com (for import)", "Local artisan communities"]
+  },
+  {
+    "step": 2,
+    "title": "Choose a Platform and Set Up Your Store",
+    "description": "Decide where to sell. You can start on a marketplace like Daraz for easy entry, or create your own branded store using a platform like Shopify for more control. Set up your store with high-quality product photos, descriptions, and payment gateways.",
+    "duration": "1-2 months",
+    "qualifications": ["A live, functional online store"],
+    "skills": ["Platform setup (Daraz, Shopify)", "Product Photography", "Copywriting (for product descriptions)", "Basic branding (logo, colors)"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Daraz University", "Shopify Learn"]
+  },
+  {
+    "step": 3,
+    "title": "Launch, Market, and Fulfill First Orders",
+    "description": "Launch your store and focus heavily on marketing to drive your first sales. Use social media marketing, especially Meta (Facebook/Instagram) Ads, to reach your target audience. Efficiently manage packaging and shipping to ensure good customer experience.",
+    "duration": "6-12 months",
+    "qualifications": ["Consistent first sales"],
+    "skills": ["Social Media Marketing", "Paid Advertising", "Customer Service", "Order Fulfillment & Logistics", "Inventory Management"],
+    "salaryRangeLKR": "Variable (reinvesting profits)",
+    "institutes": ["Working with local courier services (e.g., Koombiyo, PromptXpress)"]
+  },
+  {
+    "step": 4,
+    "title": "Optimize and Scale Your Business",
+    "description": "Analyze your sales data to understand what's working. Optimize your marketing campaigns for better ROI. Improve your website for higher conversion rates. Look for ways to expand your product line and increase your average order value.",
+    "duration": "1-3 years",
+    "qualifications": ["A profitable and growing business"],
+    "skills": ["Data Analysis", "Conversion Rate Optimization (CRO)", "Email Marketing", "Customer Retention Strategies", "Supply Chain Management"],
+    "salaryRangeLKR": "Variable (LKR 100,000 - 400,000+ in profit)",
+    "institutes": ["N/A - Self-driven"]
+  },
+  {
+    "step": 5,
+    "title": "Build a Brand and Expand Channels",
+    "description": "Transition from just selling products to building a recognized brand. Invest in branding, content marketing, and community building. Expand to other sales channels, such as physical retail partnerships or exporting to international markets.",
+    "duration": "3+ years",
+    "qualifications": ["An established brand with a loyal customer base"],
+    "skills": ["Brand Strategy", "Team Building", "Large-scale logistics", "Financial Management", "Exploring export markets"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

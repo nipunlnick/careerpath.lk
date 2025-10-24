@@ -1,0 +1,5 @@
+{
+  "name": "CareerPath.lk",
+  "description": "A career roadmap website to help Sri Lankan students plan their future career paths after O/Ls, A/Ls, or university. The website guides them with step-by-step roadmaps, skill-building resources, and local job insights, powered by Google's Gemini API.",
+  "requestFramePermissions": []
+}

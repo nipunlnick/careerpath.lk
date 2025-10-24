@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Learn to Fly and Understand the Technology",
+    "description": "Start with an affordable, entry-level drone to learn the basics of flight control, orientation, and safety. Immerse yourself in the technology: understand how GPS, gyroscopes, and flight controllers work.",
+    "duration": "6 months",
+    "qualifications": ["Proficient in basic drone flight"],
+    "skills": ["Manual Flight Control (Attitude Mode)", "Understanding of drone hardware", "Safety Procedures (pre-flight checks)", "Basic aerial photography/videography"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-taught", "YouTube tutorials", "Online forums"]
+  },
+  {
+    "step": 2,
+    "title": "Obtain CAASL Certification",
+    "description": "To operate drones commercially in Sri Lanka, you must be certified by the Civil Aviation Authority of Sri Lanka (CAASL). This involves passing a written exam and a practical flight test. This is a mandatory step for any professional work.",
+    "duration": "3-6 months",
+    "qualifications": ["CAASL Drone Operator Certificate"],
+    "skills": ["Knowledge of Sri Lankan air regulations", "Advanced safety protocols", "Emergency procedures", "Mission planning"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["CAASL-approved training organizations"]
+  },
+  {
+    "step": 3,
+    "title": "Specialize and Build a Portfolio",
+    "description": "Choose a specialization. The most common are aerial cinematography/photography and industrial surveying/mapping. Invest in a professional-grade drone suited for your niche and build a strong portfolio (showreel) of your best work.",
+    "duration": "1-2 years",
+    "qualifications": ["A professional showreel or portfolio of work"],
+    "skills": ["Advanced Cinematography (camera movements)", "Photogrammetry (for mapping)", "Data Processing Software (e.g., Pix4D, DroneDeploy)", "Client Communication"],
+    "salaryRangeLKR": "Project-based (LKR 20,000 - 50,000+ per day)",
+    "institutes": ["Freelance work for real estate, events, or small production houses"]
+  },
+  {
+    "step": 4,
+    "title": "Professional Drone Pilot / Service Provider",
+    "description": "Work as a full-time professional pilot. You may work for a production house, a surveying company, or run your own freelance business offering drone services to various industries like construction, agriculture, and media.",
+    "duration": "2-4 years",
+    "qualifications": ["A registered business", "A strong client base"],
+    "skills": ["Project Management", "Business Development", "Advanced data analysis and reporting", "Risk assessment", "Maintaining and repairing drones"],
+    "salaryRangeLKR": "LKR 100,000 - 300,000+ (from consistent project work)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  },
+  {
+    "step": 5,
+    "title": "Advanced Applications and Business Scaling",
+    "description": "Scale your business by offering more advanced services, such as thermal imaging, LiDAR scanning, or heavy-lift drone operations. This may involve hiring other pilots and building a larger drone services company.",
+    "duration": "5+ years",
+    "qualifications": ["Expertise in advanced drone payloads and applications"],
+    "skills": ["Team Management", "Business Scaling", "Specialized payload operations", "Grant and tender writing", "Training and consultancy"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A"]
+  }
+]

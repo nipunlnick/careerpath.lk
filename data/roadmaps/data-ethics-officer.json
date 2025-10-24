@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Foundation: Degree in Law, IT, or a Social Science",
+    "description": "This interdisciplinary role can be approached from several angles. A degree in Law (focus on tech/privacy), IT (focus on data governance), or a social science (focus on ethics/policy) provides a strong starting point.",
+    "duration": "3-4 years",
+    "qualifications": ["Bachelor's Degree in a relevant field"],
+    "skills": ["Analytical Thinking", "Ethical Reasoning", "Strong Writing Skills", "Understanding of technology's impact on society"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University Law Faculties", "IT Faculties", "Arts Faculties (Social Sciences)"]
+  },
+  {
+    "step": 2,
+    "title": "Gain Experience in a Related Field",
+    "description": "Work in a field that deals with data, privacy, or compliance. This could be as a lawyer in a tech practice, a data analyst with a focus on governance, or a policy advisor in a think tank. This provides the necessary context for the role.",
+    "duration": "2-4 years",
+    "qualifications": ["Practical experience with data or policy"],
+    "skills": ["Data Governance", "Compliance Management", "Risk Assessment", "Policy Analysis", "Data Privacy principles"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000 (in a related role)",
+    "institutes": ["Corporate legal departments", "Data analytics teams", "Public policy institutes"]
+  },
+  {
+    "step": 3,
+    "title": "Specialize in Data Privacy and Ethics",
+    "description": "Deepen your expertise by obtaining professional certifications in data privacy. This is a crucial step to formalize your knowledge and become a recognized expert. Focus on both international standards and local laws.",
+    "duration": "1 year",
+    "qualifications": ["CIPP (Certified Information Privacy Professional)", "CIPM (Certified Information Privacy Manager)"],
+    "skills": ["Data Protection Laws (GDPR, PDPA)", "Privacy by Design", "Ethical frameworks for AI", "Data Protection Impact Assessments (DPIA)"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000 (as a Data Privacy Officer)",
+    "institutes": ["IAPP (International Association of Privacy Professionals) accredited training"]
+  },
+  {
+    "step": 4,
+    "title": "Data Ethics Officer / Data Protection Officer (DPO)",
+    "description": "Transition into the dedicated role. As a DPO, you ensure the organization complies with data protection laws. As a Data Ethics Officer, your role is broader, guiding the company on the moral and social implications of its data practices, especially concerning AI and algorithms.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven experience managing data privacy programs"],
+    "skills": ["Developing data ethics policies", "Advising on ethical AI", "Stakeholder communication (technical and non-technical)", "Training and awareness", "Incident management"],
+    "salaryRangeLKR": "LKR 250,000 - 600,000",
+    "institutes": ["Large tech companies", "Banks and financial institutions", "Healthcare organizations"]
+  },
+  {
+    "step": 5,
+    "title": "Chief Privacy Officer / Head of Data Governance",
+    "description": "Advance to a senior leadership position, responsible for the entire data governance, privacy, and ethics strategy of a large corporation. This role reports to senior leadership and the board, shaping how the company responsibly leverages its data assets.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive leadership experience in data governance"],
+    "skills": ["Strategic Leadership", "Corporate Governance", "Board-level advisory", "Building a culture of data ethics", "Managing a team of specialists"],
+    "salaryRangeLKR": "LKR 600,000 - 1,200,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

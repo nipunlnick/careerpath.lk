@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: O/L and A/L Studies",
+    "description": "Complete your O/L and A/L examinations in any stream. Strong English language and communication skills are highly advantageous. Taking subjects like Business Studies or Economics can be helpful.",
+    "duration": "2-4 years",
+    "qualifications": ["G.C.E. O/L", "G.C.E. A/L"],
+    "skills": ["Communication", "Customer Service Orientation", "Teamwork", "Problem Solving"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any reputable school"]
+  },
+  {
+    "step": 2,
+    "title": "Diploma or Degree in Hotel Management",
+    "description": "Pursue a formal qualification in hospitality or hotel management. This provides structured learning in all key hotel departments such as Front Office, Food & Beverage (F&B), Housekeeping, and Kitchen Operations.",
+    "duration": "2-4 years",
+    "qualifications": ["Diploma/Higher Diploma in Hotel Management", "BSc in Hospitality Management"],
+    "skills": ["Front Office Operations", "Food & Beverage Service", "Culinary Basics", "Housekeeping Management", "Basic Accounting"],
+    "salaryRangeLKR": "LKR 35,000 - 60,000 (Hotel Intern/Trainee)",
+    "institutes": ["SLITHM (Sri Lanka Institute of Tourism & Hotel Management)", "William Angliss Institute", "NSBM Green University"]
+  },
+  {
+    "step": 3,
+    "title": "Entry-Level and Supervisory Roles",
+    "description": "Start your career with an entry-level position (e.g., Receptionist, F&B Captain) and work your way up to a supervisory role. This hands-on experience across different departments is crucial for understanding hotel operations.",
+    "duration": "3-5 years",
+    "qualifications": ["On-the-job training certificates"],
+    "skills": ["Guest Relations", "Supervision", "Inventory Management", "Shift Management", "Sales Techniques"],
+    "salaryRangeLKR": "LKR 70,000 - 130,000 (Supervisor/Assistant Manager)",
+    "institutes": ["Cinnamon Hotels & Resorts", "Jetwing Hotels", "Heritance Hotels & Resorts", "Shangri-La", "Hilton"]
+  },
+  {
+    "step": 4,
+    "title": "Departmental Manager",
+    "description": "Advance to a management position for a specific department, such as Front Office Manager, F&B Manager, or Executive Housekeeper. You will be responsible for the department's budget, staff, and overall performance.",
+    "duration": "4-6 years",
+    "qualifications": ["Proven track record in a supervisory role"],
+    "skills": ["Budgeting & Financial Control", "Staff Training & Development", "Revenue Management", "Marketing & Sales"],
+    "salaryRangeLKR": "LKR 150,000 - 280,000",
+    "institutes": ["All major 4-star and 5-star hotel chains in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Hotel Manager / General Manager",
+    "description": "With extensive experience across multiple departments and strong leadership skills, you can reach the top position of Hotel Manager or General Manager. You will have overall responsibility for the entire hotel's operations, profitability, and guest satisfaction. An MBA can be beneficial for this role.",
+    "duration": "5+ years",
+    "qualifications": ["MBA in Hospitality (Optional)"],
+    "skills": ["Strategic Leadership", "Asset Management", "Brand Management", "High-level Financial Acumen", "Owner/Stakeholder Relations"],
+    "salaryRangeLKR": "LKR 400,000 - 1,000,000+",
+    "institutes": ["N/A - Based on experience and promotion to leadership roles"]
+  }
+]

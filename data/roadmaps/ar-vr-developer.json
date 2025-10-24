@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Foundation in 3D and Programming",
+    "description": "A background in Maths or Computer Science is ideal. Start by learning the fundamentals of 3D computer graphics and master a core programming language used in game engines, like C# or C++.",
+    "duration": "1-2 years",
+    "qualifications": ["Strong programming and math skills"],
+    "skills": ["3D Mathematics (Vectors, Matrices, Quaternions)", "C# or C++ Programming", "Object-Oriented Programming", "Problem-Solving", "Data Structures"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Computer Science/Engineering Degree"]
+  },
+  {
+    "step": 2,
+    "title": "Master a Real-time 3D Engine",
+    "description": "Become highly proficient in a game engine like Unity or Unreal Engine, as these are the primary platforms for AR/VR development. Learn how to create scenes, import assets, and write scripts within the engine.",
+    "duration": "1-2 years",
+    "qualifications": ["Portfolio of projects built in Unity or Unreal"],
+    "skills": ["Unity Engine", "Unreal Engine", "3D Asset Pipeline", "Lighting and Shaders", "Performance Optimization"],
+    "salaryRangeLKR": "LKR 70,000 - 120,000 (as a Junior 3D Developer)",
+    "institutes": ["Unity Learn", "Unreal Engine Learning", "Game development courses"]
+  },
+  {
+    "step": 3,
+    "title": "Specialize in AR/VR Development",
+    "description": "Dive into the specific SDKs for AR and VR platforms. Learn how to build and deploy applications for target devices. This is where you move from general 3D development to creating interactive, immersive experiences.",
+    "duration": "1 year",
+    "qualifications": ["Portfolio with AR/VR specific projects"],
+    "skills": ["VR SDKs (Meta Quest SDK, OpenXR)", "AR SDKs (AR Foundation for Unity, ARCore, ARKit)", "Understanding of user interaction in VR (hand tracking, controllers)", "UI/UX for immersive experiences", "Performance optimization for mobile hardware"],
+    "salaryRangeLKR": "LKR 120,000 - 250,000 (AR/VR Developer)",
+    "institutes": ["Online tutorials", "SDK documentation"]
+  },
+  {
+    "step": 4,
+    "title": "AR/VR Developer",
+    "description": "Work for a studio or company that creates AR/VR applications. This could be in gaming, enterprise training, marketing, or real estate visualization. You will be responsible for building and maintaining features for these immersive applications.",
+    "duration": "2-4 years",
+    "qualifications": ["Experience shipping a commercial AR/VR application"],
+    "skills": ["Multiplayer networking for VR", "Advanced interaction design", "Integrating with hardware (haptics, sensors)", "Cross-platform development", "Debugging on-device"],
+    "salaryRangeLKR": "LKR 250,000 - 500,000",
+    "institutes": ["Local tech companies with R&D/innovation labs", "International remote jobs"]
+  },
+  {
+    "step": 5,
+    "title": "Senior AR/VR Engineer / Technical Lead",
+    "description": "Advance to a senior role where you architect complex AR/VR systems, lead development teams, and tackle the most challenging technical problems in the immersive space. This requires deep, specialized expertise and leadership skills.",
+    "duration": "5+ years",
+    "qualifications": ["A portfolio of high-quality, shipped AR/VR titles"],
+    "skills": ["System Architecture", "Technical Leadership", "R&D", "Mentoring", "Staying current with rapidly evolving hardware"],
+    "salaryRangeLKR": "LKR 500,000 - 800,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

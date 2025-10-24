@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Physical Science Stream",
+    "description": "A strong foundation in the Physical Science (Maths) stream is essential, as renewable energy is a deeply technical field. High marks in Combined Mathematics and Physics are critical for an engineering degree.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Physical Science/Maths Stream)"],
+    "skills": ["Advanced Mathematics", "Physics (Energy, Electricity)", "Analytical Skills", "Problem-Solving"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in Engineering",
+    "description": "Complete a BScEng degree, typically in Electrical or Mechanical Engineering. During your degree, choose elective courses related to renewable energy, such as solar power, wind energy, or energy management.",
+    "duration": "4 years",
+    "qualifications": ["BScEng (Hons) in Electrical or Mechanical Engineering"],
+    "skills": ["Thermodynamics", "Power Systems", "Control Systems", "Energy Conversion", "Project Management Basics"],
+    "salaryRangeLKR": "LKR 70,000 - 110,000 (Trainee Engineer in a related field)",
+    "institutes": ["University of Moratuwa", "University of Peradeniya", "University of Ruhuna"]
+  },
+  {
+    "step": 3,
+    "title": "Entry-Level Engineer & Specialization",
+    "description": "Join a renewable energy company (e.g., a solar power installer) as a Junior Engineer. This is where you gain practical, hands-on experience. Consider a Master's degree or professional certifications to specialize further.",
+    "duration": "2-3 years",
+    "qualifications": ["MSc in Sustainable Energy/Renewable Energy (recommended)"],
+    "skills": ["Solar PV System Design (PVSyst)", "Wind Resource Assessment", "Energy Auditing", "Grid Integration", "Feasibility Studies"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["JLanka Technologies", "Hayleys Solar", "Windforce PLC", "Sri Lanka Sustainable Energy Authority (SLSEA)"]
+  },
+  {
+    "step": 4,
+    "title": "Renewable Energy Project Engineer / Manager",
+    "description": "Take responsibility for managing renewable energy projects, from initial site assessment and design to installation and commissioning. This role requires a blend of technical engineering and project management skills.",
+    "duration": "3-5 years",
+    "qualifications": ["PMP certification (optional but beneficial)"],
+    "skills": ["Project Management", "Contract Negotiation", "Financial Modeling for energy projects", "Regulatory Compliance", "Stakeholder Management"],
+    "salaryRangeLKR": "LKR 180,000 - 350,000",
+    "institutes": ["Leading renewable energy developers and EPC contractors"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Specialist / Consultant / Policy Advisor",
+    "description": "Advance to a senior role where you lead the technical strategy for a large company, work as an independent consultant advising on large-scale projects, or join a government or international body to help shape renewable energy policy.",
+    "duration": "5+ years",
+    "qualifications": ["Chartered Engineer status", "Extensive project experience"],
+    "skills": ["Energy Policy", "Strategic Planning", "Technical Consultancy", "Business Development", "Leadership"],
+    "salaryRangeLKR": "LKR 400,000 - 700,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

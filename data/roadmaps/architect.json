@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L)",
+    "description": "Obtain excellent results in the G.C.E. A/L, preferably in the Maths or Arts stream with a focus on subjects that develop spatial awareness and creativity. You must pass a separate aptitude test for admission to university architecture programs.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L", "Pass in University Aptitude Test for Architecture"],
+    "skills": ["Drawing & Sketching", "Creativity", "Spatial Reasoning", "Mathematics"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor of Science (B.Sc.) in Architecture",
+    "description": "Complete a 3-year B.Sc. in Architecture. This degree provides the foundational knowledge of architectural design, history, theory, and technology. This qualification is equivalent to the SLIA Part 1 professional examination.",
+    "duration": "3 years",
+    "qualifications": ["B.Sc. in Architecture (SLIA Part 1 equivalent)"],
+    "skills": ["Architectural Design", "Computer-Aided Design (AutoCAD, SketchUp)", "Architectural History", "Building Materials"],
+    "salaryRangeLKR": "LKR 40,000 - 65,000 (Trainee Architectural Assistant)",
+    "institutes": ["University of Moratuwa", "City School of Architecture (CSA)"]
+  },
+  {
+    "step": 3,
+    "title": "Year-Out Experience & Master's Degree",
+    "description": "Work for at least one year as an architectural assistant under a Chartered Architect. Following this, enroll in a 2-year Master of Science (M.Sc.) in Architecture program, which is equivalent to the SLIA Part 2 examination.",
+    "duration": "3 years (1 year work + 2 years study)",
+    "qualifications": ["M.Sc. in Architecture (SLIA Part 2 equivalent)"],
+    "skills": ["Advanced Design Concepts", "Project Management", "Building Information Modeling (BIM - Revit)", "Sustainable Design"],
+    "salaryRangeLKR": "LKR 80,000 - 130,000 (Graduate Architect)",
+    "institutes": ["University of Moratuwa", "City School of Architecture (CSA)"]
+  },
+  {
+    "step": 4,
+    "title": "Obtain Charter - Become a Chartered Architect",
+    "description": "After your Master's, you need another year of practical experience. Then, you must pass the Sri Lanka Institute of Architects (SLIA) Part 3 Professional Practice Examination to obtain your charter and the license to practice.",
+    "duration": "1-2 years",
+    "qualifications": ["SLIA Part 3", "AIA (SL) - Associate of the Sri Lanka Institute of Architects"],
+    "skills": ["Professional Practice & Ethics", "Contract Law", "Client Management", "Project Documentation"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000 (Chartered Architect)",
+    "institutes": ["Working in established architectural firms"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Architect / Own Practice",
+    "description": "With your charter and several years of experience, you can lead large-scale projects as a Senior Architect or establish your own architectural firm. Continuous professional development is key to staying relevant.",
+    "duration": "5+ years",
+    "qualifications": ["Fellowship of SLIA (FIA - SL)"],
+    "skills": ["Design Leadership", "Business Management", "Mentoring", "Winning Tenders/Projects"],
+    "salaryRangeLKR": "LKR 350,000 - 700,000+",
+    "institutes": ["Geoffrey Bawa & Associates", "MICD Associates", "The Design Group Five International"]
+  }
+]

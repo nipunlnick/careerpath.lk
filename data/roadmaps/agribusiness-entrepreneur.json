@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Gain Agricultural & Business Knowledge",
+    "description": "A formal education is highly beneficial. A degree in Agricultural Science provides the technical knowledge, while a degree in Business Management provides the commercial skills. A combination, like a degree in Agricultural Technology & Management, is ideal.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Agriculture or BBA"],
+    "skills": ["Agricultural Practices", "Business Fundamentals", "Market Analysis", "Problem Identification", "Numeracy"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Peradeniya", "Wayamba University", "University of Sri Jayewardenepura"]
+  },
+  {
+    "step": 2,
+    "title": "Identify a Niche and Gain Practical Experience",
+    "description": "Work in the agricultural sector to understand the supply chain, challenges, and opportunities firsthand. Identify a specific problem or market gap. This could be in areas like high-tech farming (hydroponics), value-added products, organic farming, or farm-to-consumer logistics.",
+    "duration": "2-3 years",
+    "qualifications": ["Hands-on experience in the agri sector"],
+    "skills": ["Supply Chain knowledge", "Practical Farming Skills", "Market Research", "Networking", "Financial Literacy"],
+    "salaryRangeLKR": "Variable (based on employment)",
+    "institutes": ["Working for an existing agribusiness company (e.g., CIC, Hayleys Agriculture)"]
+  },
+  {
+    "step": 3,
+    "title": "Develop a Business Plan & Secure Initial Funding",
+    "description": "Create a detailed business plan outlining your product/service, target market, marketing strategy, operations, and financial projections. Secure startup capital, which could be from personal savings, family, bank loans (e.g., SME loans), or government grants.",
+    "duration": "6-12 months",
+    "qualifications": ["A solid business plan"],
+    "skills": ["Business Planning", "Financial Forecasting", "Proposal Writing", "Pitching", "Resourcefulness"],
+    "salaryRangeLKR": "N/A (Investment phase)",
+    "institutes": ["Banks with SME loan schemes (BOC, People's Bank)", "National Enterprise Development Authority (NEDA)"]
+  },
+  {
+    "step": 4,
+    "title": "Launch and Operate the Business (Pilot Phase)",
+    "description": "Start small. Launch a pilot version of your business to test your assumptions and refine your processes. This is the stage of intense hands-on work, managing everything from production and operations to sales and customer service.",
+    "duration": "1-3 years",
+    "qualifications": ["First sales and revenue"],
+    "skills": ["Operations Management", "Sales & Marketing", "Customer Relationship Management", "Adaptability", "Resilience"],
+    "salaryRangeLKR": "Variable (reinvesting profits)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  },
+  {
+    "step": 5,
+    "title": "Scale and Grow the Agribusiness",
+    "description": "Once you have a proven and profitable model, focus on scaling the business. This may involve expanding production, entering new markets, hiring employees, and building a brand. The goal is to grow from a small operation to a sustainable, large-scale enterprise.",
+    "duration": "3+ years",
+    "qualifications": ["A profitable and growing business"],
+    "skills": ["Leadership", "Strategic Management", "Supply Chain Optimization", "Brand Building", "Financial Management"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A"]
+  }
+]

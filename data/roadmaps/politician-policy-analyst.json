@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Degree in Social Sciences or Law",
+    "description": "A bachelor's degree in Political Science, Economics, International Relations, Law, or a related field is essential. This provides the theoretical framework for understanding governance, policy, and socio-economic issues.",
+    "duration": "3-4 years",
+    "qualifications": ["BA/BSc or LL.B"],
+    "skills": ["Critical Thinking", "Research", "Writing", "Public Speaking", "Understanding of political and economic systems"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Colombo (Faculty of Arts)", "University of Peradeniya", "University of Kelaniya"]
+  },
+  {
+    "step": 2,
+    "title": "Get Involved at the Grassroots Level",
+    "description": "For aspiring politicians, this is crucial. Join the youth wing of a political party, volunteer for election campaigns, and get involved in community work in your local area. This builds a network and an understanding of public issues.",
+    "duration": "Ongoing",
+    "qualifications": ["Active membership in a political or community organization"],
+    "skills": ["Community Organizing", "Networking", "Public Relations", "Campaigning", "Understanding local issues"],
+    "salaryRangeLKR": "N/A (Voluntary)",
+    "institutes": ["Youth wings of major political parties", "Local community service organizations"]
+  },
+  {
+    "step": 3,
+    "title": "Research Assistant / Junior Policy Analyst",
+    "description": "For the policy analyst path, join a think tank, a research institute, or work as a research assistant for a university or a senior politician. This is where you learn to conduct research, analyze data, and write policy briefs.",
+    "duration": "2-4 years",
+    "qualifications": ["Master's Degree in Public Policy/Economics (highly recommended)"],
+    "skills": ["Policy Research", "Data Analysis (Quantitative & Qualitative)", "Report Writing", "Economic Modeling", "Presenting research findings"],
+    "salaryRangeLKR": "LKR 60,000 - 110,000",
+    "institutes": ["Institute of Policy Studies (IPS)", "Verité Research", "Lakshman Kadirgamar Institute (LKI)"]
+  },
+  {
+    "step": 4,
+    "title": "Contest Elections / Policy Analyst",
+    "description": "Politician: With a strong local base, contest for a position in a Local Government body (Pradeshiya Sabha, Urban Council) or a Provincial Council. Policy Analyst: Become a full-fledged analyst, leading research projects and publishing reports that influence public debate and policymaking.",
+    "duration": "4-6 years",
+    "qualifications": ["Elected office", "Published policy reports"],
+    "skills": ["Political Strategy", "Public Debate", "Advanced Policy Analysis", "Advocacy", "Media Communication"],
+    "salaryRangeLKR": "Variable (Elected official's allowance) / LKR 120,000 - 250,000 (Analyst)",
+    "institutes": ["N/A"]
+  },
+  {
+    "step": 5,
+    "title": "Member of Parliament / Senior Policy Advisor",
+    "description": "Politician: Rise to the national level by contesting for a seat in Parliament. This allows you to participate in national law-making. Policy Analyst: Become a senior advisor to a government ministry, a political leader, or an international organization, directly shaping national policy.",
+    "duration": "5+ years",
+    "qualifications": ["Elected Member of Parliament"],
+    "skills": ["Legislative Process", "National Governance", "Strategic policy advice", "Leadership", "International Diplomacy"],
+    "salaryRangeLKR": "MP's salary and allowances / LKR 250,000 - 500,000+ (Advisor)",
+    "institutes": ["Parliament of Sri Lanka", "Presidential Secretariat", "Prime Minister's Office"]
+  }
+]

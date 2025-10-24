@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Identify Niche and Content Strategy",
+    "description": "Find a specific topic you are passionate about and can talk about endlessly. Research your target audience and the existing competition. Plan your content format, style, and a consistent publishing schedule.",
+    "duration": "1-3 months",
+    "qualifications": ["A clear and specific content niche"],
+    "skills": ["Niche Selection", "Audience Research", "Content Planning", "Authenticity", "Unique Value Proposition"],
+    "salaryRangeLKR": "LKR 0",
+    "institutes": ["N/A - Self-driven"]
+  },
+  {
+    "step": 2,
+    "title": "Acquire Basic Equipment and Technical Skills",
+    "description": "Start with basic, affordable equipment: a decent smartphone or camera for video, a USB microphone for audio. Learn the fundamentals of recording, lighting (for video), and editing. The focus is on clean audio and clear visuals.",
+    "duration": "3 months",
+    "qualifications": ["Ability to produce decent quality content"],
+    "skills": ["Video/Audio Recording", "Basic Lighting", "Video Editing (CapCut, DaVinci Resolve)", "Audio Editing (Audacity)", "Graphic Design (Canva for thumbnails)"],
+    "salaryRangeLKR": "LKR 0",
+    "institutes": ["YouTube tutorials", "Skillshare"]
+  },
+  {
+    "step": 3,
+    "title": "Launch and Consistent Content Creation",
+    "description": "Launch your channel/podcast and stick to your schedule. The first 50-100 episodes/videos are about practice, finding your voice, and improving your craft. Focus on creating value and don't worry about numbers initially. Engage with every comment.",
+    "duration": "1-2 years",
+    "qualifications": ["A consistent library of content", "First 1000 subscribers/followers"],
+    "skills": ["Storytelling", "On-camera/microphone presence", "Consistency and Discipline", "Community Engagement", "Analyzing basic analytics"],
+    "salaryRangeLKR": "LKR 0 - 20,000 (from YouTube Partner Program)",
+    "institutes": ["N/A - The 'grind' phase"]
+  },
+  {
+    "step": 4,
+    "title": "Audience Growth and Monetization",
+    "description": "Once you have a consistent output and an engaged community, focus on growth. Collaborate with other creators, promote your content on social media, and analyze your analytics to see what works. Monetize through ads, small brand deals, and affiliate marketing.",
+    "duration": "2-3 years",
+    "qualifications": ["A significant and growing audience"],
+    "skills": ["Content Marketing", "Collaboration & Networking", "Understanding Platform Algorithms", "Negotiating with brands", "Affiliate Marketing"],
+    "salaryRangeLKR": "LKR 50,000 - 250,000+",
+    "institutes": ["N/A"]
+  },
+  {
+    "step": 5,
+    "title": "Build a Media Brand and Business",
+    "description": "Treat your channel/podcast as a business. Diversify your income streams by selling merchandise, creating premium courses, or offering consulting services. You might hire an editor or a manager to help you scale your operations.",
+    "duration": "5+ years",
+    "qualifications": ["An established and profitable media brand"],
+    "skills": ["Entrepreneurship", "Brand Building", "Product Creation", "Team Management", "Business Strategy"],
+    "salaryRangeLKR": "Highly variable (LKR 300,000+)",
+    "institutes": ["N/A"]
+  }
+]

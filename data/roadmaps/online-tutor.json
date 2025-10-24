@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Master a Subject & Gain Foundational Qualifications",
+    "description": "Become an expert in the subject you want to teach. A bachelor's degree in that subject (e.g., BSc in Chemistry, BA in English) is essential for credibility. For school subjects, strong A/L results are a minimum requirement.",
+    "duration": "3-4 years",
+    "qualifications": ["Bachelor's Degree in a specific subject", "Strong G.C.E. A/L results"],
+    "skills": ["Deep Subject Matter Knowledge", "Communication", "Clarity in Explanation", "Patience"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any recognized Sri Lankan or foreign university"]
+  },
+  {
+    "step": 2,
+    "title": "Develop Teaching Skills & Technical Proficiency",
+    "description": "Gain some teaching or tutoring experience, even if informal. Simultaneously, become proficient with the tools of online education: digital whiteboards, screen recording software, video editing basics, and online meeting platforms.",
+    "duration": "6-12 months",
+    "qualifications": ["Teaching diploma (optional but helpful)"],
+    "skills": ["Online Pedagogy", "Video Editing (e.g., CapCut, Filmora)", "Graphic Design Basics (e.g., Canva)", "Screen Recording (e.g., OBS Studio)", "Using Zoom/Google Meet effectively"],
+    "salaryRangeLKR": "Variable (starts small)",
+    "institutes": ["Self-taught through online tutorials"]
+  },
+  {
+    "step": 3,
+    "title": "Start Tutoring & Build a Brand",
+    "description": "Begin tutoring individual students or small groups online. Create a social media presence (YouTube, Instagram, TikTok) to share short educational content. This helps build your brand, attract students, and serves as a portfolio of your teaching style.",
+    "duration": "1-2 years",
+    "qualifications": ["Positive student testimonials"],
+    "skills": ["Personal Branding", "Content Creation", "Social Media Marketing", "Time Management", "Client Communication"],
+    "salaryRangeLKR": "LKR 50,000 - 150,000 (depending on student numbers)",
+    "institutes": ["Platforms like Guru.lk", "Building a personal website/social media presence"]
+  },
+  {
+    "step": 4,
+    "title": "Create & Sell Digital Educational Products",
+    "description": "Scale your impact and income by creating digital products. This could include pre-recorded video courses, PDF notes and tutorials, practice question banks, or subscription-based learning platforms. This moves you from trading time for money to a more scalable model.",
+    "duration": "1-2 years",
+    "qualifications": ["An established online audience"],
+    "skills": ["Course Creation", "E-commerce Platforms (e.g., Shopify, Gumroad)", "Email Marketing", "Digital Product Design", "Community Management"],
+    "salaryRangeLKR": "LKR 150,000 - 400,000+",
+    "institutes": ["N/A - Self-driven"]
+  },
+  {
+    "step": 5,
+    "title": "Establish an EdTech Platform or Academy",
+    "description": "Evolve from a solo creator into a business. You can hire other tutors, build a comprehensive online learning platform (like a local Coursera), and establish a recognized educational brand. This involves business management and strategic planning.",
+    "duration": "3+ years",
+    "qualifications": ["A registered business"],
+    "skills": ["Business Management", "Leadership", "Marketing Strategy", "Technology Management", "Scaling Operations"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A"]
+  }
+]

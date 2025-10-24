@@ -1,0 +1,12 @@
+{
+  "demand": "High",
+  "salaryExpectations": "LKR 80,000 (Junior Engineer) to LKR 600,000+ (Network Architect) per month.",
+  "requiredSkills": [
+    "Cisco Technologies (CCNA/CCNP level)",
+    "Network Security (Firewalls, VPNs)",
+    "Cloud Networking (AWS, Azure)",
+    "Routing and Switching",
+    "Troubleshooting"
+  ],
+  "futureOutlook": "The backbone of any digital business is its network. The shift to cloud computing and the increasing complexity of cybersecurity threats mean that skilled network engineers are more important than ever. Professionals with certifications and expertise in cloud networking and network automation (using Python/Ansible) will be in the highest demand."
+}

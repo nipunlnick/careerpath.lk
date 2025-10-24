@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Physical Science Stream",
+    "description": "Excellent results in the Physical Science (Maths) stream are crucial. Mechatronics is an interdisciplinary field, so a strong foundation in Combined Mathematics and Physics is vital.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Physical Science/Maths Stream)"],
+    "skills": ["Advanced Mathematics", "Physics (Mechanics, Electronics)", "Problem Solving", "Logical & Systems Thinking"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "BSc Engineering Degree (Mechatronics/Robotics)",
+    "description": "Complete a 4-year BScEng (Hons) degree with a specialization in Mechatronics Engineering. This degree integrates mechanical engineering, electronics, computer science, and control systems.",
+    "duration": "4 years",
+    "qualifications": ["BScEng (Hons) in Mechatronics Engineering"],
+    "skills": ["Mechanical Design (CAD)", "Electronics & Circuit Design", "Control Systems", "Embedded Systems (Microcontrollers, C/C++)", "Robotics Kinematics"],
+    "salaryRangeLKR": "LKR 80,000 - 130,000 (Trainee Automation/Mechatronics Engineer)",
+    "institutes": ["University of Moratuwa", "SLIIT", "CINEC Campus"]
+  },
+  {
+    "step": 3,
+    "title": "Graduate Mechatronics Engineer",
+    "description": "Start your career in industries that rely on automation, such as manufacturing, apparel, or specialized tech companies. Your role will involve designing, building, and maintaining automated systems and robotic cells. Register with IESL as an Associate Member.",
+    "duration": "2-4 years",
+    "qualifications": ["IESL Associate Membership"],
+    "skills": ["PLC Programming", "Pneumatics & Hydraulics", "Sensor Integration", "Industrial Automation", "Robotic Arm Programming (e.g., Fanuc, KUKA)"],
+    "salaryRangeLKR": "LKR 120,000 - 220,000",
+    "institutes": ["MAS Holdings (Twinery)", "Brandix", "Vega Innovations", "Zone24x7", "Other advanced manufacturing companies"]
+  },
+  {
+    "step": 4,
+    "title": "Automation / Robotics Engineer",
+    "description": "As a specialized engineer, you'll be responsible for entire automation projects, from concept and design to implementation and commissioning. This requires strong project management and problem-solving skills.",
+    "duration": "3-5 years",
+    "qualifications": ["Chartered Engineer (CEng) status (optional but beneficial)"],
+    "skills": ["Machine Vision Systems", "Advanced Robotics", "Project Management", "Systems Integration", "Process Optimization"],
+    "salaryRangeLKR": "LKR 250,000 - 450,000",
+    "institutes": ["Leading tech and manufacturing firms"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Automation Lead / R&D Engineer",
+    "description": "Advance to a senior role where you lead the automation strategy for a company or work in R&D to develop novel robotic systems and products. A Master's or PhD is highly valuable for R&D roles.",
+    "duration": "5+ years",
+    "qualifications": ["MSc/PhD in Robotics or a related field"],
+    "skills": ["R&D Management", "AI in Robotics", "Technical Leadership", "Strategic Planning", "Innovation"],
+    "salaryRangeLKR": "LKR 500,000 - 900,000+",
+    "institutes": ["N/A - Based on experience and further education"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Master Social Media Platforms & Develop Skills",
+    "description": "A degree in Marketing or Communications is helpful but not mandatory. The key is to become a power user of major platforms (Facebook, Instagram, LinkedIn, TikTok, X). Develop strong writing, basic design, and analytical skills.",
+    "duration": "1 year",
+    "qualifications": ["A strong personal or project-based social media presence"],
+    "skills": ["Copywriting", "Graphic Design (Canva)", "Video Editing Basics (CapCut)", "Understanding of Platform Algorithms", "Communication"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Online courses (HubSpot Academy, Meta Blueprint)"]
+  },
+  {
+    "step": 2,
+    "title": "Internship or Freelance for Small Businesses",
+    "description": "Gain practical experience by managing social media for a small local business, an NGO, or through an internship at a digital marketing agency. This is where you build a portfolio of real-world results (e.g., follower growth, engagement rates).",
+    "duration": "6-12 months",
+    "qualifications": ["A portfolio with case studies and metrics"],
+    "skills": ["Content Calendar Creation", "Community Management", "Social Media Analytics", "Client Reporting", "Customer Service"],
+    "salaryRangeLKR": "LKR 30,000 - 50,000 (Intern/Junior Executive)",
+    "institutes": ["Local businesses", "Digital marketing agencies"]
+  },
+  {
+    "step": 3,
+    "title": "Social Media Executive / Specialist",
+    "description": "Work in a full-time role for a company or agency. You will be responsible for creating and scheduling content, running paid ad campaigns, monitoring social media channels, and reporting on performance against KPIs.",
+    "duration": "2-3 years",
+    "qualifications": ["Proven experience managing business accounts"],
+    "skills": ["Paid Social Advertising (Meta Ads, LinkedIn Ads)", "A/B Testing", "Content Strategy", "Influencer Marketing Coordination", "Social Listening Tools"],
+    "salaryRangeLKR": "LKR 60,000 - 120,000",
+    "institutes": ["Ogilvy", "Leo Burnett", "Loops Integrated", "Corporate marketing departments (e.g., Dialog, Keells)"]
+  },
+  {
+    "step": 4,
+    "title": "Social Media Manager",
+    "description": "As a manager, you move from execution to strategy. You will be responsible for developing the overall social media strategy, managing the budget, leading a team (if any), and aligning social media efforts with broader marketing goals.",
+    "duration": "3-5 years",
+    "qualifications": ["Strong track record of successful campaigns"],
+    "skills": ["Social Media Strategy", "Budget Management", "Team Leadership", "Crisis Management", "Advanced Analytics & ROI Measurement"],
+    "salaryRangeLKR": "LKR 120,000 - 250,000",
+    "institutes": ["All major companies with a digital presence"]
+  },
+  {
+    "step": 5,
+    "title": "Head of Social / Digital Marketing Manager",
+    "description": "Advance to a senior leadership role overseeing the entire social or digital marketing function. This role is highly strategic, focusing on brand building, market positioning, and driving significant business results through digital channels.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive experience and leadership skills"],
+    "skills": ["Digital Marketing Strategy", "Brand Management", "P&L Responsibility", "Market Research", "Team & Agency Management"],
+    "salaryRangeLKR": "LKR 250,000 - 500,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

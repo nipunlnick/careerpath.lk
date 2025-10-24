@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Develop a Mindset & Identify a Problem",
+    "description": "Entrepreneurship starts with a mindset: resilience, curiosity, and a bias for action. Pay close attention to problems you or others face in daily life. A good business solves a real problem. Education (degree in any field) helps build skills, but is not a strict prerequisite.",
+    "duration": "Ongoing",
+    "qualifications": ["A well-defined problem to solve"],
+    "skills": ["Problem Identification", "Critical Thinking", "Creativity", "Resilience", "Learning Agility"],
+    "salaryRangeLKR": "N/A (Often negative)",
+    "institutes": ["Personal experience", "Networking events", "Reading business books and biographies"]
+  },
+  {
+    "step": 2,
+    "title": "Validate Your Idea & Build a Minimum Viable Product (MVP)",
+    "description": "Before investing heavily, validate your idea. Talk to potential customers. Are they willing to pay for your solution? Build the simplest version of your product (the MVP) that solves the core problem. The goal is to learn as quickly and cheaply as possible.",
+    "duration": "3-12 months",
+    "qualifications": ["Positive customer feedback", "A functional MVP"],
+    "skills": ["Market Research", "Customer Interviews", "Prototyping", "Lean Startup Methodology", "Basic technical/product skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Y Combinator Startup School (online)", "Local incubators like Hatch Works, LAN"]
+  },
+  {
+    "step": 3,
+    "title": "Launch, Iterate, and Find Product-Market Fit",
+    "description": "Launch your MVP to a small group of early adopters. Gather feedback relentlessly and iterate on your product. The goal is to reach 'Product-Market Fit' - the point where you've built something a specific group of people truly want. This stage is about survival and finding your first real customers.",
+    "duration": "1-3 years",
+    "qualifications": ["First paying customers", "Positive growth metrics (user retention)"],
+    "skills": ["Sales & Marketing", "Customer Support", "Data Analysis (user behavior)", "Pivoting (changing direction based on feedback)", "Financial Bootstrapping"],
+    "salaryRangeLKR": "Variable (often minimal)",
+    "institutes": ["Dialog Axiata's Ideamart", "Spiralation by ICTA", "Angel investors network"]
+  },
+  {
+    "step": 4,
+    "title": "Scaling the Business & Building a Team",
+    "description": "Once you have product-market fit, the focus shifts to growth (scaling). This involves hiring your first employees, building scalable processes for marketing and sales, and potentially seeking external funding (seed or Series A) to accelerate growth.",
+    "duration": "2-4 years",
+    "qualifications": ["Consistent revenue growth", "A functional team"],
+    "skills": ["Hiring & Team Building", "Leadership", "Fundraising & Pitching", "Marketing Automation", "Operations Management"],
+    "salaryRangeLKR": "Founder's salary (depends on funding and revenue)",
+    "institutes": ["Venture Capital firms like Lanka Angel Network (LAN), BOV Capital"]
+  },
+  {
+    "step": 5,
+    "title": "Mature Company Leadership",
+    "description": "At this stage, your startup is becoming a mature company. Your role as a founder evolves from 'doing everything' to becoming a CEO who sets the vision, manages leadership, and steers the company's long-term strategy.",
+    "duration": "5+ years",
+    "qualifications": ["A sustainable, profitable, or high-growth company"],
+    "skills": ["Strategic Planning", "Corporate Governance", "Financial Management", "Public Relations", "Vision Casting"],
+    "salaryRangeLKR": "Highly variable",
+    "institutes": ["N/A - Based on company success"]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Foundation in IT and Networking",
+    "description": "Start with a strong foundation in general IT. A G.C.E. A/L in a Maths or Technology stream is helpful. Focus on understanding operating systems (especially Linux), computer networks, and basic programming concepts.",
+    "duration": "1-2 years",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["Computer Networking (TCP/IP)", "Linux/Windows Administration", "Problem-Solving", "Attention to Detail"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Online platforms like TryHackMe, Hack The Box"]
+  },
+  {
+    "step": 2,
+    "title": "Formal Education and Foundational Certifications",
+    "description": "Pursue a degree or higher diploma in IT, Cybersecurity, or Computer Science. Complement your studies with globally recognized entry-level cybersecurity certifications.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Cybersecurity/IT", "CompTIA Security+"],
+    "skills": ["Security Principles (CIA Triad)", "Cryptography Basics", "Security Policies", "Risk Assessment", "Network security concepts"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (SOC Analyst Level 1/Trainee)",
+    "institutes": ["University of Colombo (UCSC)", "SLIIT", "NSBM", "KDU"]
+  },
+  {
+    "step": 3,
+    "title": "Security Operations Center (SOC) Analyst",
+    "description": "Gain hands-on experience in a SOC. In this role, you will monitor security alerts, investigate potential incidents, and use security tools like SIEM (Security Information and Event Management) to protect the organization's assets. This is the core entry-point for most cybersecurity careers.",
+    "duration": "2-3 years",
+    "qualifications": ["Hands-on experience with security tools", "Certifications like CySA+"],
+    "skills": ["SIEM Tools (Splunk, ELK Stack)", "Intrusion Detection/Prevention Systems (IDS/IPS)", "Vulnerability Scanning", "Incident Response Procedures", "Log Analysis"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["Dialog Axiata", "Major Banks (HNB, Commercial Bank)", "Sri Lanka CERT|CC", "Managed Security Service Providers (MSSPs)"]
+  },
+  {
+    "step": 4,
+    "title": "Advanced Analyst Roles: Threat Hunter / Incident Responder",
+    "description": "Move into a more specialized and proactive analyst role. A Threat Hunter actively searches for threats that have bypassed automated defenses. An Incident Responder leads the effort to contain and eradicate threats during an active security breach.",
+    "duration": "3-5 years",
+    "qualifications": ["Advanced certifications (e.g., GCIH, GCFA)"],
+    "skills": ["Threat Hunting", "Digital Forensics", "Malware Analysis", "Reverse Engineering", "Threat Intelligence"],
+    "salaryRangeLKR": "LKR 200,000 - 450,000",
+    "institutes": ["Specialized security teams in large corporations and tech companies"]
+  },
+  {
+    "step": 5,
+    "title": "Cybersecurity Consultant / Architect",
+    "description": "Advance to a senior role where you advise companies on their overall security posture, design secure systems and architectures, and help them achieve compliance with standards like ISO 27001. This is a senior advisory and design role.",
+    "duration": "5+ years",
+    "qualifications": ["CISSP (Certified Information Systems Security Professional)"],
+    "skills": ["Security Architecture Design", "Risk Management Frameworks", "Cloud Security Strategy", "Compliance and Auditing", "Stakeholder Communication"],
+    "salaryRangeLKR": "LKR 500,000 - 800,000+",
+    "institutes": ["Big Four firms (PwC, EY)", "Tech consultancies", "Senior roles in large enterprises"]
+  }
+]

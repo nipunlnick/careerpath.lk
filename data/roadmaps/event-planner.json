@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Education and Volunteer Experience",
+    "description": "A degree or diploma in Hospitality Management, Marketing, or Communications provides a good theoretical base. Gain practical experience by volunteering to organize small events for your school, university, or community.",
+    "duration": "2-3 years",
+    "qualifications": ["Degree/Diploma"],
+    "skills": ["Organizational Skills", "Communication", "Creativity", "Problem-Solving", "Time Management"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["SLITHM", "NSBM", "Any recognized university"]
+  },
+  {
+    "step": 2,
+    "title": "Entry-Level Role: Event Assistant / Coordinator",
+    "description": "Join an event management company, a hotel's banquet department, or a corporate marketing team in an entry-level role. You will support senior planners with logistical tasks like vendor communication, venue setup, and on-site coordination.",
+    "duration": "2-3 years",
+    "qualifications": ["Hands-on experience"],
+    "skills": ["Vendor Coordination", "Logistics Management", "Budget Tracking", "Client Communication", "Working under pressure"],
+    "salaryRangeLKR": "LKR 45,000 - 75,000 (Event Coordinator)",
+    "institutes": ["Event management companies (e.g., Emphasis, Antwork)", "5-star hotels (Cinnamon, Hilton)", "Corporate marketing departments"]
+  },
+  {
+    "step": 3,
+    "title": "Event Planner / Executive",
+    "description": "Take on responsibility for planning and executing smaller events from start to finish. This includes meeting with clients, developing event concepts, creating budgets, and managing all logistical aspects to ensure a successful event.",
+    "duration": "3-5 years",
+    "qualifications": ["A portfolio of successfully managed events"],
+    "skills": ["Event Conception & Design", "Budget Management", "Project Management", "Negotiation with suppliers", "Client Relationship Management"],
+    "salaryRangeLKR": "LKR 80,000 - 160,000",
+    "institutes": ["Leading event management and MICE (Meetings, Incentives, Conferences, Exhibitions) companies"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Event Manager",
+    "description": "Manage large-scale, high-profile events such as major corporate conferences, product launches, or large weddings. You will lead a team of coordinators, manage significant budgets, and be the main point of contact for key clients.",
+    "duration": "4-6 years",
+    "qualifications": ["Proven track record with large events"],
+    "skills": ["Team Leadership", "Strategic Planning", "Complex Logistics Management", "Risk Management", "High-value client management"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000",
+    "institutes": ["Top-tier event companies and corporate event departments"]
+  },
+  {
+    "step": 5,
+    "title": "Own Event Management Company",
+    "description": "With extensive experience and a strong network of clients and suppliers, you can start your own event management company. You can specialize in a niche like corporate events, weddings, or destination management.",
+    "duration": "5+ years",
+    "qualifications": ["Strong industry network and reputation"],
+    "skills": ["Entrepreneurship", "Business Management", "Marketing & Sales", "Financial Planning", "Brand Building"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

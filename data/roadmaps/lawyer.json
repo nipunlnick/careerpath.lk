@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L)",
+    "description": "Achieve strong results in your G.C.E. A/L examinations in any stream. While there's no mandatory stream, Arts or Commerce can be beneficial. A high Z-score is required for entry into state university law faculties.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L with competitive Z-score"],
+    "skills": ["Critical Thinking", "English Language Proficiency", "Public Speaking", "Analytical Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Obtain an LL.B Degree",
+    "description": "Complete a Bachelor of Laws (LL.B) degree. This can be done through a state university or by completing the degree from a recognized foreign university (often through local providers). This is the academic foundation of your legal education.",
+    "duration": "3-4 years",
+    "qualifications": ["Bachelor of Laws (LL.B)"],
+    "skills": ["Legal Research", "Legal Writing", "Understanding of Core Law Subjects (Criminal, Constitutional, Contract)", "Jurisprudence"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Faculty of Law, University of Colombo", "University of Jaffna", "General Sir John Kotelawala Defence University (KDU)", "Local providers for University of London LL.B (e.g., CFPS, Horizon)"]
+  },
+  {
+    "step": 3,
+    "title": "Sri Lanka Law College Examinations",
+    "description": "This is the vocational training stage to become a practicing lawyer. You must pass the three years of examinations conducted by the Sri Lanka Law College to qualify to take the oaths as an Attorney-at-Law.",
+    "duration": "3 years",
+    "qualifications": ["Pass all Law College examinations"],
+    "skills": ["Civil Procedure", "Criminal Procedure", "Conveyancing", "Trusts & Accounts", "Advocacy"],
+    "salaryRangeLKR": "LKR 35,000 - 60,000 (Apprentice/Intern)",
+    "institutes": ["Sri Lanka Law College"]
+  },
+  {
+    "step": 4,
+    "title": "Apprenticeship and Taking Oaths",
+    "description": "Undergo a mandatory period of apprenticeship (currently 6 months) under a senior lawyer with at least 8 years of practice. After successful completion, you will be called to the bar and take oaths as an Attorney-at-Law of the Supreme Court of Sri Lanka.",
+    "duration": "6 months",
+    "qualifications": ["Attorney-at-Law"],
+    "skills": ["Court Craft", "Client Counseling", "Drafting Legal Documents", "Professional Ethics"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000 (Junior Lawyer)",
+    "institutes": ["Apprenticeship under a senior lawyer or in the Attorney General's Department"]
+  },
+  {
+    "step": 5,
+    "title": "Practice and Specialization",
+    "description": "Begin your career in the official bar (Attorney General's Department), unofficial bar (private practice in civil or criminal law), or the corporate sector as a legal officer. Over time, you can specialize in areas like corporate law, intellectual property, or human rights.",
+    "duration": "5+ years",
+    "qualifications": ["LL.M (Master of Laws) for specialization"],
+    "skills": ["Litigation/Corporate Law Expertise", "Negotiation", "Case Management", "Building a Client Base"],
+    "salaryRangeLKR": "LKR 200,000 - 700,000+ (Experienced Lawyer/Partner)",
+    "institutes": ["Leading Law Firms (e.g., F. J. & G. de Saram, Julius & Creasy, D. L. & F. De Saram)", "Corporate legal departments"]
+  }
+]

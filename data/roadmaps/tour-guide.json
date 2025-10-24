@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Language Skills & Historical Knowledge",
+    "description": "Complete your O/L or A/L. A passion for Sri Lankan history, culture, and nature is essential. Crucially, develop proficiency in English and, if possible, another foreign language (e.g., German, French, Chinese).",
+    "duration": "1-2 years",
+    "qualifications": ["G.C.E. O/L or A/L"],
+    "skills": ["Fluent English", "Knowledge of Sri Lankan History & Culture", "Communication Skills", "Customer Service Mindset"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Language courses at British Council, Alliance Française, etc."]
+  },
+  {
+    "step": 2,
+    "title": "Professional Training & Licensing",
+    "description": "Enroll in a tour guide training program at a recognized institute. To work as a National Tour Guide, you must obtain a license from the Sri Lanka Tourism Development Authority (SLTDA), which involves training and an examination.",
+    "duration": "6-12 months",
+    "qualifications": ["National Tour Guide License from SLTDA"],
+    "skills": ["Itinerary Planning", "Storytelling", "Public Speaking", "First Aid & Safety", "Geography of Sri Lanka"],
+    "salaryRangeLKR": "Variable (based on freelance work)",
+    "institutes": ["SLITHM (Sri Lanka Institute of Tourism & Hotel Management)"]
+  },
+  {
+    "step": 3,
+    "title": "Gaining Experience as a Freelance or Company Guide",
+    "description": "Start working as a licensed guide. You can work as a freelancer, finding clients through personal networks or online platforms, or join a major travel and tour company that will provide you with regular tours.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven tour experience", "Positive reviews from tourists"],
+    "skills": ["Group Management", "Problem-Solving (handling unexpected situations)", "Time Management", "Supplier Negotiation (with hotels, drivers)", "Building a professional network"],
+    "salaryRangeLKR": "LKR 80,000 - 200,000+ (Seasonal and depends on tours)",
+    "institutes": ["Aitken Spence Travels", "Walkers Tours", "Jetwing Travels"]
+  },
+  {
+    "step": 4,
+    "title": "Specialize and Build a Niche",
+    "description": "Differentiate yourself by specializing in a niche area. This could be adventure tourism (hiking, rafting), wildlife and nature tours (bird watching), cultural and archaeological tours, or luxury travel.",
+    "duration": "2-3 years",
+    "qualifications": ["Specialized certifications (e.g., in wildlife, adventure sports)"],
+    "skills": ["In-depth niche knowledge", "Specialized tour planning", "Targeted marketing", "Photography skills", "Blogging/Social Media presence"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000+ (as a specialist guide)",
+    "institutes": ["N/A - Self-driven specialization"]
+  },
+  {
+    "step": 5,
+    "title": "Tour Operator / Own Travel Company",
+    "description": "Leverage your experience, network, and reputation to move beyond guiding and start your own tour operating business. This involves creating tour packages, marketing them internationally, and managing all logistics, including guides, transport, and accommodation.",
+    "duration": "5+ years",
+    "qualifications": ["Business registration", "SLTDA registration as a Travel Agent"],
+    "skills": ["Business Management", "Marketing & Sales", "Financial Management", "Operations Management", "International Client Relations"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

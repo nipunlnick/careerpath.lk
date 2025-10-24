@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation in IT and Networking",
+    "description": "Start with a strong foundation in general IT. A G.C.E. A/L in a Maths or Technology stream is helpful. Focus on understanding operating systems (especially Linux), computer networks, and basic programming concepts.",
+    "duration": "1-2 years",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["Computer Networking (TCP/IP)", "Linux/Windows Administration", "Problem-Solving", "Attention to Detail"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Online platforms like TryHackMe, Hack The Box"]
+  },
+  {
+    "step": 2,
+    "title": "Formal Education and Foundational Certifications",
+    "description": "Pursue a degree or higher diploma in IT, Cybersecurity, or Computer Science. Complement your studies with globally recognized entry-level cybersecurity certifications.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Cybersecurity/IT", "CompTIA Security+", "Certified Ethical Hacker (CEH)"],
+    "skills": ["Security Principles (CIA Triad)", "Cryptography Basics", "Ethical Hacking Methodologies", "Security Policies", "Risk Assessment"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (SOC Analyst Level 1/Trainee)",
+    "institutes": ["University of Colombo (UCSC)", "SLIIT", "NSBM", "KDU", "EC-Council accredited training centers"]
+  },
+  {
+    "step": 3,
+    "title": "Security Operations Center (SOC) Analyst",
+    "description": "Gain hands-on experience in a SOC. In this role, you will monitor security alerts, investigate potential incidents, and use security tools like SIEM (Security Information and Event Management) to protect the organization's assets.",
+    "duration": "2-3 years",
+    "qualifications": ["Hands-on experience with security tools"],
+    "skills": ["SIEM Tools (Splunk, ELK Stack)", "Intrusion Detection/Prevention Systems (IDS/IPS)", "Vulnerability Scanning", "Incident Response", "Log Analysis"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["Dialog Axiata", "Major Banks (HNB, Commercial Bank)", "Sri Lanka CERT|CC", "Managed Security Service Providers (MSSPs)"]
+  },
+  {
+    "step": 4,
+    "title": "Cybersecurity Specialist / Engineer",
+    "description": "Move into a more specialized role such as a Penetration Tester, Security Engineer, or Incident Responder. This involves proactively finding vulnerabilities, designing secure systems, or managing the response to cyber attacks.",
+    "duration": "3-5 years",
+    "qualifications": ["Offensive Security Certified Professional (OSCP) for pentesters", "CISSP (Certified Information Systems Security Professional) for management track"],
+    "skills": ["Penetration Testing", "Malware Analysis", "Cloud Security (AWS/Azure)", "Digital Forensics", "Security Architecture"],
+    "salaryRangeLKR": "LKR 200,000 - 400,000",
+    "institutes": ["Virtusa", "WSO2", "TechCERT", "BDO", "KPMG"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Cybersecurity Consultant / Manager",
+    "description": "Advance to a senior role where you lead security teams, develop security strategies, manage compliance, and advise senior management on risk. This role blends deep technical knowledge with strong leadership and business acumen.",
+    "duration": "5+ years",
+    "qualifications": ["CISM (Certified Information Security Manager)"],
+    "skills": ["Security Strategy & Governance", "Risk Management Frameworks (ISO 27001)", "Team Leadership", "Budget Management", "Security Auditing"],
+    "salaryRangeLKR": "LKR 450,000 - 800,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

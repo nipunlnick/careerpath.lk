@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio Science Stream",
+    "description": "Excel in the G.C.E. A/L Bio Science stream. A high Z-score is required for admission to a state university's B.Pharm degree program. Chemistry and Biology are the most important subjects.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio Science) with high Z-score"],
+    "skills": ["Strong knowledge of Chemistry", "Attention to Detail", "Memory Recall", "Ethical Mindset"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor of Pharmacy (B.Pharm) Degree",
+    "description": "Complete the 4-year B.Pharm (Hons) degree from a recognized university. This degree covers pharmacology, pharmaceutics, medicinal chemistry, and clinical pharmacy, providing the scientific basis for the profession.",
+    "duration": "4 years",
+    "qualifications": ["B.Pharm (Hons)"],
+    "skills": ["Pharmacology", "Pharmaceutics", "Medicinal Chemistry", "Dispensing", "Patient Counseling"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Sri Jayewardenepura", "University of Peradeniya", "University of Colombo"]
+  },
+  {
+    "step": 3,
+    "title": "Internship and SLMC Registration",
+    "description": "Undergo a mandatory internship period (typically 6-12 months) in a hospital or community pharmacy setting. After successful completion, you must register with the Sri Lanka Medical Council (SLMC) to obtain the license to practice.",
+    "duration": "1 year",
+    "qualifications": ["SLMC Registration as a Pharmacist"],
+    "skills": ["Practical Dispensing", "Inventory Management", "Understanding Prescriptions", "Patient Communication", "Professional Ethics"],
+    "salaryRangeLKR": "LKR 60,000 - 90,000 (Intern/Registered Pharmacist)",
+    "institutes": ["Government Teaching Hospitals", "Major Private Hospital Chains (Asiri, Hemas, Nawaloka)"]
+  },
+  {
+    "step": 4,
+    "title": "Community or Hospital Pharmacist",
+    "description": "Work as a licensed pharmacist. In a community pharmacy (retail), you'll dispense medications and advise the public. In a hospital, you'll work with doctors and nurses to manage patient medication therapy, compound sterile preparations, and manage the hospital formulary.",
+    "duration": "3-5 years",
+    "qualifications": ["Experience in either setting"],
+    "skills": ["Medication Therapy Management", "Stock Control", "Regulatory Compliance", "Drug Information Services", "Compounding"],
+    "salaryRangeLKR": "LKR 80,000 - 160,000",
+    "institutes": ["State Pharmaceuticals Corporation (SPC)", "Major pharmacy chains (Healthguard)", "Government and Private Hospitals"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Roles / Specialization",
+    "description": "Advance to senior roles like Pharmacy Manager, or specialize in areas like clinical pharmacy, oncology pharmacy, or industrial pharmacy (working for pharmaceutical manufacturers). A Master's or PhD can lead to roles in academia or research.",
+    "duration": "5+ years",
+    "qualifications": ["M.Pharm / PhD", "Board certifications (if available)"],
+    "skills": ["Leadership", "Management", "Clinical Research", "Drug Manufacturing Processes (QA/QC)", "Teaching & Mentoring"],
+    "salaryRangeLKR": "LKR 180,000 - 350,000+",
+    "institutes": ["Pharmaceutical companies (e.g., GSK, Hemas Pharmaceuticals)", "National Medicines Regulatory Authority (NMRA)"]
+  }
+]

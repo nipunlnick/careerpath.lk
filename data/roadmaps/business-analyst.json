@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Degree in IT or Business",
+    "description": "A bachelor's degree is the essential first step. A degree in IT/Software Engineering helps understand the technical side, while a degree in Business Management or Finance helps understand the business domain. A combination is ideal.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in IT/Computer Science", "BBA/BSc in Business Management"],
+    "skills": ["Communication", "Analytical Thinking", "Problem-Solving", "Writing Skills", "General business acumen"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Moratuwa", "UCSC", "University of Sri Jayewardenepura", "SLIIT", "NSBM"]
+  },
+  {
+    "step": 2,
+    "title": "Entry-Level Role & Foundational Knowledge",
+    "description": "Start in a role like QA Engineer, Associate Software Engineer, or Business Development Executive. This provides context on how businesses and software projects operate. Concurrently, learn the fundamentals of business analysis.",
+    "duration": "1-2 years",
+    "qualifications": ["Completed Degree"],
+    "skills": ["Software Development Lifecycle (SDLC)", "Business Process Modeling (BPMN)", "UML Diagrams", "SQL for data analysis"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (in a related entry role)",
+    "institutes": ["Any major IT or corporate firm in Sri Lanka"]
+  },
+  {
+    "step": 3,
+    "title": "Associate Business Analyst",
+    "description": "Transition into a dedicated Associate BA role. You will work under a senior BA, focusing on gathering and documenting requirements from stakeholders, creating user stories, and assisting in the communication between business and technical teams.",
+    "duration": "2-3 years",
+    "qualifications": ["ECBA (Entry Certificate in Business Analysis) - Optional"],
+    "skills": ["Requirements Elicitation", "User Story Writing", "Stakeholder Interviews", "Documentation (BRD, FRS)", "Using tools like Jira and Confluence"],
+    "salaryRangeLKR": "LKR 90,000 - 160,000",
+    "institutes": ["Virtusa", "LSEG Technology", "IFS", "Sysco LABS", "99x"]
+  },
+  {
+    "step": 4,
+    "title": "Business Analyst & Professional Certification",
+    "description": "As a full-fledged Business Analyst, you'll take ownership of the requirements process for projects. You'll facilitate workshops, manage stakeholder expectations, and ensure the final product meets business needs. Obtaining a professional certification is highly recommended.",
+    "duration": "3-5 years",
+    "qualifications": ["Certified Business Analysis Professional (CBAP)", "PMI-PBA"],
+    "skills": ["Stakeholder Management", "Solution Assessment", "Agile Methodologies", "Change Management", "Data Analysis"],
+    "salaryRangeLKR": "LKR 180,000 - 320,000",
+    "institutes": ["All major IT companies and banks in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Business Analyst / Product Owner",
+    "description": "Advance to a senior BA role where you tackle more complex, strategic projects and mentor other BAs. Alternatively, you can transition into a Product Owner role, where you are responsible for defining the product vision and prioritizing the development backlog.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive domain experience"],
+    "skills": ["Business Strategy", "Product Management", "Roadmap Planning", "Leadership", "Mentoring"],
+    "salaryRangeLKR": "LKR 350,000 - 600,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

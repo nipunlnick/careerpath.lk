@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/Ls and Degree",
+    "description": "Any A/L stream is acceptable. A bachelor's degree in Human Resource Management, Business Administration, or Psychology provides a strong theoretical foundation for a career in HR.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc/BBA in Human Resource Management", "BA in Psychology"],
+    "skills": ["Communication", "Empathy", "Interpersonal Skills", "Organizational Skills", "Problem-Solving"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Sri Jayewardenepura", "University of Kelaniya", "NSBM", "CIPM Sri Lanka"]
+  },
+  {
+    "step": 2,
+    "title": "Professional Qualification & Internship",
+    "description": "Enroll in a professional HR qualification from CIPM Sri Lanka (Chartered Institute of Personnel Management). Gain practical experience through an internship in an HR department, where you'll be exposed to the day-to-day functions.",
+    "duration": "1-2 years",
+    "qualifications": ["PQHRM (Professional Qualification in Human Resource Management) from CIPM"],
+    "skills": ["Recruitment Basics", "HRIS (Human Resource Information System) usage", "Payroll Administration", "Employee Onboarding"],
+    "salaryRangeLKR": "LKR 35,000 - 50,000 (HR Intern/Trainee)",
+    "institutes": ["MAS Holdings", "John Keells Holdings", "Brandix", "Hayleys", "Major Banks"]
+  },
+  {
+    "step": 3,
+    "title": "HR Executive / Officer",
+    "description": "Work in an entry-level HR role, handling operational tasks. You may focus on a specific area like recruitment (talent acquisition), payroll, or employee relations. This is where you build your core HR skills.",
+    "duration": "2-4 years",
+    "qualifications": ["Completed Degree and/or PQHRM"],
+    "skills": ["Interviewing Skills", "Labor Law Compliance", "Performance Management Systems", "Training & Development Coordination"],
+    "salaryRangeLKR": "LKR 70,000 - 130,000",
+    "institutes": ["All large to medium-sized companies in Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "Assistant HR Manager / HR Business Partner",
+    "description": "Advance to a more strategic role. As an Assistant HR Manager, you'll oversee a team or a specific HR function. As an HR Business Partner (HRBP), you'll work closely with specific business units to align HR strategy with their goals.",
+    "duration": "3-5 years",
+    "qualifications": ["Chartered MCIPM status", "Proven experience in HR operations"],
+    "skills": ["Employee Engagement", "Talent Management", "Compensation & Benefits Strategy", "HR Analytics", "Change Management"],
+    "salaryRangeLKR": "LKR 150,000 - 280,000",
+    "institutes": ["Unilever", "Nestle", "Dialog Axiata", "Major apparel and IT companies"]
+  },
+  {
+    "step": 5,
+    "title": "HR Manager / Head of HR",
+    "description": "In a senior leadership role, you are responsible for the overall HR strategy of the organization. This involves developing policies, managing the HR budget, nurturing company culture, and advising senior leadership. An MBA is often beneficial at this stage.",
+    "duration": "5+ years",
+    "qualifications": ["MBA with HR specialization"],
+    "skills": ["Strategic Workforce Planning", "Organizational Development", "Leadership Development", "Corporate Governance", "Executive Communication"],
+    "salaryRangeLKR": "LKR 350,000 - 700,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

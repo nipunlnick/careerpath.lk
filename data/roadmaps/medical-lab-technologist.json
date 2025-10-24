@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio Science Stream",
+    "description": "A strong pass in the G.C.E. A/L Bio Science stream is the primary requirement for entering a degree program. High marks in Biology and Chemistry are particularly important.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio Science)"],
+    "skills": ["Scientific Aptitude", "Attention to Detail", "Precision", "Analytical Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Degree in Medical Laboratory Sciences (MLS)",
+    "description": "Complete a 4-year Bachelor of Science (BSc) Honours in Medical Laboratory Sciences from a recognized university. This degree provides comprehensive training in all major laboratory disciplines.",
+    "duration": "4 years",
+    "qualifications": ["BSc (Hons) in Medical Laboratory Sciences"],
+    "skills": ["Clinical Biochemistry", "Hematology", "Microbiology", "Histopathology", "Laboratory Equipment Operation"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Peradeniya", "University of Sri Jayewardenepura", "University of Jaffna", "General Sir John Kotelawala Defence University (KDU)"]
+  },
+  {
+    "step": 3,
+    "title": "Internship and Professional Registration",
+    "description": "Complete a one-year mandatory internship at an approved government or private hospital laboratory. Following this, you must register with the Sri Lanka Medical Council (SLMC) to be a licensed MLT.",
+    "duration": "1 year",
+    "qualifications": ["SLMC Registration as a Medical Laboratory Technologist"],
+    "skills": ["Sample Collection & Processing", "Quality Control Procedures", "Laboratory Information Systems (LIS)", "Safety Protocols", "Reporting Results"],
+    "salaryRangeLKR": "LKR 60,000 - 90,000 (Registered MLT - Entry Level)",
+    "institutes": ["Government Teaching Hospitals", "Major Private Hospital Labs (Asiri, Nawaloka, Hemas, Durdans)"]
+  },
+  {
+    "step": 4,
+    "title": "Medical Laboratory Technologist",
+    "description": "Work as a licensed MLT in a hospital or a private diagnostic laboratory. You will perform a wide range of tests on patient samples, which are crucial for doctors to diagnose and treat diseases. You can choose to work in a specific department like microbiology or biochemistry.",
+    "duration": "3-5 years",
+    "qualifications": ["Experience in a diagnostic lab"],
+    "skills": ["Advanced Diagnostic Techniques", "Troubleshooting Equipment", "Interpreting Complex Results", "Method Validation"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000",
+    "institutes": ["Lanka Hospitals", "Durdans Hospital", "Asiri Health", "Hemas Hospitals", "Government Hospitals"]
+  },
+  {
+    "step": 5,
+    "title": "Senior MLT / Laboratory Manager",
+    "description": "With experience, you can advance to become a Senior MLT, supervising a section of the lab, or a Laboratory Manager, responsible for the overall operations, quality assurance, and staff management of the entire laboratory. A Master's degree (MSc) is highly beneficial for these roles.",
+    "duration": "5+ years",
+    "qualifications": ["MSc in a specialized laboratory field"],
+    "skills": ["Laboratory Management", "Quality Assurance (ISO 15189)", "Budgeting", "Staff Training & Supervision", "Inventory Management"],
+    "salaryRangeLKR": "LKR 160,000 - 300,000+",
+    "institutes": ["N/A - Based on experience and promotion"]
+  }
+]

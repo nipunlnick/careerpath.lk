@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Foundation & A/L Studies",
+    "description": "Focus on the Mathematics or Technology stream for your G.C.E. Advanced Levels (A/L). Strong results in subjects like Combined Mathematics, Physics, and ICT are crucial for university admission.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Maths/Tech Stream)"],
+    "skills": ["Problem Solving", "Logical Reasoning", "Basic Computer Literacy"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in IT/CS/SE",
+    "description": "Enroll in a Bachelor of Science (BSc) degree program in Computer Science, Software Engineering, or Information Technology. This is the most critical step to build a strong theoretical and practical foundation.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Computer Science", "BSc in Software Engineering", "BIT (Bachelor of Information Technology)"],
+    "skills": ["Programming (Java, Python, C++)", "Data Structures & Algorithms", "Databases (SQL)", "Web Development (HTML, CSS, JS)", "Software Engineering Principles"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (Intern/Trainee)",
+    "institutes": ["University of Colombo (UCSC)", "University of Moratuwa", "University of Peradeniya", "SLIIT", "NSBM Green University", "IIT"]
+  },
+  {
+    "step": 3,
+    "title": "Internship / Trainee Software Engineer",
+    "description": "Gain practical industry experience through an internship. This is where you apply your academic knowledge to real-world projects and learn about industry best practices, teamwork, and professional conduct.",
+    "duration": "6-12 months",
+    "qualifications": ["Ongoing or Completed Degree"],
+    "skills": ["Version Control (Git)", "Agile/Scrum Methodologies", "Debugging & Testing", "Frameworks (React, Spring, Django)"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000 (Associate)",
+    "institutes": ["Virtusa", "WSO2", "Sysco LABS", "99x", "Creative Software", "IFS"]
+  },
+  {
+    "step": 4,
+    "title": "Junior Software Engineer",
+    "description": "Secure your first full-time role as a Software Engineer. You'll work as part of a development team, contributing to features, fixing bugs, and learning from senior engineers.",
+    "duration": "1-2 years",
+    "qualifications": ["Completed BSc Degree", "Internship Experience"],
+    "skills": ["Clean Code Practices", "API Development", "Cloud Basics (AWS, Azure)", "Software Design Patterns"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000",
+    "institutes": ["All major IT companies in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Software Engineer & Specialization",
+    "description": "After gaining experience, you'll be promoted to a senior role with more responsibility. This is a good time to specialize in a specific area like Frontend, Backend, DevOps, Mobile, or AI/ML.",
+    "duration": "3-5+ years",
+    "qualifications": ["Proven track record of successful projects"],
+    "skills": ["System Architecture", "Mentoring Juniors", "Project Leadership", "Advanced expertise in a chosen domain"],
+    "salaryRangeLKR": "LKR 300,000 - 600,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

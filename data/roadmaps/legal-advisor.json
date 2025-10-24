@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Become an Attorney-at-Law",
+    "description": "The foundational requirement is to be a qualified lawyer. This involves obtaining an LL.B degree, passing the Sri Lanka Law College examinations, and taking oaths as an Attorney-at-Law. This entire process provides the necessary legal knowledge.",
+    "duration": "6-7 years",
+    "qualifications": ["LL.B Degree", "Attorney-at-Law"],
+    "skills": ["Legal Knowledge (Corporate, Contract, Labor Law)", "Legal Research", "Analytical Skills", "Critical Thinking"],
+    "salaryRangeLKR": "Variable",
+    "institutes": ["University of Colombo", "Sri Lanka Law College"]
+  },
+  {
+    "step": 2,
+    "title": "Gain Experience in a Law Firm's Corporate Department",
+    "description": "Start your career in the corporate or commercial department of a reputable law firm. This provides intense, hands-on training in handling corporate transactions, drafting commercial agreements, and advising business clients.",
+    "duration": "2-4 years",
+    "qualifications": ["Experience in corporate law"],
+    "skills": ["Contract Drafting & Review", "Due Diligence", "Company Secretarial work", "Understanding of commercial transactions", "Client communication"],
+    "salaryRangeLKR": "LKR 80,000 - 180,000 (Junior Lawyer in a firm)",
+    "institutes": ["F. J. & G. de Saram", "Julius & Creasy", "D. L. & F. De Saram", "Nithya Partners"]
+  },
+  {
+    "step": 3,
+    "title": "Transition to an In-House Legal Officer Role",
+    "description": "Move from a law firm to the legal department of a company. This is the first step to becoming a Legal Advisor. In this 'in-house' role, you provide legal support to one client: your employer. You'll handle day-to-day legal issues, review contracts, and ensure compliance.",
+    "duration": "3-5 years",
+    "qualifications": ["Experience working with corporate clients"],
+    "skills": ["Business Acumen", "Risk Assessment", "Internal Stakeholder Management", "Practical Problem Solving", "Industry-specific regulations (e.g., banking, telecom)"],
+    "salaryRangeLKR": "LKR 150,000 - 280,000",
+    "institutes": ["John Keells Holdings", "MAS Holdings", "Dialog Axiata", "Major banks (HNB, Commercial)"]
+  },
+  {
+    "step": 4,
+    "title": "Legal Advisor / Legal Counsel",
+    "description": "As you gain seniority, your title may change to Legal Advisor or Legal Counsel. You will be responsible for providing strategic legal advice to business units, managing litigation, and handling more complex legal matters for the company.",
+    "duration": "4-6 years",
+    "qualifications": ["LL.M in Corporate/Commercial Law (optional but beneficial)"],
+    "skills": ["Strategic Legal Advice", "Litigation Management", "Negotiation", "Compliance Management", "Corporate Governance"],
+    "salaryRangeLKR": "LKR 250,000 - 450,000",
+    "institutes": ["All major corporations in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Head of Legal / General Counsel",
+    "description": "Advance to the head of the legal department. In this leadership role, you are the chief legal officer of the company, responsible for all legal affairs, managing the legal team, and advising the CEO and Board of Directors on major legal and regulatory issues.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive in-house legal experience"],
+    "skills": ["Leadership", "Corporate Strategy", "Board-level Communication", "Risk Management", "Budget Management"],
+    "salaryRangeLKR": "LKR 500,000 - 1,000,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

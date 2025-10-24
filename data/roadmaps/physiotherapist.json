@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio Science Stream",
+    "description": "Achieve a high Z-score in the G.C.E. A/L Bio Science stream. A strong understanding of Biology is essential for admission into the highly competitive BSc in Physiotherapy degree programs.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio Science) with high Z-score"],
+    "skills": ["Biology", "Anatomy Basics", "Empathy", "Communication"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor of Science (BSc) in Physiotherapy",
+    "description": "Complete the 4-year BSc (Hons) in Physiotherapy degree from a recognized university. The curriculum includes anatomy, physiology, kinesiology, and hands-on clinical training.",
+    "duration": "4 years",
+    "qualifications": ["BSc (Hons) in Physiotherapy"],
+    "skills": ["Human Anatomy & Physiology", "Kinesiology", "Therapeutic Exercise", "Electrotherapy", "Manual Therapy"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Peradeniya", "University of Colombo", "General Sir John Kotelawala Defence University (KDU)"]
+  },
+  {
+    "step": 3,
+    "title": "Internship and Professional Registration",
+    "description": "Undergo a mandatory one-year clinical internship in a government hospital. This provides supervised, practical experience across different specialities like orthopedics, neurology, and pediatrics. After completion, register with the Sri Lanka Medical Council (SLMC).",
+    "duration": "1 year",
+    "qualifications": ["SLMC Registration as a Physiotherapist"],
+    "skills": ["Patient Assessment", "Treatment Planning", "Gait Training", "Rehabilitation Techniques", "Patient Education"],
+    "salaryRangeLKR": "LKR 60,000 - 90,000 (Registered Physiotherapist - Entry Level)",
+    "institutes": ["National Hospital of Sri Lanka (NHSL)", "Other Government Teaching Hospitals"]
+  },
+  {
+    "step": 4,
+    "title": "Practicing Physiotherapist",
+    "description": "Work as a licensed physiotherapist in a government or private hospital, a rehabilitation center, or a private practice. You can start specializing in areas like sports physiotherapy, neuro-physiotherapy, or geriatric care.",
+    "duration": "3-5 years",
+    "qualifications": ["Experience in clinical practice"],
+    "skills": ["Specialized treatment modalities", "Advanced Manual Therapy", "Sports Injury Management", "Neurological Rehabilitation", "Evidence-Based Practice"],
+    "salaryRangeLKR": "LKR 80,000 - 160,000",
+    "institutes": ["Private Hospitals (Asiri, Nawaloka, Hemas)", "Sports Medicine Units", "Private Physiotherapy Clinics"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Physiotherapist / Private Practice Owner",
+    "description": "With significant experience, you can become a Senior Physiotherapist, leading a department and mentoring junior staff. Many experienced physiotherapists also choose to open their own private clinics. A Master's degree (MSc) can lead to teaching or research positions.",
+    "duration": "5+ years",
+    "qualifications": ["MSc in a specialized area of physiotherapy"],
+    "skills": ["Clinic Management", "Business Acumen", "Advanced Patient Diagnosis", "Mentoring", "Research"],
+    "salaryRangeLKR": "LKR 180,000 - 350,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

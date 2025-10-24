@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Foundation: Understand Marketing & Master the Basics",
+    "description": "A degree in Marketing or a related field is helpful, but not essential. The key is to learn the fundamentals of digital marketing channels. Get certified with free courses from Google and HubSpot to build a strong theoretical base.",
+    "duration": "6-12 months",
+    "qualifications": ["Google Analytics Certification", "HubSpot Inbound Marketing Certification"],
+    "skills": ["Marketing Funnels", "SEO/SEM Fundamentals", "Content Marketing Basics", "Social Media Marketing Principles", "Email Marketing"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Google Digital Garage", "HubSpot Academy", "YouTube"]
+  },
+  {
+    "step": 2,
+    "title": "Specialize and Gain Practical Experience",
+    "description": "Choose one or two areas to specialize in (e.g., SEO, Google Ads, Social Media). Offer your services for free or a low cost to small businesses or NGOs to build a portfolio of real-world results and case studies.",
+    "duration": "1 year",
+    "qualifications": ["A portfolio with measurable results (e.g., increased traffic, lead generation)"],
+    "skills": ["Keyword Research (for SEO)", "Google Ads Campaign Setup", "Meta (Facebook/Instagram) Ads", "Data Analysis", "Content Creation"],
+    "salaryRangeLKR": "LKR 40,000 - 60,000 (Intern/Trainee)",
+    "institutes": ["Internships at digital marketing agencies", "Freelancing for local businesses"]
+  },
+  {
+    "step": 3,
+    "title": "Digital Marketing Executive / Specialist",
+    "description": "Join a digital marketing agency or a corporate marketing team. You'll be responsible for executing campaigns in your area of specialization, analyzing data, and reporting on performance to clients or managers.",
+    "duration": "2-3 years",
+    "qualifications": ["Proven experience managing campaigns"],
+    "skills": ["Advanced SEO techniques", "Google Analytics & Tag Manager", "Conversion Rate Optimization (CRO)", "A/B Testing", "Client Reporting"],
+    "salaryRangeLKR": "LKR 70,000 - 150,000",
+    "institutes": ["Loops Integrated", "Ogilvy", "GroupM", "Corporate marketing departments"]
+  },
+  {
+    "step": 4,
+    "title": "Digital Marketing Manager",
+    "description": "Move from execution to strategy. As a manager, you will develop the overall digital marketing strategy for a brand, manage budgets across different channels, lead a team of specialists, and be responsible for achieving key business objectives (KPIs).",
+    "duration": "3-5 years",
+    "qualifications": ["A strong track record of successful, data-driven campaigns"],
+    "skills": ["Digital Marketing Strategy", "Budget Management", "Team Leadership", "Marketing Automation", "Measuring ROI"],
+    "salaryRangeLKR": "LKR 160,000 - 350,000",
+    "institutes": ["All major companies with a strong digital presence"]
+  },
+  {
+    "step": 5,
+    "title": "Head of Digital / Performance Marketing Lead",
+    "description": "In a senior leadership role, you oversee the entire digital marketing function and its impact on the company's revenue. This is a highly strategic, data-driven role focused on growth, market share, and profitability.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive experience and a portfolio of growth metrics"],
+    "skills": ["P&L Management", "Brand Strategy", "MarTech Stack Management", "Data Science in Marketing", "Executive Leadership"],
+    "salaryRangeLKR": "LKR 400,000 - 700,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation in Design Principles",
+    "description": "Develop a strong understanding of fundamental design principles such as color theory, typography, layout, and visual hierarchy. No specific A/L stream is required, but a background in Art or IT is helpful. Start building a portfolio with personal projects.",
+    "duration": "1 year",
+    "qualifications": ["G.C.E. A/L or O/L"],
+    "skills": ["Visual Design Principles", "Sketching/Wireframing", "Empathy", "Critical Thinking", "Creativity"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study (books, blogs)", "Online courses (Coursera, Udemy)"]
+  },
+  {
+    "step": 2,
+    "title": "Mastering UI/UX Tools & Education",
+    "description": "Gain proficiency in industry-standard design and prototyping tools. Consider a formal diploma or degree to learn the structured process of user-centered design, from research to final mockups.",
+    "duration": "1-2 years",
+    "qualifications": ["Diploma/Degree in Multimedia or Design", "Professional certifications"],
+    "skills": ["Figma", "Adobe XD", "Sketch", "User Research Methods", "Information Architecture", "Prototyping & Usability Testing"],
+    "salaryRangeLKR": "LKR 50,000 - 80,000 (UI/UX Intern/Trainee)",
+    "institutes": ["AMDT School of Creativity", "AOD", "SLIIT (Creative Media)", "Online bootcamps (e.g., Google UX Design Certificate)"]
+  },
+  {
+    "step": 3,
+    "title": "Junior UI/UX Designer Role",
+    "description": "Join a tech company or a design agency as a Junior UI/UX Designer. You will work on specific features of a product, creating wireframes, mockups, and prototypes under the guidance of senior designers. Your primary focus will be on execution and learning the product development lifecycle.",
+    "duration": "2 years",
+    "qualifications": ["A strong portfolio showcasing case studies"],
+    "skills": ["Design Systems", "Collaboration with Developers", "User Flow Diagrams", "Component-based Design", "Presenting Design Work"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000",
+    "institutes": ["Sysco LABS", "Daraz", "PickMe", "Creative Software", "Digital Agencies"]
+  },
+  {
+    "step": 4,
+    "title": "Mid-Level Product Designer",
+    "description": "Transition into a Product Designer role, where you take more ownership of the design process. You'll be responsible for conducting user research, defining problems, and designing end-to-end solutions for larger features or entire products.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven track record of shipping successful products"],
+    "skills": ["User Journey Mapping", "A/B Testing", "Data-informed Design", "Workshop Facilitation", "Mentoring Juniors"],
+    "salaryRangeLKR": "LKR 160,000 - 300,000",
+    "institutes": ["All major product-based tech companies in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Senior/Lead Product Designer or UX Researcher",
+    "description": "Advance to a leadership role where you guide the design vision for a product area, manage other designers, and align design strategy with business goals. Alternatively, you can specialize in a niche area like UX Research or Interaction Design.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive portfolio of impactful work"],
+    "skills": ["Design Strategy", "Product Vision", "Team Leadership", "Cross-functional Collaboration", "Advanced Research Methodologies"],
+    "salaryRangeLKR": "LKR 320,000 - 600,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

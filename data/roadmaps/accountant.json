@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Commerce Stream",
+    "description": "Complete your A/L in the Commerce stream with good results in Accounting, Business Studies, and Economics. This provides the foundational knowledge for higher studies.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Commerce Stream)"],
+    "skills": ["Numeracy", "Basic Accounting Principles", "Business Awareness"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Professional Qualification Foundation",
+    "description": "Start a professional accounting qualification alongside or after your A/Ls. The most recognized bodies in Sri Lanka are CA Sri Lanka, CIMA, and ACCA. Begin with their foundational levels.",
+    "duration": "1-2 years",
+    "qualifications": ["CA Sri Lanka (Business Level)", "CIMA (Certificate in Business Accounting)", "ACCA (Diploma in Accounting and Business)"],
+    "skills": ["Financial Accounting", "Management Accounting", "Business Law", "Taxation Basics"],
+    "salaryRangeLKR": "LKR 35,000 - 60,000 (Trainee)",
+    "institutes": ["CA Sri Lanka", "CIMA Sri Lanka", "ACCA Sri Lanka", "Wisdom Business Academy", "Mercury Institute"]
+  },
+  {
+    "step": 3,
+    "title": "Bachelor's Degree & Intermediate Professional Stages",
+    "description": "While continuing your professional qualification, consider pursuing a BSc in Accounting, Finance, or Business Administration. Many degrees offer exemptions for professional exams. Complete the intermediate stages of your chosen qualification.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Accounting/Finance", "CA (Corporate Level)", "CIMA (Operational/Management Level)", "ACCA (Skills Level)"],
+    "skills": ["Financial Reporting", "Performance Management", "Audit & Assurance", "Financial Management"],
+    "salaryRangeLKR": "LKR 70,000 - 120,000 (Audit Associate/Assistant Accountant)",
+    "institutes": ["University of Sri Jayewardenepura", "University of Kelaniya", "Big Four Firms (KPMG, EY, PwC, Deloitte) for training"]
+  },
+  {
+    "step": 4,
+    "title": "Become a Chartered Accountant / Professional Member",
+    "description": "Complete the final level exams and the practical training requirements of your professional body to earn the title of Chartered Accountant (CA), Chartered Global Management Accountant (CGMA), or ACCA member.",
+    "duration": "1-2 years",
+    "qualifications": ["ACA (Associate Chartered Accountant)", "ACMA/CGMA", "ACCA Member"],
+    "skills": ["Strategic Management", "Corporate Governance", "Advanced Taxation", "Risk Management"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000 (Qualified Accountant)",
+    "institutes": ["N/A - Based on experience"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Roles (Finance Manager / Controller)",
+    "description": "With a few years of post-qualification experience, you can move into senior management roles, overseeing finance departments, managing budgets, and contributing to corporate strategy.",
+    "duration": "3-5+ years",
+    "qualifications": ["Professional Membership + Experience"],
+    "skills": ["Leadership", "Financial Strategy", "Budgeting and Forecasting", "Team Management"],
+    "salaryRangeLKR": "LKR 350,000 - 700,000+",
+    "institutes": ["John Keells Holdings", "Hayleys", "MAS Holdings", "Brandix", "Major Banks"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Develop Foundational Art & Design Skills",
+    "description": "Focus on developing your core artistic abilities. This can be done during or after your O/L or A/L studies. Practice drawing, learn about color theory, composition, and typography. A strong portfolio of personal projects is key.",
+    "duration": "1-2 years (continuous)",
+    "qualifications": ["G.C.E. O/L or A/L"],
+    "skills": ["Drawing & Sketching", "Color Theory", "Typography Basics", "Creativity", "Attention to Detail"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Local art classes", "Online platforms like YouTube, Skillshare"]
+  },
+  {
+    "step": 2,
+    "title": "Master Design Software & Formal Education",
+    "description": "Gain proficiency in industry-standard software. Simultaneously, consider a diploma or degree in graphic design or visual communication to learn design principles and theory in a structured environment.",
+    "duration": "2-3 years",
+    "qualifications": ["Diploma or BSc in Graphic Design/Multimedia"],
+    "skills": ["Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "UI/UX fundamentals (Figma/Adobe XD)", "Visual Communication"],
+    "salaryRangeLKR": "LKR 40,000 - 70,000 (Trainee/Junior Designer)",
+    "institutes": ["Academy of Design (AOD)", "University of Moratuwa (Design Degree)", "AMDT School of Creativity", "SLIIT (Creative Media)"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Graphic Designer",
+    "description": "Work as a junior designer in an advertising agency, a tech company, or a corporate in-house team. You'll work under the guidance of senior designers on a variety of projects like social media posts, brochures, logos, and web banners.",
+    "duration": "2-3 years",
+    "qualifications": ["Strong portfolio", "Diploma/Degree"],
+    "skills": ["Following Brand Guidelines", "Production Design", "Working with Deadlines", "Client Communication", "Team Collaboration"],
+    "salaryRangeLKR": "LKR 75,000 - 130,000",
+    "institutes": ["Ogilvy", "Leo Burnett", "WSO2", "Creative Software", "MAS Holdings"]
+  },
+  {
+    "step": 4,
+    "title": "Mid-Level/Senior Graphic Designer",
+    "description": "As a senior designer, you will take on more complex projects, lead design concepts, and mentor junior designers. You might specialize in areas like branding, UI/UX design, or motion graphics.",
+    "duration": "3-5 years",
+    "qualifications": ["Excellent Portfolio of commercial work"],
+    "skills": ["Conceptual Thinking", "Art Direction", "UI/UX Design", "Branding Strategy", "Motion Graphics (Adobe After Effects)"],
+    "salaryRangeLKR": "LKR 150,000 - 280,000",
+    "institutes": ["All major advertising agencies and tech companies"]
+  },
+  {
+    "step": 5,
+    "title": "Art Director or Freelance Designer",
+    "description": "At this stage, you can progress to an Art Director role, leading the visual style and images for entire campaigns, or establish a successful freelance career, working directly with a diverse range of clients.",
+    "duration": "5+ years",
+    "qualifications": ["Industry recognition", "Strong client base (for freelancers)"],
+    "skills": ["Creative Leadership", "Project Management", "Client Pitching & Negotiation", "Business Management", "Mentorship"],
+    "salaryRangeLKR": "LKR 300,000 - 600,000+ (Art Director) or project-based (Freelance)",
+    "institutes": ["N/A - Based on career choice"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation in Art and Animation Principles",
+    "description": "Develop strong foundational art skills, especially drawing and sketching. Study the 12 basic principles of animation (squash and stretch, timing, etc.). This is the bedrock of all animation, whether 2D or 3D.",
+    "duration": "1-2 years",
+    "qualifications": ["A strong portfolio of drawings and basic animations"],
+    "skills": ["Drawing", "Anatomy & Figure Drawing", "Perspective", "Color Theory", "Understanding of the 12 Principles of Animation"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study (books like 'The Animator's Survival Kit')", "Online courses (e.g., Animation Mentor, AnimSchool)"]
+  },
+  {
+    "step": 2,
+    "title": "Master Software and Formal Education",
+    "description": "Choose a path (2D or 3D) and learn the industry-standard software. For motion graphics, Adobe After Effects is key. For 3D, Autodesk Maya or Blender. A diploma or degree can provide a structured learning path and access to resources.",
+    "duration": "2-3 years",
+    "qualifications": ["Diploma/Degree in Animation or Multimedia"],
+    "skills": ["2D Animation (Adobe Animate, Toon Boom Harmony)", "3D Animation (Maya, Blender)", "Motion Graphics (Adobe After Effects)", "Modeling, Texturing, Rigging (for 3D)"],
+    "salaryRangeLKR": "LKR 50,000 - 80,000 (Trainee/Junior Animator)",
+    "institutes": ["AMDT School of Creativity", "AOD", "SLIIT (Creative Media)"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Animator / Motion Graphics Artist",
+    "description": "Join an animation studio, an advertising agency, or a TV production house. As a junior, you'll work on specific scenes or elements under the direction of a senior animator or art director. Focus on building a strong demo reel.",
+    "duration": "2-4 years",
+    "qualifications": ["A strong demo reel showcasing your skills"],
+    "skills": ["Following an animatic or storyboard", "Meeting production deadlines", "Collaboration in a pipeline", "Taking feedback and iterating", "Compositing"],
+    "salaryRangeLKR": "LKR 70,000 - 140,000",
+    "institutes": ["Animation studios in Sri Lanka", "Advertising agencies (for motion graphics)", "Post-production houses"]
+  },
+  {
+    "step": 4,
+    "title": "Mid-Level Animator / Senior Motion Designer",
+    "description": "Take on more complex animation tasks, such as character acting shots or intricate motion graphics sequences. You'll work more independently and may start mentoring junior artists. You are a reliable artist who can deliver high-quality work consistently.",
+    "duration": "3-5 years",
+    "qualifications": ["Credit on several completed projects"],
+    "skills": ["Advanced Character Animation", "Complex visual effects", "Art Direction", "Storyboarding", "Problem-solving complex shots"],
+    "salaryRangeLKR": "LKR 150,000 - 280,000",
+    "institutes": ["Leading studios and agencies"]
+  },
+  {
+    "step": 5,
+    "title": "Animation Lead / Art Director / Freelance Specialist",
+    "description": "Advance to a leadership role, supervising a team of animators and ensuring the quality and consistency of the animation in a project. Alternatively, become a highly sought-after freelance specialist known for a particular style or skill.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive professional experience and a stellar reel"],
+    "skills": ["Team Leadership", "Project Management", "Creative Direction", "Client Communication", "Mentoring"],
+    "salaryRangeLKR": "LKR 300,000 - 550,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

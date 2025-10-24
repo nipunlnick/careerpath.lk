@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Meet Basic Eligibility Requirements",
+    "description": "For Cabin Crew, the minimum is G.C.E. O/L with a credit pass in English. For pilots, A/L in the Maths stream is required. Key requirements include meeting age, height, and medical fitness standards. Strong swimming ability is mandatory for crew.",
+    "duration": "Post-schooling",
+    "qualifications": ["G.C.E. O/L (for Cabin Crew)", "G.C.E. A/L Maths (for Pilot)"],
+    "skills": ["Excellent Communication in English", "Customer Service Orientation", "Teamwork", "Poise and Confidence", "Physical Fitness"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any reputable school"]
+  },
+  {
+    "step": 2,
+    "title": "Cabin Crew Training OR Pilot Training",
+    "description": "Cabin Crew: Successfully apply to an airline and undergo their intensive initial training program (typically 3-4 months). Pilot: Enroll in a flight school to obtain your Private Pilot License (PPL) and Commercial Pilot License (CPL) with relevant ratings. This is a significant financial investment.",
+    "duration": "4 months (Cabin Crew) / 2-3 years (Pilot)",
+    "qualifications": ["Airline Cabin Crew Certification", "CPL with Instrument Rating (IR) and Frozen ATPL"],
+    "skills": ["Safety and Emergency Procedures (SEP)", "First Aid", "Aviation Security", "In-flight Service" , "Flight Principles", "Navigation"],
+    "salaryRangeLKR": "Stipend during training",
+    "institutes": ["SriLankan Airlines Training Centre", "Flight schools (e.g., Asian Aviation Centre, Fairway Aviation Academy)"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Cabin Crew / First Officer (Co-pilot)",
+    "description": "Cabin Crew: Begin flying as a junior crew member, focusing on safety and service delivery. Pilot: After obtaining your CPL, join an airline as a Cadet Pilot or First Officer on a specific aircraft type (e.g., Airbus A320), which requires further 'Type Rating' training.",
+    "duration": "3-5 years",
+    "qualifications": ["Aircraft Type Rating (for pilots)"],
+    "skills": ["Team Coordination", "Adaptability (to time zones)", "Cultural Awareness", "Cockpit Resource Management (CRM)", "Aircraft Systems Knowledge"],
+    "salaryRangeLKR": "LKR 100,000 - 250,000 (Cabin Crew) / LKR 400,000 - 800,000 (First Officer)",
+    "institutes": ["SriLankan Airlines", "FitsAir", "Other domestic or regional airlines"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Cabin Crew / Senior First Officer",
+    "description": "Cabin Crew: Progress to a senior role, taking on more responsibility for specific cabin zones and mentoring junior crew. Pilot: Gain more flight hours and experience, becoming a proficient and reliable First Officer, ready for the next step.",
+    "duration": "4-6 years",
+    "qualifications": ["Minimum required flight hours"],
+    "skills": ["Leadership", "In-flight supervision", "Conflict Resolution", "Advanced flight maneuvers", "Decision Making"],
+    "salaryRangeLKR": "LKR 180,000 - 350,000 (Senior Crew) / LKR 700,000 - 1,200,000 (Senior FO)",
+    "institutes": ["Major airlines"]
+  },
+  {
+    "step": 5,
+    "title": "Cabin Manager (Purser) / Captain",
+    "description": "Cabin Crew: Advance to the role of Cabin Manager, leading the entire cabin crew team and being responsible for all in-flight service and safety. Pilot: After meeting extensive flight hour and experience requirements, undergo rigorous training to upgrade to the rank of Captain, taking ultimate command of the aircraft.",
+    "duration": "5+ years",
+    "qualifications": ["Airline Transport Pilot License (ATPL)", "Command Upgrade Training"],
+    "skills": ["Full Team Leadership", "Operational Management", "Ultimate Decision-Making Authority", "Mentoring", "Command Skills"],
+    "salaryRangeLKR": "LKR 250,000 - 450,000+ (Purser) / LKR 1,500,000 - 2,500,000+ (Captain)",
+    "institutes": ["N/A - Promotion within airline"]
+  }
+]

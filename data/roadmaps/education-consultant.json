@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Bachelor's Degree in Education or a Subject Area",
+    "description": "A strong academic background is crucial. A Bachelor of Education (B.Ed) is ideal. Alternatively, a BA or BSc in a specific subject (like English, Maths, or Science) combined with teaching experience is also a great start.",
+    "duration": "3-4 years",
+    "qualifications": ["B.Ed, BA, or BSc"],
+    "skills": ["Subject Matter Expertise", "Communication", "Research Skills", "Empathy", "Presentation Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["State Universities (Faculties of Education)", "Open University of Sri Lanka"]
+  },
+  {
+    "step": 2,
+    "title": "Gain Teaching or Counseling Experience",
+    "description": "Credibility as a consultant comes from practical experience. Work as a teacher in a school or as a career/student counselor for several years. This provides invaluable insight into the education system, student challenges, and curriculum.",
+    "duration": "3-5 years",
+    "qualifications": ["Postgraduate Diploma in Education (PGDE)"],
+    "skills": ["Classroom Management", "Student Assessment", "Curriculum Knowledge", "Counseling Techniques", "Parent Communication"],
+    "salaryRangeLKR": "LKR 70,000 - 130,000 (as an experienced teacher)",
+    "institutes": ["Government Schools", "Private and International Schools"]
+  },
+  {
+    "step": 3,
+    "title": "Master's Degree and Specialization",
+    "description": "Pursue a Master's degree to deepen your expertise. You can specialize in areas like Educational Psychology, Curriculum Development, Educational Leadership, or Special Needs Education. This elevates your profile from a teacher to an expert.",
+    "duration": "1-2 years",
+    "qualifications": ["Master of Education (M.Ed.)", "MA in a relevant field"],
+    "skills": ["Advanced Educational Theories", "Policy Analysis", "Research Methodologies", "Adult Learning Principles", "Consulting Frameworks"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000 (as a senior teacher or academic coordinator)",
+    "institutes": ["Postgraduate Institute of Education (PGIE)", "University of Colombo"]
+  },
+  {
+    "step": 4,
+    "title": "Transition to Consulting Role",
+    "description": "Begin your consulting career. You might join an established educational consultancy firm, work for an NGO in the education sector, or start your own practice. Focus on a niche, such as study-abroad counseling, teacher training, or school improvement.",
+    "duration": "2-4 years",
+    "qualifications": ["A strong professional network"],
+    "skills": ["Client Management", "Proposal Writing", "Needs Assessment", "Workshop Facilitation", "Business Development"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000",
+    "institutes": ["Study-abroad agencies (e.g., Aspirations Education)", "Educational NGOs", "Ministry of Education projects"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Education Consultant / Policy Advisor",
+    "description": "Become a recognized expert in your field. As a senior consultant, you'll work on large-scale projects, advise educational institutions on strategy, or contribute to national education policy development. A PhD can open doors to high-level advisory and research roles.",
+    "duration": "5+ years",
+    "qualifications": ["PhD in Education (optional)"],
+    "skills": ["Strategic Planning", "Large-Scale Project Management", "Policy Formulation", "Thought Leadership", "Public Speaking"],
+    "salaryRangeLKR": "LKR 350,000 - 600,000+",
+    "institutes": ["N/A - Based on reputation and experience"]
+  }
+]

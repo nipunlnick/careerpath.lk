@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/Ls and IT Basics",
+    "description": "A G.C.E. A/L in the Maths or Technology stream is beneficial. Develop a strong understanding of basic computer hardware, operating systems, and the fundamentals of how the internet works.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["Computer Hardware Knowledge", "Operating Systems (Windows, Linux)", "Problem Solving", "Logical Reasoning"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Vocational training centers"]
+  },
+  {
+    "step": 2,
+    "title": "Core Networking Education & Certification",
+    "description": "Pursue a diploma or degree in IT or computer networks. Crucially, obtain foundational industry certifications like CompTIA Network+ and Cisco Certified Network Associate (CCNA), which are highly valued by employers.",
+    "duration": "2-3 years",
+    "qualifications": ["Diploma/BSc in IT/Networking", "CCNA Certification", "CompTIA Network+"],
+    "skills": ["OSI Model", "TCP/IP Protocol Suite", "Routing and Switching", "Network Security Fundamentals", "Subnetting"],
+    "salaryRangeLKR": "LKR 50,000 - 80,000 (NOC Technician/Trainee)",
+    "institutes": ["Cisco Networking Academies (at various universities)", "SLT Training Centre", "Winsys Networks"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Network Administrator / Engineer",
+    "description": "Work in an entry-level role, often in a Network Operations Center (NOC). You'll be responsible for monitoring network performance, troubleshooting issues, and performing basic configuration of routers and switches.",
+    "duration": "2-3 years",
+    "qualifications": ["CCNA", "Degree/Diploma"],
+    "skills": ["Network Monitoring Tools", "Troubleshooting Methodologies", "Firewall Configuration", "VPNs", "Wireless Networking"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000",
+    "institutes": ["Dialog Axiata", "SLT-Mobitel", "Lanka Bell", "Major Banks", "Large Corporations"]
+  },
+  {
+    "step": 4,
+    "title": "Network Engineer",
+    "description": "As a Network Engineer, you will design, implement, and manage network infrastructure. This involves more complex tasks, including planning network layouts, upgrading hardware, and implementing security policies.",
+    "duration": "3-5 years",
+    "qualifications": ["Cisco Certified Network Professional (CCNP)"],
+    "skills": ["Network Design", "Advanced Routing Protocols (OSPF, BGP)", "Network Virtualization", "Scripting (Python/Ansible)", "Load Balancing"],
+    "salaryRangeLKR": "LKR 160,000 - 300,000",
+    "institutes": ["Virtusa", "WSO2", "LSEG Technology", "Telecommunication Companies"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Network Engineer / Network Architect",
+    "description": "Advance to a senior position where you are responsible for the high-level design of the entire network architecture. This role requires deep technical expertise, strategic thinking, and the ability to align network strategy with business goals. Specializations in cloud networking or security are common.",
+    "duration": "5+ years",
+    "qualifications": ["CCIE (Cisco Certified Internetwork Expert) - Optional but prestigious"],
+    "skills": ["Enterprise Network Architecture", "Cloud Networking (AWS, Azure)", "Software-Defined Networking (SDN)", "Project Management", "Budgeting and Planning"],
+    "salaryRangeLKR": "LKR 320,000 - 600,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

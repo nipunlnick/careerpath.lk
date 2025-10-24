@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: IT Fundamentals & Linux",
+    "description": "Start with a strong grasp of IT fundamentals, regardless of your A/L stream. Mastering the Linux command line is non-negotiable, as most cloud and DevOps tools are Linux-based. Also, learn basic networking concepts.",
+    "duration": "1 year",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["Linux Command Line", "Basic Networking (TCP/IP, DNS)", "Scripting (Bash)", "Version Control (Git)"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Online tutorials", "Udemy courses"]
+  },
+  {
+    "step": 2,
+    "title": "Degree and Cloud Platform Certification",
+    "description": "A degree in IT or Software Engineering is beneficial. Critically, you must learn a major cloud platform. Start with a foundational certification like AWS Certified Cloud Practitioner or Azure Fundamentals, then move to the Solutions Architect Associate level.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in IT/SE", "AWS Certified Solutions Architect - Associate", "Microsoft Certified: Azure Administrator Associate"],
+    "skills": ["Cloud Services (EC2, S3, VPC, IAM)", "Infrastructure as a Service (IaaS)", "Platform as a Service (PaaS)", "Virtualization", "Python Programming"],
+    "salaryRangeLKR": "LKR 70,000 - 120,000 (Cloud Support/Junior SysAdmin)",
+    "institutes": ["SLIIT", "NSBM", "University of Moratuwa", "AWS/Azure official training partners"]
+  },
+  {
+    "step": 3,
+    "title": "Junior DevOps/Cloud Engineer",
+    "description": "Gain practical experience in an entry-level role. You will be responsible for setting up CI/CD pipelines, automating infrastructure deployment using tools like Terraform, and managing containerized applications with Docker and Kubernetes.",
+    "duration": "2-3 years",
+    "qualifications": ["Hands-on project experience"],
+    "skills": ["CI/CD Tools (Jenkins, GitLab CI)", "Infrastructure as Code (Terraform, CloudFormation)", "Containerization (Docker)", "Container Orchestration (Kubernetes Basics)"],
+    "salaryRangeLKR": "LKR 120,000 - 220,000",
+    "institutes": ["WSO2", "Sysco LABS", "99x", "Axiata Digital Labs", "Virtusa"]
+  },
+  {
+    "step": 4,
+    "title": "DevOps Engineer",
+    "description": "As a DevOps Engineer, you are responsible for the entire software delivery lifecycle, from code commit to production deployment. You will work on improving automation, system reliability, and performance.",
+    "duration": "3-5 years",
+    "qualifications": ["Certified Kubernetes Administrator (CKA)", "AWS/Azure DevOps Engineer Professional"],
+    "skills": ["Advanced Kubernetes", "Configuration Management (Ansible)", "Monitoring & Logging (Prometheus, Grafana, ELK)", "Microservices Architecture", "Advanced Scripting"],
+    "salaryRangeLKR": "LKR 250,000 - 450,000",
+    "institutes": ["All major tech companies in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Senior DevOps Engineer / Site Reliability Engineer (SRE)",
+    "description": "Advance to a senior role where you design and implement scalable, resilient, and secure infrastructure. You may also transition to an SRE role, focusing specifically on system reliability and performance. This involves deep architectural knowledge and strategic planning.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive experience in large-scale systems"],
+    "skills": ["System Design & Architecture", "Site Reliability Engineering (SRE) Principles", "Cost Optimization", "Security Best Practices (DevSecOps)", "Technical Leadership"],
+    "salaryRangeLKR": "LKR 500,000 - 800,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

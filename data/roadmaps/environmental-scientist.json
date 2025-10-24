@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio or Physical Science Stream",
+    "description": "A strong foundation in science is essential. The Biological Science stream is ideal, but the Physical Science stream is also a viable entry path for a university degree.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio or Physical Science)"],
+    "skills": ["Biology", "Chemistry", "Physics", "Analytical Skills", "Passion for the environment"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in Environmental Science/Management",
+    "description": "Complete a 3-4 year BSc degree in Environmental Science, Environmental Management, or a related field like Forestry, Fisheries, or Natural Resources.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Environmental Science or a related field"],
+    "skills": ["Ecology", "Geographic Information Systems (GIS)", "Environmental Chemistry", "Data Analysis", "Research Methods"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Sri Jayewardenepura", "University of Colombo", "University of Peradeniya", "Sabaragamuwa University"]
+  },
+  {
+    "step": 3,
+    "title": "Gain Field Experience & Master's Degree",
+    "description": "Work in an entry-level role as a Research Assistant or a Project Assistant for an environmental NGO or a research institution. A Master's degree (MSc) is often necessary to advance to a full scientist role, allowing for specialization.",
+    "duration": "2-3 years",
+    "qualifications": ["MSc in Environmental Science/Management"],
+    "skills": ["Fieldwork (data collection)", "Laboratory Analysis", "Environmental Impact Assessment (EIA)", "Scientific Writing", "Project Coordination"],
+    "salaryRangeLKR": "LKR 50,000 - 90,000 (Research Assistant/Project Officer)",
+    "institutes": ["Central Environmental Authority (CEA)", "IUCN Sri Lanka", "Wildlife Conservation Society", "Postgraduate institutes of universities"]
+  },
+  {
+    "step": 4,
+    "title": "Environmental Scientist / Consultant",
+    "description": "Work as a scientist for a government agency, a private consultancy firm, or an NGO. Your work could involve conducting EIAs for development projects, monitoring pollution levels, or managing conservation projects.",
+    "duration": "4-6 years",
+    "qualifications": ["Proven track record in research or consultancy"],
+    "skills": ["Environmental Auditing", "Pollution Control Technologies", "Conservation Strategy", "Report Writing", "Stakeholder Consultation"],
+    "salaryRangeLKR": "LKR 100,000 - 200,000",
+    "institutes": ["Private EIA consultancy firms", "MAS Holdings (sustainability dept.)", "Hayleys (Haycarb)", "International Water Management Institute (IWMI)"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Scientist / Policy Advisor",
+    "description": "Advance to a senior role, leading research teams or managing large-scale environmental projects. With a PhD and extensive experience, you can influence national environmental policy, working for government bodies or international organizations like the UNDP or World Bank.",
+    "duration": "5+ years",
+    "qualifications": ["PhD in a specialized environmental field"],
+    "skills": ["Research Leadership", "Policy Development", "Grant Writing", "International Collaboration", "Strategic Planning"],
+    "salaryRangeLKR": "LKR 250,000 - 500,000+",
+    "institutes": ["N/A - Based on experience and further education"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Bachelor's Degree in Education",
+    "description": "A Bachelor of Education (B.Ed.) provides the perfect foundation, covering pedagogy, learning theories, and educational psychology. Alternatively, a degree in a specific subject you wish to develop curriculum for (e.g., BSc in Physics) is also a strong start.",
+    "duration": "3-4 years",
+    "qualifications": ["Bachelor of Education (B.Ed.)", "BA/BSc in a relevant subject"],
+    "skills": ["Subject Matter Expertise", "Understanding of Learning Theories", "Research Skills", "Writing Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["State Universities (Faculties of Education)", "Open University of Sri Lanka"]
+  },
+  {
+    "step": 2,
+    "title": "Gain Classroom Teaching Experience",
+    "description": "Work as a teacher for several years. This is a critical step to understand how curricula are implemented in a real-world setting, the challenges teachers face, and how students interact with learning materials. Without this experience, it's difficult to create practical and effective curricula.",
+    "duration": "3-5 years",
+    "qualifications": ["Postgraduate Diploma in Education (PGDE)"],
+    "skills": ["Lesson Planning", "Student Assessment", "Classroom Management", "Differentiated Instruction", "Feedback Implementation"],
+    "salaryRangeLKR": "LKR 70,000 - 130,000 (as an experienced teacher)",
+    "institutes": ["Government, private, or international schools"]
+  },
+  {
+    "step": 3,
+    "title": "Master's Degree in Curriculum & Instruction",
+    "description": "Pursue a master's degree to specialize in curriculum design. This will equip you with advanced knowledge of instructional design models, assessment strategies, and curriculum theory.",
+    "duration": "1-2 years",
+    "qualifications": ["Master of Education (M.Ed.) with a specialization in Curriculum Development"],
+    "skills": ["Instructional Design Models (ADDIE, SAM)", "Curriculum Mapping", "Assessment Design", "Educational Technology Integration", "Project Management"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000 (in a role like Academic Coordinator)",
+    "institutes": ["Postgraduate Institute of Education (PGIE)", "University of Colombo"]
+  },
+  {
+    "step": 4,
+    "title": "Curriculum Developer / Instructional Designer",
+    "description": "Transition into a full-time curriculum development role. You might work for the Ministry of Education, a private school network, an EdTech company, or a publishing house. You'll be responsible for designing, writing, and evaluating educational programs and materials.",
+    "duration": "2-4 years",
+    "qualifications": ["A portfolio of developed learning materials"],
+    "skills": ["Content Writing", "Learning Management Systems (LMS)", "Multimedia Content Creation", "Stakeholder Collaboration (with teachers, experts)", "Quality Assurance"],
+    "salaryRangeLKR": "LKR 150,000 - 280,000",
+    "institutes": ["National Institute of Education (NIE)", "Private school head offices (e.g., Lyceum, Gateway)", "EdTech startups"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Curriculum Manager / Head of Academics",
+    "description": "Advance to a leadership role where you manage a team of developers, oversee the curriculum strategy for an entire institution or product line, and ensure alignment with educational standards and goals.",
+    "duration": "5+ years",
+    "qualifications": ["Proven track record of successful curriculum implementation"],
+    "skills": ["Leadership", "Strategic Planning", "Budget Management", "Educational Policy", "Program Evaluation"],
+    "salaryRangeLKR": "LKR 300,000 - 550,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

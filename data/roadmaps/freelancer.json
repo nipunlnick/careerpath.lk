@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Master a Marketable Skill",
+    "description": "Freelancing is not a skill; it's a business model. First, you must become highly proficient in a skill that businesses are willing to pay for. This could be web development, graphic design, content writing, digital marketing, etc. Formal education can help, but demonstrated skill is what matters.",
+    "duration": "1-3 years",
+    "qualifications": ["A strong portfolio of work in your chosen skill"],
+    "skills": ["Web Development (e.g., WordPress, React)", "Graphic Design (e.g., Adobe Suite)", "Content Writing/Copywriting", "SEO", "Video Editing"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-taught", "University/Diploma courses", "Online bootcamps"]
+  },
+  {
+    "step": 2,
+    "title": "Build a Portfolio & Join Freelance Platforms",
+    "description": "Create a professional portfolio that showcases your best work. Sign up for international freelance platforms to start bidding for small projects. The initial goal is not high pay, but to get your first few jobs and positive reviews.",
+    "duration": "6-12 months",
+    "qualifications": ["A professional online portfolio (e.g., on Behance, GitHub, or a personal site)"],
+    "skills": ["Profile creation", "Proposal writing", "Understanding project requirements", "Time management", "Client communication"],
+    "salaryRangeLKR": "LKR 15,000 - 50,000 (from initial small projects)",
+    "institutes": ["Upwork", "Fiverr", "Freelancer.com"]
+  },
+  {
+    "step": 3,
+    "title": "Establish a Reputation and Increase Your Rates",
+    "description": "After successfully completing several projects and getting good reviews, you can start increasing your hourly rate or project fees. Focus on delivering high-quality work and excellent customer service to build a strong reputation and attract better clients.",
+    "duration": "1-2 years",
+    "qualifications": ["A high rating on freelance platforms (e.g., Top Rated on Upwork)"],
+    "skills": ["Client relationship management", "Project management", "Negotiation", "Upselling services", "Financial management (invoicing, taxes)"],
+    "salaryRangeLKR": "LKR 80,000 - 200,000+",
+    "institutes": ["N/A - Based on platform performance"]
+  },
+  {
+    "step": 4,
+    "title": "Build Direct Client Relationships",
+    "description": "While platforms are great for starting, the most successful freelancers build direct relationships with clients. This can be through networking on LinkedIn, a personal website with strong SEO, or referrals. Direct clients often mean no platform fees and long-term, stable work.",
+    "duration": "2-3 years",
+    "qualifications": ["A roster of repeat, direct clients"],
+    "skills": ["Personal Branding", "Networking", "Contract negotiation", "Invoicing and payment processing", "Building a referral network"],
+    "salaryRangeLKR": "LKR 200,000 - 500,000+",
+    "institutes": ["LinkedIn", "Personal Website", "Local tech/creative communities"]
+  },
+  {
+    "step": 5,
+    "title": "Scale: Become a Consultant or Agency",
+    "description": "At the top level, you can scale your income beyond your own hours. This involves either positioning yourself as a high-value consultant charging for expertise, not time, or starting a small agency where you outsource or hire others to handle client work.",
+    "duration": "5+ years",
+    "qualifications": ["Recognized as an expert in your niche"],
+    "skills": ["Business Strategy", "Outsourcing and Delegation", "Team Management", "High-value consulting", "Productizing your service"],
+    "salaryRangeLKR": "Highly variable (LKR 500,000+)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

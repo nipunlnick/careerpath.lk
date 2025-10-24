@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Identify Your Skills and Services",
+    "description": "Assess your existing skills. Are you great at organization, writing, social media, or research? Define a clear set of services you can offer, such as administrative support, social media scheduling, email management, or basic bookkeeping.",
+    "duration": "1 month",
+    "qualifications": ["A clear list of offered services"],
+    "skills": ["Administrative Support", "Organizational Skills", "Strong Communication (especially written English)", "Tech Savviness", "Time Management"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-assessment"]
+  },
+  {
+    "step": 2,
+    "title": "Build a Profile and Join Freelance Platforms",
+    "description": "Create a professional profile on platforms like Upwork or Fiverr. Highlight your skills, create service packages, and set an initial hourly rate. Your profile acts as your resume and storefront.",
+    "duration": "1-2 months",
+    "qualifications": ["Professional profiles on freelance platforms"],
+    "skills": ["Profile Optimization", "Crafting Service Packages", "Proposal Writing", "Client Communication"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Upwork", "Fiverr", "LinkedIn"]
+  },
+  {
+    "step": 3,
+    "title": "Secure Your First Clients and Deliver Excellence",
+    "description": "Start by applying for jobs or offering your services at a competitive rate to secure your first clients. The goal is to gain experience and, most importantly, get positive reviews. Over-deliver on your first few projects to build a strong reputation.",
+    "duration": "6-12 months",
+    "qualifications": ["First few clients and positive testimonials"],
+    "skills": ["Task Management", "Proactive Communication", "Meeting Deadlines", "Problem-Solving", "Client Relationship Management"],
+    "salaryRangeLKR": "LKR 50,000 - 100,000 (from initial clients)",
+    "institutes": ["Freelance platforms"]
+  },
+  {
+    "step": 4,
+    "title": "Specialize and Increase Your Rates",
+    "description": "As you gain experience, identify the tasks you're best at and enjoy the most. Specialize in a high-value niche, such as a 'Social Media VA', 'E-commerce VA', or 'Podcast VA'. With specialization and strong reviews, you can confidently increase your rates.",
+    "duration": "1-2 years",
+    "qualifications": ["A clear specialization and a portfolio of results"],
+    "skills": ["Specialized software (e.g., Hootsuite, Shopify, Descript)", "Advanced administrative skills", "Project Management", "Negotiation", "Personal Branding"],
+    "salaryRangeLKR": "LKR 100,000 - 250,000+",
+    "institutes": ["N/A - Based on experience"]
+  },
+  {
+    "step": 5,
+    "title": "Build a Business with Retainer Clients or an Agency",
+    "description": "Shift your focus to securing long-term 'retainer' clients who pay a fixed monthly fee for your services. This provides stable income. The ultimate step is to build a VA agency where you hire other VAs and manage clients, scaling your business beyond your own time.",
+    "duration": "3+ years",
+    "qualifications": ["A roster of long-term clients"],
+    "skills": ["Business Management", "Client Acquisition Strategy", "Team Building and Delegation", "Scaling Operations", "Contract Management"],
+    "salaryRangeLKR": "Highly variable (LKR 250,000+)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

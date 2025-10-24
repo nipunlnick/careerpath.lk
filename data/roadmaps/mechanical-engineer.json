@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Physical Science Stream",
+    "description": "Achieve excellent results in the Physical Science (Maths) stream. A strong grasp of Combined Mathematics and Physics is fundamental for success in an engineering degree program.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Physical Science/Maths Stream)"],
+    "skills": ["Advanced Mathematics", "Physics (Mechanics, Thermodynamics)", "Problem Solving", "Analytical Thinking"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "BSc Engineering Degree (Mechanical)",
+    "description": "Complete a 4-year BScEng (Hons) degree specializing in Mechanical Engineering from a university recognized by the Institution of Engineers, Sri Lanka (IESL).",
+    "duration": "4 years",
+    "qualifications": ["BScEng (Hons) in Mechanical Engineering"],
+    "skills": ["Thermodynamics", "Fluid Mechanics", "Solid Mechanics", "CAD/CAM (SolidWorks, AutoCAD)", "Manufacturing Processes"],
+    "salaryRangeLKR": "LKR 70,000 - 110,000 (Trainee Engineer)",
+    "institutes": ["University of Moratuwa", "University of Peradeniya", "University of Ruhuna", "Open University of Sri Lanka"]
+  },
+  {
+    "step": 3,
+    "title": "Graduate Engineer & IESL Associate Membership",
+    "description": "Secure a position as a Graduate Mechanical Engineer in sectors like manufacturing, power generation, or automotive. Register as an Associate Member of IESL to begin your journey towards becoming a Chartered Engineer.",
+    "duration": "2-3 years",
+    "qualifications": ["IESL Associate Membership"],
+    "skills": ["Machine Design", "HVAC Systems", "Quality Control", "Plant Maintenance", "Project Coordination"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["MAS Holdings", "Brandix", "Ceylon Electricity Board (CEB)", "Lanka Ashok Leyland", "Tokyo Cement"]
+  },
+  {
+    "step": 4,
+    "title": "Achieve Chartered Engineer Status",
+    "description": "Gain a minimum of four years of relevant post-graduate experience under a Chartered Engineer's supervision. Fulfill IESL's requirements and pass the professional review to earn the title of Chartered Engineer (CEng).",
+    "duration": "4+ years (post-graduation)",
+    "qualifications": ["Chartered Engineer (CEng)", "MIESL"],
+    "skills": ["Project Management", "Finite Element Analysis (FEA)", "Computational Fluid Dynamics (CFD)", "Energy Management", "Leadership"],
+    "salaryRangeLKR": "LKR 200,000 - 400,000",
+    "institutes": ["N/A - Based on experience and chartership"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Engineer / Engineering Manager",
+    "description": "With experience and chartership, you can advance to senior roles like a Chief Engineer or Engineering Manager, leading teams and overseeing large-scale projects. Specialization in areas like robotics, renewable energy, or automotive engineering is common.",
+    "duration": "5-10+ years",
+    "qualifications": ["MSc in a specialized field"],
+    "skills": ["Strategic Planning", "Budget Management", "R&D Leadership", "Team Management", "Technical Consultancy"],
+    "salaryRangeLKR": "LKR 450,000 - 800,000+",
+    "institutes": ["All major industrial and manufacturing companies"]
+  }
+]

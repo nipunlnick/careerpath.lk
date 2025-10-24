@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Learn Sewing and Pattern Making",
+    "description": "Start with the fundamental craft. Learn to sew, both by hand and with a machine. Understand how to take measurements, draft basic patterns, and construct simple garments. This can be self-taught or through a local sewing class.",
+    "duration": "1-2 years",
+    "qualifications": ["Proficiency in sewing and pattern making"],
+    "skills": ["Sewing machine operation", "Hand sewing techniques", "Pattern drafting", "Fabric knowledge", "Garment construction"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Local tailoring classes", "Vocational Training Authority (VTA)"]
+  },
+  {
+    "step": 2,
+    "title": "Formal Education in Fashion Design",
+    "description": "To move from a tailor to a designer, formal education is crucial. Enroll in a diploma or degree program in fashion design. This will teach you about design principles, fashion history, illustration, and brand building.",
+    "duration": "2-3 years",
+    "qualifications": ["Diploma/Degree in Fashion Design"],
+    "skills": ["Fashion Illustration", "Design Process", "Color Theory", "Textile Science", "Trend Forecasting"],
+    "salaryRangeLKR": "LKR 40,000 - 60,000 (Intern/Trainee Designer)",
+    "institutes": ["Academy of Design (AOD)", "University of Moratuwa (Fashion Design & Product Development)", "Lanka Institute of Fashion Technology (LIFT)"]
+  },
+  {
+    "step": 3,
+    "title": "Assistant Designer / Merchandiser in Apparel Industry",
+    "description": "Gain industry experience by working for a large apparel manufacturer or a fashion brand in Sri Lanka. As an assistant designer, you'll support the design team. As a merchandiser, you'll learn about the commercial side of the business, from sourcing to production.",
+    "duration": "2-4 years",
+    "qualifications": ["Completed design degree/diploma"],
+    "skills": ["Technical packs/spec sheets", "CAD for fashion (Adobe Illustrator)", "Sourcing trims and fabrics", "Communication with factories", "Understanding the production calendar"],
+    "salaryRangeLKR": "LKR 60,000 - 120,000",
+    "institutes": ["MAS Holdings", "Brandix", "Hirdaramani Group", "Local fashion retail brands"]
+  },
+  {
+    "step": 4,
+    "title": "Fashion Designer",
+    "description": "Work as a full-fledged fashion designer for a retail brand, or start creating small collections under your own name. You will be responsible for the entire design process, from conceptualization and sketching to sample development and final production.",
+    "duration": "3-5 years",
+    "qualifications": ["A strong portfolio of designed and created garments"],
+    "skills": ["Collection Development", "Brand Identity", "Marketing and Social Media", "Sales", "Event management (for fashion shows)"],
+    "salaryRangeLKR": "LKR 100,000 - 200,000+ (for a brand) or Variable (own label)",
+    "institutes": ["ODEL", "Nils", "GFLOCK", "Starting an online store"]
+  },
+  {
+    "step": 5,
+    "title": "Launch and Grow Your Own Fashion Brand",
+    "description": "Establish your own fashion label as a registered business. This involves creating a distinct brand identity, managing production, marketing your collections, and building a customer base. The goal is to become a recognized name in the Sri Lankan fashion industry.",
+    "duration": "5+ years",
+    "qualifications": ["Participation in Colombo Fashion Week (a major milestone)"],
+    "skills": ["Entrepreneurship", "Business Management", "Financial Planning", "Public Relations", "E-commerce management"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

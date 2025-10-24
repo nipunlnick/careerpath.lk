@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L)",
+    "description": "Obtain strong passes in your G.C.E. A/L. The subject stream you choose (e.g., Bio Science, Arts, Commerce) will often determine the subjects you can teach in the future.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["Subject Matter Knowledge", "Communication", "Patience"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Choose Your Teaching Pathway",
+    "description": "Decide on your path. To teach in a government school, you typically need a degree from a state university or to enter a National College of Education (NCOE). For private/international schools, a degree and/or specific teaching diplomas are required.",
+    "duration": "Decision phase",
+    "qualifications": ["University Entrance Z-Score", "NCOE Entrance Exam"],
+    "skills": ["Goal Setting", "Researching options"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["N/A"]
+  },
+  {
+    "step": 3,
+    "title": "Higher Education & Training",
+    "description": "Enroll in a relevant qualification. A Bachelor of Education (B.Ed.) is ideal. Alternatively, a BA or BSc in your chosen subject followed by a Postgraduate Diploma in Education (PGDE) is a common route for government school graduate teachers.",
+    "duration": "3-4 years",
+    "qualifications": ["Bachelor of Education (B.Ed.)", "BA/BSc + PGDE", "National Diploma in Teaching (NCOE)"],
+    "skills": ["Pedagogy (Teaching Methods)", "Child Psychology", "Classroom Management", "Curriculum Development"],
+    "salaryRangeLKR": "LKR 45,000 - 65,000 (Trainee/Assistant Teacher - Private Sector)",
+    "institutes": ["State Universities (Faculties of Education)", "National Colleges of Education (NCOEs)", "Open University of Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "Entering the Profession",
+    "description": "For government schools, you must pass the competitive exam for teacher recruitment held by the Ministry of Education. For private schools, you can apply directly. Gain initial experience and apply your theoretical knowledge.",
+    "duration": "1-2 years",
+    "qualifications": ["Pass in Teacher Recruitment Competitive Exam"],
+    "skills": ["Lesson Planning", "Student Assessment", "Parent-Teacher Communication", "Adaptability"],
+    "salaryRangeLKR": "LKR 60,000 - 120,000 (Confirmed Teacher in Govt/Private School)",
+    "institutes": ["Government Schools", "Private National Schools", "International Schools (e.g., CIS, British School, Lyceum, Gateway)"]
+  },
+  {
+    "step": 5,
+    "title": "Career Progression & Senior Roles",
+    "description": "With experience, teachers can progress into senior roles. In the government sector, this involves moving up service grades. In both sectors, roles like Sectional Head, Deputy Principal, and Principal are achievable. Further qualifications like a Master of Education (M.Ed.) are highly beneficial.",
+    "duration": "10+ years",
+    "qualifications": ["Master of Education (M.Ed.)", "Sri Lanka Principal Service (SLPS) qualifications"],
+    "skills": ["Leadership", "School Administration", "Teacher Training & Mentoring", "Policy Implementation"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000+ (Principal/Head of School)",
+    "institutes": ["N/A - Based on experience and promotion"]
+  }
+]

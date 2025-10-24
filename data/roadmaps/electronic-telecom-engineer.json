@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Physical Science Stream",
+    "description": "Strong results in the Physical Science stream are mandatory. A solid foundation in Combined Mathematics and Physics is essential for understanding the core principles of electronics and communication.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Physical Science/Maths Stream)"],
+    "skills": ["Advanced Mathematics", "Physics (Waves, Electromagnetism)", "Problem Solving", "Analytical Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "BSc Engineering Degree (Electronic & Telecom)",
+    "description": "Complete a 4-year IESL-accredited BScEng (Hons) degree specializing in Electronic and Telecommunication Engineering. The curriculum covers analog/digital electronics, signal processing, and communication systems.",
+    "duration": "4 years",
+    "qualifications": ["BScEng (Hons) in Electronic & Telecommunication Engineering"],
+    "skills": ["Analog & Digital Circuits", "Signal Processing", "Communication Theory", "Embedded Systems (Microcontrollers)", "Programming (C++, Python)"],
+    "salaryRangeLKR": "LKR 80,000 - 130,000 (Trainee Engineer)",
+    "institutes": ["University of Moratuwa", "University of Peradeniya", "SLIIT", "KDU"]
+  },
+  {
+    "step": 3,
+    "title": "Graduate Engineer & IESL Associate Membership",
+    "description": "Begin your career in the telecommunication industry, electronics design firms, or embedded systems companies. Register with IESL as an Associate Member to start your path to chartership.",
+    "duration": "2-3 years",
+    "qualifications": ["IESL Associate Membership"],
+    "skills": ["RF (Radio Frequency) Engineering", "Network Planning & Optimization", "PCB Design", "Firmware Development", "IoT Technologies"],
+    "salaryRangeLKR": "LKR 120,000 - 200,000",
+    "institutes": ["Dialog Axiata", "SLT-Mobitel", "Hutch", "Zone24x7", "Synopsys", "CodeGen"]
+  },
+  {
+    "step": 4,
+    "title": "Achieve Chartered Engineer Status",
+    "description": "Gain at least four years of relevant post-graduate experience under a Chartered Engineer. Fulfill all training requirements and pass the IESL professional review to become a Chartered Engineer (CEng).",
+    "duration": "4+ years (post-graduation)",
+    "qualifications": ["Chartered Engineer (CEng)", "MIESL"],
+    "skills": ["Project Management", "System-level Design", "Telecommunication Standards (4G/5G)", "VLSI Design Basics", "Team Leadership"],
+    "salaryRangeLKR": "LKR 250,000 - 450,000",
+    "institutes": ["N/A - Based on experience and chartership"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Engineer / Technical Lead",
+    "description": "Advance to a senior role, leading projects in areas like 5G network deployment, IoT product development, or semiconductor design. This requires deep specialization and the ability to manage complex technical projects.",
+    "duration": "5-10+ years",
+    "qualifications": ["MSc/PhD in a specialized field"],
+    "skills": ["Technical Architecture", "R&D Management", "Strategic Planning", "Mentoring", "Product Management"],
+    "salaryRangeLKR": "LKR 500,000 - 900,000+",
+    "institutes": ["All major telecom and electronics design companies"]
+  }
+]

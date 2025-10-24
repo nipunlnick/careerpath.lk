@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Foundation in Backend Development",
+    "description": "Before diving into blockchain, a strong foundation in general software development is crucial. Master a backend language, understand how APIs work, and be proficient with databases and version control.",
+    "duration": "1-2 years",
+    "qualifications": ["Proficiency in a backend language"],
+    "skills": ["Backend Programming (Node.js, Python, or Go)", "API Development (REST)", "Databases (SQL/NoSQL)", "Version Control (Git)", "Data Structures"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-taught", "Software Engineering Degree/Bootcamp"]
+  },
+  {
+    "step": 2,
+    "title": "Understand Blockchain Fundamentals",
+    "description": "Learn the core concepts of blockchain technology. Understand how it works, including concepts like decentralization, consensus mechanisms (Proof of Work vs. Proof of Stake), cryptography, and the architecture of major blockchains like Bitcoin and Ethereum.",
+    "duration": "3-6 months",
+    "qualifications": ["A solid theoretical understanding of blockchain"],
+    "skills": ["Decentralization principles", "Cryptography basics (Hashing, Public/Private Keys)", "Consensus Algorithms", "Smart Contracts concept", "Reading whitepapers"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Online courses (Coursera, Udemy)", "Ethereum.org documentation"]
+  },
+  {
+    "step": 3,
+    "title": "Learn Smart Contract Development",
+    "description": "This is the core skill. Learn Solidity, the primary language for writing smart contracts on the Ethereum blockchain. Practice writing, testing, and deploying smart contracts using frameworks like Hardhat or Truffle.",
+    "duration": "6-12 months",
+    "qualifications": ["A portfolio of deployed smart contracts on a testnet"],
+    "skills": ["Solidity Programming", "Smart Contract Security (preventing re-entrancy, etc.)", "Development Frameworks (Hardhat, Truffle)", "Testing (Chai, Mocha)", "Interacting with contracts (Ethers.js, Web3.js)"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000 (Junior Blockchain Developer)",
+    "institutes": ["CryptoZombies.io", "FreeCodeCamp (Blockchain courses)"]
+  },
+  {
+    "step": 4,
+    "title": "Blockchain Developer",
+    "description": "Work for a Web3 company or as a freelance developer. You will build and maintain smart contracts for dApps (decentralized applications), work on DeFi protocols, or develop NFT projects. Most opportunities are with international companies and are remote.",
+    "duration": "2-4 years",
+    "qualifications": ["Experience working on a production dApp"],
+    "skills": ["Building dApp frontends (React + Ethers.js)", "DeFi concepts (Liquidity Pools, AMMs)", "NFT Standards (ERC-721, ERC-1155)", "Gas Optimization", "Using Oracles (Chainlink)"],
+    "salaryRangeLKR": "LKR 300,000 - 800,000+",
+    "institutes": ["Remote jobs on Web3-specific job boards"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Blockchain Developer / Protocol Engineer",
+    "description": "Advance to a senior role where you architect complex smart contract systems, contribute to the core protocol of a blockchain, or lead a team of developers. This requires deep expertise in security, scalability, and blockchain architecture.",
+    "duration": "5+ years",
+    "qualifications": ["Recognized as an expert in the field"],
+    "skills": ["Smart Contract Auditing", "Layer 2 Scaling Solutions", "Protocol-level Development", "Advanced Cryptography", "Technical Leadership"],
+    "salaryRangeLKR": "Highly variable (LKR 800,000+)",
+    "institutes": ["N/A - Based on experience and reputation"]
+  }
+]

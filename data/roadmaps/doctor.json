@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio Science Stream",
+    "description": "Excel in the G.C.E. A/L Bio Science stream. Achieving a very high Z-score is mandatory for admission into a state medical faculty in Sri Lanka. Subjects are Biology, Chemistry, and Physics.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio Science) with high Z-score"],
+    "skills": ["Strong Memory Recall", "Analytical Skills", "Discipline and Dedication"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "MBBS Degree",
+    "description": "Complete the Bachelor of Medicine, Bachelor of Surgery (MBBS) degree from a recognized medical faculty. This is an intensive program covering all aspects of medical science.",
+    "duration": "5 years",
+    "qualifications": ["MBBS"],
+    "skills": ["Medical Knowledge", "Clinical Examination", "Diagnosis", "Patient Communication", "Ethics"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Faculty of Medicine, University of Colombo", "University of Peradeniya", "University of Sri Jayewardenepura", "University of Kelaniya", "General Sir John Kotelawala Defence University (KDU)"]
+  },
+  {
+    "step": 3,
+    "title": "Internship (Medical Officer)",
+    "description": "Complete a mandatory one-year internship at a government hospital under the supervision of senior consultants. This provides hands-on experience in major specialities like Medicine, Surgery, Paediatrics, and Gynaecology.",
+    "duration": "1 year",
+    "qualifications": ["Completed MBBS", "SLMC Provisional Registration"],
+    "skills": ["Practical Clinical Skills", "Emergency Management", "Ward Management", "Prescription Writing"],
+    "salaryRangeLKR": "LKR 80,000 - 120,000 (with allowances)",
+    "institutes": ["Government Teaching Hospitals island-wide"]
+  },
+  {
+    "step": 4,
+    "title": "Post-Internship Medical Officer (MO)",
+    "description": "After successful completion of the internship, you receive full registration from the Sri Lanka Medical Council (SLMC) and can work as a Medical Officer in the government or private sector.",
+    "duration": "2-3 years",
+    "qualifications": ["SLMC Full Registration"],
+    "skills": ["Independent Practice", "Community Health", "Further clinical experience"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000+",
+    "institutes": ["Government Hospitals", "Private Hospitals (Hemas, Nawaloka, Asiri)"]
+  },
+  {
+    "step": 5,
+    "title": "Postgraduate Specialization (MD/MS)",
+    "description": "To become a specialist (e.g., Cardiologist, Surgeon, Paediatrician), you must pass a competitive postgraduate entrance exam (MD/MS) and undergo rigorous training for several years, including overseas training.",
+    "duration": "4-7+ years",
+    "qualifications": ["MD or MS in a chosen speciality"],
+    "skills": ["Advanced knowledge in speciality", "Surgical/Procedural skills", "Research"],
+    "salaryRangeLKR": "LKR 400,000 - 1,000,000+ (Consultant)",
+    "institutes": ["Postgraduate Institute of Medicine (PGIM), University of Colombo"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: G.C.E. O/L and Technical Aptitude",
+    "description": "A pass in G.C.E. O/L with good marks in Mathematics and Science is the starting point. A natural ability for hands-on work and a focus on safety are crucial.",
+    "duration": "Post-schooling",
+    "qualifications": ["G.C.E. O/L"],
+    "skills": ["Basic Mathematics", "Safety Consciousness", "Problem-Solving", "Manual Dexterity"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any school"]
+  },
+  {
+    "step": 2,
+    "title": "Vocational Training (NVQ Level 3 & 4)",
+    "description": "Enroll in an Electrician course at a vocational training institute. The goal is to obtain NVQ Level 4, which makes you a qualified technician. This training covers both theoretical knowledge and extensive practical skills.",
+    "duration": "1-2 years",
+    "qualifications": ["NVQ Level 4 in Electrician"],
+    "skills": ["Electrical Wiring (Single & Three Phase)", "Reading Electrical Drawings", "Motor Control Circuits", "Safety Procedures", "Use of testing equipment"],
+    "salaryRangeLKR": "LKR 30,000 - 45,000 (Trainee/Apprentice)",
+    "institutes": ["German Tech (CGTTI)", "Vocational Training Authority (VTA)", "NAITA", "Don Bosco Technical Centre"]
+  },
+  {
+    "step": 3,
+    "title": "Licensed Electrician",
+    "description": "Gain on-the-job experience under a senior electrician. It is highly recommended to obtain a license from the Public Utilities Commission of Sri Lanka (PUCSL), as this is becoming a standard requirement for professional work and ensures you are recognized as a qualified professional.",
+    "duration": "2-4 years",
+    "qualifications": ["PUCSL Electrician License"],
+    "skills": ["Troubleshooting Electrical Faults", "Installation of Electrical Systems", "Maintenance", "Customer Communication", "Adherence to IEE Wiring Regulations"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000",
+    "institutes": ["Working for construction companies, factories, or established electrical contractors"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Electrician / Specialization",
+    "description": "Become a senior electrician, capable of handling complex industrial installations, or specialize in a specific area like solar power systems, industrial automation (PLCs), or high-voltage systems.",
+    "duration": "3-5 years",
+    "qualifications": ["Specialized training certificates (e.g., in solar PV installation)"],
+    "skills": ["Supervising junior electricians", "Advanced Troubleshooting", "PLC programming", "Solar Inverter and Panel Installation", "Project Estimation"],
+    "salaryRangeLKR": "LKR 90,000 - 150,000",
+    "institutes": ["N/A - On-the-job specialization"]
+  },
+  {
+    "step": 5,
+    "title": "Electrical Supervisor / Own Contracting Business",
+    "description": "Progress to a supervisory role (foreman) on large construction sites, managing a team of electricians. With strong experience and business skills, you can start your own electrical contracting company, undertaking residential and commercial projects.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive experience and a strong reputation"],
+    "skills": ["Team Management", "Project Management", "Business Management", "Client Negotiation", "Tendering and Quotation"],
+    "salaryRangeLKR": "LKR 120,000 - 200,000+ (Supervisor) or Business Profit",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

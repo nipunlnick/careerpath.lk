@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Degree in Any Field",
+    "description": "A bachelor's degree in Business Administration, Management, or even a technical field can be a good starting point. The key is to develop strong organizational and communication skills during your studies.",
+    "duration": "3-4 years",
+    "qualifications": ["Bachelor's Degree"],
+    "skills": ["Organizational Skills", "Communication (written and verbal)", "Time Management", "Attention to Detail", "Microsoft Office Suite (Word, Excel, PowerPoint)"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any recognized university in Sri Lanka"]
+  },
+  {
+    "step": 2,
+    "title": "Entry-Level Administrative or Team Assistant Role",
+    "description": "Gain experience in a professional environment in a role like an Administrative Assistant, Team Secretary, or a similar support function. This teaches you about office procedures, stakeholder communication, and scheduling.",
+    "duration": "1-2 years",
+    "qualifications": ["Completed Degree"],
+    "skills": ["Scheduling and Calendaring", "Meeting Minutes", "Document Management", "Professional Etiquette", "Basic Reporting"],
+    "salaryRangeLKR": "LKR 40,000 - 70,000",
+    "institutes": ["Any corporate office, NGO, or large organization"]
+  },
+  {
+    "step": 3,
+    "title": "Project Coordinator",
+    "description": "Transition into a Project Coordinator role. You will support Project Managers by handling the administrative and organizational aspects of a project. This includes tracking progress, maintaining documentation, scheduling meetings, and facilitating communication between team members.",
+    "duration": "2-4 years",
+    "qualifications": ["CAPM (Certified Associate in Project Management) - Optional but highly beneficial"],
+    "skills": ["Project Tracking", "Risk & Issue Logging", "Resource Scheduling", "Using Project Management Software (Jira, Asana, MS Project)", "Status Reporting"],
+    "salaryRangeLKR": "LKR 75,000 - 140,000",
+    "institutes": ["IT Companies (Virtusa, IFS)", "Construction Firms (Maga)", "Development Sector (NGOs)"]
+  },
+  {
+    "step": 4,
+    "title": "Junior Project Manager / Project Manager",
+    "description": "With solid experience as a coordinator, you can progress to managing smaller projects on your own as a Junior Project Manager, and eventually a full Project Manager. This involves taking on responsibility for the project's budget, scope, and delivery.",
+    "duration": "3-5 years",
+    "qualifications": ["PMP (Project Management Professional) - The industry gold standard"],
+    "skills": ["Project Planning", "Budget Management", "Scope Management", "Team Leadership", "Stakeholder Management"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000",
+    "institutes": ["A wide range of industries, including IT, construction, banking, and manufacturing"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Project Manager / Program Manager",
+    "description": "Advance to a senior role where you handle larger, more complex projects or a portfolio of related projects (a program). This requires strong strategic thinking and leadership skills.",
+    "duration": "5+ years",
+    "qualifications": ["PgMP (Program Management Professional)"],
+    "skills": ["Program Management", "Strategic Alignment", "Vendor Negotiation", "Mentoring", "Portfolio Management"],
+    "salaryRangeLKR": "LKR 350,000 - 650,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

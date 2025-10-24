@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Strong Maths and Programming Basics",
+    "description": "A G.C.E. A/L in the Maths stream is highly recommended due to the heavy use of physics and complex algorithms in game development. Start learning a foundational programming language like C++ or C# on your own.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Maths Stream)"],
+    "skills": ["Strong Mathematics (Linear Algebra, Trigonometry)", "C++ or C# Fundamentals", "Problem-Solving", "Logical Thinking"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Online coding platforms"]
+  },
+  {
+    "step": 2,
+    "title": "Learn a Game Engine & Higher Education",
+    "description": "Master a popular game engine like Unity (C#) or Unreal Engine (C++/Blueprints). A degree in Computer Science or Software Engineering provides the necessary theoretical background in algorithms, data structures, and software architecture.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Computer Science/Software Engineering"],
+    "skills": ["Unity Engine", "Unreal Engine", "3D Graphics Concepts", "Game Physics", "Object-Oriented Programming (OOP)"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (Intern/Trainee)",
+    "institutes": ["SLIIT (offers Interactive Media/Game Dev specialization)", "University of Moratuwa", "UCSC"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Game Developer & Portfolio",
+    "description": "Join a game development studio as a junior developer. Your main task is to build a strong portfolio by creating small games or prototypes. Participate in game jams (like the Sri Lankan Game Jam) to gain experience and network.",
+    "duration": "2-3 years",
+    "qualifications": ["A portfolio with several completed small games"],
+    "skills": ["Gameplay Programming", "Engine-specific APIs", "Version Control (Git)", "Debugging and Optimization", "Team Collaboration"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["Arimac", "Motion Miracles", "Gamer.LK (for networking)", "Other independent game studios in Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "Game Developer",
+    "description": "As a Game Developer, you'll take on more complex systems, such as AI, networking for multiplayer, or complex gameplay mechanics. You can start specializing in a specific area like graphics programming, AI programming, or tools programming.",
+    "duration": "3-5 years",
+    "qualifications": ["Shipped at least one commercial title"],
+    "skills": ["AI Programming", "Multiplayer Networking", "Graphics Shaders", "Performance Optimization", "Game Design Principles"],
+    "salaryRangeLKR": "LKR 200,000 - 350,000",
+    "institutes": ["Leading game studios in Sri Lanka and abroad (remote)"]
+  },
+  {
+    "step": 5,
+    "title": "Senior/Lead Game Developer or Indie Developer",
+    "description": "Advance to a lead role, guiding the technical vision of a project and mentoring other programmers. Alternatively, use your experience to start your own independent (Indie) game studio to create and publish your own games.",
+    "duration": "5+ years",
+    "qualifications": ["Multiple shipped titles"],
+    "skills": ["Game Architecture Design", "Technical Leadership", "Project Management", "Business skills (for Indie path)", "Mentoring"],
+    "salaryRangeLKR": "LKR 400,000 - 700,000+ (Lead Dev)",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

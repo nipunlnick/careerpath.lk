@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: O/L and Technical Drawing Skills",
+    "description": "After G.C.E. O/L, focus on developing technical drawing skills. Taking Technology stream subjects for A/L, specifically Technical Drawing, is highly advantageous. A keen eye for detail and spatial awareness is crucial.",
+    "duration": "1-2 years",
+    "qualifications": ["G.C.E. O/L", "G.C.E. A/L (Technology stream preferred)"],
+    "skills": ["Manual Drafting", "Spatial Visualization", "Attention to Detail", "Basic Mathematics"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["School-level technical drawing classes"]
+  },
+  {
+    "step": 2,
+    "title": "Vocational Training and CAD Software",
+    "description": "Enroll in a Draughtsmanship course at a vocational training institute. The primary focus of this stage is to master Computer-Aided Design (CAD) software, especially AutoCAD, which is the industry standard.",
+    "duration": "1-2 years",
+    "qualifications": ["National Vocational Qualification (NVQ) Level 4/5 in Draughtsmanship", "Certificate in AutoCAD"],
+    "skills": ["AutoCAD (2D & 3D)", "Reading Architectural/Engineering Drawings", "Understanding of Scale and Standards", "Basic knowledge of construction/mechanical parts"],
+    "salaryRangeLKR": "LKR 35,000 - 55,000 (Trainee Draughtsman)",
+    "institutes": ["Vocational Training Authority (VTA)", "NAITA", "German Tech (CGTTI)", "Private CAD training centers"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Draughtsman",
+    "description": "Work in an architectural, engineering, or construction firm under the supervision of architects, engineers, or senior draughtsmen. You will be responsible for creating, editing, and managing technical drawings based on sketches and specifications.",
+    "duration": "2-4 years",
+    "qualifications": ["Proficiency in AutoCAD"],
+    "skills": ["Architectural Drafting", "Structural Drafting", "MEP (Mechanical, Electrical, Plumbing) Drafting", "Following drawing standards", "Collaboration with technical teams"],
+    "salaryRangeLKR": "LKR 50,000 - 90,000",
+    "institutes": ["Architectural firms", "Engineering consultancy firms", "Construction companies (Maga, Access)"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Draughtsman / BIM Modeler",
+    "description": "Advance to a senior role where you handle more complex drawings and may coordinate the work of junior staff. At this stage, learning Building Information Modeling (BIM) software like Revit is crucial for career progression, transitioning you into a BIM Modeler role.",
+    "duration": "3-5 years",
+    "qualifications": ["Professional certificate in Revit/BIM"],
+    "skills": ["Autodesk Revit", "BIM Coordination", "Creating Parametric Families", "Clash Detection", "Checking and Reviewing Drawings"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000",
+    "institutes": ["Leading construction and design firms adopting BIM technology"]
+  },
+  {
+    "step": 5,
+    "title": "Chief Draughtsman / Design Coordinator",
+    "description": "In a leadership role, you will manage the entire drawing office or design team. You'll be responsible for ensuring the quality and consistency of all technical drawings, coordinating with different engineering disciplines, and managing project deadlines.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive experience and expertise in CAD and BIM"],
+    "skills": ["Team Management", "Quality Control", "Project Coordination", "Workflow Management", "Mentoring"],
+    "salaryRangeLKR": "LKR 140,000 - 250,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

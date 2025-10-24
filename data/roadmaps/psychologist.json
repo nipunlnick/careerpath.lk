@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/Ls and General Psychology Degree",
+    "description": "Any A/L stream is acceptable, but a background in Biology or Arts can be helpful. The first crucial step is to complete a Bachelor's degree (BA or BSc) in Psychology. This provides the foundational knowledge of psychological theories and research methods.",
+    "duration": "3-4 years",
+    "qualifications": ["BA/BSc in Psychology"],
+    "skills": ["Understanding of Psychological Theories", "Research Methods", "Critical Thinking", "Empathy", "Communication"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Peradeniya", "University of Colombo", "Open University of Sri Lanka", "Colombo Institute of Research & Psychology (CIRP)"]
+  },
+  {
+    "step": 2,
+    "title": "Postgraduate Diploma in Counseling",
+    "description": "To become a counselor, a postgraduate diploma is often the next step. This provides practical skills and supervised training in counseling techniques, ethics, and different therapeutic approaches.",
+    "duration": "1-2 years",
+    "qualifications": ["Postgraduate Diploma in Counseling Psychology"],
+    "skills": ["Counseling Techniques (CBT, Person-Centered)", "Active Listening", "Ethical Practice", "Case Formulation", "Group Facilitation"],
+    "salaryRangeLKR": "LKR 40,000 - 70,000 (Trainee Counselor)",
+    "institutes": ["University of Colombo", "National Institute of Social Development (NISD)"]
+  },
+  {
+    "step": 3,
+    "title": "Master's Degree for Specialization (Psychologist Path)",
+    "description": "To practice as a Psychologist (especially a clinical psychologist), a Master's degree (MA/MSc) is mandatory. This involves advanced coursework, a research thesis, and a significant supervised clinical internship.",
+    "duration": "2 years",
+    "qualifications": ["MSc in Clinical Psychology", "MA in Applied Psychology"],
+    "skills": ["Psychological Assessment & Diagnosis (using DSM/ICD)", "Advanced Psychotherapy", "Neuropsychology", "Clinical Research", "Supervision"],
+    "salaryRangeLKR": "LKR 70,000 - 120,000 (Associate Psychologist/Counselor)",
+    "institutes": ["University of Colombo (Clinical Psychology)", "University of Kelaniya (Applied Psychology)"]
+  },
+  {
+    "step": 4,
+    "title": "Practicing Counselor or Psychologist",
+    "description": "Work in a professional setting. Counselors often work in schools, NGOs, or private practices focusing on general wellness and coping strategies. Clinical Psychologists work in hospitals and clinics, diagnosing and treating mental health disorders.",
+    "duration": "3-5 years",
+    "qualifications": ["Relevant postgraduate qualification", "Clinical supervision hours"],
+    "skills": ["Individual & Group Therapy", "Crisis Intervention", "Report Writing", "Interdisciplinary Collaboration (with doctors, social workers)", "Building a client base"],
+    "salaryRangeLKR": "LKR 80,000 - 180,000",
+    "institutes": ["National Institute of Mental Health (NIMH)", "Private Hospitals (Asiri, Hemas)", "International Schools", "NGOs (e.g., Sumithrayo)"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Psychologist / Private Practice / Academia",
+    "description": "With significant experience, you can become a senior psychologist in a hospital, lead a mental health unit, or establish a thriving private practice. A PhD is required for a career in academia (lecturing and research).",
+    "duration": "5+ years",
+    "qualifications": ["PhD in Psychology"],
+    "skills": ["Supervision & Mentoring", "Practice Management", "Public Speaking/Advocacy", "Advanced Research", "Teaching"],
+    "salaryRangeLKR": "LKR 200,000 - 400,000+",
+    "institutes": ["N/A - Based on experience and further education"]
+  }
+]

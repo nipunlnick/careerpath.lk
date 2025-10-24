@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Basic Skills and Apprenticeship",
+    "description": "Formal education is not a strict requirement, but a good grasp of basic mathematics for measurements is essential. The traditional and most effective way to start is by working as an apprentice under an experienced carpenter.",
+    "duration": "1-2 years",
+    "qualifications": ["Basic literacy and numeracy"],
+    "skills": ["Identifying wood types", "Basic hand tool usage (saw, chisel, plane)", "Safety", "Taking accurate measurements", "Assisting senior carpenters"],
+    "salaryRangeLKR": "Daily wage (LKR 1,500 - 2,500) as an apprentice",
+    "institutes": ["Apprenticeship with a local 'wadu baas'"]
+  },
+  {
+    "step": 2,
+    "title": "Vocational Training (NVQ Level 3 & 4)",
+    "description": "To professionalize your skills, enroll in a Carpentry or Wood Technology course at a vocational training center. This provides structured training on joinery, furniture making, and the use of power tools, leading to an NVQ certification.",
+    "duration": "1 year",
+    "qualifications": ["NVQ Level 4 in Wood Technology/Carpentry"],
+    "skills": ["Joinery techniques (mortise and tenon, dovetail)", "Using power tools (circular saw, router)", "Reading drawings and plans", "Wood finishing (sanding, polishing)"],
+    "salaryRangeLKR": "LKR 40,000 - 60,000 (as a semi-skilled carpenter)",
+    "institutes": ["Vocational Training Authority (VTA)", "NAITA", "German Tech (CGTTI)"]
+  },
+  {
+    "step": 3,
+    "title": "Skilled Carpenter",
+    "description": "Work as a skilled carpenter for a furniture manufacturer, a construction company, or an interior design firm. You will be responsible for creating furniture, installing doors and windows, building roof structures, or crafting custom woodwork.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven practical skill and experience"],
+    "skills": ["Furniture construction", "Roof carpentry", "Cabinet making", "Installation work", "Problem-solving on site"],
+    "salaryRangeLKR": "LKR 70,000 - 120,000",
+    "institutes": ["Furniture companies (e.g., Damro, Arpico Furniture)", "Construction firms", "Interior design workshops"]
+  },
+  {
+    "step": 4,
+    "title": "Master Carpenter / Furniture Designer",
+    "description": "Become a master craftsman, known for high-quality, specialized work. You could specialize in areas like antique furniture restoration, custom kitchen cabinetry, or architectural woodwork. Some may also move into furniture design, creating their own unique pieces.",
+    "duration": "5+ years",
+    "qualifications": ["A strong portfolio of high-quality work"],
+    "skills": ["Advanced joinery", "Wood carving/turning", "Furniture design", "Material selection", "Project estimation"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000+",
+    "institutes": ["High-end furniture workshops", "Self-employed specialist"]
+  },
+  {
+    "step": 5,
+    "title": "Workshop Owner / Contractor",
+    "description": "With extensive experience and a good reputation, you can start your own carpentry workshop or business. This involves managing projects, hiring other carpenters, dealing with clients, and handling the financial side of the business.",
+    "duration": "5+ years",
+    "qualifications": ["Business acumen and industry contacts"],
+    "skills": ["Business Management", "Client Negotiation", "Quotation and Tendering", "Team Management", "Quality Control"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

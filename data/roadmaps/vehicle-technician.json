@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: O/Ls and Mechanical Aptitude",
+    "description": "A pass in G.C.E. O/L, particularly with good results in Maths and Science, is the entry point. A genuine interest in automobiles and how they work is the most important prerequisite. Starting as a helper in a local garage provides initial exposure.",
+    "duration": "1 year",
+    "qualifications": ["G.C.E. O/L"],
+    "skills": ["Mechanical interest", "Problem-solving mindset", "Basic tool recognition", "Safety awareness"],
+    "salaryRangeLKR": "Daily wage as a helper",
+    "institutes": ["Local garages"]
+  },
+  {
+    "step": 2,
+    "title": "Vocational Training (NVQ Level 4)",
+    "description": "Enroll in a formal Motor Vehicle Mechanic course at a technical college. This structured training is essential for learning the theory and professional practices of vehicle maintenance and repair, leading to a recognized NVQ qualification.",
+    "duration": "2 years",
+    "qualifications": ["NVQ Level 4 in Motor Vehicle Mechanic"],
+    "skills": ["Engine Systems", "Transmission Systems", "Brake and Suspension", "Automotive Electrical Systems", "Use of diagnostic tools"],
+    "salaryRangeLKR": "LKR 35,000 - 55,000 (Trainee Technician)",
+    "institutes": ["German Tech (CGTTI)", "DIMO Academy for Technical Skills (DATS)", "NAITA", "Vocational Training Authority (VTA)"]
+  },
+  {
+    "step": 3,
+    "title": "Automobile Technician",
+    "description": "Work as a technician in a dealership's service center or a modern independent garage. You will perform routine servicing, diagnose faults, and carry out repairs on various vehicle systems according to manufacturer standards.",
+    "duration": "3-5 years",
+    "qualifications": ["NVQ Level 4", "On-the-job experience"],
+    "skills": ["Vehicle Diagnostics (using scan tools)", "Engine Repair & Overhaul", "Wheel Alignment", "Air Conditioning Repair", "Customer communication"],
+    "salaryRangeLKR": "LKR 60,000 - 110,000",
+    "institutes": ["Toyota Lanka", "United Motors", "DIMO", "Stafford Motors", "Associated Motorways (AMW)"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Technician / Diagnostic Specialist",
+    "description": "Become a senior technician, trusted with the most complex diagnostic challenges. This is the stage to specialize in a specific area like hybrid and electric vehicles, advanced vehicle electronics (ECUs), or a particular brand (e.g., German or Japanese cars).",
+    "duration": "4-6 years",
+    "qualifications": ["Advanced/specialized training certificates"],
+    "skills": ["Hybrid & EV Technology", "Advanced Diagnostics", "ECU programming/flashing", "Supervising junior technicians", "Quality control"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["Brand-specific training centers run by major dealerships"]
+  },
+  {
+    "step": 5,
+    "title": "Workshop Foreman / Own Garage",
+    "description": "Progress to a management role as a Foreman or Service Advisor, where you supervise other technicians, interact with customers, and manage workshop operations. Alternatively, with a strong reputation and client base, you can open your own modern garage.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive experience and business skills"],
+    "skills": ["Workshop Management", "Customer Relationship Management", "Business Management", "Inventory Control", "Leadership"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000+ (Foreman) or Business Profit",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

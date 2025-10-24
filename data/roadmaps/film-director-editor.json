@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Immerse Yourself in Cinema & Learn the Basics",
+    "description": "Watch a wide variety of films critically. Learn the language of cinema: composition, editing theory, sound design, and storytelling structure. Start shooting and editing short videos on your own with any available camera to practice.",
+    "duration": "1-2 years",
+    "qualifications": ["A deep passion for filmmaking"],
+    "skills": ["Film Analysis", "Storytelling", "Basic Camera Operation", "Basic Video Editing", "Visual Composition"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study (books, YouTube channels like Film Riot)", "Local film clubs"]
+  },
+  {
+    "step": 2,
+    "title": "Formal Education and Technical Proficiency",
+    "description": "While not mandatory, a diploma or degree in film or media studies can provide a structured learning environment and access to equipment and peers. Master professional editing software like Adobe Premiere Pro, DaVinci Resolve, or Final Cut Pro.",
+    "duration": "2-3 years",
+    "qualifications": ["Diploma/Degree in Film/Media", "Proficiency in editing software"],
+    "skills": ["Advanced Video Editing", "Color Grading", "Sound Design & Mixing", "Screenwriting", "Directing Actors"],
+    "salaryRangeLKR": "Variable (student projects)",
+    "institutes": ["University of Kelaniya (Fine Arts)", "Digital Film Academy (at Sri Lanka Foundation)", "Private media academies"]
+  },
+  {
+    "step": 3,
+    "title": "Gain On-Set Experience: Production Assistant / Assistant Editor",
+    "description": "This is a critical step. Work on professional film, TV, or commercial sets in any entry-level role you can get (e.g., Production Assistant). For editors, work as an assistant editor, logging footage and preparing projects for the main editor. This teaches you the workflow and discipline of the industry.",
+    "duration": "2-4 years",
+    "qualifications": ["Experience on professional sets"],
+    "skills": ["Understanding of set etiquette", "Production logistics", "Media Management", "Technical troubleshooting", "Networking"],
+    "salaryRangeLKR": "LKR 40,000 - 80,000 (as an assistant)",
+    "institutes": ["Production houses in Sri Lanka (e.g., for commercials, teledramas, films)"]
+  },
+  {
+    "step": 4,
+    "title": "Director of Short Films / Full-Time Editor",
+    "description": "Director: Write and direct your own short films to build a portfolio (a 'showreel') that showcases your unique voice and vision. Editor: Work as a freelance or in-house editor for commercials, documentaries, or teledramas. Your reputation is built on your skill and reliability.",
+    "duration": "3-5 years",
+    "qualifications": ["An award-winning short film", "A strong editing showreel"],
+    "skills": ["Directing", "Working with crew", "Advanced narrative editing", "Client management", "Project delivery on deadline"],
+    "salaryRangeLKR": "Highly variable, project-based. (LKR 100,000 - 300,000+ per project)",
+    "institutes": ["N/A - Freelance or project-based work"]
+  },
+  {
+    "step": 5,
+    "title": "Feature Film/Commercial Director or Senior Editor",
+    "description": "Leverage your showreel and reputation to get opportunities to direct larger projects like feature films, teledramas, or high-budget commercials. As a senior editor, you will be sought after for the most prestigious projects and may lead a post-production house.",
+    "duration": "5+ years",
+    "qualifications": ["A commercially or critically successful project"],
+    "skills": ["Pitching and securing funding", "Large-scale project management", "Leading a large crew", "Creative leadership", "Mastery of post-production workflow"],
+    "salaryRangeLKR": "Highly variable (per-project fees can be substantial)",
+    "institutes": ["N/A - Based on industry reputation"]
+  }
+]

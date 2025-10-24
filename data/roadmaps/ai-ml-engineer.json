@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/L in Physical Science",
+    "description": "A strong foundation in advanced mathematics is non-negotiable for AI/ML. Excel in the G.C.E. A/L Physical Science (Maths) stream, focusing on Combined Mathematics.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Maths Stream) with high marks"],
+    "skills": ["Linear Algebra", "Calculus", "Probability & Statistics", "Logical Reasoning"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in CS/SE or Statistics",
+    "description": "Obtain a degree with a strong quantitative and programming focus. Computer Science, Software Engineering, or Statistics are ideal. Take university-level courses in Data Structures, Algorithms, and Linear Algebra.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Computer Science/Software Engineering/Statistics"],
+    "skills": ["Python Programming (with NumPy, Pandas)", "Data Structures & Algorithms", "SQL Databases", "Software Engineering Principles"],
+    "salaryRangeLKR": "LKR 80,000 - 130,000 (Data Analyst/Junior Software Engineer)",
+    "institutes": ["University of Moratuwa", "University of Colombo (UCSC)", "University of Sri Jayewardenepura", "SLIIT"]
+  },
+  {
+    "step": 3,
+    "title": "Specialization & Learning ML Frameworks",
+    "description": "Start specializing in Machine Learning. This can be done through a Master's degree or through rigorous self-study and online courses. Gain hands-on experience with core ML frameworks.",
+    "duration": "1-2 years",
+    "qualifications": ["MSc in AI/Data Science (highly recommended)", "Portfolio of ML projects on GitHub"],
+    "skills": ["Machine Learning Theory", "Deep Learning Concepts", "Frameworks (Scikit-learn, TensorFlow, PyTorch)", "Data Preprocessing", "Model Evaluation"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000 (Associate ML Engineer)",
+    "institutes": ["Postgraduate programs at local universities", "Coursera (DeepLearning.AI)", "Kaggle competitions"]
+  },
+  {
+    "step": 4,
+    "title": "Machine Learning Engineer",
+    "description": "Work as an ML Engineer, where you will be responsible for designing, building, and deploying machine learning models into production systems. This role bridges the gap between data science and software engineering.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven experience deploying ML models"],
+    "skills": ["MLOps (ML model deployment and monitoring)", "Cloud Platforms (AWS SageMaker, Azure ML)", "API Development (Flask/FastAPI)", "Containerization (Docker)", "Big Data Technologies (Spark)"],
+    "salaryRangeLKR": "LKR 280,000 - 500,000",
+    "institutes": ["WSO2", "Axiata Digital Labs", "LSEG Technology", "Stax", "Sysco LABS"]
+  },
+  {
+    "step": 5,
+    "title": "Senior ML Engineer / AI Researcher",
+    "description": "Advance to a senior role where you architect complex AI systems, lead ML projects, and mentor other engineers. Alternatively, you can move into a research-focused role, developing novel algorithms and pushing the boundaries of AI. A PhD is often required for pure research roles.",
+    "duration": "5+ years",
+    "qualifications": ["PhD in AI/ML (for research roles)"],
+    "skills": ["System Architecture for ML", "Advanced Deep Learning (NLP, Computer Vision)", "Research & Development", "Technical Leadership", "Publishing research papers"],
+    "salaryRangeLKR": "LKR 550,000 - 900,000+",
+    "institutes": ["Vega Innovations", "Leading tech companies with R&D departments"]
+  }
+]

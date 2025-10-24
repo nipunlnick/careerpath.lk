@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Excellence in A/L Physical Science & Programming",
+    "description": "A very strong foundation in advanced mathematics (Combined Maths) and Physics is the absolute prerequisite. Alongside A/Ls, start self-learning Python and foundational computer science concepts.",
+    "duration": "2 years",
+    "qualifications": ["Top-tier G.C.E. A/L (Maths Stream) results"],
+    "skills": ["Advanced Calculus & Linear Algebra", "Probability & Statistics", "Python Programming", "Algorithmic Thinking"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in CS/Engineering with Research Focus",
+    "description": "Enroll in a rigorous Computer Science or Engineering program. Actively seek out research opportunities with professors, contribute to projects, and aim to publish a paper as an undergraduate. Focus on theoretical and mathematical courses.",
+    "duration": "4 years",
+    "qualifications": ["BSc in Computer Science/Engineering with First Class Honors"],
+    "skills": ["Advanced Algorithms", "Machine Learning Theory", "Scientific Computing (NumPy, SciPy)", "Academic Writing"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Moratuwa", "University of Colombo (UCSC)", "University of Peradeniya"]
+  },
+  {
+    "step": 3,
+    "title": "Master's and/or PhD in AI/ML",
+    "description": "This is the most critical step. A postgraduate degree (usually a PhD for pure research roles) is mandatory. This is where you will specialize in a sub-field (e.g., NLP, Computer Vision, Reinforcement Learning) and conduct novel research.",
+    "duration": "2-5 years",
+    "qualifications": ["MSc or PhD in AI/ML"],
+    "skills": ["Deep Learning Architectures", "Conducting Original Research", "Reading and Writing Academic Papers", "Presenting at Conferences", "Advanced ML Frameworks (PyTorch, TensorFlow)"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000 (as a Research Engineer)",
+    "institutes": ["Leading international universities (for PhD)", "Local postgraduate programs"]
+  },
+  {
+    "step": 4,
+    "title": "AI Researcher / Research Scientist",
+    "description": "Join an academic research lab or an industrial R&D lab. Your primary role is to develop new AI algorithms and techniques, run experiments, and publish your findings in top-tier conferences and journals.",
+    "duration": "3-5 years",
+    "qualifications": ["A strong publication record (e.g., in NeurIPS, ICML, CVPR)"],
+    "skills": ["Developing Novel Algorithms", "Experimental Design", "Mentoring PhD students", "Grant Writing", "Collaboration with other researchers"],
+    "salaryRangeLKR": "LKR 300,000 - 700,000",
+    "institutes": ["R&D Labs of major tech companies (Google, Meta - often abroad)", "Local R&D centers (e.g., WSO2 Research, Vega Innovations)"]
+  },
+  {
+    "step": 5,
+    "title": "Senior AI Researcher / Principal Investigator",
+    "description": "Become a leader in your research field. You will lead a research team, define the research agenda, secure funding, and make significant contributions to the field of Artificial Intelligence. This is a globally recognized, expert-level role.",
+    "duration": "5+ years",
+    "qualifications": ["Recognized as an expert in your sub-field"],
+    "skills": ["Research Leadership", "Setting Scientific Vision", "Securing major research grants", "Leading a research group", "Influencing the field"],
+    "salaryRangeLKR": "LKR 700,000 - 1,500,000+",
+    "institutes": ["N/A - Based on global reputation"]
+  }
+]

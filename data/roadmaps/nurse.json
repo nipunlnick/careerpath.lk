@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio Science Stream",
+    "description": "Successfully complete your A/Ls in the Bio Science stream. Strong results in Biology and Chemistry are fundamental for entry into nursing education programs.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio Science)"],
+    "skills": ["Scientific Knowledge", "Empathy", "Attention to Detail", "Communication"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Nursing Education & Training",
+    "description": "Enroll in a government Nursing Training School (NTS) for a Diploma in Nursing, or pursue a BSc in Nursing from a recognized university. This is the core training phase for professional nursing.",
+    "duration": "3-4 years",
+    "qualifications": ["Diploma in Nursing", "BSc (Hons) in Nursing"],
+    "skills": ["Patient Care", "Anatomy & Physiology", "Pharmacology", "Clinical Procedures", "First Aid"],
+    "salaryRangeLKR": "LKR 40,000 - 60,000 (Student Nurse/Trainee)",
+    "institutes": ["Government Nursing Training Schools (NTS)", "University of Sri Jayewardenepura", "University of Peradeniya", "General Sir John Kotelawala Defence University (KDU)", "Private institutions like IIHS"]
+  },
+  {
+    "step": 3,
+    "title": "Registration and Internship",
+    "description": "After graduating, you must register with the Sri Lanka Nursing Council (SLNC). You will then complete a period of supervised clinical practice (internship) in a government or recognized private hospital.",
+    "duration": "1 year",
+    "qualifications": ["SLNC Registration"],
+    "skills": ["Ward Management", "Administering Medication", "Patient Monitoring", "Teamwork in a hospital setting"],
+    "salaryRangeLKR": "LKR 70,000 - 110,000 (Registered Nurse - Entry Level)",
+    "institutes": ["Government Teaching Hospitals", "Major Private Hospitals (Asiri, Nawaloka, Hemas, Durdans)"]
+  },
+  {
+    "step": 4,
+    "title": "Registered Nurse",
+    "description": "Work as a fully Registered Nurse, providing direct patient care. You can work in various units such as medical, surgical, pediatrics, or emergency departments, gaining broad experience.",
+    "duration": "3-5 years",
+    "qualifications": ["Confirmed employment as a Registered Nurse"],
+    "skills": ["Specialized Patient Care", "Critical Thinking", "Decision Making", "Health Education"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["Government and Private hospital networks"]
+  },
+  {
+    "step": 5,
+    "title": "Specialization & Senior Roles",
+    "description": "Pursue postgraduate qualifications or specialized training to advance your career. You can specialize in areas like critical care, theatre nursing, or midwifery. Senior roles include Ward Sister, Nursing Manager, or Tutor.",
+    "duration": "5+ years",
+    "qualifications": ["Post-basic diplomas", "MSc in Nursing"],
+    "skills": ["Leadership", "Mentoring", "Advanced Clinical Skills", "Administration", "Teaching"],
+    "salaryRangeLKR": "LKR 180,000 - 300,000+",
+    "institutes": ["N/A - Based on experience and promotion within healthcare institutions"]
+  }
+]

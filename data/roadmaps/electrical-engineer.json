@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Physical Science Stream",
+    "description": "Secure high marks in the Physical Science (Maths) stream. A deep understanding of Physics (especially electricity and magnetism) and Combined Mathematics is crucial for entry into an engineering faculty.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Physical Science/Maths Stream)"],
+    "skills": ["Advanced Mathematics", "Physics Principles", "Circuit Theory Basics", "Problem Solving"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "BSc Engineering Degree (Electrical)",
+    "description": "Complete a 4-year BScEng (Hons) degree with a specialization in Electrical Engineering. This degree, accredited by the IESL, covers power systems, electrical machines, and electronics.",
+    "duration": "4 years",
+    "qualifications": ["BScEng (Hons) in Electrical Engineering"],
+    "skills": ["Circuit Analysis", "Power Systems", "Control Systems", "Electrical Machines", "Programming (MATLAB, C)"],
+    "salaryRangeLKR": "LKR 75,000 - 120,000 (Trainee Engineer)",
+    "institutes": ["University of Moratuwa", "University of Peradeniya", "University of Ruhuna", "Open University of Sri Lanka"]
+  },
+  {
+    "step": 3,
+    "title": "Graduate Engineer & IESL Associate Membership",
+    "description": "Start your career as a Graduate Electrical Engineer in sectors like power generation and distribution, construction (MEP), or industrial automation. Register with the IESL as an Associate Member.",
+    "duration": "2-3 years",
+    "qualifications": ["IESL Associate Membership"],
+    "skills": ["AutoCAD/SLD Design", "PLC Programming", "Project Management", "Maintenance of Electrical Systems", "Safety Procedures"],
+    "salaryRangeLKR": "LKR 110,000 - 190,000",
+    "institutes": ["Ceylon Electricity Board (CEB)", "Lanka Electricity Company (LECO)", "Major construction firms (Maga, Access)", "Schneider Electric"]
+  },
+  {
+    "step": 4,
+    "title": "Achieve Chartered Engineer Status",
+    "description": "Accumulate at least four years of post-graduate experience, working under the guidance of a Chartered Engineer. Pass the IESL professional review to become a Chartered Engineer (CEng).",
+    "duration": "4+ years (post-graduation)",
+    "qualifications": ["Chartered Engineer (CEng)", "MIESL"],
+    "skills": ["Power System Analysis", "High Voltage Engineering", "Project Costing and Management", "Energy Auditing", "Leadership"],
+    "salaryRangeLKR": "LKR 220,000 - 420,000",
+    "institutes": ["N/A - Based on experience and chartership"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Electrical Engineer / Consultant",
+    "description": "Progress to senior roles, managing large-scale electrical projects, leading design teams, or working as a consultant. Specialization in renewable energy, power system protection, or building services is common.",
+    "duration": "5-10+ years",
+    "qualifications": ["MSc in a specialized field"],
+    "skills": ["Consultancy", "Strategic Planning", "Business Development", "Advanced Technical Expertise", "Team Leadership"],
+    "salaryRangeLKR": "LKR 450,000 - 850,000+",
+    "institutes": ["All major power, energy, and construction companies"]
+  }
+]

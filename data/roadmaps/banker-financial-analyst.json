@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/L in Commerce or Maths",
+    "description": "A strong background in Commerce (Accounting, Economics, Business Studies) or Maths is ideal. This provides the numerical and analytical foundation required for a career in finance.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Commerce or Maths Stream)"],
+    "skills": ["Numeracy", "Analytical Skills", "Attention to Detail", "Basic Economics"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Degree & Professional Banking Qualification",
+    "description": "Obtain a degree in Finance, Business Administration, or Economics. Concurrently or subsequently, start professional qualifications like those from the Institute of Bankers of Sri Lanka (IBSL) or a global qualification like CFA.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Finance/BBA", "Diploma in Banking & Finance (DBF) from IBSL", "CFA Level I Candidate"],
+    "skills": ["Financial Accounting", "Corporate Finance", "Investment Principles", "Financial Modeling Basics (Excel)"],
+    "salaryRangeLKR": "LKR 50,000 - 80,000 (Banking Trainee)",
+    "institutes": ["University of Sri Jayewardenepura", "University of Colombo", "University of Kelaniya", "IBSL"]
+  },
+  {
+    "step": 3,
+    "title": "Banking Officer / Junior Analyst",
+    "description": "Join a commercial bank or financial institution as a Banking Trainee or Junior Analyst. You will rotate through different departments like retail banking, credit, or treasury to gain broad experience.",
+    "duration": "2-3 years",
+    "qualifications": ["Completed Degree and/or IBSL qualification"],
+    "skills": ["Credit Analysis", "Customer Relationship Management (CRM)", "Treasury Operations", "Financial Statement Analysis", "Risk Management"],
+    "salaryRangeLKR": "LKR 80,000 - 160,000",
+    "institutes": ["Commercial Bank", "HNB", "Sampath Bank", "NDB", "Central Bank of Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "Financial Analyst / Credit Manager",
+    "description": "Specialize in a specific area. As a Financial Analyst, you'll analyze stocks, bonds, and other investments for investment banks or asset management firms. As a Credit Manager in a bank, you'll assess the creditworthiness of loan applicants.",
+    "duration": "3-5 years",
+    "qualifications": ["CFA Charterholder (for analyst roles)", "Advanced banking diplomas"],
+    "skills": ["Advanced Financial Modeling", "Valuation Techniques", "Portfolio Management", "Loan Structuring", "Industry Research"],
+    "salaryRangeLKR": "LKR 180,000 - 350,000",
+    "institutes": ["Investment Banks (CAL, NDB Investment Bank)", "Stock Broking Firms", "Corporate finance departments of major banks"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Analyst / Investment Manager / Branch Manager",
+    "description": "Advance to a senior role, managing investment portfolios, leading teams of analysts, or managing an entire bank branch. An MBA in Finance can be highly beneficial for these leadership positions.",
+    "duration": "5+ years",
+    "qualifications": ["CFA Charter", "MBA in Finance"],
+    "skills": ["Leadership", "Strategic Decision Making", "Client Acquisition", "Risk Oversight", "People Management"],
+    "salaryRangeLKR": "LKR 400,000 - 750,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio or Agri Science Stream",
+    "description": "A strong pass in the G.C.E. A/L is required, with the Biological Science or Agricultural Science stream being the most direct path for university admission.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio/Agri Science)"],
+    "skills": ["Biology", "Chemistry", "Scientific Principles", "Interest in agriculture"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in Agricultural Science",
+    "description": "Complete a 4-year BSc (Hons) in Agricultural Science or a related specialization like Agricultural Technology & Management. This degree provides a comprehensive scientific foundation.",
+    "duration": "4 years",
+    "qualifications": ["BSc (Hons) in Agricultural Science"],
+    "skills": ["Agronomy", "Soil Science", "Plant Pathology", "Animal Science", "Agricultural Economics"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Peradeniya (Faculty of Agriculture)", "University of Ruhuna", "Wayamba University of Sri Lanka"]
+  },
+  {
+    "step": 3,
+    "title": "Join the Sri Lanka Agricultural Service (SLAS)",
+    "description": "To become a government Agricultural Officer, you must pass the highly competitive open examination for recruitment to the Sri Lanka Agricultural Service (SLAS), conducted by the Department of Examinations.",
+    "duration": "1 year (preparation & exam)",
+    "qualifications": ["Pass in the SLAS open competitive examination"],
+    "skills": ["General Knowledge", "Government Policy", "Problem-Solving", "Analytical Skills"],
+    "salaryRangeLKR": "LKR 70,000 - 110,000 (Initial government salary scale)",
+    "institutes": ["N/A - Government recruitment process"]
+  },
+  {
+    "step": 4,
+    "title": "Agricultural Officer / Agricultural Instructor",
+    "description": "Work as a field-level officer for the Department of Agriculture or a Provincial Council. Your role involves advising farmers on modern farming techniques, pest control, water management, and implementing government agricultural policies.",
+    "duration": "5-10 years",
+    "qualifications": ["Confirmed government appointment"],
+    "skills": ["Extension Services", "Farmer Training", "Data Collection", "Project Implementation", "Community Engagement"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000 (with service increments)",
+    "institutes": ["Department of Agriculture", "Provincial Departments of Agriculture"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Agricultural Roles / Research Officer",
+    "description": "With experience and further qualifications (MSc/PhD), you can advance to senior administrative roles within the agricultural service. Alternatively, you can join an agricultural research institute as a Research Officer, contributing to the development of new crop varieties and technologies.",
+    "duration": "10+ years",
+    "qualifications": ["MSc/PhD in an agricultural specialization"],
+    "skills": ["Agricultural Policy", "Research & Development", "Management", "Leadership", "Scientific Research"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000+",
+    "institutes": ["Agricultural Research Institutes (e.g., in Gannoruwa, Mahailluppallama)"]
+  }
+]

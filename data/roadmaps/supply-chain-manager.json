@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Degree in a Relevant Field",
+    "description": "A bachelor's degree in Supply Chain Management, Logistics, Business Administration, or Industrial Engineering provides the essential theoretical knowledge. Focus on quantitative and analytical subjects.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Supply Chain Management/Transport & Logistics"],
+    "skills": ["Analytical Skills", "Problem-Solving", "Numeracy", "Communication", "Microsoft Excel"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Moratuwa (Transport & Logistics Management)", "CINEC Campus", "NSBM Green University"]
+  },
+  {
+    "step": 2,
+    "title": "Entry-Level Role: Logistics/Supply Chain Trainee",
+    "description": "Start your career in an entry-level position within a specific function of the supply chain, such as procurement, warehousing, or logistics. This hands-on experience is vital for understanding the ground realities.",
+    "duration": "2-3 years",
+    "qualifications": ["Completed Degree"],
+    "skills": ["Procurement Processes", "Inventory Management", "Warehouse Operations", "Logistics Coordination", "Data Entry and Analysis"],
+    "salaryRangeLKR": "LKR 50,000 - 90,000 (Trainee/Coordinator)",
+    "institutes": ["John Keells Logistics", "Hayleys Advantis", "MAS Holdings", "Brandix", "Major FMCG companies (Unilever, Nestle)"]
+  },
+  {
+    "step": 3,
+    "title": "Supply Chain Analyst / Executive",
+    "description": "Move into a role that involves more analysis and planning. As an analyst, you'll use data to improve efficiency, reduce costs, and forecast demand. As an executive, you'll manage specific supply chain operations.",
+    "duration": "2-4 years",
+    "qualifications": ["Professional certifications (e.g., from CILT - Chartered Institute of Logistics and Transport)"],
+    "skills": ["Demand Forecasting", "Supply Planning", "Data Analysis", "ERP Systems (SAP, Oracle)", "Vendor Management"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["All major manufacturing, retail, and logistics companies in Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "Assistant Supply Chain Manager",
+    "description": "Take on managerial responsibilities, overseeing a team and a significant part of the supply chain process. You will be involved in process improvement, budget management, and strategic planning for your department.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven experience and strong performance"],
+    "skills": ["Team Leadership", "Process Optimization", "Budget Management", "Negotiation", "Project Management"],
+    "salaryRangeLKR": "LKR 200,000 - 350,000",
+    "institutes": ["Leading apparel, FMCG, and manufacturing firms"]
+  },
+  {
+    "step": 5,
+    "title": "Supply Chain Manager / Head of Supply Chain",
+    "description": "In this senior leadership role, you are responsible for the entire end-to-end supply chain of the organization. You will develop and implement the overall supply chain strategy to meet business objectives. An MBA or a Master's in Supply Chain Management is highly beneficial.",
+    "duration": "5+ years",
+    "qualifications": ["Master's Degree/MBA"],
+    "skills": ["Strategic Sourcing", "Network Design", "Global Logistics", "Risk Management", "Financial Acumen"],
+    "salaryRangeLKR": "LKR 400,000 - 750,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Obtain a Bachelor's Degree",
+    "description": "A bachelor's degree from a university recognized by the University Grants Commission (UGC) of Sri Lanka is the mandatory minimum educational qualification to sit for the key public service examinations.",
+    "duration": "3-4 years",
+    "qualifications": ["Bachelor's Degree (any field)"],
+    "skills": ["Analytical Skills", "Writing Skills", "General Knowledge", "Critical Thinking", "Research Abilities"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any UGC recognized university"]
+  },
+  {
+    "step": 2,
+    "title": "Succeed in the Open Competitive Examination",
+    "description": "This is the most critical and challenging step. You must prepare for and pass the highly competitive open examination for recruitment into a premier government service, such as the Sri Lanka Administrative Service (SLAS) or the Sri Lanka Foreign Service (SLFS).",
+    "duration": "1-2 years (preparation & exam cycle)",
+    "qualifications": ["High marks in the competitive examination"],
+    "skills": ["General Knowledge (local and international)", "IQ and Analytical Reasoning", "Essay Writing", "Government Policy Awareness"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-study", "Private institutes offering classes for competitive exams"]
+  },
+  {
+    "step": 3,
+    "title": "Post-Recruitment Training",
+    "description": "Upon successful selection, you will undergo a rigorous training program at the Sri Lanka Institute of Development Administration (SLIDA) or a similar institution. This training covers public policy, financial regulations, management, and administrative procedures.",
+    "duration": "1-2 years",
+    "qualifications": ["Completion of cadetship/training period"],
+    "skills": ["Public Administration", "Financial Regulations (FR)", "Establishment Code", "Management", "Leadership"],
+    "salaryRangeLKR": "Initial government salary scale for the service",
+    "institutes": ["SLIDA"]
+  },
+  {
+    "step": 4,
+    "title": "Assistant Secretary / Assistant Divisional Secretary / Third Secretary",
+    "description": "Begin your career in a junior executive role. In the SLAS, you might be an Assistant Divisional Secretary managing a local government area. In the SLFS, you'd be a Third Secretary in a foreign embassy or the Ministry of Foreign Affairs.",
+    "duration": "5-8 years",
+    "qualifications": ["Confirmed appointment in the service"],
+    "skills": ["Administrative Management", "Project Implementation", "Community Engagement", "Report Writing", "Diplomatic Protocol (for SLFS)"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000 (with service increments)",
+    "institutes": ["Various government ministries, Divisional Secretariats, Sri Lankan embassies abroad"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Government Official (Secretary, Ambassador)",
+    "description": "Through promotions based on seniority and performance, you can rise through the ranks to become a head of a government department, a Ministry Secretary (the highest civil service position), or an Ambassador representing Sri Lanka overseas.",
+    "duration": "15+ years",
+    "qualifications": ["Extensive and exemplary service record"],
+    "skills": ["Policy Formulation", "Strategic Leadership", "National-level Administration", "International Relations & Negotiation", "Public Finance Management"],
+    "salaryRangeLKR": "LKR 200,000 - 400,000+",
+    "institutes": ["N/A - Based on career progression"]
+  }
+]

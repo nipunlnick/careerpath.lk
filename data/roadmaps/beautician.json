@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Interest and Basic Skills",
+    "description": "A passion for beauty and style is the starting point. Practice on friends and family to develop a feel for makeup, hairstyling, and other beauty treatments. A G.C.E. O/L is generally sufficient for entry into training programs.",
+    "duration": "6 months",
+    "qualifications": ["G.C.E. O/L"],
+    "skills": ["Creativity", "Good hand-eye coordination", "Interpersonal skills", "Customer service mindset", "Basic hygiene practices"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-practice", "Watching online tutorials"]
+  },
+  {
+    "step": 2,
+    "title": "Professional Diploma and NVQ Qualification",
+    "description": "Enroll in a comprehensive hairdressing and beauty therapy course at a reputable academy. The goal is to get a recognized diploma and an NVQ Level 4 qualification, which covers all the core skills of the profession.",
+    "duration": "1-2 years",
+    "qualifications": ["Diploma in Hairdressing & Beauty Therapy", "NVQ Level 4"],
+    "skills": ["Hair Cutting & Coloring", "Facial Treatments", "Manicures & Pedicures", "Makeup Artistry", "Client Consultation"],
+    "salaryRangeLKR": "LKR 25,000 - 40,000 (Trainee/Junior Stylist)",
+    "institutes": ["Ramani Fernando Salons Academy", "Chagall Hair and Beauty Academy", "Vocational Training Authority (VTA)"]
+  },
+  {
+    "step": 3,
+    "title": "Beautician / Hairstylist",
+    "description": "Work in a professional salon. This is where you will build your speed, refine your techniques, and learn how to handle a diverse range of clients and requests. Building a loyal client base is the key to success at this stage.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven practical skills"],
+    "skills": ["Advanced hair coloring (balayage, etc.)", "Bridal dressing", "Advanced skincare treatments", "Time management", "Building client relationships"],
+    "salaryRangeLKR": "LKR 50,000 - 100,000 (including commissions)",
+    "institutes": ["Ramani Fernando Salons", "Capello Salons", "Chagall", "Kess", "Leading hotel salons"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Stylist / Salon Manager",
+    "description": "Become a senior stylist, who is often the most in-demand and highest-earning professional in the salon. You can also move into a management role, overseeing the salon's daily operations, managing staff, and handling inventory.",
+    "duration": "3-5 years",
+    "qualifications": ["A large personal client base"],
+    "skills": ["Mentoring junior staff", "Salon Management", "Inventory Control", "Marketing and Promotions", "Financial Basics"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000+",
+    "institutes": ["N/A - Promotion within a salon"]
+  },
+  {
+    "step": 5,
+    "title": "Own Your Own Salon",
+    "description": "With a strong reputation, a loyal client base, and good business sense, you can take the entrepreneurial step of opening your own salon. This involves finding a location, branding, hiring staff, and managing all aspects of the business.",
+    "duration": "5+ years",
+    "qualifications": ["Business registration"],
+    "skills": ["Entrepreneurship", "Business Management", "Financial Planning", "Marketing", "Leadership"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

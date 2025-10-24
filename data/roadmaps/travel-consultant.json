@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: O/Ls, A/Ls, and Communication Skills",
+    "description": "A good educational background with strong passes in English is essential. Develop excellent communication and customer service skills. A passion for travel and geography is a must.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. O/L or A/L"],
+    "skills": ["Communication Skills", "Customer Service", "Geography Knowledge", "Sales Aptitude", "IT Literacy"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any reputable school"]
+  },
+  {
+    "step": 2,
+    "title": "Professional Qualification in Travel & Tourism",
+    "description": "Enroll in a diploma or higher diploma program specializing in travel and tourism. It's crucial to learn about airline ticketing systems (GDS like Amadeus or Galileo) as this is a core skill for the job.",
+    "duration": "1-2 years",
+    "qualifications": ["IATA Diploma", "Diploma in Travel & Tourism"],
+    "skills": ["Global Distribution Systems (GDS - Amadeus, Galileo)", "Airline Ticketing and Fares", "Itinerary Planning", "Visa Procedures", "Hotel Booking Systems"],
+    "salaryRangeLKR": "LKR 40,000 - 60,000 (Trainee Travel Consultant)",
+    "institutes": ["IATA Sri Lanka accredited training centers", "SLITHM"]
+  },
+  {
+    "step": 3,
+    "title": "Travel Consultant",
+    "description": "Work for a travel agency or a tour operator. Your primary role will be advising clients, creating customized travel itineraries, booking flights, hotels, and tours, and handling all travel-related documentation.",
+    "duration": "2-4 years",
+    "qualifications": ["Proficiency in a GDS"],
+    "skills": ["Sales & Negotiation", "Client Relationship Management", "Problem-Solving", "Destination Knowledge", "Time Management"],
+    "salaryRangeLKR": "LKR 60,000 - 120,000 (plus commissions)",
+    "institutes": ["Hemas Travels", "Aitken Spence Travels", "Walkers Tours", "Classic Travel", "Findmyfare"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Travel Consultant / Team Lead",
+    "description": "Advance to a senior role where you handle high-value clients (corporate or luxury travel) and may supervise a team of junior consultants. You'll be responsible for meeting sales targets and ensuring high levels of customer satisfaction.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven sales track record"],
+    "skills": ["Corporate Travel Management", "Luxury Travel Planning", "Team Supervision", "Sales Strategy", "Supplier Relationships"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000 (plus commissions)",
+    "institutes": ["Leading travel agencies in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Agency Manager or Independent Travel Agent",
+    "description": "Progress to managing an entire branch or agency, overseeing operations, sales, and staff. Alternatively, with a strong client base and industry network, you can start your own independent travel agency.",
+    "duration": "5+ years",
+    "qualifications": ["Business acumen", "Strong industry network"],
+    "skills": ["Business Management", "Financial Management", "Marketing", "Leadership", "Entrepreneurship"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000+ (Manager) or Business Profit",
+    "institutes": ["N/A - Based on experience and career choice"]
+  }
+]

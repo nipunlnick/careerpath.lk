@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio Science Stream",
+    "description": "A strong foundation in the Bio Science stream, particularly in Chemistry and Biology, is essential for university admission to a nutrition and dietetics program.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio Science)"],
+    "skills": ["Chemistry", "Biology", "Analytical Skills", "Interest in health and food"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Degree in Nutrition / Dietetics",
+    "description": "Complete a 4-year Bachelor's degree. In Sri Lanka, the key degree is BSc (Hons) in Nutrition & Dietetics or a related field like Food Science & Nutrition. This provides the core scientific knowledge.",
+    "duration": "4 years",
+    "qualifications": ["BSc (Hons) in Nutrition & Dietetics"],
+    "skills": ["Human Nutrition", "Biochemistry", "Food Science", "Dietary Assessment", "Medical Nutrition Therapy"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Peradeniya", "University of Sri Jayewardenepura", "Wayamba University of Sri Lanka"]
+  },
+  {
+    "step": 3,
+    "title": "Internship and Professional Registration",
+    "description": "Complete a supervised practical training or internship (typically 6-12 months) in a clinical setting like a hospital. Register with the Nutrition Society of Sri Lanka or other relevant professional bodies to enhance credibility.",
+    "duration": "1 year",
+    "qualifications": ["Membership in a professional body"],
+    "skills": ["Clinical Dietetics", "Patient Counseling", "Diet Plan Formulation", "Community Nutrition", "Professional Ethics"],
+    "salaryRangeLKR": "LKR 50,000 - 80,000 (Trainee/Junior Nutritionist)",
+    "institutes": ["Government Teaching Hospitals", "Private Hospitals"]
+  },
+  {
+    "step": 4,
+    "title": "Practicing Nutritionist / Dietitian",
+    "description": "Work as a nutritionist or dietitian. Clinical dietitians work in hospitals with patients. Public health nutritionists work in community settings or for NGOs. You can also work in the food industry or for wellness companies.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven experience in the field"],
+    "skills": ["Nutritional Counseling", "Sports Nutrition", "Public Health Program Planning", "Corporate Wellness", "Content Creation (for health promotion)"],
+    "salaryRangeLKR": "LKR 70,000 - 150,000",
+    "institutes": ["Hospitals (Asiri, Hemas)", "Wellness centers", "Food companies (Nestle, Unilever)", "Sports organizations"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Dietitian / Private Consultant",
+    "description": "With experience, you can become a senior dietitian managing a hospital's nutrition department. Many also build a reputation and start their own private practice, consulting with individual clients. A Master's degree (MSc) can lead to roles in academia or research.",
+    "duration": "5+ years",
+    "qualifications": ["MSc in Human Nutrition or a specialized area"],
+    "skills": ["Private Practice Management", "Research", "Public Speaking", "Media Communication", "Mentoring"],
+    "salaryRangeLKR": "LKR 160,000 - 300,000+",
+    "institutes": ["N/A - Based on experience and reputation"]
+  }
+]

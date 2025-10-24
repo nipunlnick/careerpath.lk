@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Passion and Basic Kitchen Skills",
+    "description": "After G.C.E. O/L, the most important foundation is a passion for food and cooking. Start by learning basic cooking techniques, kitchen hygiene, and knife skills at home or through a basic course.",
+    "duration": "1 year",
+    "qualifications": ["G.C.E. O/L"],
+    "skills": ["Basic Cooking", "Knife Skills", "Kitchen Safety & Hygiene", "Understanding of Flavors", "Hard Work Ethic"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Self-taught", "Basic courses at local culinary schools"]
+  },
+  {
+    "step": 2,
+    "title": "Formal Culinary Training & Certification",
+    "description": "Enroll in a professional culinary arts program. This will provide structured training in various cuisines, pastry arts, and kitchen management. Aim for a recognized diploma and NVQ qualification.",
+    "duration": "1-2 years",
+    "qualifications": ["Diploma in Culinary Arts", "NVQ Level 4 in Commercial Cookery"],
+    "skills": ["Classical French Techniques", "Pastry & Baking", "Stock & Sauce Making", "Menu Planning", "Cost Control"],
+    "salaryRangeLKR": "LKR 30,000 - 50,000 (Kitchen Trainee/Commis 3)",
+    "institutes": ["SLITHM (Sri Lanka Institute of Tourism & Hotel Management)", "William Angliss Institute", "Prima Baking Training Centre"]
+  },
+  {
+    "step": 3,
+    "title": "Commis Chef to Chef de Partie",
+    "description": "Start your career at the bottom of the kitchen hierarchy (Commis 3) and work your way up. You will work in a specific section of the kitchen (e.g., sauces, vegetables, pastry) under a Chef de Partie (Station Chef), mastering the skills of that station.",
+    "duration": "3-5 years",
+    "qualifications": ["On-the-job experience"],
+    "skills": ["Speed and Efficiency", "Consistency", "Working under pressure", "Mastery of a kitchen station", "Teamwork"],
+    "salaryRangeLKR": "LKR 60,000 - 120,000 (Chef de Partie)",
+    "institutes": ["5-star hotels (Cinnamon, Hilton, Shangri-La)", "Fine dining restaurants", "Resort hotels"]
+  },
+  {
+    "step": 4,
+    "title": "Sous Chef (Second-in-Command)",
+    "description": "As a Sous Chef, you are the deputy to the Head Chef. You will be responsible for day-to-day kitchen management, supervising staff, managing inventory, ensuring quality control, and stepping in for the Head Chef when needed.",
+    "duration": "3-5 years",
+    "qualifications": ["Extensive experience as a Chef de Partie"],
+    "skills": ["Kitchen Management", "Staff Supervision & Training", "Inventory & Ordering", "Menu Development", "Leadership"],
+    "salaryRangeLKR": "LKR 120,000 - 250,000",
+    "institutes": ["Leading hotels and restaurant groups"]
+  },
+  {
+    "step": 5,
+    "title": "Executive Chef / Own Restaurant",
+    "description": "Reach the pinnacle of the kitchen profession as the Executive Chef, responsible for the entire culinary operation, including menu creation, budgeting, staffing, and maintaining the restaurant's reputation. Many chefs at this level also venture to open their own restaurants.",
+    "duration": "5+ years",
+    "qualifications": ["Proven leadership and culinary excellence"],
+    "skills": ["Creative Vision", "Financial Management", "Marketing & Branding", "Team Leadership", "Business Acumen"],
+    "salaryRangeLKR": "LKR 300,000 - 600,000+ (Executive Chef)",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

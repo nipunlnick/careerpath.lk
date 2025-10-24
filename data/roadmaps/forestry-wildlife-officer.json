@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Bio Science Stream",
+    "description": "A strong pass in the G.C.E. A/L Bio Science stream is the fundamental requirement for a university degree in this field. A passion for nature and physical fitness are also essential.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Bio Science)"],
+    "skills": ["Biology (Zoology, Botany)", "Physical Fitness", "Observation Skills", "Love for the outdoors"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in a Relevant Field",
+    "description": "Complete a BSc degree in Forestry and Environmental Science, or Zoology and Environmental Management. These programs provide the scientific knowledge base required for the profession.",
+    "duration": "4 years",
+    "qualifications": ["BSc in Forestry & Environmental Science", "BSc in Zoology"],
+    "skills": ["Forest Ecology", "Wildlife Biology", "Biodiversity Conservation", "GIS and Remote Sensing", "Taxonomy"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Sri Jayewardenepura (Faculty of Applied Sciences)"]
+  },
+  {
+    "step": 3,
+    "title": "Join a Government Department via Competitive Exam",
+    "description": "To become a government officer, you must pass the competitive examination for recruitment into the Department of Wildlife Conservation (as a Wildlife Ranger/Officer) or the Forest Department (as a Forester/Range Forest Officer).",
+    "duration": "1 year (preparation & exam)",
+    "qualifications": ["Pass in the relevant government competitive exam"],
+    "skills": ["General Knowledge", "Departmental regulations", "Analytical skills", "Interview skills"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (Initial government salary scale)",
+    "institutes": ["N/A - Government recruitment process"]
+  },
+  {
+    "step": 4,
+    "title": "Field Officer (Wildlife Ranger / Forest Officer)",
+    "description": "Work in a national park, forest reserve, or a regional office. Your duties will include patrolling to prevent poaching and illegal logging, conducting wildlife surveys, managing human-wildlife conflict, and community outreach.",
+    "duration": "5-10 years",
+    "qualifications": ["Confirmed government appointment"],
+    "skills": ["Patrolling & Law Enforcement", "Wildlife census techniques", "Conflict Mitigation", "Community Engagement", "Report Writing"],
+    "salaryRangeLKR": "LKR 70,000 - 130,000 (with service increments)",
+    "institutes": ["Department of Wildlife Conservation", "Forest Department"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Officer / Park Warden / Researcher",
+    "description": "With experience and promotions, you can advance to manage a section of a park, or become the Warden in charge of an entire national park. With higher education (MSc/PhD), you can also transition into the research divisions of these departments or work for conservation NGOs.",
+    "duration": "10+ years",
+    "qualifications": ["MSc/PhD in Conservation Biology or related field"],
+    "skills": ["Management & Administration", "Leadership", "Conservation Planning", "Scientific Research", "Policy Contribution"],
+    "salaryRangeLKR": "LKR 120,000 - 220,000+",
+    "institutes": ["Research arms of government departments", "Conservation NGOs (e.g., WNPS, FOGSL)"]
+  }
+]

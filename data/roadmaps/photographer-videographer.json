@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Learn the Fundamentals & Get a Camera",
+    "description": "Start with any camera, even a smartphone. The most crucial step is to learn the fundamentals of composition, lighting, and the exposure triangle (Aperture, Shutter Speed, ISO). Formal education is optional; passion and practice are key.",
+    "duration": "1 year",
+    "qualifications": ["A basic understanding of photography/videography principles"],
+    "skills": ["Composition (Rule of Thirds, etc.)", "Lighting Techniques", "Exposure Triangle", "A good 'eye' for shots", "Patience"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["YouTube (e.g., Peter McKinnon, Matti Haapoja)", "Online courses (Skillshare)", "Local photography clubs"]
+  },
+  {
+    "step": 2,
+    "title": "Develop Technical Skills & Build a Portfolio",
+    "description": "Invest in a DSLR or mirrorless camera. Master post-processing software. Build a strong portfolio by practicing in a specific niche you enjoy, such as portraits, weddings, products, or events.",
+    "duration": "1-2 years",
+    "qualifications": ["A strong portfolio in a chosen niche"],
+    "skills": ["Adobe Lightroom & Photoshop (for photos)", "Adobe Premiere Pro & DaVinci Resolve (for video)", "Advanced camera settings", "Audio recording techniques", "Client communication"],
+    "salaryRangeLKR": "Variable (freelance)",
+    "institutes": ["Self-taught", "Workshops by local professionals"]
+  },
+  {
+    "step": 3,
+    "title": "Assistant Photographer/Videographer or Freelancer",
+    "description": "Gain professional experience by assisting an established photographer or videographer. This is the best way to learn the business side and how to work on a professional set. Alternatively, start taking on small paid freelance projects like small events or portrait sessions.",
+    "duration": "2-3 years",
+    "qualifications": ["On-set experience"],
+    "skills": ["Lighting setup (strobes, LEDs)", "Assisting skills", "Client management", "Pricing your work", "Networking"],
+    "salaryRangeLKR": "LKR 40,000 - 80,000 (as an assistant or from small gigs)",
+    "institutes": ["Assisting well-known wedding, commercial, or fashion photographers"]
+  },
+  {
+    "step": 4,
+    "title": "Professional Photographer/Videographer",
+    "description": "Go full-time as a professional. You will be responsible for marketing yourself, finding clients, planning shoots, executing the creative vision, and delivering the final edited product. Specializing in a high-demand area like wedding photography or commercial videography is common.",
+    "duration": "3-5 years",
+    "qualifications": ["A registered business", "A professional website and social media presence"],
+    "skills": ["Marketing & Branding", "Sales & Negotiation", "Project Management", "Advanced editing and color grading", "Directing subjects"],
+    "salaryRangeLKR": "LKR 100,000 - 300,000+ (highly variable)",
+    "institutes": ["N/A - Entrepreneurial path"]
+  },
+  {
+    "step": 5,
+    "title": "Own a Studio / Production House",
+    "description": "Scale your business by opening your own studio for portrait or product work, or by starting a production house. This involves hiring other photographers, editors, and building a team to handle larger commercial projects for corporate clients.",
+    "duration": "5+ years",
+    "qualifications": ["A strong brand and client base"],
+    "skills": ["Business Management", "Team Leadership", "Financial Planning", "Client Acquisition", "Scaling Operations"],
+    "salaryRangeLKR": "Highly variable (business profit)",
+    "institutes": ["N/A"]
+  }
+]

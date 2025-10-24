@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Apprenticeship and Safety Basics",
+    "description": "A pass in G.C.E. O/L is a good start. The most common entry is as a helper or apprentice in a welding workshop or a vehicle garage. The initial focus is on safety, learning about tools, and observing skilled professionals.",
+    "duration": "1 year",
+    "qualifications": ["Basic literacy"],
+    "skills": ["Workshop safety", "Identifying tools and materials", "Basic grinding and cutting", "Assisting senior workers", "Willingness to learn"],
+    "salaryRangeLKR": "Daily wage (LKR 1,500 - 2,500) as an apprentice",
+    "institutes": ["Apprenticeship at a local workshop or garage"]
+  },
+  {
+    "step": 2,
+    "title": "Vocational Training (NVQ Level 3 & 4)",
+    "description": "Enroll in a formal training program for Welding or as an Auto Mechanic at a vocational institute. This will provide theoretical knowledge and certified practical skills, leading to an NVQ qualification which is highly valued.",
+    "duration": "1-2 years",
+    "qualifications": ["NVQ Level 4 in Welding or Motor Vehicle Mechanic"],
+    "skills": ["Welding Processes (Arc, MIG, TIG)", "Reading technical drawings", "Metal fabrication" , "Engine systems", "Brake and suspension systems"],
+    "salaryRangeLKR": "LKR 40,000 - 65,000 (as a certified technician)",
+    "institutes": ["German Tech (CGTTI)", "Vocational Training Authority (VTA)", "NAITA", "DIMO Academy for Technical Skills (DATS)"]
+  },
+  {
+    "step": 3,
+    "title": "Skilled Welder / Mechanic",
+    "description": "Work as a qualified professional. A welder might work in construction, shipbuilding, or manufacturing. A mechanic would work in a garage or service center, diagnosing and repairing vehicles. Practical experience is key to becoming faster and more accurate.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven practical skills"],
+    "skills": ["Advanced welding techniques", "Pipe welding", "Vehicle diagnostics (using scanners)", "Engine overhauling", "Problem-solving"],
+    "salaryRangeLKR": "LKR 70,000 - 130,000",
+    "institutes": ["Colombo Dockyard", "Construction companies", "Vehicle dealerships (Toyota Lanka, United Motors)", "Independent garages"]
+  },
+  {
+    "step": 4,
+    "title": "Master Technician / Specialist Welder",
+    "description": "Become an expert in a specific area. A welder could become a certified pipe welder for high-pressure systems or an underwater welder. A mechanic could specialize in hybrid/electric vehicles, automatic transmissions, or a specific car brand.",
+    "duration": "5+ years",
+    "qualifications": ["Advanced certifications (e.g., hybrid vehicle technician)"],
+    "skills": ["Specialized welding (e.g., TIG on aluminum)", "Fabrication from blueprints", "Advanced vehicle electronics", "Hybrid battery systems", "Supervising junior staff"],
+    "salaryRangeLKR": "LKR 100,000 - 200,000+",
+    "institutes": ["N/A - On-the-job specialization and advanced training"]
+  },
+  {
+    "step": 5,
+    "title": "Workshop Foreman / Own Garage or Workshop",
+    "description": "Advance to a supervisory role, managing a workshop or a team on a large project. With strong experience and entrepreneurial skills, many master technicians open their own successful garage or welding/fabrication workshop.",
+    "duration": "5+ years",
+    "qualifications": ["Business acumen and good reputation"],
+    "skills": ["Business Management", "Customer Service", "Quotation and Costing", "Team Leadership", "Inventory Management"],
+    "salaryRangeLKR": "LKR 140,000 - 250,000+ (Foreman) or Business Profit",
+    "institutes": ["N/A - Entrepreneurial path"]
+  }
+]

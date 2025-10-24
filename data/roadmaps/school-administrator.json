@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Bachelor's Degree and Teaching Qualification",
+    "description": "The most common path to school administration is through teaching. Obtain a Bachelor's degree (B.Ed., BA, or BSc) and a teaching qualification like a Postgraduate Diploma in Education (PGDE).",
+    "duration": "4-5 years",
+    "qualifications": ["Bachelor's Degree", "PGDE"],
+    "skills": ["Subject Matter Expertise", "Pedagogy", "Communication", "Organizational Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["State Universities", "Open University of Sri Lanka"]
+  },
+  {
+    "step": 2,
+    "title": "Gain Extensive Teaching Experience",
+    "description": "Work as a teacher in a school for a significant period. This is essential for understanding school culture, student needs, teacher challenges, and the curriculum. Leadership potential is often identified during this stage.",
+    "duration": "5-10 years",
+    "qualifications": ["Proven track record as an effective teacher"],
+    "skills": ["Classroom Management", "Student Mentoring", "Leadership in extra-curricular activities", "Curriculum Implementation", "Parent Communication"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000 (as a senior teacher)",
+    "institutes": ["Government, private, or international schools"]
+  },
+  {
+    "step": 3,
+    "title": "Master's in Educational Administration & Leadership",
+    "description": "Pursue a postgraduate degree focused on school management. This provides the theoretical framework for financial management, school law, human resource management, and strategic planning in an educational context.",
+    "duration": "1-2 years",
+    "qualifications": ["Master of Education (M.Ed.) in Educational Leadership/Administration"],
+    "skills": ["Educational Leadership Theories", "School Finance & Budgeting", "Human Resource Management", "Policy Analysis", "Strategic Planning"],
+    "salaryRangeLKR": "LKR 120,000 - 200,000 (in a mid-management role)",
+    "institutes": ["Postgraduate Institute of Education (PGIE)", "University of Colombo"]
+  },
+  {
+    "step": 4,
+    "title": "Mid-Level Administrative Roles",
+    "description": "Take on roles with administrative responsibility, such as Sectional Head, Head of Department, or Vice Principal. This is the training ground for senior leadership, where you manage teams of teachers, oversee academic programs, and handle disciplinary matters.",
+    "duration": "3-5 years",
+    "qualifications": ["For government schools, passing the Sri Lanka Principal Service (SLPS) exam is necessary"],
+    "skills": ["Team Leadership", "Teacher Evaluation", "Academic Program Management", "Conflict Resolution", "Decision Making"],
+    "salaryRangeLKR": "LKR 150,000 - 250,000",
+    "institutes": ["N/A - Promotion within the school system"]
+  },
+  {
+    "step": 5,
+    "title": "Principal / Head of School",
+    "description": "Advance to the top leadership position. As a Principal, you are the chief executive of the school, responsible for its overall academic success, financial health, staff management, and strategic direction.",
+    "duration": "5+ years",
+    "qualifications": ["SLPS Grade I (for top government schools)"],
+    "skills": ["Visionary Leadership", "Financial Management", "Community Engagement", "Stakeholder Management (Ministry, Parents, Board)", "Institutional Development"],
+    "salaryRangeLKR": "LKR 200,000 - 450,000+",
+    "institutes": ["N/A - Appointed based on service and qualifications"]
+  }
+]

@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/L in Physical Science",
+    "description": "Complete your G.C.E. A/L in the Physical Science (Maths) stream. A strong foundation in Combined Mathematics and Physics is crucial for understanding the core concepts of data science.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L (Maths Stream)"],
+    "skills": ["Advanced Mathematics", "Statistics Basics", "Problem Solving", "Logical Reasoning"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Bachelor's Degree in a Quantitative Field",
+    "description": "Obtain a BSc degree in Computer Science, Statistics, IT with specialization in Data Science, or a related field. This academic step is essential for learning programming, algorithms, and statistical theory.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in Computer Science/IT", "BSc in Statistics & Data Science"],
+    "skills": ["Python/R Programming", "SQL and Databases", "Statistics & Probability", "Machine Learning Fundamentals", "Data Wrangling"],
+    "salaryRangeLKR": "LKR 70,000 - 120,000 (Data Analyst/Trainee)",
+    "institutes": ["University of Colombo (UCSC)", "University of Moratuwa", "University of Sri Jayewardenepura", "SLIIT", "NSBM"]
+  },
+  {
+    "step": 3,
+    "title": "Entry-Level Role: Data Analyst",
+    "description": "Begin your career as a Data Analyst. In this role, you will work with data sets to identify trends, create reports, and develop visualizations to help businesses make informed decisions. This is practical training for a full data scientist role.",
+    "duration": "1-2 years",
+    "qualifications": ["Completed BSc Degree"],
+    "skills": ["Data Visualization (Tableau, Power BI)", "Advanced Excel", "Data Cleaning", "Reporting", "Business Acumen"],
+    "salaryRangeLKR": "LKR 100,000 - 180,000",
+    "institutes": ["PickMe", "Daraz", "Dialog Axiata", "Major Banks (HNB, Commercial)", "John Keells Holdings"]
+  },
+  {
+    "step": 4,
+    "title": "Transition to Data Scientist",
+    "description": "Leverage your analyst experience to move into a Data Scientist position. This role involves more advanced tasks like building predictive models, using machine learning algorithms, and conducting in-depth exploratory analysis.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven experience as a Data Analyst", "Strong portfolio of data projects"],
+    "skills": ["Machine Learning (Scikit-learn, TensorFlow)", "Big Data Technologies (Spark)", "Cloud Platforms (AWS, Azure)", "Statistical Modeling"],
+    "salaryRangeLKR": "LKR 200,000 - 400,000",
+    "institutes": ["WSO2", "Sysco LABS", "Stax", "Axiata Digital Labs", "LSEG Technology"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Data Scientist / ML Engineer",
+    "description": "Advance to a senior role where you lead complex data science projects, mentor junior team members, and contribute to data strategy. You can specialize further into fields like Machine Learning Engineering or AI Research. A Master's degree can accelerate this step.",
+    "duration": "3-5+ years",
+    "qualifications": ["MSc in Data Science/AI (Optional but recommended)"],
+    "skills": ["MLOps", "Deep Learning", "Project Leadership", "Research & Development", "Stakeholder Communication"],
+    "salaryRangeLKR": "LKR 450,000 - 800,000+",
+    "institutes": ["Leading tech companies and research divisions"]
+  }
+]

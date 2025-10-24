@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation in IT Basics & A/L Studies",
+    "description": "Any A/L stream is viable, but the Technology or Maths stream is advantageous. Focus on self-learning basic HTML, CSS, and JavaScript fundamentals through online resources.",
+    "duration": "1-2 years",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["HTML5", "CSS3", "Basic JavaScript (ES6)", "Logical Thinking"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["FreeCodeCamp", "The Odin Project", "YouTube Tutorials"]
+  },
+  {
+    "step": 2,
+    "title": "Diploma or Degree in IT/Software Engineering",
+    "description": "Enroll in a higher education program to get a structured understanding of software development principles. This is where you will dive deep into programming languages and frameworks.",
+    "duration": "2-4 years",
+    "qualifications": ["Diploma in Web/Software Development", "BSc in IT/Software Engineering"],
+    "skills": ["Advanced JavaScript", "Frontend Frameworks (React, Vue, or Angular)", "Backend Development (Node.js, PHP, or Python)", "Mobile Frameworks (React Native, Flutter)", "Databases (MongoDB, MySQL)"],
+    "salaryRangeLKR": "LKR 50,000 - 90,000 (Intern/Trainee)",
+    "institutes": ["SLIIT", "NSBM", "IIT", "University of Moratuwa", "UCSC"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Developer & Portfolio Building",
+    "description": "Secure a role as a Junior Web or Mobile Developer. Focus on building a strong portfolio of projects. Contribute to open-source projects to showcase your skills and ability to collaborate.",
+    "duration": "1-2 years",
+    "qualifications": ["Completed Degree/Diploma", "Strong GitHub Portfolio"],
+    "skills": ["Version Control (Git)", "API Integration (REST, GraphQL)", "State Management (Redux, MobX)", "UI/UX Principles", "Testing & Debugging"],
+    "salaryRangeLKR": "LKR 80,000 - 160,000",
+    "institutes": ["99x", "Creative Software", "WSO2", "Sysco LABS", "Digital Agencies"]
+  },
+  {
+    "step": 4,
+    "title": "Mid-Level Developer",
+    "description": "As a mid-level developer, you'll take on more complex features and have more ownership of the codebase. You'll be expected to work more independently and contribute to architectural decisions.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven experience in delivering projects"],
+    "skills": ["Software Architecture", "Performance Optimization", "Security Best Practices", "CI/CD Pipelines", "Code Review"],
+    "salaryRangeLKR": "LKR 180,000 - 300,000",
+    "institutes": ["All major tech companies and startups in Sri Lanka"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Developer / Tech Lead",
+    "description": "Advance to a senior role where you'll mentor junior developers, lead technical design for projects, and solve the most challenging technical problems. You can specialize in frontend, backend, mobile, or full-stack development.",
+    "duration": "5+ years",
+    "qualifications": ["Deep expertise in one or more tech stacks"],
+    "skills": ["System Design", "Technical Leadership", "Mentoring", "Project Planning", "Stakeholder Communication"],
+    "salaryRangeLKR": "LKR 350,000 - 650,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

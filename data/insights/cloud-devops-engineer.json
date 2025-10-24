@@ -1,0 +1,12 @@
+{
+  "demand": "Extremely High",
+  "salaryExpectations": "LKR 120,000 (Junior Cloud Engineer) to LKR 800,000+ (Senior DevOps/SRE) per month.",
+  "requiredSkills": [
+    "Cloud Platforms (AWS, Azure)",
+    "Containerization (Docker, Kubernetes)",
+    "CI/CD Tools (Jenkins, GitLab CI)",
+    "Infrastructure as Code (Terraform)",
+    "Linux and Scripting (Python, Bash)"
+  ],
+  "futureOutlook": "This is currently one of the most sought-after and highest-paying roles in the Sri Lankan IT industry. Every modern software company is moving to the cloud and adopting DevOps practices to ship software faster and more reliably. The talent pool is small, and demand is huge, creating excellent career opportunities."
+}

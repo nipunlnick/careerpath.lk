@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: Degree in IT or Business",
+    "description": "Start with a bachelor's degree. A degree in Information Technology, Computer Science, or Software Engineering provides technical grounding, while a degree in Business Management provides a strong commercial foundation. Both are excellent starting points.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc in IT/Computer Science", "BBA (Bachelor of Business Administration)"],
+    "skills": ["Communication", "Problem-Solving", "Teamwork", "Basic Technical Literacy", "Organizational Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Colombo (UCSC)", "University of Moratuwa", "SLIIT", "NSBM", "University of Sri Jayewardenepura"]
+  },
+  {
+    "step": 2,
+    "title": "Entry-Level Role: Project Coordinator or Business Analyst",
+    "description": "Begin your career in a role that supports the project management process. As a Project Coordinator, you'll handle administrative tasks, scheduling, and reporting. As a Business Analyst, you'll focus on gathering requirements and bridging the gap between business needs and the tech team.",
+    "duration": "2-3 years",
+    "qualifications": ["Completed Degree"],
+    "skills": ["Project Coordination", "Requirements Gathering", "Documentation", "Stakeholder Communication", "MS Project/Jira Basics"],
+    "salaryRangeLKR": "LKR 70,000 - 130,000",
+    "institutes": ["Virtusa", "IFS", "LSEG Technology", "HCLTech", "Major Banks"]
+  },
+  {
+    "step": 3,
+    "title": "Associate Project Manager & Certification",
+    "description": "Move into an Associate Project Manager role with responsibility for smaller projects or modules of a larger project. This is the perfect time to get a globally recognized project management certification.",
+    "duration": "2-3 years",
+    "qualifications": ["Certified Associate in Project Management (CAPM)", "Professional Scrum Master (PSM I)"],
+    "skills": ["Agile/Scrum Methodologies", "Risk Management", "Scope Management", "Budget Tracking", "Team Facilitation"],
+    "salaryRangeLKR": "LKR 140,000 - 250,000",
+    "institutes": ["All major IT companies in Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "IT Project Manager",
+    "description": "As a Project Manager, you are fully responsible for planning, executing, and closing projects. You will manage the project scope, schedule, budget, and team to ensure successful delivery.",
+    "duration": "3-5 years",
+    "qualifications": ["Project Management Professional (PMP)"],
+    "skills": ["Project Planning & Execution", "Leadership", "Vendor Management", "Stakeholder Management", "Conflict Resolution"],
+    "salaryRangeLKR": "LKR 260,000 - 450,000",
+    "institutes": ["WSO2", "Sysco LABS", "99x", "Dialog Axiata", "Commercial Bank"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Project Manager / Program Manager",
+    "description": "Advance to a senior role where you manage multiple, related projects (a program) or handle large-scale, complex enterprise projects. This role involves more strategic planning and alignment with organizational goals.",
+    "duration": "5+ years",
+    "qualifications": ["PgMP (Program Management Professional)", "MBA (optional)"],
+    "skills": ["Program Management", "Portfolio Management", "Strategic Planning", "Financial Acumen", "Mentoring"],
+    "salaryRangeLKR": "LKR 500,000 - 800,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

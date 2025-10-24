@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: G.C.E. O/L and Technical Aptitude",
+    "description": "A good pass in G.C.E. O/L, especially in Mathematics and Science, is the starting point. Having a natural interest in how things work and hands-on problem-solving is crucial. Pursuing the A/L Technology stream can be an advantage.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. O/L"],
+    "skills": ["Basic Science Principles", "Mathematical Skills", "Hands-on Aptitude", "Problem-Solving"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any school"]
+  },
+  {
+    "step": 2,
+    "title": "Vocational Training & NVQ Qualification",
+    "description": "Enroll in a technician course at a recognized vocational training institute. Choose a specialization based on your interest, such as Electrical, Mechanical, Automotive, or AC & Refrigeration. The goal is to achieve an NVQ Level 4 certification.",
+    "duration": "1-2 years",
+    "qualifications": ["National Vocational Qualification (NVQ) Level 4"],
+    "skills": ["Specialized technical knowledge (e.g., wiring, engine repair)", "Use of Tools and Equipment", "Safety Procedures", "Reading Technical Diagrams"],
+    "salaryRangeLKR": "LKR 30,000 - 50,000 (Trainee/Apprentice)",
+    "institutes": ["German Tech (CGTTI)", "Vocational Training Authority (VTA)", "NAITA", "Sri Lanka-Korea National Vocational Training Institute"]
+  },
+  {
+    "step": 3,
+    "title": "Technician",
+    "description": "Work as a qualified technician in your chosen field. Your responsibilities will include installation, maintenance, troubleshooting, and repair of equipment and systems. This is where you apply your training to real-world problems.",
+    "duration": "3-5 years",
+    "qualifications": ["NVQ Level 4", "On-the-job experience"],
+    "skills": ["Troubleshooting & Diagnostics", "Repair and Maintenance", "Customer Service", "Reporting", "Adherence to Standards"],
+    "salaryRangeLKR": "LKR 50,000 - 90,000",
+    "institutes": ["Industrial factories", "Automobile service centers (e.g., DIMO, Toyota Lanka)", "Construction companies", "Utility providers (CEB, NWSDB)"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Technician & Further Qualification",
+    "description": "Become a senior technician, handling more complex tasks and possibly supervising junior staff. To progress further, consider pursuing a higher-level qualification like an NVQ Level 5/6 (equivalent to a diploma/higher diploma).",
+    "duration": "3-5 years",
+    "qualifications": ["NVQ Level 5 or 6", "Industry-specific certifications"],
+    "skills": ["Advanced Diagnostics", "Supervision", "Training Junior Staff", "Inventory Management", "Quality Control"],
+    "salaryRangeLKR": "LKR 80,000 - 140,000",
+    "institutes": ["University of Vocational Technology (Univotec)"]
+  },
+  {
+    "step": 5,
+    "title": "Technical Supervisor / Foreman / Entrepreneur",
+    "description": "Advance to a supervisory role, managing a team of technicians and overseeing all technical operations in a workshop or on a site. With extensive experience and business acumen, many senior technicians also start their own successful service and repair businesses.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive experience"],
+    "skills": ["Team Management", "Work Scheduling", "Project Coordination", "Business Management", "Customer Relations"],
+    "salaryRangeLKR": "LKR 120,000 - 200,000+ (Supervisor) or Business Profit",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

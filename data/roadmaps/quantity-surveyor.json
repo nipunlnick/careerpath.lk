@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "G.C.E. Advanced Level (A/L) - Maths or Commerce Stream",
+    "description": "A strong background in the Maths stream is preferred for the university degree path. The Commerce stream is also a viable option, especially for diploma-level entry. Strong numerical skills are key.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["Mathematics", "Numeracy", "Attention to Detail", "Analytical Skills"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Leading Government & Private Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Degree or Diploma in Quantity Surveying",
+    "description": "The primary pathway is a 4-year BSc (Hons) in Quantity Surveying. Alternatively, a National Diploma (NDT or HNDE) is also a well-recognized entry point into the profession.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc (Hons) in Quantity Surveying", "National Diploma in Technology (NDT)"],
+    "skills": ["Measurement (SMM)", "Cost Estimation", "Tendering and Procurement", "Contract Law Basics", "Construction Technology"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (Trainee/Assistant QS)",
+    "institutes": ["University of Moratuwa", "Institute of Technology, University of Moratuwa (ITUM)", "HNDE"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Quantity Surveyor",
+    "description": "Work under a senior QS in a construction company or a consultancy firm. You will be involved in taking measurements from drawings, preparing Bills of Quantities (BOQ), and assisting with tender evaluations and monthly payment valuations.",
+    "duration": "2-4 years",
+    "qualifications": ["Completed Degree/Diploma"],
+    "skills": ["BOQ Preparation", "Interim Valuations", "Variation Assessment", "Cost Control", "AutoCAD/Measurement Software"],
+    "salaryRangeLKR": "LKR 90,000 - 160,000",
+    "institutes": ["Maga Engineering", "Access Engineering", "Nawaloka Construction", "Consultancy firms (e.g., Cost-Consult)", "Major developers"]
+  },
+  {
+    "step": 4,
+    "title": "Achieve Professional Chartership",
+    "description": "Gain sufficient experience and pass the professional examinations to become a Chartered Quantity Surveyor. The main professional bodies are the Institute of Quantity Surveyors, Sri Lanka (IQSSL) and the Royal Institution of Chartered Surveyors (RICS, UK).",
+    "duration": "4+ years (post-graduation)",
+    "qualifications": ["Chartered Quantity Surveyor (IQSSL/RICS)"],
+    "skills": ["Contract Administration", "Dispute Resolution", "Feasibility Studies", "Value Engineering", "Professional Ethics"],
+    "salaryRangeLKR": "LKR 180,000 - 350,000",
+    "institutes": ["N/A - Based on experience and professional exams"]
+  },
+  {
+    "step": 5,
+    "title": "Senior QS / Commercial Manager",
+    "description": "Advance to a senior role where you manage the entire commercial aspect of large-scale construction projects. This includes managing contracts, handling claims, and leading a team of junior QSs. Many also become partners in consultancy firms.",
+    "duration": "5+ years",
+    "qualifications": ["Fellowship of professional bodies"],
+    "skills": ["Commercial Management", "Contract Negotiation", "Risk Management", "Client Management", "Leadership"],
+    "salaryRangeLKR": "LKR 400,000 - 700,000+",
+    "institutes": ["N/A - Based on experience"]
+  }
+]

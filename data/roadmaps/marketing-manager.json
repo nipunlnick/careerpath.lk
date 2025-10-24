@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/Ls and Basic Marketing Knowledge",
+    "description": "While any A/L stream is acceptable, the Commerce stream can provide a good foundation. Start building your knowledge by following marketing trends and reading basic marketing literature.",
+    "duration": "2 years",
+    "qualifications": ["G.C.E. A/L"],
+    "skills": ["Communication Skills", "Creativity", "General Business Awareness"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Any reputable school"]
+  },
+  {
+    "step": 2,
+    "title": "Professional Qualification / Degree",
+    "description": "Pursue a recognized professional marketing qualification or a university degree. CIM (UK) is highly regarded in the Sri Lankan corporate sector. A business or marketing degree is also a strong alternative.",
+    "duration": "3-4 years",
+    "qualifications": ["CIM (UK) Diploma in Professional Marketing", "BBA/BSc in Marketing Management"],
+    "skills": ["Marketing Principles", "Digital Marketing Basics (SEO, SMM)", "Market Research", "Consumer Behavior"],
+    "salaryRangeLKR": "LKR 45,000 - 75,000 (Marketing Intern/Trainee)",
+    "institutes": ["SLIM (Sri Lanka Institute of Marketing)", "CIM UK (Sri Lanka Branch)", "University of Sri Jayewardenepura", "University of Kelaniya", "NSBM", "SLIIT"]
+  },
+  {
+    "step": 3,
+    "title": "Marketing Executive / Brand Executive",
+    "description": "Secure an entry-level position in a marketing department. You will be responsible for executing marketing campaigns, coordinating with agencies, conducting market research, and managing social media channels.",
+    "duration": "2-3 years",
+    "qualifications": ["Completed Degree or Professional Qualification"],
+    "skills": ["Campaign Execution", "Content Creation", "Social Media Management", "Data Analysis", "Vendor Coordination"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000",
+    "institutes": ["Unilever", "Nestle", "Dialog Axiata", "MAS Holdings", "Leading Advertising Agencies (e.g., Ogilvy, Leo Burnett)"]
+  },
+  {
+    "step": 4,
+    "title": "Assistant Brand Manager / Brand Manager",
+    "description": "Move into a brand management role where you take ownership of a specific brand or product portfolio. This involves developing marketing strategies, managing budgets, and analyzing brand performance.",
+    "duration": "3-5 years",
+    "qualifications": ["Proven experience as a Marketing Executive"],
+    "skills": ["Brand Strategy", "Budget Management", "Product Management", "Marketing Analytics", "Leadership"],
+    "salaryRangeLKR": "LKR 180,000 - 350,000",
+    "institutes": ["Primarily FMCG, Banking, and Telecommunication sectors"]
+  },
+  {
+    "step": 5,
+    "title": "Marketing Manager / Head of Marketing",
+    "description": "As a Marketing Manager, you oversee the entire marketing function of the company or a business unit. You are responsible for setting the overall marketing strategy, leading the team, and driving business growth through marketing initiatives. An MBA can be highly beneficial at this stage.",
+    "duration": "5+ years",
+    "qualifications": ["MBA (Master of Business Administration)", "Chartered Marketer status (CIM)"],
+    "skills": ["Strategic Marketing Planning", "Team Leadership & Mentoring", "P&L Responsibility", "Market Penetration Strategies", "Corporate Communications"],
+    "salaryRangeLKR": "LKR 400,000 - 750,000+",
+    "institutes": ["Any leading local or multinational corporation in Sri Lanka"]
+  }
+]

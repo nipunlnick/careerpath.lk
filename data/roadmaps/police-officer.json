@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Meet Basic Eligibility Requirements",
+    "description": "To join as a Police Constable, the minimum educational qualification is passing the G.C.E. O/L examination. For Sub-Inspector, a G.C.E. A/L pass is required. Applicants must also meet strict age, height, and physical fitness standards and have a clean record.",
+    "duration": "Post-schooling",
+    "qualifications": ["G.C.E. O/L or A/L", "Meet physical and character requirements"],
+    "skills": ["Integrity", "Discipline", "Physical Fitness", "Communication Skills", "Courage"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["N/A"]
+  },
+  {
+    "step": 2,
+    "title": "Recruitment Process and Basic Training",
+    "description": "Successfully pass the police recruitment process, which includes a written exam, a physical fitness test, and an interview. Upon selection, undergo intensive basic training at a police college, which covers law, police procedures, physical training, and firearms.",
+    "duration": "1-2 years",
+    "qualifications": ["Successful completion of police training"],
+    "skills": ["Police Procedures", "Criminal Law (basics)", "Self-Defense", "First Aid", "Drill and Parade"],
+    "salaryRangeLKR": "Stipend during training, then initial government salary scale",
+    "institutes": ["Sri Lanka Police College"]
+  },
+  {
+    "step": 3,
+    "title": "Police Constable / Sub-Inspector",
+    "description": "Begin your service at a police station. Your duties will include patrolling, responding to public complaints, conducting preliminary investigations, traffic control, and maintaining law and order in your assigned area.",
+    "duration": "5-10 years",
+    "qualifications": ["Confirmed appointment in the Sri Lanka Police"],
+    "skills": ["Patrolling Techniques", "Investigation Skills", "Statement Recording", "Community Policing", "De-escalation Techniques"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000 (with allowances)",
+    "institutes": ["Police stations across Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "Promotion to Sergeant / Inspector of Police (IP)",
+    "description": "Through departmental examinations and a good service record, you can earn promotions. Sergeants and IPs take on more supervisory roles, leading teams of constables, managing station duties, and handling more serious cases.",
+    "duration": "5-8 years",
+    "qualifications": ["Pass in departmental promotion exams"],
+    "skills": ["Supervision", "Case Management", "Report Writing", "Leadership", "Operational Planning"],
+    "salaryRangeLKR": "LKR 80,000 - 140,000",
+    "institutes": ["N/A - Promotion within the police service"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Gazetted Ranks (ASP, SP, etc.)",
+    "description": "Highly capable officers can rise to the gazetted ranks, starting from Assistant Superintendent of Police (ASP). These are senior leadership roles involving command of a police division or a specialized unit. A university degree becomes increasingly important for these higher ranks.",
+    "duration": "10+ years",
+    "qualifications": ["Excellent service record", "Higher education (Degree) is an asset"],
+    "skills": ["Strategic Command", "Administrative Management", "Policy Implementation", "Public Relations", "Large-scale operational command"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000+",
+    "institutes": ["N/A - Based on service progression"]
+  }
+]

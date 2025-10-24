@@ -1,0 +1,53 @@
+
+[
+  {
+    "step": 1,
+    "title": "Foundation: A/Ls and Strong Language Skills",
+    "description": "A degree is not always mandatory but highly recommended. A BA in Mass Communication, English, or Social Sciences is ideal. What's non-negotiable are excellent writing and communication skills in English, Sinhala, or Tamil.",
+    "duration": "2-4 years",
+    "qualifications": ["G.C.E. A/L", "Bachelor's Degree (recommended)"],
+    "skills": ["Excellent Writing Skills", "Strong Command of Language", "Curiosity", "Critical Thinking", "General Knowledge"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["University of Colombo", "University of Kelaniya (Mass Communication)", "Sri Lanka College of Journalism (SLCJ)"]
+  },
+  {
+    "step": 2,
+    "title": "Internship and Building a Portfolio",
+    "description": "Gain practical experience by interning at a newspaper, TV station, or online news outlet. Focus on getting bylines (your name on published articles). This portfolio of work is more important than your academic qualifications when looking for your first job.",
+    "duration": "6-12 months",
+    "qualifications": ["A portfolio of published work (even on a blog)"],
+    "skills": ["News Writing (Inverted Pyramid style)", "Interviewing Techniques", "Fact-Checking", "Research", "Meeting Deadlines"],
+    "salaryRangeLKR": "LKR 20,000 - 35,000 (Intern)",
+    "institutes": ["Daily Mirror/Sunday Times", "Daily FT", "Roar Media", "Sirasa/MTV", "Ada Derana"]
+  },
+  {
+    "step": 3,
+    "title": "Junior Reporter / Journalist",
+    "description": "Work as a full-time reporter. You will be assigned a 'beat' (a specific area to cover, like politics, business, or sports). Your job is to find news stories, interview sources, and write accurate and timely articles.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven reporting ability"],
+    "skills": ["Developing Sources", "Investigative Skills", "Media Law & Ethics", "Multimedia Skills (basic photo/video)", "Working under pressure"],
+    "salaryRangeLKR": "LKR 50,000 - 90,000",
+    "institutes": ["All major media houses in Sri Lanka"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Reporter / Feature Writer",
+    "description": "As a senior reporter, you will cover more significant stories and conduct in-depth investigations. You might also move into feature writing, creating longer, more narrative-driven articles. You will be a trusted name in your field.",
+    "duration": "3-5 years",
+    "qualifications": ["A strong reputation for accuracy and integrity"],
+    "skills": ["In-depth Analysis", "Feature Writing", "Data Journalism", "Mentoring Junior Reporters", "Specialized Beat Knowledge"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000",
+    "institutes": ["Leading newspapers and digital media outlets"]
+  },
+  {
+    "step": 5,
+    "title": "Editor / News Manager",
+    "description": "Advance to an editorial role, where you move from creating content to managing it. Editors are responsible for assigning stories, editing copy, ensuring quality and accuracy, and shaping the overall editorial direction of the publication.",
+    "duration": "5+ years",
+    "qualifications": ["Extensive journalism experience"],
+    "skills": ["Editing & Proofreading", "Team Leadership", "Editorial Strategy", "Content Management Systems (CMS)", "Decision Making"],
+    "salaryRangeLKR": "LKR 140,000 - 250,000+",
+    "institutes": ["N/A - Promotion within media organizations"]
+  }
+]
