@@ -1,3 +1,4 @@
+
 import type { CareerCategory } from './types';
 
 export const NAV_LINKS = [

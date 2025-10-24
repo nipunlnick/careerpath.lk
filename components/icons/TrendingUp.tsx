@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const TrendingUp: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (

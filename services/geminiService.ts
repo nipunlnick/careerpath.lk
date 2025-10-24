@@ -1,3 +1,4 @@
+
 import { GoogleGenAI, Type } from "@google/genai";
 import type { CareerSuggestion, RoadmapStep, MarketInsights } from '../types';
 

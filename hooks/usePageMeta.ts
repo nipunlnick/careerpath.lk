@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 
 export const usePageMeta = (title: string, description: string) => {
