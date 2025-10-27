@@ -1,34 +1,38 @@
-
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { QUIZ_QUESTIONS } from '../constants';
-import { suggestCareers } from '../services/geminiService';
-import type { CareerSuggestion } from '../types';
-import { usePageMeta } from '../hooks/usePageMeta';
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { QUIZ_QUESTIONS } from "../constants";
+import { useQuizApi } from "../hooks/api/useQuizApi";
+import { useAuth } from "../contexts/AuthContext";
+import type { CareerSuggestion } from "../types";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const CareerQuiz: React.FC = () => {
   usePageMeta(
     "Quick Career Quiz | CareerPath.lk",
-    "Answer 5 simple questions to get instant, AI-powered career suggestions tailored for the Sri Lankan job market. Find your ideal career path today!"
+    "Discover your ideal career path with our quick 2-minute career assessment quiz."
   );
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [suggestions, setSuggestions] = useState<CareerSuggestion[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
+  const { user } = useAuth();
+  const { getSuggestions, isLoading, error, wasCached } = useQuizApi();
+
   const handleSubmit = async (finalAnswers: Record<string, string>) => {
-    setIsLoading(true);
-    setError(null);
     setSuggestions([]);
     try {
-      const result = await suggestCareers(finalAnswers);
+      const result = await getSuggestions(finalAnswers, "standard", user?.uid);
       setSuggestions(result);
+
+      if (wasCached) {
+        console.log("Quiz result retrieved from cache");
+      } else {
+        console.log("New quiz result generated");
+      }
     } catch (err: any) {
-      setError(err.message || 'An unexpected error occurred.');
-    } finally {
-      setIsLoading(false);
+      console.error("Quiz submission error:", err);
+      // Error is handled by the useQuizApi hook
     }
   };
 
@@ -49,29 +53,45 @@ const CareerQuiz: React.FC = () => {
     setCurrentQuestionIndex(0);
     setAnswers({});
     setSuggestions([]);
-    setError(null);
   };
 
-  const handleExploreRoadmap = (path: string) => {
-    navigate(`/roadmaps?field=${encodeURIComponent(path)}&level=A/Ls`);
+  const handleExploreRoadmap = (suggestion: any) => {
+    // Use the roadmap slug if available, otherwise fallback to search
+    if (suggestion.roadmapSlug) {
+      navigate(`/roadmaps/${suggestion.roadmapSlug}`);
+    } else {
+      const path = suggestion.roadmapPath || suggestion.career;
+      navigate(`/roadmaps?field=${encodeURIComponent(path)}&level=A/Ls`);
+    }
   };
 
-  const progressPercentage = ((currentQuestionIndex + 1) / QUIZ_QUESTIONS.length) * 100;
+  const progressPercentage =
+    ((currentQuestionIndex + 1) / QUIZ_QUESTIONS.length) * 100;
 
   if (isLoading) {
     return (
       <div className="text-center mt-8 bg-white dark:bg-gray-800 p-12 rounded-xl shadow-lg">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">Analyzing your answers to find the perfect career...</p>
+        <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">
+          Analyzing your answers to find the perfect career...
+        </p>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="mt-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-center animate-fadeInUp" role="alert">
+      <div
+        className="mt-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-center animate-fadeInUp"
+        role="alert"
+      >
         <p>{error}</p>
-        <button onClick={handleReset} className="mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600">Try Again</button>
+        <button
+          onClick={handleReset}
+          className="mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600"
+        >
+          Try Again
+        </button>
       </div>
     );
   }
@@ -79,32 +99,58 @@ const CareerQuiz: React.FC = () => {
   if (suggestions.length > 0) {
     return (
       <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg animate-fadeInUp">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">Your Personalized Career Suggestions</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
+          Your Personalized Career Suggestions
+        </h2>
         <div className="mt-8 space-y-6">
           {suggestions.map((suggestion, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg animate-fadeInUp"
-              style={{ animationDelay: `${index * 200}ms`}}
+              style={{ animationDelay: `${index * 200}ms` }}
             >
-              <h3 className="text-2xl font-semibold text-yellow-800 dark:text-yellow-300">{suggestion.career}</h3>
-              <p className="mt-2 text-gray-700 dark:text-gray-300">{suggestion.description}</p>
-              <p className="mt-4 text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-700 p-3 rounded-md"><strong className="dark:text-gray-200">Why it's a good fit:</strong> {suggestion.reasoning}</p>
-              <button onClick={() => handleExploreRoadmap(suggestion.roadmapPath)} className="mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-green-700 transition-colors">
-                Explore Roadmap
+              <h3 className="text-2xl font-semibold text-yellow-800 dark:text-yellow-300">
+                {suggestion.career}
+              </h3>
+              <p className="mt-2 text-gray-700 dark:text-gray-300">
+                {suggestion.description}
+              </p>
+              <p className="mt-4 text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-700 p-3 rounded-md">
+                <strong className="dark:text-gray-200">
+                  Why it's a good fit:
+                </strong>{" "}
+                {suggestion.reasoning}
+              </p>
+              <button
+                onClick={() => handleExploreRoadmap(suggestion)}
+                className="mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-green-700 transition-colors"
+              >
+                {suggestion.roadmapSlug ? "View Roadmap" : "Explore Roadmap"}
               </button>
             </div>
           ))}
         </div>
         <div className="mt-10 text-center border-t dark:border-gray-700 pt-6 animate-fadeInUp animation-delay-600">
-            <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Ready for a Deeper Dive?</h4>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">Get even more personalized results with our in-depth assessment.</p>
-            <Link to="/long-quiz" className="mt-4 inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-green-700 transition-colors">
-                Take the In-Depth Assessment
-            </Link>
+          <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+            Ready for a Deeper Dive?
+          </h4>
+          <p className="mt-2 text-gray-600 dark:text-gray-400">
+            Get even more personalized results with our in-depth assessment.
+          </p>
+          <Link
+            to="/long-quiz"
+            className="mt-4 inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-green-700 transition-colors"
+          >
+            Take the In-Depth Assessment
+          </Link>
         </div>
         <div className="text-center mt-8">
-          <button onClick={handleReset} className="text-green-600 dark:text-green-400 font-semibold hover:underline">Take the quick quiz again</button>
+          <button
+            onClick={handleReset}
+            className="text-green-600 dark:text-green-400 font-semibold hover:underline"
+          >
+            Take the quick quiz again
+          </button>
         </div>
       </div>
     );
@@ -115,31 +161,45 @@ const CareerQuiz: React.FC = () => {
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white text-center animate-fadeInUp">Find Your Perfect Career Path</h1>
-        <p className="text-center mt-2 text-gray-600 dark:text-gray-300 animate-fadeInUp animation-delay-100">Answer 5 quick questions to get started.</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white text-center animate-fadeInUp">
+          Find Your Perfect Career Path
+        </h1>
+        <p className="text-center mt-2 text-gray-600 dark:text-gray-300 animate-fadeInUp animation-delay-100">
+          Answer 5 quick questions to get started.
+        </p>
 
         <div className="mt-8">
-            {/* Progress Bar */}
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
-                <div className="bg-green-600 h-2.5 rounded-full" style={{ width: `${progressPercentage}%`, transition: 'width 0.5s ease-in-out' }}></div>
-            </div>
-          
-            <div key={currentQuestionIndex} className="animate-fadeInUp">
-              <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-1">Question {currentQuestionIndex + 1}/{QUIZ_QUESTIONS.length}</h2>
-              <p className="text-lg text-gray-800 dark:text-gray-200">{currentQuestion.question}</p>
+          {/* Progress Bar */}
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
+            <div
+              className="bg-green-600 h-2.5 rounded-full"
+              style={{
+                width: `${progressPercentage}%`,
+                transition: "width 0.5s ease-in-out",
+              }}
+            ></div>
+          </div>
 
-              <div className="mt-6 space-y-4">
-                  {currentQuestion.options.map((option, index) => (
-                      <button
-                          key={index}
-                          onClick={() => handleAnswerSelect(option)}
-                          className="w-full text-left p-4 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 rounded-lg border-2 border-transparent hover:bg-green-100 hover:border-green-500 dark:hover:bg-green-900/50 dark:hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105"
-                      >
-                          {option}
-                      </button>
-                  ))}
-              </div>
+          <div key={currentQuestionIndex} className="animate-fadeInUp">
+            <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-1">
+              Question {currentQuestionIndex + 1}/{QUIZ_QUESTIONS.length}
+            </h2>
+            <p className="text-lg text-gray-800 dark:text-gray-200">
+              {currentQuestion.question}
+            </p>
+
+            <div className="mt-6 space-y-4">
+              {currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswerSelect(option)}
+                  className="w-full text-left p-4 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 rounded-lg border-2 border-transparent hover:bg-green-100 hover:border-green-500 dark:hover:bg-green-900/50 dark:hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105"
+                >
+                  {option}
+                </button>
+              ))}
             </div>
+          </div>
         </div>
       </div>
     </div>

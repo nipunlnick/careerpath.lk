@@ -2,13 +2,21 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { CareerSuggestion, RoadmapStep, MarketInsights } from '../types';
 
-const API_KEY = process.env.API_KEY;
 let ai: GoogleGenAI | null = null;
 
-if (!API_KEY) {
-  console.warn("API_KEY environment variable is not set. Gemini API features will be disabled.");
-} else {
+function initializeAI() {
+  if (ai !== null) return ai;
+  
+  const API_KEY = process.env.GEMINI_API_KEY || process.env.API_KEY;
+  
+  if (!API_KEY) {
+    console.warn("GEMINI_API_KEY environment variable is not set. Gemini API features will be disabled.");
+    return null;
+  }
+  
   ai = new GoogleGenAI({ apiKey: API_KEY });
+  console.log("✅ Gemini AI initialized successfully");
+  return ai;
 }
 
 const careerSuggestionSchema = {
@@ -68,13 +76,15 @@ const roadmapAndInsightsSchema = {
 };
 
 const checkApi = () => {
-    if (!ai) {
-        throw new Error("Gemini API is not configured. Please ensure the API_KEY is set correctly.");
+    const apiInstance = initializeAI();
+    if (!apiInstance) {
+        throw new Error("Gemini API is not configured. Please ensure the GEMINI_API_KEY is set correctly.");
     }
+    return apiInstance;
 }
 
 export const suggestCareers = async (answers: Record<string, string>): Promise<CareerSuggestion[]> => {
-    checkApi();
+    const ai = checkApi();
     try {
         const prompt = `
         Based on the following quiz answers from a Sri Lankan student, suggest 3 suitable career paths.
@@ -112,7 +122,7 @@ export const suggestCareers = async (answers: Record<string, string>): Promise<C
 };
 
 export const suggestCareersLong = async (answers: Record<string, string>): Promise<CareerSuggestion[]> => {
-    checkApi();
+    const ai = checkApi();
     try {
         const prompt = `
         A Sri Lankan student has completed an in-depth career quiz. Based on their detailed answers below, provide 3 highly personalized career path suggestions.
@@ -160,7 +170,7 @@ export const suggestCareersLong = async (answers: Record<string, string>): Promi
 };
 
 export const generateRoadmap = async (careerName: string): Promise<{ roadmap: RoadmapStep[], insights: MarketInsights }> => {
-    checkApi();
+    const ai = checkApi();
     try {
         const prompt = `
         Generate a detailed 5-step career roadmap and market insights for the career of a "${careerName}" in Sri Lanka.

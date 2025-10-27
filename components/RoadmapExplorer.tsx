@@ -1,28 +1,40 @@
-
-import React, { useState, useEffect, useRef } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import jsPDF from 'jspdf';
-import autoTable from 'jspdf-autotable';
-import type { RoadmapStep, MarketInsights } from '../types';
-import { Book, Briefcase, CheckCircle, GraduationCap, Lightbulb, Money, Target, TrendingUp, DollarSign, ClipboardList, Download } from './icons';
-import { useAuth } from '../contexts/AuthContext';
-import { db } from '../firebase';
-import { generateRoadmap } from '../services/geminiService';
-import { usePageMeta } from '../hooks/usePageMeta';
-import { EXPLORE_CAREERS } from '../constants';
-import * as Icons from './icons';
-
+import React, { useState, useEffect, useRef } from "react";
+import { useParams, Link, useLocation } from "react-router-dom";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
+import type { RoadmapStep, MarketInsights } from "../types";
+import {
+  Book,
+  Briefcase,
+  CheckCircle,
+  GraduationCap,
+  Lightbulb,
+  Money,
+  Target,
+  TrendingUp,
+  DollarSign,
+  ClipboardList,
+  Download,
+} from "./icons";
+import { useAuth } from "../contexts/AuthContext";
+import { db } from "../firebase";
+import { generateRoadmap } from "../services/geminiService";
+import { useRoadmapSearch } from "../hooks/api/useRoadmapSearch";
+import { usePageMeta } from "../hooks/usePageMeta";
+import { EXPLORE_CAREERS } from "../constants";
+import * as Icons from "./icons";
 
 const RoadmapExplorer: React.FC = () => {
   const { careerPath } = useParams<{ careerPath: string }>();
   const location = useLocation();
-  const [searchTerm, setSearchTerm] = useState('');
-  const [field, setField] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [field, setField] = useState("");
   const [roadmap, setRoadmap] = useState<RoadmapStep[]>([]);
   const [insights, setInsights] = useState<MarketInsights | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [wasGenerated, setWasGenerated] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const [visibleStep, setVisibleStep] = useState<number | null>(0);
@@ -30,130 +42,237 @@ const RoadmapExplorer: React.FC = () => {
   const [openCategory, setOpenCategory] = useState<string | null>(null);
 
   const { currentUser } = useAuth();
-  
-  const pageTitle = field ? `${field} Roadmap | CareerPath.lk` : "Explore Career Roadmaps | CareerPath.lk";
-  const pageDescription = field ? `A step-by-step career roadmap for becoming a ${field} in Sri Lanka, including salary, skills, and qualifications.` : "Explore detailed career roadmaps for various fields in Sri Lanka.";
+  const {
+    searchRoadmap,
+    isLoading: isSearching,
+    wasGenerated: searchWasGenerated,
+  } = useRoadmapSearch();
+
+  const pageTitle = field
+    ? `${field} Roadmap | CareerPath.lk`
+    : "Explore Career Roadmaps | CareerPath.lk";
+  const pageDescription = field
+    ? `A step-by-step career roadmap for becoming a ${field} in Sri Lanka, including salary, skills, and qualifications.`
+    : "Explore detailed career roadmaps for various fields in Sri Lanka.";
   usePageMeta(pageTitle, pageDescription);
 
-  const allCareers = EXPLORE_CAREERS.flatMap(category => category.careers);
+  const allCareers = EXPLORE_CAREERS.flatMap((category) => category.careers);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchTerm.trim()) return;
 
-    const predefinedCareer = allCareers.find(c => c.name.toLowerCase() === searchTerm.toLowerCase());
-    
+    // First check predefined careers for exact matches
+    const predefinedCareer = allCareers.find(
+      (c) => c.name.toLowerCase() === searchTerm.toLowerCase()
+    );
+
     if (predefinedCareer && predefinedCareer.path) {
       window.location.href = `/roadmaps/${predefinedCareer.path}`;
-    } else {
-      window.location.href = `/roadmaps?field=${encodeURIComponent(searchTerm)}`;
+      return;
+    }
+
+    // Use enhanced search for dynamic roadmap generation
+    try {
+      setIsLoading(true);
+      setError(null);
+      setWasGenerated(false);
+
+      const searchResult = await searchRoadmap(
+        searchTerm.trim(),
+        currentUser?.uid
+      );
+
+      if (searchResult.success && searchResult.data) {
+        // Update the URL and load the roadmap data
+        const newUrl = `/roadmaps/${searchResult.slug}`;
+        window.history.pushState({}, "", newUrl);
+
+        // Update component state with the search results
+        setField(searchResult.data.name);
+        setRoadmap(searchResult.data.steps || []);
+        setInsights(searchResult.data.marketInsights || null);
+        setWasGenerated(searchResult.generated || false);
+        setSearchTerm(""); // Clear search term after successful search
+
+        if (searchResult.generated) {
+          console.log("New roadmap generated and stored in database");
+        } else {
+          console.log("Existing roadmap found in database");
+        }
+      } else {
+        throw new Error("Failed to find or generate roadmap");
+      }
+    } catch (err: any) {
+      console.error("Enhanced search failed:", err);
+      setError(err.message || "Failed to search for roadmap");
+      // Fallback to old URL-based search
+      window.location.href = `/roadmaps?field=${encodeURIComponent(
+        searchTerm
+      )}`;
+    } finally {
+      setIsLoading(false);
     }
   };
 
-
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
-    const fieldFromQuery = queryParams.get('field');
-    
+    const fieldFromQuery = queryParams.get("field");
+    const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:3001";
+
     const loadData = async () => {
-      const careerSlug = careerPath || fieldFromQuery?.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
-      const careerDisplayName = fieldFromQuery || careerPath?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      const careerSlug =
+        careerPath ||
+        fieldFromQuery
+          ?.toLowerCase()
+          .replace(/ /g, "-")
+          .replace(/[^\w-]+/g, "");
+      const careerDisplayName =
+        fieldFromQuery ||
+        careerPath?.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
 
       if (!careerSlug || !careerDisplayName) {
         setIsLoading(false);
-        setField(''); // Clear field if none is selected
+        setField(""); // Clear field if none is selected
         return;
       }
-      
+
       setIsLoading(true);
       setError(null);
       setRoadmap([]);
       setInsights(null);
       setIsSaved(false);
+      setWasGenerated(false);
       setField(careerDisplayName);
 
       try {
-        // First, try to load a pre-built roadmap
-        const roadmapPromise = import(`../data/roadmaps/${careerSlug}.json`);
-        const insightsPromise = import(`../data/insights/${careerSlug}.json`);
-
-        const [roadmapData, insightsData] = await Promise.all([roadmapPromise, insightsPromise]);
-        
-        setRoadmap(roadmapData.default);
-        setInsights(insightsData.default);
-      } catch (err) {
-        console.warn(`Pre-built data for "${careerDisplayName}" not found. Falling back to API generation.`);
-        
+        // 1) Try DB via server API
         try {
-          const generatedData = await generateRoadmap(careerDisplayName);
-          if (generatedData && generatedData.roadmap && generatedData.insights) {
-              setRoadmap(generatedData.roadmap);
-              setInsights(generatedData.insights);
-          } else {
-              throw new Error("API returned incomplete data.");
+          const res = await fetch(
+            `${API_BASE}/api/roadmaps/slug/${careerSlug}`
+          );
+          if (res.ok) {
+            const json = await res.json();
+            if (json && json.success && json.data) {
+              const doc = json.data;
+              // `steps` field is used in DB; support legacy shapes
+              setRoadmap((doc.steps as RoadmapStep[]) || doc.roadmap || []);
+              setInsights(
+                (doc.marketInsights as MarketInsights) || doc.insights || null
+              );
+              return;
+            }
           }
-        } catch (apiError: any) {
-          console.error("Failed to generate data from API:", apiError);
-          setError(apiError.message || `Sorry, we couldn't generate a roadmap for "${careerDisplayName}" at this time.`);
+        } catch (dbErr) {
+          // Ignore DB errors and fallback to generation
+          console.warn("DB lookup failed, falling back to generation", dbErr);
         }
+
+        // 2) Ask server to generate & persist (server will check DB again)
+        try {
+          const genRes = await fetch(`${API_BASE}/api/roadmaps/generate`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: careerDisplayName, slug: careerSlug }),
+          });
+
+          if (genRes.ok) {
+            const json = await genRes.json();
+            if (json && json.success && json.data) {
+              const doc = json.data;
+              setRoadmap((doc.steps as RoadmapStep[]) || doc.roadmap || []);
+              setInsights(
+                (doc.marketInsights as MarketInsights) || doc.insights || null
+              );
+              setWasGenerated(!json.cached); // Mark as generated if not from cache
+              return;
+            }
+          }
+        } catch (genErr) {
+          console.warn(
+            "Server generation failed, will try client generation",
+            genErr
+          );
+        }
+
+        // 3) Fallback: generate directly from client (Gemini service)
+        const generatedData = await generateRoadmap(careerDisplayName);
+        if (generatedData && generatedData.roadmap && generatedData.insights) {
+          setRoadmap(generatedData.roadmap);
+          setInsights(generatedData.insights);
+          setWasGenerated(true); // Client-side generation
+        } else {
+          throw new Error("API returned incomplete data.");
+        }
+      } catch (err: any) {
+        console.error("Failed to load or generate roadmap:", err);
+        setError(
+          err.message ||
+            `Sorry, we couldn't generate a roadmap for "${careerDisplayName}" at this time.`
+        );
       } finally {
         setIsLoading(false);
       }
     };
 
     loadData();
-
   }, [careerPath, location.search]);
 
   useEffect(() => {
     if (isLoading || roadmap.length === 0) return;
 
     const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const index = parseInt(entry.target.getAttribute('data-step-index') || '0', 10);
-                    setVisibleStep(index);
-                }
-            });
-        },
-        {
-            root: null, // observes intersections relative to the viewport
-            rootMargin: '-40% 0px -40% 0px', // trigger when the element is in the middle 20% of the viewport
-            threshold: 0,
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(
+              entry.target.getAttribute("data-step-index") || "0",
+              10
+            );
+            setVisibleStep(index);
+          }
+        });
+      },
+      {
+        root: null, // observes intersections relative to the viewport
+        rootMargin: "-40% 0px -40% 0px", // trigger when the element is in the middle 20% of the viewport
+        threshold: 0,
+      }
     );
 
     const currentRefs = stepRefs.current;
     currentRefs.forEach((ref) => {
-        if (ref) observer.observe(ref);
+      if (ref) observer.observe(ref);
     });
 
     return () => {
-        currentRefs.forEach((ref) => {
-            if (ref) observer.unobserve(ref);
-        });
+      currentRefs.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
     };
   }, [isLoading, roadmap]);
 
-
   const handleSaveRoadmap = async () => {
     if (!currentUser || !db || roadmap.length === 0) {
-        if (!db) {
-            setError("Cannot save. Database is not configured.");
-        }
-        return;
-    };
+      if (!db) {
+        setError("Cannot save. Database is not configured.");
+      }
+      return;
+    }
     setIsSaving(true);
     try {
-      const userDocRef = doc(db, 'users', currentUser.uid);
-      await setDoc(userDocRef, {
-        savedRoadmap: {
-          field,
-          roadmap,
-          savedAt: serverTimestamp()
-        }
-      }, { merge: true }); // merge to not overwrite other user data
+      const userDocRef = doc(db, "users", currentUser.uid);
+      await setDoc(
+        userDocRef,
+        {
+          savedRoadmap: {
+            field,
+            roadmap,
+            savedAt: serverTimestamp(),
+          },
+        },
+        { merge: true }
+      ); // merge to not overwrite other user data
       setIsSaved(true);
     } catch (error) {
       console.error("Error saving roadmap:", error);
@@ -182,18 +301,18 @@ const RoadmapExplorer: React.FC = () => {
     startY += 8;
 
     const insightsBody = [
-        ['Current Demand', insights.demand],
-        ['Salary Expectations', insights.salaryExpectations],
-        ['Key Skills', insights.requiredSkills.join(', ')],
-        ['Future Outlook', doc.splitTextToSize(insights.futureOutlook, 120)],
+      ["Current Demand", insights.demand],
+      ["Salary Expectations", insights.salaryExpectations],
+      ["Key Skills", insights.requiredSkills.join(", ")],
+      ["Future Outlook", doc.splitTextToSize(insights.futureOutlook, 120)],
     ];
-    
+
     (doc as any).autoTable({
-        startY: startY,
-        head: [['Insight', 'Details']],
-        body: insightsBody,
-        theme: 'striped',
-        headStyles: { fillColor: [22, 160, 133] }, // A teal color
+      startY: startY,
+      head: [["Insight", "Details"]],
+      body: insightsBody,
+      theme: "striped",
+      headStyles: { fillColor: [22, 160, 133] }, // A teal color
     });
 
     startY = (doc as any).autoTable.previous.finalY + 15;
@@ -202,177 +321,246 @@ const RoadmapExplorer: React.FC = () => {
     doc.setFontSize(16);
     doc.text("Your 5-Step Roadmap", 14, startY);
     startY += 10;
-    
-    roadmap.forEach(step => {
-        const stepContentHeight = 80; // Estimated height for each step content
-        if (startY > doc.internal.pageSize.getHeight() - stepContentHeight) {
-            doc.addPage();
-            startY = 20;
-        }
 
-        doc.setFontSize(14);
-        doc.setTextColor(41, 128, 185); // A nice blue color
-        doc.text(`${step.step}. ${step.title}`, 14, startY);
-        startY += 6;
+    roadmap.forEach((step) => {
+      const stepContentHeight = 80; // Estimated height for each step content
+      if (startY > doc.internal.pageSize.getHeight() - stepContentHeight) {
+        doc.addPage();
+        startY = 20;
+      }
 
-        doc.setFontSize(10);
-        doc.setTextColor(100);
-        const descriptionLines = doc.splitTextToSize(step.description, 180);
-        doc.text(descriptionLines, 14, startY);
-        startY += descriptionLines.length * 4 + 4;
+      doc.setFontSize(14);
+      doc.setTextColor(41, 128, 185); // A nice blue color
+      doc.text(`${step.step}. ${step.title}`, 14, startY);
+      startY += 6;
 
-        const stepDetails = [
-            ['Duration', step.duration],
-            ['Qualifications', step.qualifications.join('\n')],
-            ['Key Skills', step.skills.join('\n')],
-            ['Institutes', step.institutes.join('\n')],
-            ['Est. Salary (LKR)', step.salaryRangeLKR],
-        ];
+      doc.setFontSize(10);
+      doc.setTextColor(100);
+      const descriptionLines = doc.splitTextToSize(step.description, 180);
+      doc.text(descriptionLines, 14, startY);
+      startY += descriptionLines.length * 4 + 4;
 
-        (doc as any).autoTable({
-            startY: startY,
-            head: [['Category', 'Details']],
-            body: stepDetails,
-            theme: 'grid',
-            headStyles: { fillColor: [52, 73, 94] }, // A dark blue-gray
-            didDrawPage: (data: any) => {
-                startY = data.cursor.y; // Update startY in case of page break
-            }
-        });
-        
-        startY = (doc as any).autoTable.previous.finalY + 12;
+      const stepDetails = [
+        ["Duration", step.duration],
+        ["Qualifications", step.qualifications.join("\n")],
+        ["Key Skills", step.skills.join("\n")],
+        ["Institutes", step.institutes.join("\n")],
+        ["Est. Salary (LKR)", step.salaryRangeLKR],
+      ];
+
+      (doc as any).autoTable({
+        startY: startY,
+        head: [["Category", "Details"]],
+        body: stepDetails,
+        theme: "grid",
+        headStyles: { fillColor: [52, 73, 94] }, // A dark blue-gray
+        didDrawPage: (data: any) => {
+          startY = data.cursor.y; // Update startY in case of page break
+        },
+      });
+
+      startY = (doc as any).autoTable.previous.finalY + 12;
     });
 
     // --- Footer ---
     const pageCount = (doc as any).internal.getNumberOfPages();
     for (let i = 1; i <= pageCount; i++) {
-        doc.setPage(i);
-        doc.setFontSize(8);
-        doc.setTextColor(150);
-        const footerText = `Page ${i} of ${pageCount} | Generated by CareerPath.lk`;
-        doc.text(footerText, 14, doc.internal.pageSize.getHeight() - 10);
+      doc.setPage(i);
+      doc.setFontSize(8);
+      doc.setTextColor(150);
+      const footerText = `Page ${i} of ${pageCount} | Generated by CareerPath.lk`;
+      doc.text(footerText, 14, doc.internal.pageSize.getHeight() - 10);
     }
 
-    doc.save(`CareerPath.lk_Roadmap_${field.replace(/ /g, '_')}.pdf`);
+    doc.save(`CareerPath.lk_Roadmap_${field.replace(/ /g, "_")}.pdf`);
   };
 
   const getThemeForStep = (title: string) => {
     const lowerTitle = title.toLowerCase();
-    
-    const yellowKeywords = ['degree', 'bachelor', 'a/l', 'o/l', 'foundation', 'studies', 'education', 'skill', 'certification', 'learn', 'master', 'qualification', 'training'];
 
-    if (yellowKeywords.some(kw => lowerTitle.includes(kw))) {
-        // Yellow theme for education and skills
-        return {
-            iconBg: 'bg-yellow-500',
-            titleText: 'text-yellow-800 dark:text-yellow-300',
-            borderColor: 'border-yellow-500',
-            shadow: 'shadow-yellow-200/50 dark:shadow-yellow-800/50'
-        };
+    const yellowKeywords = [
+      "degree",
+      "bachelor",
+      "a/l",
+      "o/l",
+      "foundation",
+      "studies",
+      "education",
+      "skill",
+      "certification",
+      "learn",
+      "master",
+      "qualification",
+      "training",
+    ];
+
+    if (yellowKeywords.some((kw) => lowerTitle.includes(kw))) {
+      // Yellow theme for education and skills
+      return {
+        iconBg: "bg-yellow-500",
+        titleText: "text-yellow-800 dark:text-yellow-300",
+        borderColor: "border-yellow-500",
+        shadow: "shadow-yellow-200/50 dark:shadow-yellow-800/50",
+      };
     }
 
     // Default to Green theme for work, leadership, and others
     return {
-        iconBg: 'bg-green-600',
-        titleText: 'text-green-800 dark:text-green-300',
-        borderColor: 'border-green-500',
-        shadow: 'shadow-green-200/50 dark:shadow-green-800/50'
+      iconBg: "bg-green-600",
+      titleText: "text-green-800 dark:text-green-300",
+      borderColor: "border-green-500",
+      shadow: "shadow-green-200/50 dark:shadow-green-800/50",
     };
   };
 
   const getIconForStep = (title: string) => {
     const lowerTitle = title.toLowerCase();
-    if (lowerTitle.includes('degree') || lowerTitle.includes('bachelor')) return <GraduationCap className="w-6 h-6 text-white" />;
-    if (lowerTitle.includes('a/l') || lowerTitle.includes('o/l') || lowerTitle.includes('foundation')) return <Book className="w-6 h-6 text-white" />;
-    if (lowerTitle.includes('internship') || lowerTitle.includes('entry-level') || lowerTitle.includes('job')) return <Briefcase className="w-6 h-6 text-white" />;
-    if (lowerTitle.includes('skill') || lowerTitle.includes('certification')) return <Lightbulb className="w-6 h-6 text-white" />;
-    if (lowerTitle.includes('specialize') || lowerTitle.includes('senior')) return <Target className="w-6 h-6 text-white" />;
+    if (lowerTitle.includes("degree") || lowerTitle.includes("bachelor"))
+      return <GraduationCap className="w-6 h-6 text-white" />;
+    if (
+      lowerTitle.includes("a/l") ||
+      lowerTitle.includes("o/l") ||
+      lowerTitle.includes("foundation")
+    )
+      return <Book className="w-6 h-6 text-white" />;
+    if (
+      lowerTitle.includes("internship") ||
+      lowerTitle.includes("entry-level") ||
+      lowerTitle.includes("job")
+    )
+      return <Briefcase className="w-6 h-6 text-white" />;
+    if (lowerTitle.includes("skill") || lowerTitle.includes("certification"))
+      return <Lightbulb className="w-6 h-6 text-white" />;
+    if (lowerTitle.includes("specialize") || lowerTitle.includes("senior"))
+      return <Target className="w-6 h-6 text-white" />;
     return <CheckCircle className="w-6 h-6 text-white" />;
   };
 
   if (isLoading) {
     return (
-        <div className="text-center mt-8">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">Loading roadmap{field ? ` for ${field}` : ''}...</p>
-            {field && <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">This may take a moment if we're generating a new one for you!</p>}
-        </div>
-      );
+      <div className="text-center mt-8">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          Loading roadmap{field ? ` for ${field}` : ""}...
+        </p>
+        {field && (
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            This may take a moment if we're generating a new one for you!
+          </p>
+        )}
+      </div>
+    );
   }
 
   if (error) {
     return (
-        <div className="mt-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-center animate-fadeInUp" role="alert">
-          <p className="font-bold">An Error Occurred</p>
-          <p>{error}</p>
-          <Link to="/roadmaps" className="text-green-600 hover:underline dark:text-green-400 mt-2 inline-block">Go back to Roadmaps</Link>
-        </div>
+      <div
+        className="mt-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-center animate-fadeInUp"
+        role="alert"
+      >
+        <p className="font-bold">An Error Occurred</p>
+        <p>{error}</p>
+        <Link
+          to="/roadmaps"
+          className="text-green-600 hover:underline dark:text-green-400 mt-2 inline-block"
+        >
+          Go back to Roadmaps
+        </Link>
+      </div>
     );
   }
-  
+
   // Show search/browse view if no career path is selected
   if (!field) {
     return (
-        <div className="w-full max-w-4xl mx-auto animate-fadeInUp">
-            <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">Explore Career Roadmaps</h1>
-            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Search for a career to generate a custom roadmap, or browse our curated list of paths.</p>
-            
-            <form onSubmit={handleSearch} className="flex gap-2 mb-12">
-                <input 
-                    type="text"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    placeholder="e.g., 'Data Scientist' or 'Graphic Designer'"
-                    className="flex-grow w-full border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm py-3 px-4 bg-white dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
-                />
-                <button type="submit" className="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transition-colors">
-                    Search
+      <div className="w-full max-w-4xl mx-auto animate-fadeInUp">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">
+          Explore Career Roadmaps
+        </h1>
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
+          Search for a career to generate a custom roadmap, or browse our
+          curated list of paths.
+        </p>
+
+        <form onSubmit={handleSearch} className="flex gap-2 mb-12">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="e.g., 'Data Scientist' or 'Graphic Designer'"
+            className="flex-grow w-full border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm py-3 px-4 bg-white dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+          <button
+            type="submit"
+            className="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transition-colors"
+          >
+            Search
+          </button>
+        </form>
+
+        <div className="space-y-4">
+          {EXPLORE_CAREERS.map((category) => {
+            const Icon =
+              Icons[category.icon as keyof typeof Icons] || Icons.Code;
+            const isOpen = openCategory === category.name;
+
+            return (
+              <div
+                key={category.name}
+                className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden"
+              >
+                <button
+                  onClick={() => setOpenCategory(isOpen ? null : category.name)}
+                  className="w-full flex justify-between items-center p-4 sm:p-5 bg-white dark:bg-gray-800 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                  aria-expanded={isOpen}
+                >
+                  <div className="flex items-center">
+                    <div className="rounded-lg w-12 h-12 flex items-center justify-center mr-4 bg-green-100 dark:bg-green-900/30">
+                      <Icon className="w-6 h-6 text-green-600 dark:text-green-400" />
+                    </div>
+                    <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">
+                      {category.name}
+                    </span>
+                  </div>
+                  <Icons.ChevronDown
+                    className={`w-6 h-6 shrink-0 text-gray-500 transform transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
                 </button>
-            </form>
-
-            <div className="space-y-4">
-                {EXPLORE_CAREERS.map((category) => {
-                    const Icon = Icons[category.icon as keyof typeof Icons] || Icons.Code;
-                    const isOpen = openCategory === category.name;
-
-                    return (
-                        <div key={category.name} className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
-                            <button
-                                onClick={() => setOpenCategory(isOpen ? null : category.name)}
-                                className="w-full flex justify-between items-center p-4 sm:p-5 bg-white dark:bg-gray-800 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
-                                aria-expanded={isOpen}
-                            >
-                                <div className="flex items-center">
-                                    <div className="rounded-lg w-12 h-12 flex items-center justify-center mr-4 bg-green-100 dark:bg-green-900/30">
-                                        <Icon className="w-6 h-6 text-green-600 dark:text-green-400" />
-                                    </div>
-                                    <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">{category.name}</span>
-                                </div>
-                                <Icons.ChevronDown className={`w-6 h-6 shrink-0 text-gray-500 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-                            </button>
-                            <div className={`grid transition-all duration-500 ease-in-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
-                                <div className="overflow-hidden">
-                                    <div className="bg-gray-50 dark:bg-gray-800/50 p-4 sm:p-6 border-t border-gray-200 dark:border-gray-700">
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-1">
-                                            {category.careers.map((career) => (
-                                                <Link
-                                                    key={career.name}
-                                                    to={career.path ? `/roadmaps/${career.path}` : `/roadmaps?field=${encodeURIComponent(career.name)}`}
-                                                    className="flex items-center p-2 rounded-md text-left text-gray-600 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700/50 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
-                                                >
-                                                    <Icons.ChevronRight className="w-4 h-4 mr-3 text-gray-400 group-hover:text-green-500 transition-colors flex-shrink-0" />
-                                                    <span>{career.name}</span>
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
+                <div
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="bg-gray-50 dark:bg-gray-800/50 p-4 sm:p-6 border-t border-gray-200 dark:border-gray-700">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-1">
+                        {category.careers.map((career) => (
+                          <Link
+                            key={career.name}
+                            to={
+                              career.path
+                                ? `/roadmaps/${career.path}`
+                                : `/roadmaps?field=${encodeURIComponent(
+                                    career.name
+                                  )}`
+                            }
+                            className="flex items-center p-2 rounded-md text-left text-gray-600 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700/50 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                          >
+                            <Icons.ChevronRight className="w-4 h-4 mr-3 text-gray-400 group-hover:text-green-500 transition-colors flex-shrink-0" />
+                            <span>{career.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
+      </div>
     );
   }
 
@@ -380,140 +568,222 @@ const RoadmapExplorer: React.FC = () => {
   return (
     <div className="w-full max-w-4xl mx-auto">
       {roadmap.length > 0 && (
-        <div className='mt-0'>
-            <div className="flex flex-col sm:flex-row justify-between items-center mb-4 animate-fadeInUp">
-              <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-white">Roadmap to a {field}</h1>
-              <div className="flex items-center gap-2 mt-4 sm:mt-0">
-                {currentUser && (
-                  <button 
-                    onClick={handleSaveRoadmap} 
-                    disabled={isSaving || isSaved || !db}
-                    className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 disabled:bg-green-300 disabled:cursor-not-allowed transition-colors"
-                  >
-                    {isSaved ? 'Saved ✓' : isSaving ? 'Saving...' : 'Save Roadmap'}
-                  </button>
-                )}
+        <div className="mt-0">
+          <div className="flex flex-col sm:flex-row justify-between items-center mb-4 animate-fadeInUp">
+            <div className="text-center sm:text-left">
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white">
+                Roadmap to a {field}
+              </h1>
+              {wasGenerated && (
+                <div className="mt-2 inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                  Freshly generated roadmap
+                </div>
+              )}
+            </div>
+            <div className="flex items-center gap-2 mt-4 sm:mt-0">
+              {currentUser && (
                 <button
-                  onClick={handleDownload}
-                  className="flex items-center justify-center py-2 px-4 border border-green-600 rounded-md shadow-sm text-sm font-medium text-green-600 dark:text-green-400 dark:hover:text-white hover:bg-green-600 hover:text-white dark:hover:bg-green-600 transition-colors"
+                  onClick={handleSaveRoadmap}
+                  disabled={isSaving || isSaved || !db}
+                  className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 disabled:bg-green-300 disabled:cursor-not-allowed transition-colors"
                 >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download PDF
+                  {isSaved
+                    ? "Saved ✓"
+                    : isSaving
+                    ? "Saving..."
+                    : "Save Roadmap"}
                 </button>
+              )}
+              <button
+                onClick={handleDownload}
+                className="flex items-center justify-center py-2 px-4 border border-green-600 rounded-md shadow-sm text-sm font-medium text-green-600 dark:text-green-400 dark:hover:text-white hover:bg-green-600 hover:text-white dark:hover:bg-green-600 transition-colors"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download PDF
+              </button>
+            </div>
+          </div>
+
+          {/* Market Insights Section */}
+          {insights && (
+            <div className="mb-10 bg-yellow-50 dark:bg-gray-800 p-6 rounded-xl border border-yellow-200 dark:border-yellow-700 animate-fadeInUp animation-delay-200">
+              <h3 className="text-xl font-bold text-center text-yellow-800 dark:text-yellow-300 mb-4">
+                Market Insights for Sri Lanka
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                    <TrendingUp className="w-5 h-5 mr-2 text-green-500" />
+                    Current Demand
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1">
+                    {insights.demand}
+                  </p>
+                </div>
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                    <DollarSign className="w-5 h-5 mr-2 text-green-500" />
+                    Salary Expectations
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1">
+                    {insights.salaryExpectations}
+                  </p>
+                </div>
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow md:col-span-2">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                    <ClipboardList className="w-5 h-5 mr-2 text-yellow-500" />
+                    Key Skills in Demand
+                  </h4>
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mt-1 space-y-1">
+                    {insights.requiredSkills.map((skill, i) => (
+                      <li key={i}>{skill}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow md:col-span-2">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                    <Target className="w-5 h-5 mr-2 text-green-500" />
+                    Future Outlook
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 mt-1">
+                    {insights.futureOutlook}
+                  </p>
+                </div>
               </div>
             </div>
+          )}
 
-            {/* Market Insights Section */}
-            {insights && (
-                 <div className="mb-10 bg-yellow-50 dark:bg-gray-800 p-6 rounded-xl border border-yellow-200 dark:border-yellow-700 animate-fadeInUp animation-delay-200">
-                    <h3 className="text-xl font-bold text-center text-yellow-800 dark:text-yellow-300 mb-4">Market Insights for Sri Lanka</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
-                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center"><TrendingUp className="w-5 h-5 mr-2 text-green-500"/>Current Demand</h4>
-                            <p className="text-gray-600 dark:text-gray-300 mt-1">{insights.demand}</p>
-                        </div>
-                        <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
-                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center"><DollarSign className="w-5 h-5 mr-2 text-green-500"/>Salary Expectations</h4>
-                            <p className="text-gray-600 dark:text-gray-300 mt-1">{insights.salaryExpectations}</p>
-                        </div>
-                        <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow md:col-span-2">
-                             <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center"><ClipboardList className="w-5 h-5 mr-2 text-yellow-500"/>Key Skills in Demand</h4>
-                             <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mt-1 space-y-1">
-                                {insights.requiredSkills.map((skill, i) => <li key={i}>{skill}</li>)}
-                            </ul>
-                        </div>
-                         <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow md:col-span-2">
-                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center"><Target className="w-5 h-5 mr-2 text-green-500"/>Future Outlook</h4>
-                            <p className="text-gray-600 dark:text-gray-300 mt-1">{insights.futureOutlook}</p>
-                        </div>
+          <div className="relative container mx-auto px-4 py-8">
+            {/* Timeline bar */}
+            <div className="absolute top-0 bottom-0 w-1 bg-yellow-200 dark:bg-gray-700 left-6 md:left-1/2 -translate-x-1/2"></div>
+
+            <div className="space-y-16">
+              {roadmap.map((step, index) => {
+                const isLeft = index % 2 !== 0; // For desktop view
+                const theme = getThemeForStep(step.title);
+                const isVisible = visibleStep === index;
+
+                return (
+                  <div
+                    key={index}
+                    ref={(el) => (stepRefs.current[index] = el)}
+                    data-step-index={index}
+                    className={`relative md:flex ${
+                      isLeft ? "md:flex-row-reverse" : ""
+                    } md:items-center animate-fadeInUp group`}
+                    style={{ animationDelay: `${200 + index * 200}ms` }}
+                  >
+                    {/* Desktop Spacer */}
+                    <div className="hidden md:block w-full md:w-5/12"></div>
+
+                    {/* Icon */}
+                    <div className="absolute md:relative z-10 left-6 md:left-0 -translate-x-1/2 md:translate-x-0">
+                      <div
+                        className={`flex items-center justify-center w-12 h-12 ${
+                          theme.iconBg
+                        } rounded-full ring-8 transition-all duration-500 ${
+                          isVisible
+                            ? "ring-yellow-200 dark:ring-yellow-900"
+                            : "ring-yellow-50 dark:ring-gray-900"
+                        }`}
+                      >
+                        {getIconForStep(step.title)}
+                      </div>
                     </div>
-                </div>
-            )}
 
-            <div className="relative container mx-auto px-4 py-8">
-                {/* Timeline bar */}
-                <div className="absolute top-0 bottom-0 w-1 bg-yellow-200 dark:bg-gray-700 left-6 md:left-1/2 -translate-x-1/2"></div>
-                
-                <div className="space-y-16">
-                    {roadmap.map((step, index) => {
-                      const isLeft = index % 2 !== 0; // For desktop view
-                      const theme = getThemeForStep(step.title);
-                      const isVisible = visibleStep === index;
+                    {/* Card */}
+                    <div className="relative ml-16 md:ml-0 md:w-5/12">
+                      {/* Desktop Arrow */}
+                      <div
+                        className={`hidden md:block absolute top-5 h-0 w-0 border-t-8 border-b-8 border-solid z-10
+                                        ${
+                                          isLeft
+                                            ? "right-full -mr-2 border-l-8 border-l-white dark:border-l-gray-800 border-r-0"
+                                            : "left-full -ml-2 border-r-8 border-r-white dark:border-r-gray-800 border-l-0"
+                                        }`}
+                        style={{
+                          borderTopColor: "transparent",
+                          borderBottomColor: "transparent",
+                        }}
+                      ></div>
 
-                      return (
-                        <div 
-                           key={index} 
-                           ref={(el) => (stepRefs.current[index] = el)}
-                           data-step-index={index}
-                           className={`relative md:flex ${isLeft ? 'md:flex-row-reverse' : ''} md:items-center animate-fadeInUp group`}
-                           style={{ animationDelay: `${200 + index * 200}ms`}}
-                        >
-                        
-                        {/* Desktop Spacer */}
-                        <div className="hidden md:block w-full md:w-5/12"></div>
-            
-                        {/* Icon */}
-                        <div className="absolute md:relative z-10 left-6 md:left-0 -translate-x-1/2 md:translate-x-0">
-                            <div className={`flex items-center justify-center w-12 h-12 ${theme.iconBg} rounded-full ring-8 transition-all duration-500 ${isVisible ? 'ring-yellow-200 dark:ring-yellow-900' : 'ring-yellow-50 dark:ring-gray-900'}`}>
-                              {getIconForStep(step.title)}
-                            </div>
-                        </div>
-                        
-                        {/* Card */}
-                        <div className="relative ml-16 md:ml-0 md:w-5/12">
-                            {/* Desktop Arrow */}
-                            <div className={`hidden md:block absolute top-5 h-0 w-0 border-t-8 border-b-8 border-solid z-10
-                                        ${isLeft ? 'right-full -mr-2 border-l-8 border-l-white dark:border-l-gray-800 border-r-0' 
-                                                : 'left-full -ml-2 border-r-8 border-r-white dark:border-r-gray-800 border-l-0'}`}
-                                style={{ borderTopColor: 'transparent', borderBottomColor: 'transparent' }}
-                            ></div>
-                            
-                            <div className={`
+                      <div
+                        className={`
                                 bg-white dark:bg-gray-800 p-6 rounded-xl border-t-4 
                                 transition-all duration-500 ease-in-out
                                 ${theme.borderColor}
-                                ${isVisible ? `${theme.shadow} shadow-2xl scale-[1.02] -translate-y-1` : 'shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1'}
-                              `}>
-                                <div className="flex justify-between items-start gap-4">
-                                    <h3 className={`text-xl font-bold ${theme.titleText}`}>{step.step}. {step.title}</h3>
-                                    <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full whitespace-nowrap">{step.duration}</span>
-                                </div>
-                                <p className="mt-2 text-gray-600 dark:text-gray-300">{step.description}</p>
-                                
-                                <div className="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                                    <div>
-                                        <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Qualifications:</h4>
-                                        <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
-                                            {step.qualifications.map((q, i) => <li key={i}>{q}</li>)}
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Key Skills:</h4>
-                                        <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
-                                            {step.skills.map((s, i) => <li key={i}>{s}</li>)}
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Recommended Institutes:</h4>
-                                        <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
-                                            {step.institutes.map((inst, i) => <li key={i}>{inst}</li>)}
-                                        </ul>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <Money className="w-5 h-5 text-green-600 dark:text-green-400 mr-2 mt-0.5"/>
-                                        <div>
-                                            <h4 className="font-semibold text-gray-800 dark:text-gray-200">Est. Salary (Monthly):</h4>
-                                            <p className="text-green-700 dark:text-green-400 font-medium">{step.salaryRangeLKR}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                           </div>
+                                ${
+                                  isVisible
+                                    ? `${theme.shadow} shadow-2xl scale-[1.02] -translate-y-1`
+                                    : "shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1"
+                                }
+                              `}
+                      >
+                        <div className="flex justify-between items-start gap-4">
+                          <h3
+                            className={`text-xl font-bold ${theme.titleText}`}
+                          >
+                            {step.step}. {step.title}
+                          </h3>
+                          <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full whitespace-nowrap">
+                            {step.duration}
+                          </span>
                         </div>
+                        <p className="mt-2 text-gray-600 dark:text-gray-300">
+                          {step.description}
+                        </p>
+
+                        <div className="mt-6 border-t border-gray-200 dark:border-gray-700 pt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                          <div>
+                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                              Qualifications:
+                            </h4>
+                            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                              {step.qualifications.map((q, i) => (
+                                <li key={i}>{q}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                              Key Skills:
+                            </h4>
+                            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                              {step.skills.map((s, i) => (
+                                <li key={i}>{s}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                              Recommended Institutes:
+                            </h4>
+                            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                              {step.institutes.map((inst, i) => (
+                                <li key={i}>{inst}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="flex items-start">
+                            <Money className="w-5 h-5 text-green-600 dark:text-green-400 mr-2 mt-0.5" />
+                            <div>
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-200">
+                                Est. Salary (Monthly):
+                              </h4>
+                              <p className="text-green-700 dark:text-green-400 font-medium">
+                                {step.salaryRangeLKR}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    );
-                })}
-                </div>
+                  </div>
+                );
+              })}
             </div>
+          </div>
         </div>
       )}
     </div>
