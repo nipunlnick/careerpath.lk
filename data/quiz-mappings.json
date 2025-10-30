@@ -1,0 +1,500 @@
+{
+  "standard": {
+    "patterns": [
+      {
+        "id": "tech_logical_analyst",
+        "pattern": {
+          "activity": "Solving complex puzzles or math problems.",
+          "role": "The analyst, focusing on data and logic.",
+          "environment": "A quiet, focused environment where I can concentrate.",
+          "subject": "Mathematics or Physics",
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "career": "Software Engineer",
+            "description": "Design, develop, and maintain software applications and systems using various programming languages and technologies.",
+            "reasoning": "Your analytical mindset, love for problem-solving, and preference for logical challenges make software engineering an excellent fit. The field offers continuous learning opportunities and intellectually stimulating work.",
+            "roadmapPath": "software-engineer"
+          },
+          {
+            "career": "Data Scientist",
+            "description": "Analyze complex data sets to extract insights and help organizations make data-driven decisions.",
+            "reasoning": "Your analytical skills and mathematical background align perfectly with data science, where you'll solve complex problems using statistical methods and machine learning.",
+            "roadmapPath": "data-scientist"
+          },
+          {
+            "career": "AI/ML Engineer",
+            "description": "Develop artificial intelligence and machine learning systems to solve complex problems and automate processes.",
+            "reasoning": "Your problem-solving abilities and interest in continuous learning make AI/ML engineering ideal, as it's a rapidly evolving field requiring logical thinking.",
+            "roadmapPath": "ai-ml-engineer"
+          }
+        ]
+      },
+      {
+        "id": "creative_artist_flexible",
+        "pattern": {
+          "activity": "Creating art, music, or stories.",
+          "role": "The creative one, coming up with new ideas.",
+          "environment": "A creative studio or a flexible remote setting.",
+          "subject": "Art, Music, or Literature",
+          "priority": "Creative freedom and self-expression."
+        },
+        "suggestions": [
+          {
+            "career": "Graphic Designer",
+            "description": "Create visual concepts and designs for digital and print media, including logos, websites, and marketing materials.",
+            "reasoning": "Your artistic talents and need for creative freedom align perfectly with graphic design, where you can express yourself while solving visual communication problems.",
+            "roadmapPath": "graphic-designer"
+          },
+          {
+            "career": "Content Creator",
+            "description": "Produce engaging content across various digital platforms including social media, blogs, videos, and podcasts.",
+            "reasoning": "Your creative mindset and preference for flexible environments make content creation ideal, offering unlimited creative expression and storytelling opportunities.",
+            "roadmapPath": "content-creator"
+          },
+          {
+            "career": "UI/UX Designer",
+            "description": "Design user interfaces and experiences for websites and mobile applications, focusing on usability and visual appeal.",
+            "reasoning": "Combines your artistic skills with problem-solving, creating beautiful and functional digital experiences while maintaining creative freedom.",
+            "roadmapPath": "ui-ux-designer"
+          }
+        ]
+      },
+      {
+        "id": "helper_supporter_people",
+        "pattern": {
+          "activity": "Helping and caring for others.",
+          "role": "The supporter, ensuring everyone is working well together.",
+          "environment": "A hospital, clinic, or a place where I can help people directly.",
+          "subject": "Biology or Chemistry",
+          "priority": "Making a positive impact on society."
+        },
+        "suggestions": [
+          {
+            "career": "Doctor",
+            "description": "Diagnose and treat patients, providing medical care and improving people's health and quality of life.",
+            "reasoning": "Your desire to help others, scientific background, and goal of making a positive social impact make medicine an excellent career choice.",
+            "roadmapPath": "doctor"
+          },
+          {
+            "career": "Nurse",
+            "description": "Provide direct patient care, support medical procedures, and advocate for patient health and wellbeing.",
+            "reasoning": "Your caring nature and desire to help people directly align perfectly with nursing, where you'll make a meaningful difference in patients' lives daily.",
+            "roadmapPath": "nurse"
+          },
+          {
+            "career": "Psychologist",
+            "description": "Study human behavior and mental processes, providing therapy and counseling to help people overcome challenges.",
+            "reasoning": "Your supportive nature and interest in helping others makes psychology ideal, where you can make a significant positive impact on people's mental health.",
+            "roadmapPath": "psychologist"
+          }
+        ]
+      },
+      {
+        "id": "leader_organizer_business",
+        "pattern": {
+          "activity": "Organizing projects and leading a team.",
+          "role": "The leader, making decisions and delegating tasks.",
+          "environment": "A fast-paced, dynamic office with lots of collaboration.",
+          "subject": "Business Studies or Economics",
+          "priority": "High earning potential and financial security."
+        },
+        "suggestions": [
+          {
+            "career": "Business Analyst",
+            "description": "Analyze business processes and requirements to help organizations improve efficiency and achieve their goals.",
+            "reasoning": "Your leadership skills, business acumen, and preference for collaborative environments make business analysis a perfect fit for your analytical and organizational talents.",
+            "roadmapPath": "business-analyst"
+          },
+          {
+            "career": "Marketing Manager",
+            "description": "Develop and execute marketing strategies to promote products and services, managing campaigns and teams.",
+            "reasoning": "Your leadership abilities and business background align well with marketing management, offering good earning potential and opportunities to lead dynamic projects.",
+            "roadmapPath": "marketing-manager"
+          },
+          {
+            "career": "Entrepreneur",
+            "description": "Start and manage your own business, identifying opportunities and building innovative solutions.",
+            "reasoning": "Your leadership skills, business knowledge, and desire for financial security make entrepreneurship attractive, offering unlimited earning potential and the ability to lead your own organization.",
+            "roadmapPath": "entrepreneur"
+          }
+        ]
+      },
+      {
+        "id": "hands_on_builder_practical",
+        "pattern": {
+          "activity": "Building or fixing things with your hands.",
+          "role": "The hands-on worker, executing the tasks.",
+          "environment": "Outdoors or in a hands-on workshop.",
+          "subject": "Mathematics or Physics",
+          "priority": "A stable and predictable work-life balance."
+        },
+        "suggestions": [
+          {
+            "career": "Civil Engineer",
+            "description": "Design and supervise construction of infrastructure projects like buildings, roads, bridges, and water systems.",
+            "reasoning": "Your hands-on approach, mathematical skills, and practical mindset align perfectly with civil engineering, offering stable career prospects and tangible results.",
+            "roadmapPath": "civil-engineer"
+          },
+          {
+            "career": "Electrician",
+            "description": "Install, maintain, and repair electrical systems in homes, businesses, and industrial settings.",
+            "reasoning": "Your preference for hands-on work and practical problem-solving makes electrician work ideal, offering stable employment and the satisfaction of fixing real problems.",
+            "roadmapPath": "electrician"
+          },
+          {
+            "career": "Architect",
+            "description": "Design buildings and structures, combining creativity with technical knowledge and practical construction considerations.",
+            "reasoning": "Combines your hands-on interests with mathematical skills, allowing you to create practical solutions while maintaining a good work-life balance.",
+            "roadmapPath": "architect"
+          }
+        ]
+      },
+      {
+        "id": "creative_business_leader",
+        "pattern": {
+          "activity": "Creating art, music, or stories.",
+          "role": "The leader, making decisions and delegating tasks.",
+          "environment": "A fast-paced, dynamic office with lots of collaboration.",
+          "subject": "Art, Music, or Literature",
+          "priority": "High earning potential and financial security."
+        },
+        "suggestions": [
+          {
+            "career": "Creative Director",
+            "description": "Lead creative teams and campaigns, combining artistic vision with business strategy and team management.",
+            "reasoning": "Your creative background and leadership skills make you perfect for directing creative projects while ensuring business success and high earning potential.",
+            "roadmapPath": "creative-director"
+          },
+          {
+            "career": "Marketing Manager",
+            "description": "Develop and execute marketing strategies to promote products and services, managing campaigns and teams.",
+            "reasoning": "Combines your creative abilities with leadership opportunities and offers excellent earning potential in a collaborative environment.",
+            "roadmapPath": "marketing-manager"
+          },
+          {
+            "career": "Film Director",
+            "description": "Direct movies, documentaries, or digital content, leading creative teams to bring stories to life.",
+            "reasoning": "Perfect blend of your artistic interests and leadership abilities, with potential for high earnings in the entertainment industry.",
+            "roadmapPath": "film-director-editor"
+          }
+        ]
+      },
+      {
+        "id": "tech_helper_stable",
+        "pattern": {
+          "activity": "Solving complex puzzles or math problems.",
+          "role": "The supporter, ensuring everyone is working well together.",
+          "environment": "A quiet, focused environment where I can concentrate.",
+          "subject": "Mathematics or Physics",
+          "priority": "A stable and predictable work-life balance."
+        },
+        "suggestions": [
+          {
+            "career": "IT Support Specialist",
+            "description": "Provide technical support and troubleshooting for computer systems, networks, and software applications.",
+            "reasoning": "Your problem-solving skills and supportive nature make IT support ideal, offering stable employment and the satisfaction of helping others with technology.",
+            "roadmapPath": "it-support-specialist"
+          },
+          {
+            "career": "Database Administrator",
+            "description": "Manage and maintain database systems, ensuring data integrity, security, and optimal performance.",
+            "reasoning": "Combines your analytical skills with behind-the-scenes support work, offering stable career prospects and good work-life balance.",
+            "roadmapPath": "database-administrator"
+          },
+          {
+            "career": "Quality Assurance Analyst",
+            "description": "Test software applications and systems to identify bugs and ensure quality standards are met.",
+            "reasoning": "Your attention to detail and problem-solving abilities make QA work perfect, providing stable employment in a supportive role.",
+            "roadmapPath": "qa-analyst"
+          }
+        ]
+      },
+      {
+        "id": "people_helper_education",
+        "pattern": {
+          "activity": "Helping and caring for others.",
+          "role": "The supporter, ensuring everyone is working well together.",
+          "environment": "A hospital, clinic, or a place where I can help people directly.",
+          "subject": "History or Social Studies",
+          "priority": "Making a positive impact on society."
+        },
+        "suggestions": [
+          {
+            "career": "Teacher",
+            "description": "Educate and inspire students, developing curriculum and helping shape the next generation.",
+            "reasoning": "Your caring nature, social awareness, and desire to make a positive impact make teaching an excellent career choice for meaningful work.",
+            "roadmapPath": "teacher"
+          },
+          {
+            "career": "Social Worker",
+            "description": "Help individuals and families overcome challenges, providing support and connecting them with resources.",
+            "reasoning": "Perfect match for your desire to help others and make a social impact, working directly with people who need support.",
+            "roadmapPath": "social-worker"
+          },
+          {
+            "career": "Counselor",
+            "description": "Provide guidance and support to help people work through personal, academic, or career challenges.",
+            "reasoning": "Your supportive nature and interest in helping others makes counseling ideal, allowing you to make a direct positive impact on people's lives.",
+            "roadmapPath": "counselor"
+          }
+        ]
+      },
+      {
+        "id": "business_finance_analyst",
+        "pattern": {
+          "activity": "Solving complex puzzles or math problems.",
+          "role": "The analyst, focusing on data and logic.",
+          "environment": "A fast-paced, dynamic office with lots of collaboration.",
+          "subject": "Business Studies or Economics",
+          "priority": "High earning potential and financial security."
+        },
+        "suggestions": [
+          {
+            "career": "Financial Analyst",
+            "description": "Analyze financial data and market trends to help organizations make investment and business decisions.",
+            "reasoning": "Your analytical skills, business knowledge, and focus on financial security make financial analysis a perfect career fit with excellent earning potential.",
+            "roadmapPath": "banker-financial-analyst"
+          },
+          {
+            "career": "Investment Banker",
+            "description": "Help companies and governments raise capital through securities offerings and provide strategic financial advice.",
+            "reasoning": "Combines your analytical abilities with business acumen in a high-earning, fast-paced environment perfect for your goals.",
+            "roadmapPath": "investment-banker"
+          },
+          {
+            "career": "Business Intelligence Analyst",
+            "description": "Analyze business data to identify trends, patterns, and insights that drive strategic decision-making.",
+            "reasoning": "Perfect blend of your problem-solving skills and business interests, offering good earning potential in a collaborative environment.",
+            "roadmapPath": "business-analyst"
+          }
+        ]
+      }
+    ],
+    "fallback": [
+      {
+        "career": "Software Engineer",
+        "description": "Design, develop, and maintain software applications and systems using various programming languages and technologies.",
+        "reasoning": "A versatile career that offers good growth opportunities, problem-solving challenges, and is in high demand across all industries.",
+        "roadmapPath": "software-engineer"
+      },
+      {
+        "career": "Business Analyst",
+        "description": "Analyze business processes and requirements to help organizations improve efficiency and achieve their goals.",
+        "reasoning": "A well-rounded career that combines analytical skills with business acumen, suitable for various personality types and interests.",
+        "roadmapPath": "business-analyst"
+      },
+      {
+        "career": "Marketing Manager",
+        "description": "Develop and execute marketing strategies to promote products and services, managing campaigns and teams.",
+        "reasoning": "Offers creativity, leadership opportunities, and good career growth potential in almost every industry.",
+        "roadmapPath": "marketing-manager"
+      }
+    ]
+  },
+  "long": {
+    "patterns": [
+      {
+        "id": "analytical_independent_expert",
+        "pattern": {
+          "problemSolving": "Break it down logically and analyze data to find the optimal solution.",
+          "workStyle": "Independent and self-directed: I do my best work when I have autonomy and can manage my own projects.",
+          "ambition": "To become a leading expert or specialist in my field.",
+          "workWith": "Data and abstract concepts (numbers, code, theories).",
+          "learningStyle": "By deconstructing examples and understanding the underlying theory."
+        },
+        "suggestions": [
+          {
+            "career": "Data Scientist",
+            "description": "Analyze complex data sets to extract insights and help organizations make data-driven decisions using statistical methods and machine learning.",
+            "reasoning": "Your analytical approach, preference for working with data, and desire to become an expert align perfectly with data science. The field offers independence and continuous learning opportunities.",
+            "roadmapPath": "data-scientist"
+          },
+          {
+            "career": "AI Researcher",
+            "description": "Conduct research in artificial intelligence, developing new algorithms and techniques to advance the field.",
+            "reasoning": "Your logical problem-solving skills and interest in becoming a specialist make AI research ideal. It's a field where deep expertise and theoretical understanding are highly valued.",
+            "roadmapPath": "ai-researcher"
+          },
+          {
+            "career": "Cybersecurity Specialist",
+            "description": "Protect organizations from cyber threats by analyzing security systems and developing protection strategies.",
+            "reasoning": "Combines your analytical mindset with independent work style. Cybersecurity specialists are highly valued experts who solve complex security challenges.",
+            "roadmapPath": "cybersecurity-specialist"
+          }
+        ]
+      },
+      {
+        "id": "collaborative_leader_impact",
+        "pattern": {
+          "problemSolving": "Collaborate with others to gather diverse perspectives and build consensus.",
+          "workStyle": "Collaborative and team-oriented: I get energized by working with others and sharing ideas.",
+          "ambition": "To climb the ladder and take on leadership and management responsibilities.",
+          "workWith": "People (helping, teaching, persuading, serving).",
+          "impact": "Help individuals directly, improving their well-being or solving their problems."
+        },
+        "suggestions": [
+          {
+            "career": "HR Manager",
+            "description": "Manage human resources functions including recruitment, employee relations, training, and organizational development.",
+            "reasoning": "Your collaborative nature and desire to help people while taking on leadership roles makes HR management perfect. You'll directly impact employee wellbeing and organizational success.",
+            "roadmapPath": "hr-manager"
+          },
+          {
+            "career": "Education Consultant",
+            "description": "Work with educational institutions to improve teaching methods, curriculum development, and student outcomes.",
+            "reasoning": "Combines your collaborative approach with direct impact on people's lives. Education consulting allows you to help many individuals while building leadership experience.",
+            "roadmapPath": "education-consultant"
+          },
+          {
+            "career": "Healthcare Administrator",
+            "description": "Manage healthcare facilities and services, ensuring efficient operations and quality patient care.",
+            "reasoning": "Allows you to help people indirectly through better healthcare systems while using your collaborative skills and leadership ambitions.",
+            "roadmapPath": "healthcare-administrator"
+          }
+        ]
+      },
+      {
+        "id": "creative_innovator_visionary",
+        "pattern": {
+          "problemSolving": "Brainstorm creative, unconventional ideas and experiment with different approaches.",
+          "workStyle": "Flexible and adaptable: I thrive in dynamic environments and enjoy tackling unexpected challenges.",
+          "reputation": "A creative visionary who pushed the boundaries of their field.",
+          "workWith": "Ideas and creative expression (designing, writing, innovating).",
+          "impact": "Innovate and create new technologies or products that change the world."
+        },
+        "suggestions": [
+          {
+            "career": "Product Designer",
+            "description": "Design innovative products and user experiences, combining creativity with user research and business goals.",
+            "reasoning": "Your creative problem-solving and desire to innovate align perfectly with product design. You'll create solutions that can impact millions of users worldwide.",
+            "roadmapPath": "product-designer"
+          },
+          {
+            "career": "Startup Founder",
+            "description": "Create and lead innovative companies, developing new products or services that solve real-world problems.",
+            "reasoning": "Your visionary thinking and adaptability make entrepreneurship ideal. As a founder, you can push boundaries and create world-changing innovations.",
+            "roadmapPath": "startup-founder"
+          },
+          {
+            "career": "Creative Director",
+            "description": "Lead creative teams and projects, setting the vision for campaigns, products, or content across various media.",
+            "reasoning": "Combines your creative vision with leadership opportunities, allowing you to push creative boundaries while building a reputation as an innovator.",
+            "roadmapPath": "creative-director"
+          }
+        ]
+      },
+      {
+        "id": "stable_helper_organized_team",
+        "pattern": {
+          "problemSolving": "Collaborate with others to gather diverse perspectives and build consensus.",
+          "workStyle": "Structured and organized: I prefer clear plans, deadlines, and predictable routines.",
+          "ambition": "To have a stable, secure job with a good work-life balance.",
+          "workWith": "People (helping, teaching, persuading, serving).",
+          "workValue": "Precision and accuracy, getting every detail right."
+        },
+        "suggestions": [
+          {
+            "career": "Project Coordinator",
+            "description": "Coordinate project activities, manage timelines, and ensure teams stay on track to meet project goals.",
+            "reasoning": "Your organized approach and collaborative nature make project coordination ideal. You'll work with people while maintaining structure and stability.",
+            "roadmapPath": "project-coordinator"
+          },
+          {
+            "career": "Administrative Manager",
+            "description": "Oversee administrative operations, manage office procedures, and support organizational efficiency.",
+            "reasoning": "Perfect for your structured work style and people skills, offering stability and the chance to help others succeed through organization.",
+            "roadmapPath": "administrative-manager"
+          },
+          {
+            "career": "Training Coordinator",
+            "description": "Develop and coordinate training programs for employees, ensuring skill development and organizational growth.",
+            "reasoning": "Combines your collaborative nature with helping others, while providing the structured environment and stability you prefer.",
+            "roadmapPath": "training-coordinator"
+          }
+        ]
+      },
+      {
+        "id": "independent_entrepreneur_risk_taker",
+        "pattern": {
+          "problemSolving": "Trust your intuition and past experiences to make a quick decision.",
+          "workStyle": "Independent and self-directed: I do my best work when I have autonomy and can manage my own projects.",
+          "ambition": "To create my own business or work as a freelancer.",
+          "riskAttitude": "I'm a calculated risk-taker, willing to try new things if the potential reward is high.",
+          "reputation": "A respected leader who built a successful team or company."
+        },
+        "suggestions": [
+          {
+            "career": "Entrepreneur",
+            "description": "Start and manage your own business, identifying opportunities and building innovative solutions.",
+            "reasoning": "Your independence, risk-taking ability, and leadership ambitions make entrepreneurship perfect. You can build your own successful company from the ground up.",
+            "roadmapPath": "entrepreneur"
+          },
+          {
+            "career": "Freelance Consultant",
+            "description": "Provide specialized expertise to various clients as an independent consultant in your field of expertise.",
+            "reasoning": "Offers the independence you crave while building a reputation as a respected expert. You can manage your own projects and take calculated risks.",
+            "roadmapPath": "freelancer"
+          },
+          {
+            "career": "Business Development Manager",
+            "description": "Identify new business opportunities, build partnerships, and drive company growth through strategic initiatives.",
+            "reasoning": "Combines your intuitive decision-making with leadership goals, offering autonomy to pursue new opportunities and calculated risks.",
+            "roadmapPath": "business-development-manager"
+          }
+        ]
+      },
+      {
+        "id": "expert_researcher_precision",
+        "pattern": {
+          "problemSolving": "Break it down logically and analyze data to find the optimal solution.",
+          "ambition": "To become a leading expert or specialist in my field.",
+          "workWith": "Data and abstract concepts (numbers, code, theories).",
+          "workValue": "Precision and accuracy, getting every detail right.",
+          "learningStyle": "By deconstructing examples and understanding the underlying theory."
+        },
+        "suggestions": [
+          {
+            "career": "Research Scientist",
+            "description": "Conduct advanced research in your field of expertise, contributing to scientific knowledge and innovation.",
+            "reasoning": "Your analytical approach, precision focus, and desire to become an expert make research science ideal. You'll work with data and theories to advance knowledge.",
+            "roadmapPath": "research-scientist"
+          },
+          {
+            "career": "Data Engineer",
+            "description": "Design and build systems for collecting, storing, and analyzing large datasets to support data-driven decisions.",
+            "reasoning": "Perfect match for your logical problem-solving skills and precision focus. You'll work with complex data systems and become a technical expert.",
+            "roadmapPath": "data-engineer"
+          },
+          {
+            "career": "Financial Quantitative Analyst",
+            "description": "Use mathematical models and statistical analysis to evaluate financial instruments and market risks.",
+            "reasoning": "Combines your analytical skills with precision requirements, working with complex data and theories to become a respected financial expert.",
+            "roadmapPath": "quantitative-analyst"
+          }
+        ]
+      }
+    ],
+    "fallback": [
+      {
+        "career": "Project Manager",
+        "description": "Plan, execute, and oversee projects from initiation to completion, coordinating teams and resources to achieve goals.",
+        "reasoning": "A versatile career that can accommodate various work styles and interests while offering good growth opportunities.",
+        "roadmapPath": "project-manager"
+      },
+      {
+        "career": "Business Consultant",
+        "description": "Provide expert advice to organizations on improving their operations, strategy, and performance.",
+        "reasoning": "Offers variety, intellectual challenges, and the opportunity to work across different industries and problem types.",
+        "roadmapPath": "business-consultant"
+      },
+      {
+        "career": "Digital Marketing Specialist",
+        "description": "Develop and execute digital marketing strategies across various online platforms to reach target audiences.",
+        "reasoning": "Combines analytical and creative skills, offers flexibility, and is applicable across all industries in today's digital world.",
+        "roadmapPath": "digital-marketer"
+      }
+    ]
+  }
+}

@@ -2,10 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { connectToDatabase } from '../lib/mongodb';
 import { CareerRoadmapService } from '../lib/models';
+import { QuizPatternService } from '../lib/models/QuizPattern';
 import dotenv from 'dotenv';
 
 // Load environment variables
-dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
 
 async function seedRoadmapsFromJson() {
   try {
@@ -39,6 +40,26 @@ async function seedRoadmapsFromJson() {
           continue;
         }
 
+        // Load corresponding insights data
+        const insightsPath = path.join(process.cwd(), 'data', 'insights', `${fileName}.json`);
+        let marketInsights = null;
+        
+        if (fs.existsSync(insightsPath)) {
+          try {
+            const insightsData = JSON.parse(fs.readFileSync(insightsPath, 'utf8'));
+            marketInsights = {
+              demand: insightsData.demand?.toLowerCase() || 'medium',
+              salaryRange: parseSalaryRange(insightsData.salaryExpectations || ''),
+              requiredSkills: insightsData.requiredSkills || [],
+              futureOutlook: insightsData.futureOutlook || '',
+              lastUpdated: new Date()
+            };
+            console.log(`💡 Loaded insights for ${fileName}`);
+          } catch (error) {
+            console.warn(`⚠️  Failed to load insights for ${fileName}:`, error);
+          }
+        }
+
         // Create roadmap object from JSON data
         const roadmapData = {
           name: fileName.split('-').map(word => 
@@ -57,6 +78,7 @@ async function seedRoadmapsFromJson() {
             salaryRangeLKR: step.salaryRangeLKR || 'N/A',
             institutes: step.institutes || []
           })),
+          marketInsights,
           difficulty: inferDifficulty(jsonData.length, fileName),
           estimatedDuration: inferDuration(jsonData.length),
           tags: generateTags(fileName),
@@ -161,9 +183,70 @@ function generateTags(fileName: string): string[] {
   return [...new Set(tags)]; // Remove duplicates
 }
 
-// Run the seeding if this script is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  seedRoadmapsFromJson();
+function parseSalaryRange(salaryExpectations: string): { min: number; max: number; currency: string } {
+  // Parse salary ranges like "LKR 80,000 (Trainee) to LKR 600,000+ (Senior/Lead) per month."
+  const lkrMatch = salaryExpectations.match(/LKR\s*([\d,]+)(?:.*?to.*?LKR\s*([\d,]+))?/i);
+  
+  if (lkrMatch) {
+    const min = parseInt(lkrMatch[1].replace(/,/g, ''));
+    const max = lkrMatch[2] ? parseInt(lkrMatch[2].replace(/[,+]/g, '')) : min * 2;
+    return { min, max, currency: 'LKR' };
+  }
+  
+  // Default values if parsing fails
+  return { min: 50000, max: 200000, currency: 'LKR' };
 }
 
-export default seedRoadmapsFromJson;
+async function seedQuizPatternsFromJson() {
+  try {
+    console.log('🧠 Starting quiz patterns seeding...');
+
+    const { db } = await connectToDatabase();
+    
+    // Path to quiz mappings file
+    const quizMappingsPath = path.join(process.cwd(), 'data', 'quiz-mappings.json');
+    
+    if (!fs.existsSync(quizMappingsPath)) {
+      console.error('❌ Quiz mappings file not found:', quizMappingsPath);
+      return;
+    }
+
+    const mappingsData = JSON.parse(fs.readFileSync(quizMappingsPath, 'utf8'));
+    console.log('📁 Loaded quiz mappings data');
+
+    // Seed the quiz patterns using the service
+    const result = await QuizPatternService.seedFromJson(mappingsData);
+    
+    console.log('🎉 Quiz patterns seeding completed!');
+    console.log('📊 Statistics:');
+    console.log(`   - New patterns: ${result.created}`);
+    console.log(`   - Updated patterns: ${result.updated}`);
+    console.log(`   - Errors: ${result.errors}`);
+    console.log(`   - Total processed: ${result.created + result.updated}`);
+
+  } catch (error) {
+    console.error('❌ Quiz patterns seeding failed:', error);
+    process.exit(1);
+  }
+}
+
+async function seedAll() {
+  console.log('🌱 Starting complete data seeding...');
+  
+  try {
+    await seedRoadmapsFromJson();
+    await seedQuizPatternsFromJson();
+    console.log('✅ All seeding completed successfully!');
+  } catch (error) {
+    console.error('❌ Seeding failed:', error);
+    process.exit(1);
+  }
+}
+
+// Run the seeding if this script is executed directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  seedAll();
+}
+
+export default seedAll;
+export { seedRoadmapsFromJson, seedQuizPatternsFromJson };

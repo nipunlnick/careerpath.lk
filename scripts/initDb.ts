@@ -2,7 +2,7 @@ import { MongoClient, Db } from 'mongodb';
 import dotenv from 'dotenv';
 
 // Load environment variables
-dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017';
 const MONGODB_DB = process.env.MONGODB_DB || 'careerpath_lk';

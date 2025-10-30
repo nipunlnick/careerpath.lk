@@ -8,6 +8,7 @@ import connectToDatabase from '../lib/mongodb';
 import { CareerRoadmapService } from '../lib/models/CareerRoadmap';
 import { QuizResultService } from '../lib/models/QuizResult';
 import { generateRoadmap, suggestCareers, suggestCareersLong } from '../services/geminiService';
+import { localQuizService } from '../services/localQuizService';
 import crypto from 'crypto';
 
 const app = express();
@@ -208,17 +209,19 @@ app.post('/api/quiz/generate', async (req, res) => {
         success: true,
         cached: true,
         result: existingResult.result,
-        hash: answersHash
+        hash: answersHash,
+        source: 'database'
       });
     }
     
-    // Generate new result using appropriate Gemini service
-    let careerSuggestions;
-    if (quizType === 'long') {
-      careerSuggestions = await suggestCareersLong(answersForAPI);
-    } else {
-      careerSuggestions = await suggestCareers(answersForAPI);
-    }
+    // Generate new result using local quiz service (faster, no API calls)
+    console.log('Generating suggestions using local quiz service...');
+    const careerSuggestions = await localQuizService.getSuggestionsWithPartialMatching(
+      answersForAPI,
+      quizType as 'standard' | 'long'
+    );
+    
+    console.log(`Generated ${careerSuggestions.length} career suggestions locally`);
     
     // Generate and store roadmaps for each suggested career
     console.log('Generating roadmaps for suggested careers...');
@@ -260,13 +263,21 @@ app.post('/api/quiz/generate', async (req, res) => {
           
           // Return enhanced suggestion with slug for roadmap navigation
           return {
-            ...suggestion,
+            career: suggestion.career,
+            description: suggestion.description,
+            reasoning: suggestion.reasoning,
+            roadmapPath: suggestion.roadmapPath,
             roadmapSlug: slug
           };
         } catch (error) {
           console.error(`Error generating roadmap for ${suggestion.career}:`, error);
           // Return original suggestion if roadmap generation fails
-          return suggestion;
+          return {
+            career: suggestion.career,
+            description: suggestion.description,
+            reasoning: suggestion.reasoning,
+            roadmapPath: suggestion.roadmapPath
+          };
         }
       })
     );
@@ -287,7 +298,8 @@ app.post('/api/quiz/generate', async (req, res) => {
       cached: false,
       result: enhancedSuggestions,
       hash: answersHash,
-      roadmapsGenerated: enhancedSuggestions.length
+      roadmapsGenerated: enhancedSuggestions.length,
+      source: 'local-patterns'
     });
     
   } catch (error) {

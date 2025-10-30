@@ -65,11 +65,7 @@ const Header: React.FC = () => {
               to="/"
               className="flex items-center gap-2 text-2xl font-bold text-green-600"
             >
-              <img
-                src="/favicon.png"
-                alt="CareerPath.lk"
-                className="h-10 w-7"
-              />
+              <img src="/cplogo.png" alt="CareerPath.lk" className="h-10 w-7" />
               <span>
                 CareerPath
                 <span className="text-gray-800 dark:text-gray-200">.lk</span>
