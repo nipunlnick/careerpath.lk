@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { QUIZ_QUESTIONS } from "../constants";
-import { useQuizApi } from "../hooks/api/useQuizApi";
+import { useLocalQuizApi } from "../hooks/api/useLocalQuizApi";
 import { useAuth } from "../contexts/AuthContext";
 import type { CareerSuggestion } from "../types";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -17,7 +17,8 @@ const CareerQuiz: React.FC = () => {
   const navigate = useNavigate();
 
   const { user } = useAuth();
-  const { getSuggestions, isLoading, error, wasCached } = useQuizApi();
+  const { getSuggestions, isLoading, error, wasCached, source } =
+    useLocalQuizApi();
 
   const handleSubmit = async (finalAnswers: Record<string, string>) => {
     setSuggestions([]);
@@ -28,7 +29,9 @@ const CareerQuiz: React.FC = () => {
       if (wasCached) {
         console.log("Quiz result retrieved from cache");
       } else {
-        console.log("New quiz result generated");
+        console.log(
+          `New quiz result generated using ${source || "local patterns"}`
+        );
       }
     } catch (err: any) {
       console.error("Quiz submission error:", err);
@@ -74,6 +77,9 @@ const CareerQuiz: React.FC = () => {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
         <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">
           Analyzing your answers to find the perfect career...
+        </p>
+        <p className="mt-2 text-sm text-green-600 dark:text-green-400">
+          ⚡ Powered by our new lightning-fast local matching system
         </p>
       </div>
     );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LONG_QUIZ_QUESTIONS } from "../constants";
-import { useQuizApi } from "../hooks/api/useQuizApi";
+import { useLocalQuizApi } from "../hooks/api/useLocalQuizApi";
 import { useAuth } from "../contexts/AuthContext";
 import type { CareerSuggestion } from "../types";
 import { usePageMeta } from "../hooks/usePageMeta";
@@ -18,7 +18,8 @@ const LongCareerQuiz: React.FC = () => {
   const navigate = useNavigate();
 
   const { user } = useAuth();
-  const { getSuggestions, isLoading, error, wasCached } = useQuizApi();
+  const { getSuggestions, isLoading, error, wasCached, source } =
+    useLocalQuizApi();
 
   const handleAnswerSelect = (option: string) => {
     const currentQuestionKey = LONG_QUIZ_QUESTIONS[currentQuestionIndex].key;
@@ -78,6 +79,9 @@ const LongCareerQuiz: React.FC = () => {
         </p>
         <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
           This will give you highly personalized results!
+        </p>
+        <p className="mt-2 text-sm text-green-600 dark:text-green-400">
+          ⚡ Powered by our new lightning-fast local matching system
         </p>
       </div>
     );

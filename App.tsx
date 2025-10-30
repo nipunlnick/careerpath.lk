@@ -1,19 +1,19 @@
-
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import RoadmapExplorer from './components/RoadmapExplorer';
-import CareerQuiz from './components/CareerQuiz';
-import LongCareerQuiz from './components/LongCareerQuiz';
-import About from './components/About';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import Profile from './components/Profile';
-import PrivateRoute from './components/PrivateRoute';
-import { AuthProvider } from './contexts/AuthContext';
-import { ThemeProvider } from './contexts/ThemeContext';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import RoadmapExplorer from "./components/RoadmapExplorer";
+import CareerQuiz from "./components/CareerQuiz";
+import LongCareerQuiz from "./components/LongCareerQuiz";
+import QuizPerformanceDemo from "./components/QuizPerformanceDemo";
+import About from "./components/About";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import Profile from "./components/Profile";
+import PrivateRoute from "./components/PrivateRoute";
+import { AuthProvider } from "./contexts/AuthContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const App: React.FC = () => {
   return (
@@ -26,19 +26,23 @@ const App: React.FC = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/roadmaps" element={<RoadmapExplorer />} />
-                <Route path="/roadmaps/:careerPath" element={<RoadmapExplorer />} />
+                <Route
+                  path="/roadmaps/:careerPath"
+                  element={<RoadmapExplorer />}
+                />
                 <Route path="/quiz" element={<CareerQuiz />} />
                 <Route path="/long-quiz" element={<LongCareerQuiz />} />
+                <Route path="/quiz-demo" element={<QuizPerformanceDemo />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route 
+                <Route
                   path="/profile"
                   element={
                     <PrivateRoute>
                       <Profile />
                     </PrivateRoute>
-                  } 
+                  }
                 />
               </Routes>
             </main>
