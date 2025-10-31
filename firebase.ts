@@ -1,6 +1,6 @@
 import { initializeApp, type FirebaseApp } from 'firebase/app';
 import { getAuth, type Auth } from 'firebase/auth';
-import { getFirestore, type Firestore } from 'firebase/firestore';
+import { getFirestore, type Firestore, connectFirestoreEmulator, enableNetwork, disableNetwork } from 'firebase/firestore';
 
 // =================================================================
 // FIREBASE PROJECT CONFIGURATION
@@ -30,6 +30,25 @@ if (isConfigValid) {
     app = initializeApp(firebaseConfig);
     auth = getAuth(app);
     db = getFirestore(app);
+    
+    // Enhanced error handling for Firestore connection issues
+    if (db) {
+      // Disable network initially to prevent connection errors during initialization
+      disableNetwork(db).then(() => {
+        console.log("Firestore network disabled during initialization");
+        // Re-enable network after a brief delay
+        setTimeout(() => {
+          enableNetwork(db!).then(() => {
+            console.log("Firestore network re-enabled");
+          }).catch((error) => {
+            console.warn("Failed to re-enable Firestore network:", error);
+          });
+        }, 1000);
+      }).catch((error) => {
+        console.warn("Failed to disable Firestore network:", error);
+      });
+    }
+    
     console.log("Firebase initialized successfully");
   } catch (e) {
     console.error("Firebase initialization failed:", e);
@@ -47,6 +66,44 @@ if (isConfigValid) {
     "4. Restart the development server"
   );
 }
+
+// Helper function to check Firebase connectivity
+export const checkFirebaseConnection = async (): Promise<boolean> => {
+  if (!db) return false;
+  
+  try {
+    // Try to enable network if it's disabled
+    await enableNetwork(db);
+    return true;
+  } catch (error) {
+    console.warn("Firebase connection check failed:", error);
+    return false;
+  }
+};
+
+// Helper function to safely disable Firebase network
+export const safeDisableNetwork = async (): Promise<void> => {
+  if (!db) return;
+  
+  try {
+    await disableNetwork(db);
+    console.log("Firebase network safely disabled");
+  } catch (error) {
+    console.warn("Failed to disable Firebase network:", error);
+  }
+};
+
+// Helper function to safely enable Firebase network
+export const safeEnableNetwork = async (): Promise<void> => {
+  if (!db) return;
+  
+  try {
+    await enableNetwork(db);
+    console.log("Firebase network safely enabled");
+  } catch (error) {
+    console.warn("Failed to enable Firebase network:", error);
+  }
+};
 
 // Export Firebase services
 export { auth, db };

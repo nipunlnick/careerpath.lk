@@ -1,0 +1,23 @@
+# Railway Configuration for Backend API
+version: "2"
+services:
+  api:
+    source: .
+    build:
+      commands:
+        - npm install
+        - npm run build:all
+    start: npm run start
+    env:
+      NODE_ENV: production
+      PORT: ${{ PORT }}
+      MONGODB_URI: ${{ MONGODB_URI }}
+      MONGODB_DB: careerpath_lk
+      GEMINI_API_KEY: ${{ GEMINI_API_KEY }}
+      ADMIN_KEY: ${{ ADMIN_KEY }}
+      CORS_ORIGIN: https://careerpath.lk,https://www.careerpath.lk
+    healthcheck:
+      path: /health
+      interval: 30s
+      timeout: 10s
+      retries: 3

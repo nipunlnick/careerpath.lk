@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { NAV_LINKS } from "../constants";
 import { useAuth } from "../contexts/AuthContext";
-import ThemeToggle from "./ThemeToggle";
 import { LogoIcon } from "./icons";
 
 const MenuIcon = () => (
@@ -126,11 +125,9 @@ const Header: React.FC = () => {
                   </NavLink>
                 </>
               )}
-              <ThemeToggle />
             </div>
           </div>
           <div className="-mr-2 flex md:hidden items-center">
-            <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type="button"

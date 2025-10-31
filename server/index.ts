@@ -9,17 +9,141 @@ import { CareerRoadmapService } from '../lib/models/CareerRoadmap';
 import { QuizResultService } from '../lib/models/QuizResult';
 import { generateRoadmap, suggestCareers, suggestCareersLong } from '../services/geminiService';
 import { localQuizService } from '../services/localQuizService';
+import { AnalyticsService } from '../services/analyticsService';
 import crypto from 'crypto';
 
 const app = express();
 
+// CORS Configuration
+const corsOptions = {
+  origin: function (origin: string | undefined, callback: Function) {
+    // Allow requests with no origin (mobile apps, Postman, etc.)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = process.env.CORS_ORIGIN 
+      ? process.env.CORS_ORIGIN.split(',')
+      : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:3001'];
+    
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.warn(`CORS blocked origin: ${origin}`);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
 // Middleware
-app.use(cors());
-app.use(express.json());
+app.use(cors(corsOptions));
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// Security headers middleware
+app.use((req, res, next) => {
+  res.header('X-Content-Type-Options', 'nosniff');
+  res.header('X-Frame-Options', 'DENY');
+  res.header('X-XSS-Protection', '1; mode=block');
+  res.header('Referrer-Policy', 'strict-origin-when-cross-origin');
+  next();
+});
 
 // Health check endpoint
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.json({ 
+    status: 'ok', 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development',
+    version: '1.0.0'
+  });
+});
+
+// Admin middleware to check if user is admin
+const isAdmin = (req: any, res: any, next: any) => {
+  // In a real implementation, you'd verify JWT token and check admin status
+  // For now, we'll implement a simple header-based check
+  const adminKey = req.headers['x-admin-key'];
+  const validAdminKey = process.env.ADMIN_KEY || 'dev-admin-key-2024';
+  
+  if (adminKey !== validAdminKey) {
+    return res.status(403).json({ 
+      success: false, 
+      error: 'Admin access required' 
+    });
+  }
+  
+  next();
+};
+
+// Analytics endpoints (admin only)
+app.get('/api/analytics/quiz-stats', isAdmin, async (req, res) => {
+  try {
+    const { range = '7d' } = req.query;
+    const analytics = await AnalyticsService.getQuizAnalytics(range as any);
+    
+    res.json({
+      success: true,
+      data: analytics
+    });
+  } catch (error) {
+    console.error('Error fetching quiz analytics:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch quiz analytics'
+    });
+  }
+});
+
+app.get('/api/analytics/system-metrics', isAdmin, async (req, res) => {
+  try {
+    const metrics = await AnalyticsService.getSystemMetrics();
+    
+    res.json({
+      success: true,
+      data: metrics
+    });
+  } catch (error) {
+    console.error('Error fetching system metrics:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch system metrics'
+    });
+  }
+});
+
+app.get('/api/analytics/patterns', isAdmin, async (req, res) => {
+  try {
+    const stats = await AnalyticsService.getQuizPatternStats();
+    
+    res.json({
+      success: true,
+      data: stats
+    });
+  } catch (error) {
+    console.error('Error fetching pattern stats:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch pattern statistics'
+    });
+  }
+});
+
+app.get('/api/analytics/roadmaps', isAdmin, async (req, res) => {
+  try {
+    const stats = await AnalyticsService.getRoadmapStats();
+    
+    res.json({
+      success: true,
+      data: stats
+    });
+  } catch (error) {
+    console.error('Error fetching roadmap stats:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch roadmap statistics'
+    });
+  }
 });
 
 // Helper function to generate quiz answers hash
@@ -394,6 +518,241 @@ app.post('/api/roadmaps/search', async (req, res) => {
       success: false, 
       error: 'Failed to search or generate roadmap',
       searchTerm: req.body.searchTerm
+    });
+  }
+});
+
+// User Statistics endpoints
+app.get('/api/user-stats/:userId/quiz-history', async (req, res) => {
+  try {
+    const { userId } = req.params;
+    
+    if (!userId) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'userId is required' 
+      });
+    }
+
+    const quizHistory = await QuizResultService.findByUserId(userId);
+    
+    res.json({
+      success: true,
+      data: quizHistory
+    });
+  } catch (error) {
+    console.error('Error fetching quiz history:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch quiz history'
+    });
+  }
+});
+
+app.get('/api/user-stats/:userId/recent-activity', async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const { limit = 10 } = req.query;
+    
+    if (!userId) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'userId is required' 
+      });
+    }
+
+    // Get recent quiz results and saved roadmaps with proper error handling
+    let recentQuizzes = [];
+    let savedRoadmaps = [];
+    
+    try {
+      [recentQuizzes, savedRoadmaps] = await Promise.all([
+        QuizResultService.findByUserId(userId),
+        (() => {
+          const { SavedRoadmapService } = require('../services/savedRoadmapService');
+          return SavedRoadmapService.getUserSavedRoadmaps(userId);
+        })()
+      ]);
+    } catch (dataError) {
+      console.error('Error fetching user data for activity:', dataError);
+      // Continue with empty arrays if data fetch fails
+    }
+
+    // Validate data
+    recentQuizzes = Array.isArray(recentQuizzes) ? recentQuizzes : [];
+    savedRoadmaps = Array.isArray(savedRoadmaps) ? savedRoadmaps : [];
+
+    // Combine and sort activities
+    const activities = [
+      ...recentQuizzes.map(quiz => ({
+        type: 'quiz',
+        title: `Completed ${quiz.quizType} career quiz`,
+        description: `Generated ${quiz.result?.length || 0} career suggestions`,
+        date: quiz.createdAt,
+        icon: 'ClipboardList'
+      })),
+      ...savedRoadmaps.map(roadmap => ({
+        type: 'roadmap_save',
+        title: `Saved roadmap: ${roadmap.roadmapName}`,
+        description: 'Added to your career collection',
+        date: roadmap.savedAt,
+        icon: 'Bookmark'
+      }))
+    ]
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, Number(limit));
+
+    res.json({
+      success: true,
+      data: activities
+    });
+  } catch (error) {
+    console.error('Error fetching user activity:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch user activity'
+    });
+  }
+});
+
+// Saved Roadmaps endpoints
+app.post('/api/saved-roadmaps', async (req, res) => {
+  try {
+    const { userId, roadmapSlug, roadmapName, roadmapData, notes } = req.body;
+    
+    if (!userId || !roadmapSlug || !roadmapName) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'userId, roadmapSlug, and roadmapName are required' 
+      });
+    }
+
+    const { SavedRoadmapService } = await import('../services/savedRoadmapService');
+    const savedRoadmap = await SavedRoadmapService.saveRoadmap(
+      userId, 
+      roadmapSlug, 
+      roadmapName, 
+      roadmapData, 
+      notes
+    );
+    
+    res.json({
+      success: true,
+      data: savedRoadmap
+    });
+  } catch (error) {
+    console.error('Error saving roadmap:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to save roadmap'
+    });
+  }
+});
+
+app.delete('/api/saved-roadmaps', async (req, res) => {
+  try {
+    const { userId, roadmapSlug } = req.body;
+    
+    if (!userId || !roadmapSlug) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'userId and roadmapSlug are required' 
+      });
+    }
+
+    const { SavedRoadmapService } = await import('../services/savedRoadmapService');
+    const success = await SavedRoadmapService.unsaveRoadmap(userId, roadmapSlug);
+    
+    res.json({
+      success,
+      message: success ? 'Roadmap unsaved successfully' : 'Roadmap not found'
+    });
+  } catch (error) {
+    console.error('Error unsaving roadmap:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to unsave roadmap'
+    });
+  }
+});
+
+app.get('/api/saved-roadmaps/:userId', async (req, res) => {
+  try {
+    const { userId } = req.params;
+    
+    if (!userId) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'userId is required' 
+      });
+    }
+
+    const { SavedRoadmapService } = await import('../services/savedRoadmapService');
+    const savedRoadmaps = await SavedRoadmapService.getUserSavedRoadmaps(userId);
+    
+    res.json({
+      success: true,
+      data: savedRoadmaps
+    });
+  } catch (error) {
+    console.error('Error fetching saved roadmaps:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch saved roadmaps'
+    });
+  }
+});
+
+app.get('/api/saved-roadmaps/:userId/:roadmapSlug', async (req, res) => {
+  try {
+    const { userId, roadmapSlug } = req.params;
+    
+    if (!userId || !roadmapSlug) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'userId and roadmapSlug are required' 
+      });
+    }
+
+    const { SavedRoadmapService } = await import('../services/savedRoadmapService');
+    const isSaved = await SavedRoadmapService.isRoadmapSaved(userId, roadmapSlug);
+    
+    res.json({
+      success: true,
+      data: { isSaved }
+    });
+  } catch (error) {
+    console.error('Error checking saved roadmap:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to check saved roadmap'
+    });
+  }
+});
+
+app.patch('/api/saved-roadmaps/notes', async (req, res) => {
+  try {
+    const { userId, roadmapSlug, notes } = req.body;
+    
+    if (!userId || !roadmapSlug) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'userId and roadmapSlug are required' 
+      });
+    }
+
+    const { SavedRoadmapService } = await import('../services/savedRoadmapService');
+    const success = await SavedRoadmapService.addNoteToSavedRoadmap(userId, roadmapSlug, notes);
+    
+    res.json({
+      success,
+      message: success ? 'Notes updated successfully' : 'Failed to update notes'
+    });
+  } catch (error) {
+    console.error('Error updating notes:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to update notes'
     });
   }
 });

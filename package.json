@@ -9,13 +9,18 @@
     "preview": "vite preview",
     "server": "tsx server/index.ts",
     "server:dev": "tsx --watch server/index.ts",
+    "start": "tsx server/index.ts",
     "db:init": "tsx scripts/initDb.ts",
-    "db:seed": "tsx scripts/seedData.ts"
+    "db:seed": "tsx scripts/seedData.ts",
+    "build:all": "npm run build",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^1.26.0",
     "@types/mongodb": "^4.0.6",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
+    "express": "^4.21.2",
     "firebase": "^12.4.0",
     "jspdf": "latest",
     "jspdf-autotable": "latest",
@@ -26,10 +31,16 @@
     "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
     "tsx": "^4.20.6",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
   }
 }

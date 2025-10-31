@@ -6,7 +6,8 @@ import Home from "./components/Home";
 import RoadmapExplorer from "./components/RoadmapExplorer";
 import CareerQuiz from "./components/CareerQuiz";
 import LongCareerQuiz from "./components/LongCareerQuiz";
-import QuizPerformanceDemo from "./components/QuizPerformanceDemo";
+import AnalyticsDashboard from "./components/AnalyticsDashboard";
+import AdminNav from "./components/AdminNav";
 import About from "./components/About";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <AuthProvider>
         <BrowserRouter>
           <div className="flex flex-col min-h-screen bg-yellow-50 dark:bg-gray-900">
+            <AdminNav />
             <Header />
             <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
               <Routes>
@@ -32,7 +34,14 @@ const App: React.FC = () => {
                 />
                 <Route path="/quiz" element={<CareerQuiz />} />
                 <Route path="/long-quiz" element={<LongCareerQuiz />} />
-                <Route path="/quiz-demo" element={<QuizPerformanceDemo />} />
+                <Route
+                  path="/admin/analytics"
+                  element={
+                    <PrivateRoute>
+                      <AnalyticsDashboard />
+                    </PrivateRoute>
+                  }
+                />
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />

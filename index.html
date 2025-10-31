@@ -40,14 +40,11 @@
       .animation-delay-700 { animation-delay: 700ms; }
     </style>
     <script>
-      // Prevents "flash of incorrect theme" (FOUC) by setting the theme class before React loads.
+      // Always apply dark theme
       (function() {
         try {
-          const savedTheme = localStorage.getItem('theme');
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            document.documentElement.classList.add('dark');
-          }
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
         } catch (e) {
           // Ignore storage access errors.
         }

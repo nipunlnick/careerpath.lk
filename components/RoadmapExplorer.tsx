@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
-import { doc, setDoc, serverTimestamp } from "firebase/firestore";
-import jsPDF from "jspdf";
-import autoTable from "jspdf-autotable";
 import type { RoadmapStep, MarketInsights } from "../types";
 import {
   Book,
+  Bookmark,
   Briefcase,
   CheckCircle,
   GraduationCap,
@@ -18,12 +16,13 @@ import {
   Download,
 } from "./icons";
 import { useAuth } from "../contexts/AuthContext";
-import { db } from "../firebase";
-import { generateRoadmap } from "../services/geminiService";
 import { useRoadmapSearch } from "../hooks/api/useRoadmapSearch";
+import { useSavedRoadmaps } from "../hooks/api/useSavedRoadmaps";
+import { RoadmapDownloadService } from "../services/downloadService";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { EXPLORE_CAREERS } from "../constants";
 import * as Icons from "./icons";
+import { generateRoadmap } from "@/services/geminiService";
 
 const RoadmapExplorer: React.FC = () => {
   const { careerPath } = useParams<{ careerPath: string }>();
@@ -35,11 +34,13 @@ const RoadmapExplorer: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [wasGenerated, setWasGenerated] = useState(false);
-  const [isSaving, setIsSaving] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const [visibleStep, setVisibleStep] = useState<number | null>(0);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
+  const [showDownloadOptions, setShowDownloadOptions] = useState(false);
+  const [notes, setNotes] = useState("");
+  const [showNotesModal, setShowNotesModal] = useState(false);
 
   const { currentUser } = useAuth();
   const {
@@ -47,6 +48,15 @@ const RoadmapExplorer: React.FC = () => {
     isLoading: isSearching,
     wasGenerated: searchWasGenerated,
   } = useRoadmapSearch();
+
+  const {
+    saveRoadmap,
+    unsaveRoadmap,
+    checkIsRoadmapSaved,
+    updateNotes,
+    isLoading: isSavingRoadmap,
+    error: saveError,
+  } = useSavedRoadmaps();
 
   const pageTitle = field
     ? `${field} Roadmap | CareerPath.lk`
@@ -218,6 +228,21 @@ const RoadmapExplorer: React.FC = () => {
     loadData();
   }, [careerPath, location.search]);
 
+  // Check if roadmap is saved when user or field changes
+  useEffect(() => {
+    if (currentUser && field) {
+      const roadmapSlug = field
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+      checkIsRoadmapSaved(roadmapSlug)
+        .then(setIsSaved)
+        .catch(() => setIsSaved(false));
+    } else {
+      setIsSaved(false);
+    }
+  }, [currentUser, field, checkIsRoadmapSaved]);
+
   useEffect(() => {
     if (isLoading || roadmap.length === 0) return;
 
@@ -253,127 +278,114 @@ const RoadmapExplorer: React.FC = () => {
   }, [isLoading, roadmap]);
 
   const handleSaveRoadmap = async () => {
-    if (!currentUser || !db || roadmap.length === 0) {
-      if (!db) {
-        setError("Cannot save. Database is not configured.");
-      }
+    if (!currentUser || roadmap.length === 0) {
+      setError("You must be logged in to save roadmaps.");
       return;
     }
-    setIsSaving(true);
+
     try {
-      const userDocRef = doc(db, "users", currentUser.uid);
-      await setDoc(
-        userDocRef,
-        {
-          savedRoadmap: {
-            field,
-            roadmap,
-            savedAt: serverTimestamp(),
-          },
-        },
-        { merge: true }
-      ); // merge to not overwrite other user data
-      setIsSaved(true);
+      const roadmapSlug = field
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+      const success = await saveRoadmap(
+        roadmapSlug,
+        field,
+        { roadmap, insights },
+        notes
+      );
+
+      if (success) {
+        setIsSaved(true);
+        setError(null);
+      }
     } catch (error) {
       console.error("Error saving roadmap:", error);
       setError("Failed to save roadmap. Please try again.");
-    } finally {
-      setIsSaving(false);
     }
   };
 
-  const handleDownload = () => {
-    if (!roadmap.length || !insights) return;
+  const handleUnsaveRoadmap = async () => {
+    if (!currentUser) return;
 
-    const doc = new jsPDF();
-    // Add autoTable plugin to the jsPDF instance
-    (doc as any).autoTable = autoTable;
+    try {
+      const roadmapSlug = field
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+      const success = await unsaveRoadmap(roadmapSlug);
 
-    const title = `Career Roadmap for a ${field}`;
-    doc.setFontSize(18);
-    doc.text(title, 14, 22);
-
-    let startY = 30;
-
-    // --- Market Insights Section ---
-    doc.setFontSize(14);
-    doc.text("Market Insights for Sri Lanka", 14, startY);
-    startY += 8;
-
-    const insightsBody = [
-      ["Current Demand", insights.demand],
-      ["Salary Expectations", insights.salaryExpectations],
-      ["Key Skills", insights.requiredSkills.join(", ")],
-      ["Future Outlook", doc.splitTextToSize(insights.futureOutlook, 120)],
-    ];
-
-    (doc as any).autoTable({
-      startY: startY,
-      head: [["Insight", "Details"]],
-      body: insightsBody,
-      theme: "striped",
-      headStyles: { fillColor: [22, 160, 133] }, // A teal color
-    });
-
-    startY = (doc as any).autoTable.previous.finalY + 15;
-
-    // --- Roadmap Steps Section ---
-    doc.setFontSize(16);
-    doc.text("Your 5-Step Roadmap", 14, startY);
-    startY += 10;
-
-    roadmap.forEach((step) => {
-      const stepContentHeight = 80; // Estimated height for each step content
-      if (startY > doc.internal.pageSize.getHeight() - stepContentHeight) {
-        doc.addPage();
-        startY = 20;
+      if (success) {
+        setIsSaved(false);
+        setError(null);
       }
-
-      doc.setFontSize(14);
-      doc.setTextColor(41, 128, 185); // A nice blue color
-      doc.text(`${step.step}. ${step.title}`, 14, startY);
-      startY += 6;
-
-      doc.setFontSize(10);
-      doc.setTextColor(100);
-      const descriptionLines = doc.splitTextToSize(step.description, 180);
-      doc.text(descriptionLines, 14, startY);
-      startY += descriptionLines.length * 4 + 4;
-
-      const stepDetails = [
-        ["Duration", step.duration],
-        ["Qualifications", step.qualifications.join("\n")],
-        ["Key Skills", step.skills.join("\n")],
-        ["Institutes", step.institutes.join("\n")],
-        ["Est. Salary (LKR)", step.salaryRangeLKR],
-      ];
-
-      (doc as any).autoTable({
-        startY: startY,
-        head: [["Category", "Details"]],
-        body: stepDetails,
-        theme: "grid",
-        headStyles: { fillColor: [52, 73, 94] }, // A dark blue-gray
-        didDrawPage: (data: any) => {
-          startY = data.cursor.y; // Update startY in case of page break
-        },
-      });
-
-      startY = (doc as any).autoTable.previous.finalY + 12;
-    });
-
-    // --- Footer ---
-    const pageCount = (doc as any).internal.getNumberOfPages();
-    for (let i = 1; i <= pageCount; i++) {
-      doc.setPage(i);
-      doc.setFontSize(8);
-      doc.setTextColor(150);
-      const footerText = `Page ${i} of ${pageCount} | Generated by CareerPath.lk`;
-      doc.text(footerText, 14, doc.internal.pageSize.getHeight() - 10);
+    } catch (error) {
+      console.error("Error unsaving roadmap:", error);
+      setError("Failed to unsave roadmap. Please try again.");
     }
-
-    doc.save(`CareerPath.lk_Roadmap_${field.replace(/ /g, "_")}.pdf`);
   };
+
+  const handleUpdateNotes = async () => {
+    if (!currentUser) return;
+
+    try {
+      const roadmapSlug = field
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+      const success = await updateNotes(roadmapSlug, notes);
+
+      if (success) {
+        setShowNotesModal(false);
+        setError(null);
+      }
+    } catch (error) {
+      console.error("Error updating notes:", error);
+      setError("Failed to update notes. Please try again.");
+    }
+  };
+
+  const handleDownloadPDF = async () => {
+    try {
+      await RoadmapDownloadService.downloadAsPDF(field, roadmap, insights, {
+        includeInsights: true,
+        includeNotes: notes,
+      });
+      setShowDownloadOptions(false);
+    } catch (error) {
+      console.error("Error downloading PDF:", error);
+      setError("Failed to download PDF. Please try again.");
+    }
+  };
+
+  const handleDownloadImage = async (format: "png" | "jpeg" = "png") => {
+    try {
+      await RoadmapDownloadService.downloadAsImage("roadmap-content", field, {
+        format,
+      });
+      setShowDownloadOptions(false);
+    } catch (error) {
+      console.error("Error downloading image:", error);
+      setError("Failed to download image. Please try again.");
+    }
+  };
+
+  const handleDownloadData = async () => {
+    try {
+      await RoadmapDownloadService.downloadRoadmapData(
+        field,
+        roadmap,
+        insights,
+        notes
+      );
+      setShowDownloadOptions(false);
+    } catch (error) {
+      console.error("Error downloading data:", error);
+      setError("Failed to download data. Please try again.");
+    }
+  };
+
+  const handleDownload = handleDownloadPDF;
 
   const getThemeForStep = (title: string) => {
     const lowerTitle = title.toLowerCase();
@@ -583,25 +595,74 @@ const RoadmapExplorer: React.FC = () => {
             </div>
             <div className="flex items-center gap-2 mt-4 sm:mt-0">
               {currentUser && (
-                <button
-                  onClick={handleSaveRoadmap}
-                  disabled={isSaving || isSaved || !db}
-                  className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 disabled:bg-green-300 disabled:cursor-not-allowed transition-colors"
-                >
-                  {isSaved
-                    ? "Saved ✓"
-                    : isSaving
-                    ? "Saving..."
-                    : "Save Roadmap"}
-                </button>
+                <>
+                  <button
+                    onClick={isSaved ? handleUnsaveRoadmap : handleSaveRoadmap}
+                    disabled={isSavingRoadmap}
+                    className={`flex items-center justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium transition-colors ${
+                      isSaved
+                        ? "text-white bg-red-600 hover:bg-red-700"
+                        : "text-white bg-green-600 hover:bg-green-700"
+                    } disabled:opacity-50 disabled:cursor-not-allowed`}
+                  >
+                    <Bookmark className="w-4 h-4 mr-2" />
+                    {isSavingRoadmap
+                      ? "Processing..."
+                      : isSaved
+                      ? "Unsave Roadmap"
+                      : "Save Roadmap"}
+                  </button>
+                  {isSaved && (
+                    <button
+                      onClick={() => setShowNotesModal(true)}
+                      className="flex items-center justify-center py-2 px-4 border border-blue-600 rounded-md shadow-sm text-sm font-medium text-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
+                    >
+                      Add Notes
+                    </button>
+                  )}
+                </>
               )}
-              <button
-                onClick={handleDownload}
-                className="flex items-center justify-center py-2 px-4 border border-green-600 rounded-md shadow-sm text-sm font-medium text-green-600 dark:text-green-400 dark:hover:text-white hover:bg-green-600 hover:text-white dark:hover:bg-green-600 transition-colors"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download PDF
-              </button>
+
+              <div className="relative download-options-container">
+                <button
+                  onClick={() => setShowDownloadOptions(!showDownloadOptions)}
+                  className="flex items-center justify-center py-2 px-4 border border-green-600 rounded-md shadow-sm text-sm font-medium text-green-600 dark:text-green-400 hover:bg-green-600 hover:text-white dark:hover:bg-green-600 transition-colors"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download
+                </button>
+
+                {showDownloadOptions && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                    <div className="py-1">
+                      <button
+                        onClick={handleDownloadPDF}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Download as PDF
+                      </button>
+                      <button
+                        onClick={() => handleDownloadImage("png")}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Download as PNG
+                      </button>
+                      <button
+                        onClick={() => handleDownloadImage("jpeg")}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Download as JPEG
+                      </button>
+                      <button
+                        onClick={handleDownloadData}
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Download Data (JSON)
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -654,7 +715,10 @@ const RoadmapExplorer: React.FC = () => {
             </div>
           )}
 
-          <div className="relative container mx-auto px-4 py-8">
+          <div
+            id="roadmap-content"
+            className="relative container mx-auto px-4 py-8"
+          >
             {/* Timeline bar */}
             <div className="absolute top-0 bottom-0 w-1 bg-yellow-200 dark:bg-gray-700 left-6 md:left-1/2 -translate-x-1/2"></div>
 
@@ -782,6 +846,41 @@ const RoadmapExplorer: React.FC = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Notes Modal */}
+      {showNotesModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              Add Notes to Roadmap
+            </h3>
+            <textarea
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              placeholder="Add personal notes, goals, or reminders for this roadmap..."
+              className="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-md resize-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            />
+            <div className="flex justify-end gap-3 mt-4">
+              <button
+                onClick={() => {
+                  setShowNotesModal(false);
+                  setNotes("");
+                }}
+                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleUpdateNotes}
+                disabled={isSavingRoadmap}
+                className="px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 disabled:opacity-50 rounded-md transition-colors"
+              >
+                {isSavingRoadmap ? "Saving..." : "Save Notes"}
+              </button>
             </div>
           </div>
         </div>
