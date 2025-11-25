@@ -1,24 +1,21 @@
+"use client";
+
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { EXPLORE_CAREERS } from "../constants";
-import * as Icons from "./icons";
+import * as Icons from "../components/icons";
 import type { Career } from "../types";
-import { usePageMeta } from "../hooks/usePageMeta";
 
 const Home: React.FC = () => {
-  usePageMeta(
-    "CareerPath.lk | Career Roadmaps for Sri Lankan Students",
-    "Plan your future with step-by-step career roadmaps for Sri Lankan students. Find your path after O/Ls, A/Ls, or University with our AI-powered guidance."
-  );
-
-  const navigate = useNavigate();
+  const navigate = useRouter();
   const [openCategory, setOpenCategory] = useState<string | null>(null);
 
   const handleCareerClick = (career: Career) => {
     if (career.path) {
-      navigate(`/roadmaps/${career.path}`);
+      navigate.push(`/roadmaps/${career.path}`);
     } else {
-      navigate(`/roadmaps?field=${encodeURIComponent(career.name)}`);
+      navigate.push(`/roadmaps?field=${encodeURIComponent(career.name)}`);
     }
   };
 
@@ -38,7 +35,7 @@ const Home: React.FC = () => {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 animate-fadeInUp animation-delay-400">
           <button
-            onClick={() => navigate("/roadmaps")}
+            onClick={() => navigate.push("/roadmaps")}
             className="w-full sm:w-auto bg-white text-green-600 border-2 border-green-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-400 dark:hover:bg-gray-700 transform hover:-translate-y-1 transition-all duration-300"
           >
             Quick Start
@@ -64,7 +61,7 @@ const Home: React.FC = () => {
               Perfect for a fast start.
             </p>
             <Link
-              to="/quiz"
+              href="/quiz"
               className="mt-6 text-center bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-300 font-semibold py-3 px-6 rounded-lg hover:bg-yellow-200 dark:hover:bg-yellow-900 transition-all duration-300"
             >
               Take the 5-Question Quiz &rarr;
@@ -79,7 +76,7 @@ const Home: React.FC = () => {
               skills and personality, leading to more personalized results.
             </p>
             <Link
-              to="/long-quiz"
+              href="/long-quiz"
               className="mt-6 text-center bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition-all duration-300"
             >
               Start In-Depth Assessment &rarr;

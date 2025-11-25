@@ -39,7 +39,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   // Enable fallback auth in development when Firebase has issues
   useEffect(() => {
-    if (import.meta.env.DEV && !FallbackAuth.isEnabled()) {
+    if (process.env.NODE_ENV === "development" && !FallbackAuth.isEnabled()) {
       FallbackAuth.enable();
     }
   }, []);

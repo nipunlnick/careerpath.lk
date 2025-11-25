@@ -1,26 +1,61 @@
-# Logs
-logs
-*.log
+Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+*.test.js.snap
+.nyc_output
+
+# Next.js
+/.next/
+/out/
+.next
+out
+build
+
+# Production
+/dist
+dist-ssr
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-/node_modules
-/.pnp
-.pnp.js
-dist
-dist-ssr
+# Local development
+.DS_Store
+*.pem
 
-.env/
-.env.*
-.venv/
-venv/
-ENV/
+# Vercel
+.vercel
 
-### IDE ###
-# VS Code
+# Railway
+.railway
+
+# Netlify
+.netlify
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# ESLint
+.eslintcache
+
+# IDE
 .vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -28,9 +63,43 @@ ENV/
 !.vscode/extensions.json
 *.code-workspace
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Python virtual environments (if any)
+.venv/
+venv/
+ENV/
+
+# Logs
+logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache
+
+# OS
+Thumbs.db
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+
+# MongoDB
+*.mongodb
+
+# Docker
+docker-compose.override.yml
+
+# Deployment scripts (optional - uncomment if you want to keep these private)
+# deploy-railway.sh
+
+# Antigravity artifacts (optional - uncomment if you don't want to commit)
+# .gemini/
+

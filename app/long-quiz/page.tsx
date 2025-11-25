@@ -1,54 +1,55 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { QUIZ_QUESTIONS } from "../constants";
-import { useLocalQuizApi } from "../hooks/api/useLocalQuizApi";
-import { useAuth } from "../contexts/AuthContext";
-import type { CareerSuggestion } from "../types";
-import { usePageMeta } from "../hooks/usePageMeta";
+"use client";
 
-const CareerQuiz: React.FC = () => {
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { LONG_QUIZ_QUESTIONS } from "../../constants";
+import { useLocalQuizApi } from "../../hooks/api/useLocalQuizApi";
+import { useAuth } from "../../contexts/AuthContext";
+import type { CareerSuggestion } from "../../types";
+import { usePageMeta } from "../../hooks/usePageMeta";
+
+const LongCareerQuiz: React.FC = () => {
   usePageMeta(
-    "Quick Career Quiz | CareerPath.lk",
-    "Discover your ideal career path with our quick 2-minute career assessment quiz."
+    "In-Depth Career Assessment | CareerPath.lk",
+    "Get personalized career recommendations with our comprehensive 15-question assessment."
   );
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [suggestions, setSuggestions] = useState<CareerSuggestion[]>([]);
-  const navigate = useNavigate();
+  const navigate = useRouter();
 
   const { user } = useAuth();
   const { getSuggestions, isLoading, error, wasCached, source } =
     useLocalQuizApi();
 
-  const handleSubmit = async (finalAnswers: Record<string, string>) => {
-    setSuggestions([]);
-    try {
-      const result = await getSuggestions(finalAnswers, "standard", user?.uid);
-      setSuggestions(result);
-
-      if (wasCached) {
-        console.log("Quiz result retrieved from cache");
-      } else {
-        console.log(
-          `New quiz result generated using ${source || "local patterns"}`
-        );
-      }
-    } catch (err: any) {
-      console.error("Quiz submission error:", err);
-      // Error is handled by the useQuizApi hook
-    }
-  };
-
   const handleAnswerSelect = (option: string) => {
-    const currentQuestionKey = QUIZ_QUESTIONS[currentQuestionIndex].key;
+    const currentQuestionKey = LONG_QUIZ_QUESTIONS[currentQuestionIndex].key;
     const newAnswers = { ...answers, [currentQuestionKey]: option };
     setAnswers(newAnswers);
 
-    if (currentQuestionIndex < QUIZ_QUESTIONS.length - 1) {
+    if (currentQuestionIndex < LONG_QUIZ_QUESTIONS.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       // If it's the last question, automatically submit.
       handleSubmit(newAnswers);
+    }
+  };
+
+  const handleSubmit = async (finalAnswers: Record<string, string>) => {
+    setSuggestions([]);
+    try {
+      const result = await getSuggestions(finalAnswers, "long", user?.uid);
+      setSuggestions(result);
+
+      if (wasCached) {
+        console.log("Long quiz result retrieved from cache");
+      } else {
+        console.log("New long quiz result generated");
+      }
+    } catch (err: any) {
+      console.error("Long quiz submission error:", err);
+      // Error is handled by the useQuizApi hook
     }
   };
 
@@ -58,25 +59,23 @@ const CareerQuiz: React.FC = () => {
     setSuggestions([]);
   };
 
-  const handleExploreRoadmap = (suggestion: any) => {
-    // Use the roadmap slug if available, otherwise fallback to search
-    if (suggestion.roadmapSlug) {
-      navigate(`/roadmaps/${suggestion.roadmapSlug}`);
-    } else {
-      const path = suggestion.roadmapPath || suggestion.career;
-      navigate(`/roadmaps?field=${encodeURIComponent(path)}&level=A/Ls`);
-    }
+  const handleExploreRoadmap = (suggestion: CareerSuggestion) => {
+    const path = suggestion.roadmapPath || suggestion.career;
+    navigate.push(`/roadmaps?field=${encodeURIComponent(path)}&level=A/Ls`);
   };
 
   const progressPercentage =
-    ((currentQuestionIndex + 1) / QUIZ_QUESTIONS.length) * 100;
+    ((currentQuestionIndex + 1) / LONG_QUIZ_QUESTIONS.length) * 100;
 
   if (isLoading) {
     return (
       <div className="text-center mt-8 bg-white dark:bg-gray-800 p-12 rounded-xl shadow-lg">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
         <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">
-          Analyzing your answers to find the perfect career...
+          Performing deep analysis on your answers...
+        </p>
+        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          This will give you highly personalized results!
         </p>
         <p className="mt-2 text-sm text-green-600 dark:text-green-400">
           ⚡ Powered by our new lightning-fast local matching system
@@ -106,7 +105,7 @@ const CareerQuiz: React.FC = () => {
     return (
       <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg animate-fadeInUp">
         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
-          Your Personalized Career Suggestions
+          Your In-Depth Career Suggestions
         </h2>
         <div className="mt-8 space-y-6">
           {suggestions.map((suggestion, index) => (
@@ -123,7 +122,7 @@ const CareerQuiz: React.FC = () => {
               </p>
               <p className="mt-4 text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-700 p-3 rounded-md">
                 <strong className="dark:text-gray-200">
-                  Why it's a good fit:
+                  Why it's a great fit for you:
                 </strong>{" "}
                 {suggestion.reasoning}
               </p>
@@ -131,66 +130,50 @@ const CareerQuiz: React.FC = () => {
                 onClick={() => handleExploreRoadmap(suggestion)}
                 className="mt-4 bg-green-600 text-white font-semibold py-2 px-5 rounded-lg hover:bg-green-700 transition-colors"
               >
-                {suggestion.roadmapSlug ? "View Roadmap" : "Explore Roadmap"}
+                {suggestion.roadmapPath ? "View Roadmap" : "Explore Roadmap"}
               </button>
             </div>
           ))}
-        </div>
-        <div className="mt-10 text-center border-t dark:border-gray-700 pt-6 animate-fadeInUp animation-delay-600">
-          <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-            Ready for a Deeper Dive?
-          </h4>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Get even more personalized results with our in-depth assessment.
-          </p>
-          <Link
-            to="/long-quiz"
-            className="mt-4 inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-green-700 transition-colors"
-          >
-            Take the In-Depth Assessment
-          </Link>
         </div>
         <div className="text-center mt-8">
           <button
             onClick={handleReset}
             className="text-green-600 dark:text-green-400 font-semibold hover:underline"
           >
-            Take the quick quiz again
+            Take the assessment again
           </button>
         </div>
       </div>
     );
   }
 
-  const currentQuestion = QUIZ_QUESTIONS[currentQuestionIndex];
+  const currentQuestion = LONG_QUIZ_QUESTIONS[currentQuestionIndex];
 
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white text-center animate-fadeInUp">
-          Find Your Perfect Career Path
+          In-Depth Career Assessment
         </h1>
         <p className="text-center mt-2 text-gray-600 dark:text-gray-300 animate-fadeInUp animation-delay-100">
-          Answer 5 quick questions to get started.
+          Answer 15 questions for a detailed analysis.
         </p>
 
         <div className="mt-8">
-          {/* Progress Bar */}
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-6">
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-6 relative">
             <div
-              className="bg-green-600 h-2.5 rounded-full"
+              className="bg-green-600 h-4 rounded-full flex items-center justify-center text-xs font-medium text-white"
               style={{
                 width: `${progressPercentage}%`,
                 transition: "width 0.5s ease-in-out",
               }}
-            ></div>
+            >
+              {currentQuestionIndex + 1} / {LONG_QUIZ_QUESTIONS.length}
+            </div>
           </div>
 
           <div key={currentQuestionIndex} className="animate-fadeInUp">
-            <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-1">
-              Question {currentQuestionIndex + 1}/{QUIZ_QUESTIONS.length}
-            </h2>
-            <p className="text-lg text-gray-800 dark:text-gray-200">
+            <p className="text-lg text-gray-800 dark:text-gray-200 font-semibold">
               {currentQuestion.question}
             </p>
 
@@ -212,4 +195,4 @@ const CareerQuiz: React.FC = () => {
   );
 };
 
-export default CareerQuiz;
+export default LongCareerQuiz;

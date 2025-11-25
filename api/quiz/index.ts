@@ -1,5 +1,7 @@
 import { QuizResultService } from '../../lib/models';
 
+import { createHash } from 'crypto';
+
 // API endpoints for quiz operations
 export async function saveQuizResult(quizData: {
   userId?: string;
@@ -9,8 +11,15 @@ export async function saveQuizResult(quizData: {
   results: any;
 }) {
   try {
+    const answersHash = createHash('md5').update(JSON.stringify(quizData.answers)).digest('hex');
+    
     const result = await QuizResultService.create({
-      ...quizData,
+      userId: quizData.userId,
+      sessionId: quizData.sessionId,
+      quizType: quizData.quizType === 'quick' ? 'standard' : 'long',
+      answers: quizData.answers,
+      result: quizData.results,
+      answersHash,
       completedAt: new Date()
     });
     return { success: true, data: result };
@@ -42,7 +51,7 @@ export async function getQuizResultBySession(sessionId: string) {
 
 export async function getUserQuizResults(userId: string, limit: number = 10) {
   try {
-    const results = await QuizResultService.getByUserId(userId, limit);
+    const results = await QuizResultService.findByUserId(userId);
     return { success: true, data: results };
   } catch (error) {
     console.error('Error getting user quiz results:', error);
@@ -52,7 +61,7 @@ export async function getUserQuizResults(userId: string, limit: number = 10) {
 
 export async function getLatestUserQuizResult(userId: string, quizType: 'quick' | 'long') {
   try {
-    const result = await QuizResultService.getLatestByUserAndType(userId, quizType);
+    const result = await QuizResultService.getLatestByUserAndType(userId, quizType === 'quick' ? 'standard' : 'long');
     return { success: true, data: result };
   } catch (error) {
     console.error('Error getting latest quiz result:', error);

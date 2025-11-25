@@ -1,9 +1,11 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
-import { useSavedRoadmaps } from "../hooks/api/useSavedRoadmaps";
-import { useUserStats } from "../hooks/api/useUserStats";
-import { UserStatsService } from "../services/userStatsService";
+import Link from "next/link";
+import { useAuth } from "../../contexts/AuthContext";
+import { useSavedRoadmaps } from "../../hooks/api/useSavedRoadmaps";
+import { useUserStats } from "../../hooks/api/useUserStats";
+import { UserStatsService } from "../../services/userStatsService";
 import {
   Activity,
   Book,
@@ -22,15 +24,15 @@ import {
   Target,
   TrendingUp,
   User,
-} from "./icons";
-import { usePageMeta } from "../hooks/usePageMeta";
-import { RoadmapDownloadService } from "../services/downloadService";
+} from "../../components/icons";
+import { usePageMeta } from "../../hooks/usePageMeta";
+import { RoadmapDownloadService } from "../../services/downloadService";
 
-interface Activity {
+interface ActivityItem {
   type: string;
   title: string;
   description: string;
-  date: string;
+  date: Date;
   icon: string;
 }
 
@@ -55,7 +57,7 @@ const Profile: React.FC = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("all");
-  const [recentActivity, setRecentActivity] = useState<Activity[]>([]);
+  const [recentActivity, setRecentActivity] = useState<ActivityItem[]>([]);
   const [activityLoading, setActivityLoading] = useState(true);
   const [activityError, setActivityError] = useState<string | null>(null);
 
@@ -141,29 +143,6 @@ const Profile: React.FC = () => {
     }
   };
 
-  const getIconForStep = (title: string) => {
-    const lowerTitle = title.toLowerCase();
-    if (lowerTitle.includes("degree") || lowerTitle.includes("bachelor"))
-      return <GraduationCap className="w-6 h-6 text-white" />;
-    if (
-      lowerTitle.includes("a/l") ||
-      lowerTitle.includes("o/l") ||
-      lowerTitle.includes("foundation")
-    )
-      return <Book className="w-6 h-6 text-white" />;
-    if (
-      lowerTitle.includes("internship") ||
-      lowerTitle.includes("entry-level") ||
-      lowerTitle.includes("job")
-    )
-      return <Briefcase className="w-6 h-6 text-white" />;
-    if (lowerTitle.includes("skill") || lowerTitle.includes("certification"))
-      return <Lightbulb className="w-6 h-6 text-white" />;
-    if (lowerTitle.includes("specialize") || lowerTitle.includes("senior"))
-      return <Target className="w-6 h-6 text-white" />;
-    return <CheckCircle className="w-6 h-6 text-white" />;
-  };
-
   const getActivityIcon = (iconName: string) => {
     const iconClass = "w-5 h-5 text-green-600";
     switch (iconName) {
@@ -190,7 +169,7 @@ const Profile: React.FC = () => {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto space-y-8">
+    <div className="w-full max-w-7xl mx-auto space-y-8 p-4">
       {/* Enhanced Profile Header */}
       <div className="bg-gradient-to-r from-green-600 to-green-800 p-8 rounded-xl shadow-lg text-white">
         <div className="flex items-center justify-between">
@@ -220,8 +199,8 @@ const Profile: React.FC = () => {
           </div>
           <div className="text-right">
             <Link
-              to="/quiz"
-              className="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              href="/quiz"
+              className="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-block"
             >
               Take New Quiz
             </Link>
@@ -314,7 +293,7 @@ const Profile: React.FC = () => {
               Recent Activity
             </h3>
             <Link
-              to="/roadmaps"
+              href="/roadmaps"
               className="text-green-600 hover:text-green-700 text-sm font-medium"
             >
               View All →
@@ -397,7 +376,7 @@ const Profile: React.FC = () => {
           </h3>
           <div className="space-y-4">
             <Link
-              to="/quiz"
+              href="/quiz"
               className="w-full bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition-colors flex items-center"
             >
               <ClipboardList className="w-5 h-5 mr-3" />
@@ -408,7 +387,7 @@ const Profile: React.FC = () => {
             </Link>
 
             <Link
-              to="/quiz/long"
+              href="/long-quiz"
               className="w-full bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
             >
               <Target className="w-5 h-5 mr-3" />
@@ -419,7 +398,7 @@ const Profile: React.FC = () => {
             </Link>
 
             <Link
-              to="/roadmaps"
+              href="/roadmaps"
               className="w-full bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors flex items-center"
             >
               <TrendingUp className="w-5 h-5 mr-3" />
@@ -532,7 +511,7 @@ const Profile: React.FC = () => {
 
                   <div className="flex gap-2">
                     <Link
-                      to={`/roadmaps/${savedRoadmap.roadmapSlug}`}
+                      href={`/roadmaps/${savedRoadmap.roadmapSlug}`}
                       className="flex-1 bg-green-600 text-white text-center py-2 px-3 rounded-md text-sm font-medium hover:bg-green-700 transition-colors"
                     >
                       View Roadmap
@@ -589,13 +568,13 @@ const Profile: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/quiz"
+                href="/quiz"
                 className="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transform hover:-translate-y-1 transition-all duration-300"
               >
                 Take Career Quiz
               </Link>
               <Link
-                to="/roadmaps"
+                href="/roadmaps"
                 className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transform hover:-translate-y-1 transition-all duration-300"
               >
                 Explore Roadmaps

@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
-import { useAuth } from "../contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../contexts/AuthContext";
+import { useRouter } from "next/navigation";
 
 interface QuizStats {
   totalQuizzes: number;
@@ -40,7 +42,7 @@ interface SystemMetrics {
 
 const AnalyticsDashboard: React.FC = () => {
   const { user } = useAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
   const [quizStats, setQuizStats] = useState<QuizStats | null>(null);
   const [systemMetrics, setSystemMetrics] = useState<SystemMetrics | null>(
     null
@@ -58,25 +60,27 @@ const AnalyticsDashboard: React.FC = () => {
 
   useEffect(() => {
     if (!user) {
-      navigate("/login");
+      router.push("/login");
       return;
     }
 
     if (!isAdmin) {
-      navigate("/");
+      router.push("/");
       return;
     }
 
     fetchAnalytics();
-  }, [user, isAdmin, navigate, timeRange]);
+  }, [user, isAdmin, router, timeRange]);
 
   const fetchAnalytics = async () => {
     setLoading(true);
     setError(null);
 
     try {
-      const adminKey = import.meta.env.VITE_ADMIN_KEY || "dev-admin-key-2024";
-      const apiBase = import.meta.env.VITE_API_URL || "http://localhost:3001";
+      const adminKey =
+        process.env.NEXT_PUBLIC_ADMIN_KEY || "dev-admin-key-2024";
+      const apiBase =
+        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
 
       const [quizResponse, metricsResponse] = await Promise.all([
         fetch(`${apiBase}/api/analytics/quiz-stats?range=${timeRange}`, {

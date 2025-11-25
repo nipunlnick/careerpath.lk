@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useAuth } from "../contexts/AuthContext";
 
 const AdminNav: React.FC = () => {
@@ -33,7 +35,7 @@ const AdminNav: React.FC = () => {
               </span>
               <nav className="flex space-x-4">
                 <Link
-                  to="/admin/analytics"
+                  href="/admin/analytics"
                   className="text-sm hover:text-red-200 transition-colors"
                 >
                   📊 Analytics

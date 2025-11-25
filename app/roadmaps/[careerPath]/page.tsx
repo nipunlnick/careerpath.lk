@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState, useEffect, useRef } from "react";
-import { useParams, Link, useLocation } from "react-router-dom";
-import type { RoadmapStep, MarketInsights } from "../types";
+import { useParams, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import {
   Book,
   Bookmark,
@@ -14,20 +16,20 @@ import {
   DollarSign,
   ClipboardList,
   Download,
-} from "./icons";
-import { useAuth } from "../contexts/AuthContext";
-import { useRoadmapSearch } from "../hooks/api/useRoadmapSearch";
-import { useSavedRoadmaps } from "../hooks/api/useSavedRoadmaps";
-import { RoadmapDownloadService } from "../services/downloadService";
-import { usePageMeta } from "../hooks/usePageMeta";
-import { EXPLORE_CAREERS } from "../constants";
-import * as Icons from "./icons";
-import { generateRoadmap } from "@/services/geminiService";
+} from "../../../components/icons";
+import { useAuth } from "../../../contexts/AuthContext";
+import { useSavedRoadmaps } from "../../../hooks/api/useSavedRoadmaps";
+import { RoadmapDownloadService } from "../../../services/downloadService";
+import { usePageMeta } from "../../../hooks/usePageMeta";
+import { generateRoadmap } from "../../../services/geminiService";
+import type { RoadmapStep, MarketInsights } from "../../../types";
 
-const RoadmapExplorer: React.FC = () => {
-  const { careerPath } = useParams<{ careerPath: string }>();
-  const location = useLocation();
-  const [searchTerm, setSearchTerm] = useState("");
+const RoadmapDetailsPage: React.FC = () => {
+  const params = useParams();
+  const searchParams = useSearchParams();
+  const careerPath = params.careerPath as string;
+  const fieldFromQuery = searchParams.get("field");
+
   const [field, setField] = useState("");
   const [roadmap, setRoadmap] = useState<RoadmapStep[]>([]);
   const [insights, setInsights] = useState<MarketInsights | null>(null);
@@ -37,98 +39,29 @@ const RoadmapExplorer: React.FC = () => {
   const [isSaved, setIsSaved] = useState(false);
   const [visibleStep, setVisibleStep] = useState<number | null>(0);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [openCategory, setOpenCategory] = useState<string | null>(null);
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
   const [notes, setNotes] = useState("");
   const [showNotesModal, setShowNotesModal] = useState(false);
 
   const { currentUser } = useAuth();
   const {
-    searchRoadmap,
-    isLoading: isSearching,
-    wasGenerated: searchWasGenerated,
-  } = useRoadmapSearch();
-
-  const {
     saveRoadmap,
     unsaveRoadmap,
     checkIsRoadmapSaved,
     updateNotes,
     isLoading: isSavingRoadmap,
-    error: saveError,
   } = useSavedRoadmaps();
 
   const pageTitle = field
     ? `${field} Roadmap | CareerPath.lk`
-    : "Explore Career Roadmaps | CareerPath.lk";
+    : "Career Roadmap | CareerPath.lk";
   const pageDescription = field
     ? `A step-by-step career roadmap for becoming a ${field} in Sri Lanka, including salary, skills, and qualifications.`
     : "Explore detailed career roadmaps for various fields in Sri Lanka.";
   usePageMeta(pageTitle, pageDescription);
 
-  const allCareers = EXPLORE_CAREERS.flatMap((category) => category.careers);
-
-  const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!searchTerm.trim()) return;
-
-    // First check predefined careers for exact matches
-    const predefinedCareer = allCareers.find(
-      (c) => c.name.toLowerCase() === searchTerm.toLowerCase()
-    );
-
-    if (predefinedCareer && predefinedCareer.path) {
-      window.location.href = `/roadmaps/${predefinedCareer.path}`;
-      return;
-    }
-
-    // Use enhanced search for dynamic roadmap generation
-    try {
-      setIsLoading(true);
-      setError(null);
-      setWasGenerated(false);
-
-      const searchResult = await searchRoadmap(
-        searchTerm.trim(),
-        currentUser?.uid
-      );
-
-      if (searchResult.success && searchResult.data) {
-        // Update the URL and load the roadmap data
-        const newUrl = `/roadmaps/${searchResult.slug}`;
-        window.history.pushState({}, "", newUrl);
-
-        // Update component state with the search results
-        setField(searchResult.data.name);
-        setRoadmap(searchResult.data.steps || []);
-        setInsights(searchResult.data.marketInsights || null);
-        setWasGenerated(searchResult.generated || false);
-        setSearchTerm(""); // Clear search term after successful search
-
-        if (searchResult.generated) {
-          console.log("New roadmap generated and stored in database");
-        } else {
-          console.log("Existing roadmap found in database");
-        }
-      } else {
-        throw new Error("Failed to find or generate roadmap");
-      }
-    } catch (err: any) {
-      console.error("Enhanced search failed:", err);
-      setError(err.message || "Failed to search for roadmap");
-      // Fallback to old URL-based search
-      window.location.href = `/roadmaps?field=${encodeURIComponent(
-        searchTerm
-      )}`;
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   useEffect(() => {
-    const queryParams = new URLSearchParams(location.search);
-    const fieldFromQuery = queryParams.get("field");
-    const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:3001";
+    const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
 
     const loadData = async () => {
       const careerSlug =
@@ -143,7 +76,7 @@ const RoadmapExplorer: React.FC = () => {
 
       if (!careerSlug || !careerDisplayName) {
         setIsLoading(false);
-        setField(""); // Clear field if none is selected
+        setField("");
         return;
       }
 
@@ -153,7 +86,7 @@ const RoadmapExplorer: React.FC = () => {
       setInsights(null);
       setIsSaved(false);
       setWasGenerated(false);
-      setField(careerDisplayName);
+      setField(decodeURIComponent(careerDisplayName));
 
       try {
         // 1) Try DB via server API
@@ -165,7 +98,6 @@ const RoadmapExplorer: React.FC = () => {
             const json = await res.json();
             if (json && json.success && json.data) {
               const doc = json.data;
-              // `steps` field is used in DB; support legacy shapes
               setRoadmap((doc.steps as RoadmapStep[]) || doc.roadmap || []);
               setInsights(
                 (doc.marketInsights as MarketInsights) || doc.insights || null
@@ -174,11 +106,10 @@ const RoadmapExplorer: React.FC = () => {
             }
           }
         } catch (dbErr) {
-          // Ignore DB errors and fallback to generation
           console.warn("DB lookup failed, falling back to generation", dbErr);
         }
 
-        // 2) Ask server to generate & persist (server will check DB again)
+        // 2) Ask server to generate & persist
         try {
           const genRes = await fetch(`${API_BASE}/api/roadmaps/generate`, {
             method: "POST",
@@ -194,7 +125,7 @@ const RoadmapExplorer: React.FC = () => {
               setInsights(
                 (doc.marketInsights as MarketInsights) || doc.insights || null
               );
-              setWasGenerated(!json.cached); // Mark as generated if not from cache
+              setWasGenerated(!json.cached);
               return;
             }
           }
@@ -205,12 +136,12 @@ const RoadmapExplorer: React.FC = () => {
           );
         }
 
-        // 3) Fallback: generate directly from client (Gemini service)
+        // 3) Fallback: generate directly from client
         const generatedData = await generateRoadmap(careerDisplayName);
         if (generatedData && generatedData.roadmap && generatedData.insights) {
           setRoadmap(generatedData.roadmap);
           setInsights(generatedData.insights);
-          setWasGenerated(true); // Client-side generation
+          setWasGenerated(true);
         } else {
           throw new Error("API returned incomplete data.");
         }
@@ -226,9 +157,8 @@ const RoadmapExplorer: React.FC = () => {
     };
 
     loadData();
-  }, [careerPath, location.search]);
+  }, [careerPath, fieldFromQuery]);
 
-  // Check if roadmap is saved when user or field changes
   useEffect(() => {
     if (currentUser && field) {
       const roadmapSlug = field
@@ -259,8 +189,8 @@ const RoadmapExplorer: React.FC = () => {
         });
       },
       {
-        root: null, // observes intersections relative to the viewport
-        rootMargin: "-40% 0px -40% 0px", // trigger when the element is in the middle 20% of the viewport
+        root: null,
+        rootMargin: "-40% 0px -40% 0px",
         threshold: 0,
       }
     );
@@ -385,11 +315,8 @@ const RoadmapExplorer: React.FC = () => {
     }
   };
 
-  const handleDownload = handleDownloadPDF;
-
   const getThemeForStep = (title: string) => {
     const lowerTitle = title.toLowerCase();
-
     const yellowKeywords = [
       "degree",
       "bachelor",
@@ -407,7 +334,6 @@ const RoadmapExplorer: React.FC = () => {
     ];
 
     if (yellowKeywords.some((kw) => lowerTitle.includes(kw))) {
-      // Yellow theme for education and skills
       return {
         iconBg: "bg-yellow-500",
         titleText: "text-yellow-800 dark:text-yellow-300",
@@ -416,7 +342,6 @@ const RoadmapExplorer: React.FC = () => {
       };
     }
 
-    // Default to Green theme for work, leadership, and others
     return {
       iconBg: "bg-green-600",
       titleText: "text-green-800 dark:text-green-300",
@@ -473,7 +398,7 @@ const RoadmapExplorer: React.FC = () => {
         <p className="font-bold">An Error Occurred</p>
         <p>{error}</p>
         <Link
-          to="/roadmaps"
+          href="/roadmaps"
           className="text-green-600 hover:underline dark:text-green-400 mt-2 inline-block"
         >
           Go back to Roadmaps
@@ -482,103 +407,8 @@ const RoadmapExplorer: React.FC = () => {
     );
   }
 
-  // Show search/browse view if no career path is selected
-  if (!field) {
-    return (
-      <div className="w-full max-w-4xl mx-auto animate-fadeInUp">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">
-          Explore Career Roadmaps
-        </h1>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-          Search for a career to generate a custom roadmap, or browse our
-          curated list of paths.
-        </p>
-
-        <form onSubmit={handleSearch} className="flex gap-2 mb-12">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="e.g., 'Data Scientist' or 'Graphic Designer'"
-            className="flex-grow w-full border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm py-3 px-4 bg-white dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-          <button
-            type="submit"
-            className="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transition-colors"
-          >
-            Search
-          </button>
-        </form>
-
-        <div className="space-y-4">
-          {EXPLORE_CAREERS.map((category) => {
-            const Icon =
-              Icons[category.icon as keyof typeof Icons] || Icons.Code;
-            const isOpen = openCategory === category.name;
-
-            return (
-              <div
-                key={category.name}
-                className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenCategory(isOpen ? null : category.name)}
-                  className="w-full flex justify-between items-center p-4 sm:p-5 bg-white dark:bg-gray-800 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
-                  aria-expanded={isOpen}
-                >
-                  <div className="flex items-center">
-                    <div className="rounded-lg w-12 h-12 flex items-center justify-center mr-4 bg-green-100 dark:bg-green-900/30">
-                      <Icon className="w-6 h-6 text-green-600 dark:text-green-400" />
-                    </div>
-                    <span className="font-semibold text-lg text-gray-800 dark:text-gray-200">
-                      {category.name}
-                    </span>
-                  </div>
-                  <Icons.ChevronDown
-                    className={`w-6 h-6 shrink-0 text-gray-500 transform transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="bg-gray-50 dark:bg-gray-800/50 p-4 sm:p-6 border-t border-gray-200 dark:border-gray-700">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-1">
-                        {category.careers.map((career) => (
-                          <Link
-                            key={career.name}
-                            to={
-                              career.path
-                                ? `/roadmaps/${career.path}`
-                                : `/roadmaps?field=${encodeURIComponent(
-                                    career.name
-                                  )}`
-                            }
-                            className="flex items-center p-2 rounded-md text-left text-gray-600 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700/50 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
-                          >
-                            <Icons.ChevronRight className="w-4 h-4 mr-3 text-gray-400 group-hover:text-green-500 transition-colors flex-shrink-0" />
-                            <span>{career.name}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  }
-
-  // Render the roadmap if a field is set
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto p-4">
       {roadmap.length > 0 && (
         <div className="mt-0">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 animate-fadeInUp">
@@ -731,7 +561,9 @@ const RoadmapExplorer: React.FC = () => {
                 return (
                   <div
                     key={index}
-                    ref={(el) => (stepRefs.current[index] = el)}
+                    ref={(el) => {
+                      stepRefs.current[index] = el;
+                    }}
                     data-step-index={index}
                     className={`relative md:flex ${
                       isLeft ? "md:flex-row-reverse" : ""
@@ -889,4 +721,4 @@ const RoadmapExplorer: React.FC = () => {
   );
 };
 
-export default RoadmapExplorer;
+export default RoadmapDetailsPage;

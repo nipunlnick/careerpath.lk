@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { NAV_LINKS } from "../constants";
 import { useAuth } from "../contexts/AuthContext";
 import { LogoIcon } from "./icons";
@@ -41,13 +44,14 @@ const CloseIcon = () => (
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { currentUser, logout } = useAuth();
-  const navigate = useNavigate();
+  const navigate = useRouter();
+  const pathname = usePathname();
 
   const handleLogout = async () => {
     try {
       await logout();
       setIsMenuOpen(false);
-      navigate("/");
+      navigate.push("/");
     } catch (error) {
       console.error("Failed to log out", error);
     }
@@ -55,13 +59,15 @@ const Header: React.FC = () => {
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  const isActive = (path: string) => pathname === path;
+
   return (
     <header className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <NavLink
-              to="/"
+            <Link
+              href="/"
               className="flex items-center gap-2 text-2xl font-bold text-green-600"
             >
               <img src="/cplogo.png" alt="CareerPath.lk" className="h-10 w-7" />
@@ -69,39 +75,35 @@ const Header: React.FC = () => {
                 CareerPath
                 <span className="text-gray-800 dark:text-gray-200">.lk</span>
               </span>
-            </NavLink>
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
               {NAV_LINKS.map((link) => (
-                <NavLink
+                <Link
                   key={link.name}
-                  to={link.path}
-                  className={({ isActive }) =>
-                    `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                      isActive
-                        ? "bg-green-600 text-white"
-                        : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                    }`
-                  }
+                  href={link.path}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+                    isActive(link.path)
+                      ? "bg-green-600 text-white"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
+                  }`}
                 >
                   {link.name}
-                </NavLink>
+                </Link>
               ))}
               {currentUser ? (
                 <>
-                  <NavLink
-                    to="/profile"
-                    className={({ isActive }) =>
-                      `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                        isActive
-                          ? "bg-green-600 text-white"
-                          : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                      }`
-                    }
+                  <Link
+                    href="/profile"
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+                      isActive("/profile")
+                        ? "bg-green-600 text-white"
+                        : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
+                    }`}
                   >
                     Profile
-                  </NavLink>
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-red-500 hover:text-white transition-colors duration-300"
@@ -111,18 +113,18 @@ const Header: React.FC = () => {
                 </>
               ) : (
                 <>
-                  <NavLink
-                    to="/login"
+                  <Link
+                    href="/login"
                     className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white transition-colors duration-300"
                   >
                     Login
-                  </NavLink>
-                  <NavLink
-                    to="/signup"
+                  </Link>
+                  <Link
+                    href="/signup"
                     className="ml-2 bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors duration-300"
                   >
                     Sign Up
-                  </NavLink>
+                  </Link>
                 </>
               )}
             </div>
@@ -150,36 +152,32 @@ const Header: React.FC = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {NAV_LINKS.map((link) => (
-            <NavLink
+            <Link
               key={link.name}
-              to={link.path}
+              href={link.path}
               onClick={closeMenu}
-              className={({ isActive }) =>
-                `block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
-                  isActive
-                    ? "bg-green-600 text-white"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                }`
-              }
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                isActive(link.path)
+                  ? "bg-green-600 text-white"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
+              }`}
             >
               {link.name}
-            </NavLink>
+            </Link>
           ))}
           {currentUser ? (
             <>
-              <NavLink
-                to="/profile"
+              <Link
+                href="/profile"
                 onClick={closeMenu}
-                className={({ isActive }) =>
-                  `block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
-                    isActive
-                      ? "bg-green-600 text-white"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                  }`
-                }
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                  isActive("/profile")
+                    ? "bg-green-600 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
+                }`}
               >
                 Profile
-              </NavLink>
+              </Link>
               <button
                 onClick={handleLogout}
                 className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-red-500 hover:text-white transition-colors duration-300"
@@ -189,26 +187,24 @@ const Header: React.FC = () => {
             </>
           ) : (
             <>
-              <NavLink
-                to="/login"
+              <Link
+                href="/login"
                 onClick={closeMenu}
-                className={({ isActive }) =>
-                  `block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
-                    isActive
-                      ? "bg-green-600 text-white"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                  }`
-                }
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+                  isActive("/login")
+                    ? "bg-green-600 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
+                }`}
               >
                 Login
-              </NavLink>
-              <NavLink
-                to="/signup"
+              </Link>
+              <Link
+                href="/signup"
                 onClick={closeMenu}
                 className="block mt-1 bg-green-600 text-white px-3 py-2 rounded-md text-base font-medium text-center hover:bg-green-700 transition-colors duration-300"
               >
                 Sign Up
-              </NavLink>
+              </Link>
             </>
           )}
         </div>

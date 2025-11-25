@@ -26,7 +26,7 @@ export interface SavedRoadmap {
 }
 
 export interface MarketInsights {
-  salaryRange: string;
+  salaryRange?: string;
   demand: string;
   salaryExpectations: string;
   requiredSkills: string[];

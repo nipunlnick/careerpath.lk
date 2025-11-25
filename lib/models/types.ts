@@ -64,23 +64,26 @@ export interface RoadmapStep {
 }
 
 // Market insights model
+// Market insights model
 export interface MarketInsights {
-  demand: 'high' | 'medium' | 'low';
-  salaryRange: {
+  demand: 'high' | 'medium' | 'low' | string;
+  salaryRange?: {
     min: number;
     max: number;
     currency: string;
   };
+  salaryExpectations?: string;
   requiredSkills: string[];
   futureOutlook: string;
   jobGrowthRate?: string;
   topEmployers?: string[];
-  lastUpdated: Date;
+  lastUpdated?: Date;
 }
 
 // Quiz result model
 export interface QuizResult extends BaseDocument {
   userId?: string; // Optional for anonymous users
+  sessionId: string; // Session ID for anonymous users
   answersHash: string; // Hash of answers for caching
   quizType: 'standard' | 'long';
   answers: Record<string, string> | any[]; // Raw answers from quiz components
