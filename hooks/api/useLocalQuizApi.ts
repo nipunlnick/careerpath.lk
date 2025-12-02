@@ -19,9 +19,7 @@ interface UseLocalQuizApiReturn {
   source: 'database' | 'local-patterns' | 'fallback' | 'api' | null;
 }
 
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '' // Use relative URLs in production
-  : 'http://localhost:3001'; // Use localhost in development
+const API_BASE_URL = '';
 
 export const useLocalQuizApi = (): UseLocalQuizApiReturn => {
   const [isLoading, setIsLoading] = useState(false);

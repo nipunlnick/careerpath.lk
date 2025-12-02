@@ -43,6 +43,10 @@ const careerSuggestionSchema = {
 const roadmapAndInsightsSchema = {
     type: Type.OBJECT,
     properties: {
+        category: {
+            type: Type.STRING,
+            description: "The most appropriate category for this career from the provided list."
+        },
         roadmap: {
             type: Type.ARRAY,
             description: "A 5-step career roadmap.",
@@ -72,7 +76,7 @@ const roadmapAndInsightsSchema = {
             required: ["demand", "salaryExpectations", "requiredSkills", "futureOutlook"]
         }
     },
-    required: ["roadmap", "insights"]
+    required: ["category", "roadmap", "insights"]
 };
 
 const checkApi = () => {
@@ -98,11 +102,12 @@ export const suggestCareers = async (answers: Record<string, string>): Promise<C
 
         For each suggestion, provide a brief description, explain why it's a good fit based on their answers, and provide a specific career field name that can be used to generate a detailed roadmap.
         Tailor the suggestions to the Sri Lankan job market and context.
+        Ensure the 3 suggestions are distinct from each other (e.g., not all IT roles if possible, unless strongly indicated).
         The output must be a valid JSON object matching the provided schema.
         `;
         
         const response = await ai!.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: "gemini-pro-latest",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -117,7 +122,8 @@ export const suggestCareers = async (answers: Record<string, string>): Promise<C
 
     } catch (error) {
         console.error("Error suggesting careers:", error);
-        throw new Error("Failed to suggest careers. The model may be unavailable or the request was invalid.");
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        throw new Error(`Failed to suggest careers: ${errorMessage}`);
     }
 };
 
@@ -146,11 +152,12 @@ export const suggestCareersLong = async (answers: Record<string, string>): Promi
 
         For each suggestion, provide a concise description of the career, a detailed reasoning that connects specific answers to the career choice, and a specific career field name for roadmap generation.
         The suggestions must be relevant to the Sri Lankan job market.
+        Ensure the suggestions cover different aspects of their potential (e.g., one safe bet, one ambitious, one creative).
         The output must be a valid JSON object matching the provided schema.
         `;
         
         const response = await ai!.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: "gemini-pro-latest",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -164,12 +171,13 @@ export const suggestCareersLong = async (answers: Record<string, string>): Promi
         return parsed.suggestions as CareerSuggestion[];
 
     } catch (error) {
-        console.error("Error suggesting careers:", error);
-        throw new Error("Failed to suggest careers. The model may be unavailable or the request was invalid.");
+        console.error("Error suggesting careers:", JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        throw new Error(`Failed to suggest careers: ${errorMessage}`);
     }
 };
 
-export const generateRoadmap = async (careerName: string): Promise<{ roadmap: RoadmapStep[], insights: MarketInsights }> => {
+export const generateRoadmap = async (careerName: string, categories: string[]): Promise<{ roadmap: RoadmapStep[], insights: MarketInsights, category: string }> => {
     const ai = checkApi();
     try {
         const prompt = `
@@ -179,11 +187,14 @@ export const generateRoadmap = async (careerName: string): Promise<{ roadmap: Ro
 
         The market insights should summarize the current demand, salary expectations, key required skills, and future outlook for this career within the Sri Lankan context.
 
+        Also, select the most appropriate category for this career from the following list:
+        ${JSON.stringify(categories)}
+
         The output must be a valid JSON object matching the provided schema.
         `;
 
         const response = await ai!.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: "gemini-pro-latest",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -194,7 +205,7 @@ export const generateRoadmap = async (careerName: string): Promise<{ roadmap: Ro
         
         const jsonText = response.text.trim();
         const parsed = JSON.parse(jsonText);
-        return parsed as { roadmap: RoadmapStep[], insights: MarketInsights };
+        return parsed as { roadmap: RoadmapStep[], insights: MarketInsights, category: string };
 
     } catch (error) {
         console.error(`Error generating roadmap for ${careerName}:`, error);

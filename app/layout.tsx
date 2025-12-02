@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "CareerPath.lk - Your Journey to Success",
   description:
     "Discover your ideal career path with our quick 2-minute career assessment quiz.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

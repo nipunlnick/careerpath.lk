@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { NAV_LINKS } from "../constants";
-import { useAuth } from "../contexts/AuthContext";
+import { NAV_LINKS } from "../constants/navigation";
 import { LogoIcon } from "./icons";
 
 const MenuIcon = () => (
@@ -43,19 +42,7 @@ const CloseIcon = () => (
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { currentUser, logout } = useAuth();
-  const navigate = useRouter();
   const pathname = usePathname();
-
-  const handleLogout = async () => {
-    try {
-      await logout();
-      setIsMenuOpen(false);
-      navigate.push("/");
-    } catch (error) {
-      console.error("Failed to log out", error);
-    }
-  };
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -92,41 +79,6 @@ const Header: React.FC = () => {
                   {link.name}
                 </Link>
               ))}
-              {currentUser ? (
-                <>
-                  <Link
-                    href="/profile"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
-                      isActive("/profile")
-                        ? "bg-green-600 text-white"
-                        : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                    }`}
-                  >
-                    Profile
-                  </Link>
-                  <button
-                    onClick={handleLogout}
-                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-red-500 hover:text-white transition-colors duration-300"
-                  >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link
-                    href="/login"
-                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white transition-colors duration-300"
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    href="/signup"
-                    className="ml-2 bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors duration-300"
-                  >
-                    Sign Up
-                  </Link>
-                </>
-              )}
             </div>
           </div>
           <div className="-mr-2 flex md:hidden items-center">
@@ -165,48 +117,6 @@ const Header: React.FC = () => {
               {link.name}
             </Link>
           ))}
-          {currentUser ? (
-            <>
-              <Link
-                href="/profile"
-                onClick={closeMenu}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
-                  isActive("/profile")
-                    ? "bg-green-600 text-white"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                }`}
-              >
-                Profile
-              </Link>
-              <button
-                onClick={handleLogout}
-                className="w-full text-left block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-red-500 hover:text-white transition-colors duration-300"
-              >
-                Logout
-              </button>
-            </>
-          ) : (
-            <>
-              <Link
-                href="/login"
-                onClick={closeMenu}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
-                  isActive("/login")
-                    ? "bg-green-600 text-white"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
-                }`}
-              >
-                Login
-              </Link>
-              <Link
-                href="/signup"
-                onClick={closeMenu}
-                className="block mt-1 bg-green-600 text-white px-3 py-2 rounded-md text-base font-medium text-center hover:bg-green-700 transition-colors duration-300"
-              >
-                Sign Up
-              </Link>
-            </>
-          )}
         </div>
       </div>
     </header>

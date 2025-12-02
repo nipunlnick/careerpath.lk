@@ -18,7 +18,7 @@ export const useSavedRoadmaps = () => {
   const [error, setError] = useState<string | null>(null);
   const { currentUser } = useAuth();
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
 
   const fetchSavedRoadmaps = async () => {
     if (!currentUser) return;

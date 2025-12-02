@@ -5,7 +5,6 @@ import { useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
   Book,
-  Bookmark,
   Briefcase,
   CheckCircle,
   GraduationCap,
@@ -18,10 +17,8 @@ import {
   Download,
 } from "../../../components/icons";
 import { useAuth } from "../../../contexts/AuthContext";
-import { useSavedRoadmaps } from "../../../hooks/api/useSavedRoadmaps";
 import { RoadmapDownloadService } from "../../../services/downloadService";
 import { usePageMeta } from "../../../hooks/usePageMeta";
-import { generateRoadmap } from "../../../services/geminiService";
 import type { RoadmapStep, MarketInsights } from "../../../types";
 
 const RoadmapDetailsPage: React.FC = () => {
@@ -36,21 +33,11 @@ const RoadmapDetailsPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [wasGenerated, setWasGenerated] = useState(false);
-  const [isSaved, setIsSaved] = useState(false);
   const [visibleStep, setVisibleStep] = useState<number | null>(0);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
-  const [notes, setNotes] = useState("");
-  const [showNotesModal, setShowNotesModal] = useState(false);
 
   const { currentUser } = useAuth();
-  const {
-    saveRoadmap,
-    unsaveRoadmap,
-    checkIsRoadmapSaved,
-    updateNotes,
-    isLoading: isSavingRoadmap,
-  } = useSavedRoadmaps();
 
   const pageTitle = field
     ? `${field} Roadmap | CareerPath.lk`
@@ -84,16 +71,13 @@ const RoadmapDetailsPage: React.FC = () => {
       setError(null);
       setRoadmap([]);
       setInsights(null);
-      setIsSaved(false);
       setWasGenerated(false);
       setField(decodeURIComponent(careerDisplayName));
 
       try {
-        // 1) Try DB via server API
+        // 1) Try DB via API
         try {
-          const res = await fetch(
-            `${API_BASE}/api/roadmaps/slug/${careerSlug}`
-          );
+          const res = await fetch(`/api/roadmaps/slug/${careerSlug}`);
           if (res.ok) {
             const json = await res.json();
             if (json && json.success && json.data) {
@@ -102,6 +86,12 @@ const RoadmapDetailsPage: React.FC = () => {
               setInsights(
                 (doc.marketInsights as MarketInsights) || doc.insights || null
               );
+              // Increment view count
+              fetch("/api/roadmaps/view", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ slug: careerSlug }),
+              }).catch(console.error);
               return;
             }
           }
@@ -109,9 +99,9 @@ const RoadmapDetailsPage: React.FC = () => {
           console.warn("DB lookup failed, falling back to generation", dbErr);
         }
 
-        // 2) Ask server to generate & persist
+        // 2) Ask API to generate & persist
         try {
-          const genRes = await fetch(`${API_BASE}/api/roadmaps/generate`, {
+          const genRes = await fetch(`/api/roadmaps/generate`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name: careerDisplayName, slug: careerSlug }),
@@ -126,25 +116,20 @@ const RoadmapDetailsPage: React.FC = () => {
                 (doc.marketInsights as MarketInsights) || doc.insights || null
               );
               setWasGenerated(!json.cached);
+              // Increment view count
+              fetch("/api/roadmaps/view", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ slug: careerSlug }),
+              }).catch(console.error);
               return;
             }
           }
         } catch (genErr) {
-          console.warn(
-            "Server generation failed, will try client generation",
-            genErr
-          );
+          console.warn("Server generation failed", genErr);
         }
 
-        // 3) Fallback: generate directly from client
-        const generatedData = await generateRoadmap(careerDisplayName);
-        if (generatedData && generatedData.roadmap && generatedData.insights) {
-          setRoadmap(generatedData.roadmap);
-          setInsights(generatedData.insights);
-          setWasGenerated(true);
-        } else {
-          throw new Error("API returned incomplete data.");
-        }
+        throw new Error("Failed to load or generate roadmap.");
       } catch (err: any) {
         console.error("Failed to load or generate roadmap:", err);
         setError(
@@ -158,20 +143,6 @@ const RoadmapDetailsPage: React.FC = () => {
 
     loadData();
   }, [careerPath, fieldFromQuery]);
-
-  useEffect(() => {
-    if (currentUser && field) {
-      const roadmapSlug = field
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-      checkIsRoadmapSaved(roadmapSlug)
-        .then(setIsSaved)
-        .catch(() => setIsSaved(false));
-    } else {
-      setIsSaved(false);
-    }
-  }, [currentUser, field, checkIsRoadmapSaved]);
 
   useEffect(() => {
     if (isLoading || roadmap.length === 0) return;
@@ -207,79 +178,11 @@ const RoadmapDetailsPage: React.FC = () => {
     };
   }, [isLoading, roadmap]);
 
-  const handleSaveRoadmap = async () => {
-    if (!currentUser || roadmap.length === 0) {
-      setError("You must be logged in to save roadmaps.");
-      return;
-    }
-
-    try {
-      const roadmapSlug = field
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-      const success = await saveRoadmap(
-        roadmapSlug,
-        field,
-        { roadmap, insights },
-        notes
-      );
-
-      if (success) {
-        setIsSaved(true);
-        setError(null);
-      }
-    } catch (error) {
-      console.error("Error saving roadmap:", error);
-      setError("Failed to save roadmap. Please try again.");
-    }
-  };
-
-  const handleUnsaveRoadmap = async () => {
-    if (!currentUser) return;
-
-    try {
-      const roadmapSlug = field
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-      const success = await unsaveRoadmap(roadmapSlug);
-
-      if (success) {
-        setIsSaved(false);
-        setError(null);
-      }
-    } catch (error) {
-      console.error("Error unsaving roadmap:", error);
-      setError("Failed to unsave roadmap. Please try again.");
-    }
-  };
-
-  const handleUpdateNotes = async () => {
-    if (!currentUser) return;
-
-    try {
-      const roadmapSlug = field
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-|-$)/g, "");
-      const success = await updateNotes(roadmapSlug, notes);
-
-      if (success) {
-        setShowNotesModal(false);
-        setError(null);
-      }
-    } catch (error) {
-      console.error("Error updating notes:", error);
-      setError("Failed to update notes. Please try again.");
-    }
-  };
-
   const handleDownloadPDF = async () => {
     try {
       await RoadmapDownloadService.downloadAsPDF(field, roadmap, insights, {
         includeInsights: true,
-        includeNotes: notes,
+        includeNotes: "",
       });
       setShowDownloadOptions(false);
     } catch (error) {
@@ -306,7 +209,7 @@ const RoadmapDetailsPage: React.FC = () => {
         field,
         roadmap,
         insights,
-        notes
+        ""
       );
       setShowDownloadOptions(false);
     } catch (error) {
@@ -424,35 +327,6 @@ const RoadmapDetailsPage: React.FC = () => {
               )}
             </div>
             <div className="flex items-center gap-2 mt-4 sm:mt-0">
-              {currentUser && (
-                <>
-                  <button
-                    onClick={isSaved ? handleUnsaveRoadmap : handleSaveRoadmap}
-                    disabled={isSavingRoadmap}
-                    className={`flex items-center justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium transition-colors ${
-                      isSaved
-                        ? "text-white bg-red-600 hover:bg-red-700"
-                        : "text-white bg-green-600 hover:bg-green-700"
-                    } disabled:opacity-50 disabled:cursor-not-allowed`}
-                  >
-                    <Bookmark className="w-4 h-4 mr-2" />
-                    {isSavingRoadmap
-                      ? "Processing..."
-                      : isSaved
-                      ? "Unsave Roadmap"
-                      : "Save Roadmap"}
-                  </button>
-                  {isSaved && (
-                    <button
-                      onClick={() => setShowNotesModal(true)}
-                      className="flex items-center justify-center py-2 px-4 border border-blue-600 rounded-md shadow-sm text-sm font-medium text-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
-                    >
-                      Add Notes
-                    </button>
-                  )}
-                </>
-              )}
-
               <div className="relative download-options-container">
                 <button
                   onClick={() => setShowDownloadOptions(!showDownloadOptions)}
@@ -463,7 +337,7 @@ const RoadmapDetailsPage: React.FC = () => {
                 </button>
 
                 {showDownloadOptions && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-[200]">
                     <div className="py-1">
                       <button
                         onClick={handleDownloadPDF}
@@ -578,7 +452,7 @@ const RoadmapDetailsPage: React.FC = () => {
                       <div
                         className={`flex items-center justify-center w-12 h-12 ${
                           theme.iconBg
-                        } rounded-full ring-8 transition-all duration-500 ${
+                        } rounded-full ring-8 transition-all duration-500 transform group-hover:scale-110 ${
                           isVisible
                             ? "ring-yellow-200 dark:ring-yellow-900"
                             : "ring-yellow-50 dark:ring-gray-900"
@@ -684,39 +558,6 @@ const RoadmapDetailsPage: React.FC = () => {
       )}
 
       {/* Notes Modal */}
-      {showNotesModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Add Notes to Roadmap
-            </h3>
-            <textarea
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
-              placeholder="Add personal notes, goals, or reminders for this roadmap..."
-              className="w-full h-32 p-3 border border-gray-300 dark:border-gray-600 rounded-md resize-none focus:ring-2 focus:ring-green-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-            />
-            <div className="flex justify-end gap-3 mt-4">
-              <button
-                onClick={() => {
-                  setShowNotesModal(false);
-                  setNotes("");
-                }}
-                className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 rounded-md transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleUpdateNotes}
-                disabled={isSavingRoadmap}
-                className="px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 disabled:opacity-50 rounded-md transition-colors"
-              >
-                {isSavingRoadmap ? "Saving..." : "Save Notes"}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

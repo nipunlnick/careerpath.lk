@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { QUIZ_QUESTIONS } from "../../constants";
+import { QUIZ_QUESTIONS } from "../../constants/quiz";
 import { useLocalQuizApi } from "../../hooks/api/useLocalQuizApi";
 import { useAuth } from "../../contexts/AuthContext";
 import type { CareerSuggestion } from "../../types";
@@ -62,8 +62,13 @@ const CareerQuiz: React.FC = () => {
   };
 
   const handleExploreRoadmap = (suggestion: CareerSuggestion) => {
-    const path = suggestion.roadmapPath || suggestion.career;
-    navigate.push(`/roadmaps?field=${encodeURIComponent(path)}&level=A/Ls`);
+    if (suggestion.roadmapPath) {
+      navigate.push(`/roadmaps/${suggestion.roadmapPath}`);
+    } else {
+      navigate.push(
+        `/roadmaps?field=${encodeURIComponent(suggestion.career)}&level=A/Ls`
+      );
+    }
   };
 
   const progressPercentage =
@@ -77,7 +82,7 @@ const CareerQuiz: React.FC = () => {
           Analyzing your answers to find the perfect career...
         </p>
         <p className="mt-2 text-sm text-green-600 dark:text-green-400">
-          ⚡ Powered by our new lightning-fast local matching system
+          ⚡ Powered by our new lightning-fast matching system
         </p>
       </div>
     );
@@ -197,7 +202,8 @@ const CareerQuiz: React.FC = () => {
                 <button
                   key={index}
                   onClick={() => handleAnswerSelect(option)}
-                  className="w-full text-left p-4 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 rounded-lg border-2 border-transparent hover:bg-green-100 hover:border-green-500 dark:hover:bg-green-900/50 dark:hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105"
+                  className="w-full text-left p-4 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 rounded-lg border-2 border-transparent hover:bg-green-100 hover:border-green-500 dark:hover:bg-green-900/50 dark:hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105 animate-fadeInRight"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {option}
                 </button>

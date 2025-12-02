@@ -13,6 +13,7 @@ export class CareerRoadmapService {
       ...roadmap,
       createdAt: new Date(),
       updatedAt: new Date(),
+      views: 0,
     };
 
     return await db.collection<CareerRoadmap>(this.COLLECTION_NAME).insertOne(newRoadmap);
@@ -190,6 +191,16 @@ export class CareerRoadmapService {
     return await db.collection<CareerRoadmap>(this.COLLECTION_NAME).countDocuments(filter);
   }
 
+  // Count generated roadmaps
+  static async countGenerated(): Promise<number> {
+    const { db } = await connectToDatabase();
+    
+    return await db.collection<CareerRoadmap>(this.COLLECTION_NAME).countDocuments({
+      tags: { $in: ['search-generated'] },
+      isActive: true
+    });
+  }
+
   // Get distinct categories
   static async getCategories(): Promise<string[]> {
     const { db } = await connectToDatabase();
@@ -202,5 +213,26 @@ export class CareerRoadmapService {
     const { db } = await connectToDatabase();
     
     return await db.collection<CareerRoadmap>(this.COLLECTION_NAME).distinct('tags', { isActive: true });
+  }
+
+  // Increment view count
+  static async incrementViews(id: string | ObjectId): Promise<UpdateResult> {
+    const { db } = await connectToDatabase();
+    
+    return await db.collection<CareerRoadmap>(this.COLLECTION_NAME).updateOne(
+      { _id: typeof id === 'string' ? new ObjectId(id) : id },
+      { $inc: { views: 1 } }
+    );
+  }
+
+  // Get total views
+  static async getTotalViews(): Promise<number> {
+    const { db } = await connectToDatabase();
+    
+    const result = await db.collection<CareerRoadmap>(this.COLLECTION_NAME).aggregate([
+      { $group: { _id: null, totalViews: { $sum: "$views" } } }
+    ]).toArray();
+
+    return result[0]?.totalViews || 0;
   }
 }

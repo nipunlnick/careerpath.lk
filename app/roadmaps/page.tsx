@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { EXPLORE_CAREERS } from "../../constants";
+import { EXPLORE_CAREERS } from "../../constants/careers";
 import * as Icons from "../../components/icons";
 import { useRoadmapSearch } from "../../hooks/api/useRoadmapSearch";
 import { useAuth } from "../../contexts/AuthContext";

@@ -43,6 +43,7 @@ export interface CareerRoadmap extends BaseDocument {
   estimatedDuration: string;
   tags: string[];
   isActive: boolean;
+  views?: number;
 }
 
 // Roadmap step model
@@ -71,7 +72,7 @@ export interface MarketInsights {
     min: number;
     max: number;
     currency: string;
-  };
+  } | string;
   salaryExpectations?: string;
   requiredSkills: string[];
   futureOutlook: string;
@@ -85,9 +86,9 @@ export interface QuizResult extends BaseDocument {
   userId?: string; // Optional for anonymous users
   sessionId: string; // Session ID for anonymous users
   answersHash: string; // Hash of answers for caching
-  quizType: 'standard' | 'long';
+  quizType: 'quick' | 'long';
   answers: Record<string, string> | any[]; // Raw answers from quiz components
-  result: any; // Gemini API response
+  results: any; // Gemini API response
   completedAt: Date;
 }
 

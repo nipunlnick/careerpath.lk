@@ -62,7 +62,7 @@ export class RoadmapDownloadService {
         ['Future Outlook', insights.futureOutlook || 'N/A']
       ];
 
-      (doc as any).autoTable({
+      autoTable(doc, {
         startY: startY,
         head: [['Category', 'Details']],
         body: insightsData,
@@ -75,7 +75,7 @@ export class RoadmapDownloadService {
         }
       });
 
-      startY = (doc as any).autoTable.previous.finalY + 15;
+      startY = (doc as any).lastAutoTable.finalY + 15;
     }
 
     // --- Notes Section ---
@@ -141,7 +141,7 @@ export class RoadmapDownloadService {
           : step.institutes || 'N/A']
       ];
 
-      (doc as any).autoTable({
+      autoTable(doc, {
         startY: startY,
         head: [['Category', 'Details']],
         body: stepDetails,
@@ -155,7 +155,7 @@ export class RoadmapDownloadService {
         margin: { left: 14, right: 14 }
       });
 
-      startY = (doc as any).autoTable.previous.finalY + 12;
+      startY = (doc as any).lastAutoTable.finalY + 12;
     });
 
     // --- Footer ---

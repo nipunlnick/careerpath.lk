@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { LONG_QUIZ_QUESTIONS } from "../../constants";
+import { LONG_QUIZ_QUESTIONS } from "../../constants/quiz";
 import { useLocalQuizApi } from "../../hooks/api/useLocalQuizApi";
 import { useAuth } from "../../contexts/AuthContext";
 import type { CareerSuggestion } from "../../types";
