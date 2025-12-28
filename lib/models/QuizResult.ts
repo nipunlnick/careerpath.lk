@@ -56,7 +56,7 @@ export class QuizResultService {
   }
 
   // Get latest quiz result for user by type
-  static async getLatestByUserAndType(userId: string, quizType: 'standard' | 'long'): Promise<QuizResult | null> {
+  static async getLatestByUserAndType(userId: string, quizType: 'quick' | 'long'): Promise<QuizResult | null> {
     const { db } = await connectToDatabase();
     
     return await db.collection<QuizResult>(this.COLLECTION_NAME)
@@ -91,7 +91,7 @@ export class QuizResultService {
   }
 
   // Get quiz results by type
-  static async getByType(quizType: 'standard' | 'long', limit: number = 50, skip: number = 0): Promise<QuizResult[]> {
+  static async getByType(quizType: 'quick' | 'long', limit: number = 50, skip: number = 0): Promise<QuizResult[]> {
     const { db } = await connectToDatabase();
     
     return await db.collection<QuizResult>(this.COLLECTION_NAME)
@@ -118,7 +118,7 @@ export class QuizResultService {
           _id: null,
           totalQuizzes: { $sum: 1 },
           quickQuizzes: { 
-            $sum: { $cond: [{ $eq: ['$quizType', 'standard'] }, 1, 0] } 
+            $sum: { $cond: [{ $eq: ['$quizType', 'quick'] }, 1, 0] } 
           },
           longQuizzes: { 
             $sum: { $cond: [{ $eq: ['$quizType', 'long'] }, 1, 0] } 

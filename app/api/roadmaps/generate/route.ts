@@ -36,7 +36,15 @@ export async function POST(request: NextRequest) {
 
     // Use AI-determined category, fallback to 'Community Generated' if invalid
     let category = roadmapData.category;
+    
+    // Validate against known categories or remap invalid ones
     if (!categories.includes(category)) {
+        // Leave it as is, or default to something generic. 
+        // The GET route will now handle categorization intelligence.
+        // We'll just save it as 'Community Generated' for now if it's completely unknown, 
+        // but ideally we should try to infer here too.
+        // For simplicity, let's just default to 'Community Generated' if strictly not in list,
+        // but we won't force-rename specific legacy tags here anymore as the GET route handles them.
         category = 'Community Generated';
     }
 
@@ -47,6 +55,7 @@ export async function POST(request: NextRequest) {
       description: `Career roadmap for ${careerName} generated from search`,
       steps: roadmapData.roadmap,
       marketInsights: roadmapData.insights,
+      alternativeCareers: roadmapData.alternativeCareers,
       difficulty: 'intermediate',
       estimatedDuration: '2-4 years',
       tags: [careerName, 'search-generated'],

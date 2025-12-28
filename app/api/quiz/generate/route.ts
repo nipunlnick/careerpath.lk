@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { QuizResultService } from '@/lib/models/QuizResult';
 import { CareerRoadmapService } from '@/lib/models/CareerRoadmap';
-// import { generateRoadmap, suggestCareers, suggestCareersLong } from '@/services/geminiService'; // Gemini disabled
 import { localQuizService } from '@/services/localQuizService';
 import crypto from 'crypto';
 
@@ -61,7 +60,6 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate using Local Pattern Matching Service (Gemini Disabled)
-    console.log('Generating new quiz result using Local Pattern Matching...');
     
     const careerSuggestions = await localQuizService.getSuggestions(
       answersForAPI, 

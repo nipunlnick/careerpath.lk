@@ -14,6 +14,20 @@ const Footer: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
               Your Journey to Success Starts Here 🇱🇰
             </p>
+            <div className="mt-2 text-xs text-gray-500 dark:text-gray-500 space-x-4">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-green-600 dark:hover:text-green-400 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms-of-service"
+                className="hover:text-green-600 dark:hover:text-green-400 transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
           </div>
           <nav className="flex items-center mt-4 md:mt-0 space-x-6">
             <Link

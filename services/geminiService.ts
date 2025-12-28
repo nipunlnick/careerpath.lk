@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
-import type { CareerSuggestion, RoadmapStep, MarketInsights } from '../types';
+import type { CareerSuggestion, RoadmapStep, MarketInsights, AlternativeCareer, SoftSkillRoadmap } from '../types';
 
 let ai: GoogleGenAI | null = null;
 
@@ -71,12 +71,29 @@ const roadmapAndInsightsSchema = {
                 demand: { type: Type.STRING, description: "Current job market demand in Sri Lanka (e.g., 'High', 'Growing')." },
                 salaryExpectations: { type: Type.STRING, description: "A summary of the salary range from trainee to senior in LKR." },
                 requiredSkills: { type: Type.ARRAY, items: { type: Type.STRING } },
+                technicalSkills: { type: Type.ARRAY, items: { type: Type.STRING }, description: "List of key technical skills required." },
+                softSkills: { type: Type.ARRAY, items: { type: Type.STRING }, description: "List of important soft skills." },
+                toolsAndSoftware: { type: Type.ARRAY, items: { type: Type.STRING }, description: "List of essential tools and software." },
+                certifications: { type: Type.ARRAY, items: { type: Type.STRING }, description: "List of recommended certifications." },
                 futureOutlook: { type: Type.STRING, description: "The future prospects for this career in Sri Lanka." }
             },
-            required: ["demand", "salaryExpectations", "requiredSkills", "futureOutlook"]
+            required: ["demand", "salaryExpectations", "requiredSkills", "technicalSkills", "softSkills", "toolsAndSoftware", "certifications", "futureOutlook"]
+        },
+        alternativeCareers: {
+            type: Type.ARRAY,
+            description: "3 Alternative career paths related to this one.",
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    careerName: { type: Type.STRING },
+                    similarity: { type: Type.STRING, description: "Brief explanation of why this is a good alternative." },
+                    skillsOverlap: { type: Type.ARRAY, items: { type: Type.STRING }, description: "List of overlapping skills." }
+                },
+                required: ["careerName", "similarity", "skillsOverlap"]
+            }
         }
     },
-    required: ["category", "roadmap", "insights"]
+    required: ["category", "roadmap", "insights", "alternativeCareers"]
 };
 
 const checkApi = () => {
@@ -107,7 +124,7 @@ export const suggestCareers = async (answers: Record<string, string>): Promise<C
         `;
         
         const response = await ai!.models.generateContent({
-            model: "gemini-pro-latest",
+            model: "gemini-2.5-flash",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -157,7 +174,7 @@ export const suggestCareersLong = async (answers: Record<string, string>): Promi
         `;
         
         const response = await ai!.models.generateContent({
-            model: "gemini-pro-latest",
+            model: "gemini-2.5-flash",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -177,15 +194,23 @@ export const suggestCareersLong = async (answers: Record<string, string>): Promi
     }
 };
 
-export const generateRoadmap = async (careerName: string, categories: string[]): Promise<{ roadmap: RoadmapStep[], insights: MarketInsights, category: string }> => {
+export const generateRoadmap = async (careerName: string, categories: string[]): Promise<{ roadmap: RoadmapStep[], insights: MarketInsights, category: string, alternativeCareers: AlternativeCareer[] }> => {
     const ai = checkApi();
     try {
         const prompt = `
-        Generate a detailed 5-step career roadmap and market insights for the career of a "${careerName}" in Sri Lanka.
+        Generate a detailed 5-step career roadmap, market insights, and 3 alternative career suggestions for a "${careerName}" in Sri Lanka.
 
         The roadmap should start from foundational education (like A/Ls) and progress to a senior-level position in about 5 steps. For each step, provide a title, description, typical duration, necessary qualifications, key skills to acquire, an estimated monthly salary range in LKR, and relevant Sri Lankan institutes/companies.
 
         The market insights should summarize the current demand, salary expectations, key required skills, and future outlook for this career within the Sri Lankan context.
+        
+        Additionally, provide specific lists for:
+        - Technical Skills: Core technical competencies.
+        - Soft Skills: Interpersonal and behavioral skills.
+        - Tools & Software: Industry-standard software and tools.
+        - Certifications: Recognized certifications that boost employability.
+
+        The alternative careers should be 3 other career paths that require similar skills or qualifications, offering a "Plan B" or pivot option.
 
         Also, select the most appropriate category for this career from the following list:
         ${JSON.stringify(categories)}
@@ -194,7 +219,7 @@ export const generateRoadmap = async (careerName: string, categories: string[]):
         `;
 
         const response = await ai!.models.generateContent({
-            model: "gemini-pro-latest",
+            model: "gemini-2.5-flash",
             contents: prompt,
             config: {
                 responseMimeType: "application/json",
@@ -205,10 +230,85 @@ export const generateRoadmap = async (careerName: string, categories: string[]):
         
         const jsonText = response.text.trim();
         const parsed = JSON.parse(jsonText);
-        return parsed as { roadmap: RoadmapStep[], insights: MarketInsights, category: string };
+        return parsed as { roadmap: RoadmapStep[], insights: MarketInsights, category: string, alternativeCareers: AlternativeCareer[] };
 
     } catch (error) {
         console.error(`Error generating roadmap for ${careerName}:`, error);
         throw new Error(`Failed to generate a roadmap for "${careerName}". The model may be unavailable or the request was invalid.`);
+    }
+};
+
+const softSkillRoadmapSchema = {
+    type: Type.OBJECT,
+    properties: {
+        description: { type: Type.STRING, description: "A brief overview of why this soft skill is important." },
+        levels: {
+            type: Type.ARRAY,
+            description: "A 5-level progression to master the skill.",
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    level: { type: Type.NUMBER },
+                    title: { type: Type.STRING, description: "Title of the proficiency level (e.g., 'Beginner', 'Practitioner')." },
+                    objective: { type: Type.STRING, description: "The main goal of this level." },
+                    description: { type: Type.STRING, description: "What to focus on learning." },
+                    practices: { type: Type.ARRAY, items: { type: Type.STRING }, description: "Specific daily or weekly exercises." },
+                    duration: { type: Type.STRING, description: "Estimated time to clear this level (e.g., '2 weeks')." }
+                },
+                required: ["level", "title", "objective", "description", "practices", "duration"]
+            }
+        },
+        resources: {
+            type: Type.ARRAY,
+            description: "Recommended learning materials.",
+            items: {
+                type: Type.OBJECT,
+                properties: {
+                    title: { type: Type.STRING },
+                    url: { type: Type.STRING },
+                    type: { type: Type.STRING, enum: ["article", "video", "book", "course"] }
+                },
+                required: ["title", "url", "type"]
+            }
+        }
+    },
+    required: ["description", "levels", "resources"]
+};
+
+export const generateSoftSkillRoadmap = async (skillName: string): Promise<SoftSkillRoadmap> => {
+    const ai = checkApi();
+    try {
+        const prompt = `
+        Generate a comprehensive, 5-level roadmap to master the soft skill: "${skillName}".
+
+        The roadmap should take a user from a beginner level to mastery.
+        For each level, provide a clear objective, a description of the concepts to learn, specific actionable practice exercises, and an estimated duration.
+        
+        Also provide a list of high-quality resources (books, videos, articles) to support learning.
+
+        The output must be a valid JSON object matching the provided schema.
+        `;
+
+        const response = await ai!.models.generateContent({
+            model: "gemini-2.5-flash",
+            contents: prompt,
+            config: {
+                responseMimeType: "application/json",
+                responseSchema: softSkillRoadmapSchema,
+                temperature: 0.6,
+            },
+        });
+        
+        const jsonText = response.text.trim();
+        const parsed = JSON.parse(jsonText);
+        return {
+            name: skillName,
+            slug: skillName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+            ...parsed
+        } as SoftSkillRoadmap;
+
+    } catch (error) {
+        console.error(`Error generating soft skill roadmap for ${skillName}:`, error);
+        throw new Error(`Failed to generate a roadmap for "${skillName}".`);
     }
 };

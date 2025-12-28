@@ -16,9 +16,9 @@ export async function saveQuizResult(quizData: {
     const result = await QuizResultService.create({
       userId: quizData.userId,
       sessionId: quizData.sessionId,
-      quizType: quizData.quizType === 'quick' ? 'standard' : 'long',
+      quizType: quizData.quizType === 'quick' ? 'quick' : 'long',
       answers: quizData.answers,
-      result: quizData.results,
+      results: quizData.results,
       answersHash,
       completedAt: new Date()
     });
@@ -61,7 +61,7 @@ export async function getUserQuizResults(userId: string, limit: number = 10) {
 
 export async function getLatestUserQuizResult(userId: string, quizType: 'quick' | 'long') {
   try {
-    const result = await QuizResultService.getLatestByUserAndType(userId, quizType === 'quick' ? 'standard' : 'long');
+    const result = await QuizResultService.getLatestByUserAndType(userId, quizType === 'quick' ? 'quick' : 'long');
     return { success: true, data: result };
   } catch (error) {
     console.error('Error getting latest quiz result:', error);

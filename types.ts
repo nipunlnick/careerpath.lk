@@ -1,6 +1,3 @@
-
-import type { Timestamp } from 'firebase/firestore';
-
 export interface RoadmapStep {
   step: number;
   title: string;
@@ -22,7 +19,7 @@ export interface CareerSuggestion {
 export interface SavedRoadmap {
   field: string;
   roadmap: RoadmapStep[];
-  savedAt: Timestamp;
+  savedAt: Date;
 }
 
 export interface MarketInsights {
@@ -30,6 +27,10 @@ export interface MarketInsights {
   demand: string;
   salaryExpectations: string;
   requiredSkills: string[];
+  technicalSkills?: string[];
+  softSkills?: string[];
+  toolsAndSoftware?: string[];
+  certifications?: string[];
   futureOutlook: string;
 }
 
@@ -42,4 +43,29 @@ export interface CareerCategory {
   name: string;
   icon: string;
   careers: Career[];
+}
+
+export interface AlternativeCareer {
+  careerName: string;
+  similarity: string;
+  skillsOverlap: string[];
+}
+
+export interface SoftSkillRoadmap {
+  name: string;
+  slug: string;
+  description: string;
+  levels: {
+    level: number;
+    title: string;
+    objective: string;
+    description: string;
+    practices: string[];
+    duration: string;
+  }[];
+  resources?: {
+    title: string;
+    url: string;
+    type: 'article' | 'video' | 'book' | 'course';
+  }[];
 }

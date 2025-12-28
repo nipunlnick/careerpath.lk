@@ -39,95 +39,112 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="space-y-16 sm:space-y-24">
+    <div className="space-y-32 pb-24">
       {/* Hero Section */}
-      <section className="text-center pt-12 pb-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-50/50 to-transparent dark:from-green-900/10 pointer-events-none" />
-        <h1 className="relative text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight animate-fadeInUp">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-teal-500 dark:from-green-400 dark:to-teal-300">
-            Your Journey to Success
-          </span>{" "}
-          Starts Here{" "}
-          <span
-            role="img"
-            aria-label="Sri Lanka Flag"
-            className="inline-block hover:scale-110 transition-transform duration-300 animate-float"
-          >
-            🇱🇰
-          </span>
-        </h1>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300 animate-fadeInUp animation-delay-200">
-          Plan your future with clear, step-by-step career roadmaps tailored for
-          Sri Lankan students. Find your path after O/Ls, A/Ls, or University.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 animate-fadeInUp animation-delay-400">
-          <button
-            onClick={() => navigate.push("/roadmaps")}
-            className="w-full sm:w-auto bg-green-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-green-700 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-pulse-soft"
-          >
-            Quick Start
-          </button>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Abstract Background Shapes */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-40 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float animation-delay-500"></div>
+          <div className="absolute -bottom-20 left-1/3 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-float animation-delay-1000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fadeInUp">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+            </span>
+            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              #1 Career Guidance Platform in Sri Lanka 🇱🇰
+            </span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 animate-fadeInUp animation-delay-200">
+            Find Your Path <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-500 to-secondary animate-gradient-x">
+              Shape Your Future
+            </span>
+          </h1>
+
+          <p className="max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300 mb-10 animate-fadeInUp animation-delay-300 leading-relaxed">
+            Personalized career roadmaps, AI-driven skills analysis, and
+            real-time market insights tailored for Sri Lankan students.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeInUp animation-delay-400">
+            <button
+              onClick={() => navigate.push("/quiz")}
+              className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold shadow-lg shadow-primary/30 transition-all hover:scale-105"
+            >
+              Take Career Quiz
+            </button>
+            <button
+              onClick={() => navigate.push("/roadmaps")}
+              className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-white/10 text-gray-900 dark:text-white rounded-full font-semibold border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/20 transition-all hover:scale-105"
+            >
+              Explore Roadmaps
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Find Your Path Section */}
-      <section className="animate-fadeInUp animation-delay-300">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-2">
-          Not Sure Where to Start?
-        </h2>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-          Our AI-powered quizzes can help you discover your ideal career path.
-        </p>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 flex flex-col transition-all duration-300 transform hover:scale-105 hover:shadow-2xl animate-fadeInLeft">
-            <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mb-4">
-              <span className="text-2xl">⚡</span>
+      {/* Features Grid */}
+      <section className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-primary/50 transition-all duration-500 animate-fadeInLeft">
+            <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <span className="text-3xl">⚡</span>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              Quick Quiz
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              Quick Career Quiz
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 flex-grow mb-6">
-              Answer 5 simple questions to get instant career suggestions.
-              Perfect for a fast start.
+            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              Unsure where to start? Answer 5 simple questions to get instant,
+              AI-powered career suggestions based on your interests.
             </p>
             <Link
               href="/quiz"
-              className="text-center bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
+              className="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors"
             >
-              Take the 5-Question Quiz &rarr;
+              Start Quiz <Icons.ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-2 border-green-500/20 dark:border-green-500/30 flex flex-col transition-all duration-300 transform hover:scale-105 hover:shadow-2xl animate-fadeInRight">
-            <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
-              <span className="text-2xl">🎯</span>
+          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-secondary/50 transition-all duration-500 animate-fadeInRight">
+            <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <span className="text-3xl">🎯</span>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              In-Depth Assessment
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              Deep Skills Assessment
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 flex-grow mb-6">
-              Take our 15-question assessment for a deeper analysis of your
-              skills and personality, leading to more personalized results.
+            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              Ready for a deep dive? Our comprehensive 15-question assessment
+              analyzes your strengths specifically for key industries.
             </p>
             <Link
               href="/long-quiz"
-              className="text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
+              className="inline-flex items-center text-secondary font-semibold hover:text-secondary/80 transition-colors"
             >
-              Start In-Depth Assessment &rarr;
+              Start Assessment <Icons.ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Explore All Career Paths Section */}
-      <section className="animate-fadeInUp animation-delay-400">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100">
-          Explore All Career Paths
-        </h2>
-        <p className="text-center mt-2 text-gray-600 dark:text-gray-400">
-          Browse by category to find your perfect fit.
-        </p>
-        <div className="mt-8 max-w-4xl mx-auto space-y-4">
+      {/* Career Categories */}
+      <section className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Explore Capabilities
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Browse our curated collection of career paths across Sri Lanka's
+            fastest-growing industries.
+          </p>
+        </div>
+
+        <div className="grid gap-6 max-w-5xl mx-auto">
           {categories.map((category, index) => {
             const Icon =
               Icons[category.icon as keyof typeof Icons] || Icons.Code;
@@ -137,83 +154,61 @@ const Home: React.FC = () => {
               <div
                 key={category.name}
                 className={`
-                                    rounded-xl border shadow-sm transition-all duration-300 ease-in-out overflow-hidden
-                                    animate-fadeInUp
-                                    ${
-                                      isOpen
-                                        ? "border-green-300 dark:border-green-600 shadow-md"
-                                        : "border-gray-200 dark:border-gray-700 hover:shadow-md"
-                                    }
-                                `}
-                style={{ animationDelay: `${400 + index * 100}ms` }}
+                  glass dark:glass-dark rounded-2xl overflow-hidden transition-all duration-500
+                  ${
+                    isOpen
+                      ? "ring-2 ring-primary/20 shadow-lg"
+                      : "hover:shadow-md"
+                  }
+                `}
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <button
                   onClick={() => setOpenCategory(isOpen ? null : category.name)}
-                  className="w-full flex justify-between items-center p-4 sm:p-5 bg-white dark:bg-gray-800 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
-                  aria-expanded={isOpen}
+                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                 >
-                  <div className="flex items-center">
+                  <div className="flex items-center gap-4">
                     <div
-                      className={`
-                                            rounded-lg w-12 h-12 flex items-center justify-center mr-4 
-                                            transition-colors duration-300
-                                            ${
-                                              isOpen
-                                                ? "bg-green-600"
-                                                : "bg-green-100 dark:bg-green-900/30"
-                                            }
-                                        `}
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors duration-300 ${
+                        isOpen
+                          ? "bg-primary text-white"
+                          : "bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 group-hover:text-primary"
+                      }`}
                     >
-                      <Icon
-                        className={`
-                                                w-6 h-6 transition-colors duration-300
-                                                ${
-                                                  isOpen
-                                                    ? "text-white"
-                                                    : "text-green-600 dark:text-green-400"
-                                                }
-                                            `}
-                      />
+                      <Icon className="w-6 h-6" />
                     </div>
-                    <span
-                      className={`
-                                            font-semibold text-lg transition-colors duration-300
-                                            ${
-                                              isOpen
-                                                ? "text-green-600 dark:text-green-400"
-                                                : "text-gray-800 dark:text-gray-200"
-                                            }
-                                        `}
-                    >
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white">
                       {category.name}
                     </span>
                   </div>
                   <Icons.ChevronDown
-                    className={`w-6 h-6 shrink-0 text-gray-500 transform transition-all duration-300 ${
-                      isOpen ? "rotate-180 text-green-600" : ""
+                    className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-primary" : ""
                     }`}
                   />
                 </button>
 
                 <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="bg-gray-50 dark:bg-gray-800/50 p-4 sm:p-6 border-t border-gray-200 dark:border-gray-700">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-1">
-                        {category.careers.map((career) => (
-                          <button
-                            key={career.name}
-                            onClick={() => handleCareerClick(career)}
-                            className="flex items-center p-2 rounded-md text-left text-gray-600 dark:text-gray-300 hover:bg-green-100 dark:hover:bg-gray-700/50 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
-                          >
-                            <Icons.ChevronRight className="w-4 h-4 mr-3 text-gray-400 group-hover:text-green-500 transition-colors flex-shrink-0" />
-                            <span>{career.name}</span>
-                          </button>
-                        ))}
-                      </div>
+                    <div className="p-6 pt-0 grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                      {category.careers.map((career) => (
+                        <button
+                          key={career.name}
+                          onClick={() => handleCareerClick(career)}
+                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group"
+                        >
+                          <div className="w-1 h-1 bg-gray-300 rounded-full group-hover:bg-primary transition-colors"></div>
+                          <span className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors">
+                            {career.name}
+                          </span>
+                        </button>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -223,65 +218,67 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-900 py-16 rounded-3xl my-16 animate-fadeInUp animation-delay-600">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            What Students Say
+      {/* Testimonials */}
+      <section className="container mx-auto px-4 py-10">
+        <div className="relative glass dark:glass-dark rounded-[2.5rem] p-10 md:p-16 overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12 relative z-10">
+            Success Stories
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-3 gap-8 relative z-10">
             {[
               {
                 quote:
-                  "CareerPath.lk gave me the clarity I needed after my A/Ls. The IT roadmap was incredibly detailed and helpful!",
+                  "The IT roadmap gave me specific certifications to target. I landed my first internship within 3 months!",
                 name: "Nimali Perera",
-                role: "Undergraduate, University of Colombo",
-                img: "https://picsum.photos/id/1005/40/40",
-                delay: "0ms",
+                role: "Undergraduate",
+                img: "https://i.pravatar.cc/150?u=nimali",
               },
               {
                 quote:
-                  "The career quiz was spot on! It suggested fields I hadn't considered before, and now I'm excited about my future in design.",
+                  "I was confused about choosing between Design and Marketing. The quiz clarified my strengths perfectly.",
                 name: "Kasun Jayasuriya",
-                role: "A/L Student, Kandy",
-                img: "https://picsum.photos/id/1011/40/40",
-                delay: "200ms",
+                role: "A/L Student",
+                img: "https://i.pravatar.cc/150?u=kasun",
               },
               {
                 quote:
-                  "Finally, a resource that understands the Sri Lankan education system. The guidance is practical and relevant.",
+                  "Unlike other sites, CareerPath explains the 'how' not just the 'what'. Highly recommended.",
                 name: "Fathima Rizan",
-                role: "O/L Graduate, Galle",
-                img: "https://picsum.photos/id/1027/40/40",
-                delay: "400ms",
+                role: "O/L Graduate",
+                img: "https://i.pravatar.cc/150?u=fathima",
               },
-            ].map((testimonial, idx) => (
+            ].map((testimonial, i) => (
               <div
-                key={idx}
-                className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl animate-scaleIn"
-                style={{ animationDelay: testimonial.delay }}
+                key={i}
+                className="bg-white/50 dark:bg-black/20 p-6 rounded-2xl border border-white/20 hover:-translate-y-1 transition-transform duration-300"
               >
-                <div className="flex text-yellow-400 mb-4">
+                <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Icons.Star key={i} className="w-5 h-5 fill-current" />
+                    <Icons.Star
+                      key={i}
+                      className="w-4 h-4 text-orange-400 fill-current"
+                    />
                   ))}
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
+                <p className="text-gray-700 dark:text-gray-300 mb-6 italic text-sm leading-relaxed">
                   "{testimonial.quote}"
                 </p>
-                <div className="flex items-center">
+                <div className="flex items-center gap-3">
                   <img
                     src={testimonial.img}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full border-2 border-white dark:border-gray-700 shadow-sm"
+                    className="w-10 h-10 rounded-full"
                   />
-                  <div className="ml-3">
-                    <p className="font-semibold text-gray-900 dark:text-white">
+                  <div>
+                    <div className="font-semibold text-gray-900 dark:text-white text-sm">
                       {testimonial.name}
-                    </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">
                       {testimonial.role}
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>

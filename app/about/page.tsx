@@ -9,6 +9,7 @@ import {
   TrendingUp,
   DollarSign,
   ClipboardList,
+  Google,
 } from "../../components/icons";
 import type { MarketInsights } from "../../types";
 import { usePageMeta } from "../../hooks/usePageMeta";
@@ -42,22 +43,16 @@ const About: React.FC = () => {
 
   const teamMembers = [
     {
-      name: "Janith Perera",
-      role: "Founder & CEO",
-      imageUrl: "https://picsum.photos/id/1005/200/200",
-      bio: "Passionate about empowering Sri Lankan youth, Janith founded CareerPath.lk to bridge the gap between education and employment.",
+      name: "Nipun Lakshitha",
+      role: "Creator & Lead Developer",
+      imageUrl: "/me.jpeg",
+      bio: "Passionate about empowering Sri Lankan youth, Nipun built CareerPath.lk to bridge the gap between education and employment using technology.",
     },
     {
-      name: "Dr. Anusha Silva",
-      role: "Head of Career Counseling",
-      imageUrl: "https://picsum.photos/id/1027/200/200",
-      bio: "With a Ph.D. in Educational Psychology, Dr. Silva ensures our guidance is relevant, accurate, and supportive for students.",
-    },
-    {
-      name: "Sahan Kumar",
-      role: "Lead AI Engineer",
-      imageUrl: "https://picsum.photos/id/1011/200/200",
-      bio: "Sahan leads the development of our AI-powered tools, leveraging cutting-edge technology to create personalized career roadmaps.",
+      name: "Gemini AI",
+      role: "AI Intelligence Core",
+      icon: Google,
+      bio: "The advanced AI engine powering our personalized roadmaps, market insights, and career guidance, ensuring you get the best advice.",
     },
   ];
 
@@ -212,18 +207,24 @@ const About: React.FC = () => {
         <p className="text-center mt-2 text-gray-600 dark:text-gray-400">
           We're a small team of educators, technologists, and career experts.
         </p>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
               className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 text-center transform transition-transform duration-300 hover:-translate-y-2 animate-fadeInUp"
               style={{ animationDelay: `${500 + index * 100}ms` }}
             >
-              <img
-                src={member.imageUrl}
-                alt={member.name}
-                className="w-32 h-32 rounded-full mx-auto"
-              />
+              {member.icon ? (
+                <div className="w-32 h-32 mx-auto flex items-center justify-center bg-white rounded-full">
+                  <member.icon className="w-20 h-20" />
+                </div>
+              ) : (
+                <img
+                  src={member.imageUrl}
+                  alt={member.name}
+                  className="w-32 h-32 rounded-full mx-auto object-cover"
+                />
+              )}
               <h3 className="mt-4 text-xl font-bold text-gray-900 dark:text-white">
                 {member.name}
               </h3>

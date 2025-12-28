@@ -7,11 +7,55 @@ export async function GET(
 ) {
   try {
     const { slug } = await params;
-    console.log(`Looking up roadmap with slug: ${slug}`);
 
     const existingRoadmap = await CareerRoadmapService.getBySlug(slug);
 
     if (existingRoadmap) {
+      // Check if marketInsights lacks newer fields (e.g. at least one of the detailed skill arrays)
+      const insights = existingRoadmap.marketInsights;
+      const isMissingDetailedSkills = 
+        !insights?.technicalSkills || 
+        !insights?.softSkills ||
+        !insights?.toolsAndSoftware ||
+        !insights?.certifications;
+
+      if (isMissingDetailedSkills) {
+        try {
+           // We need the categories for generation
+           const { EXPLORE_CAREERS } = await import('@/constants/careers');
+           const { generateRoadmap } = await import('@/services/geminiService');
+           
+           const categories = EXPLORE_CAREERS.map(c => c.name);
+           const roadmapData = await generateRoadmap(existingRoadmap.name, categories);
+           
+           if (existingRoadmap._id) {
+             const updateResult = await CareerRoadmapService.update(existingRoadmap._id, {
+                steps: roadmapData.roadmap,
+                marketInsights: roadmapData.insights,
+                alternativeCareers: roadmapData.alternativeCareers
+             });
+
+             if (updateResult.acknowledged) {
+                // Return the updated data
+                return NextResponse.json({
+                  success: true,
+                  data: {
+                    ...existingRoadmap,
+                    steps: roadmapData.roadmap,
+                    marketInsights: roadmapData.insights,
+                    alternativeCareers: roadmapData.alternativeCareers
+                  },
+                  cached: false, // It was regenerated
+                  regenerated: true
+                });
+             }
+           }
+        } catch (genError) {
+           console.error("Failed to regenerate roadmap on the fly", genError);
+           // Fallback to existing if regeneration fails
+        }
+      }
+
       return NextResponse.json({
         success: true,
         data: existingRoadmap,

@@ -16,7 +16,7 @@ export async function GET(
       return NextResponse.json({
         success: true,
         cached: true,
-        result: cachedResult.result,
+        result: cachedResult.results,
         timestamp: cachedResult.createdAt
       });
     } else {

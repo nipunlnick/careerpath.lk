@@ -188,3 +188,15 @@ export const COMMON_CAREER_PATHS = [
   { name: 'Mechanical Engineer', path: 'mechanical-engineer', icon: 'Cog' },
   { name: 'Cybersecurity Specialist', path: 'cybersecurity-specialist', icon: 'Code' },
 ];
+
+export const KEYWORD_MAPPINGS: Record<string, string[]> = {
+  'Information Technology & Digital Careers': ['developer', 'engineer', 'data', 'cyber', 'tech', 'software', 'cloud', 'ai', 'game', 'db', 'it', 'manager', 'scrum', 'agile'],
+  'Business, Management & Finance': ['manager', 'analyst', 'accountant', 'finance', 'marketing', 'hr', 'consultant', 'business', 'banker', 'entrepreneur'],
+  'Healthcare & Medical Fields': ['doctor', 'nurse', 'medical', 'health', 'therapist', 'pharmacist', 'surgeon', 'dentist'],
+  'Engineering & Technical': ['engineer', 'technician', 'architect', 'mechanic', 'electrician'],
+  'Media, Communication & Design': ['designer', 'writer', 'editor', 'artist', 'content', 'media', 'journalist'],
+  'Education & Training': ['teacher', 'educator', 'trainer', 'lecturer', 'professor', 'tutor'],
+  'Tourism, Hospitality & Travel': ['hotel', 'chef', 'travel', 'guide', 'tourism'],
+  'Law, Governance & Public Service': ['lawyer', 'legal', 'police', 'officer', 'judge'],
+  'Agriculture, Environment & Sustainability': ['agriculture', 'environment', 'farm', 'biology']
+};

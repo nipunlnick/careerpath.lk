@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "../constants/navigation";
-import { LogoIcon } from "./icons";
 
 const MenuIcon = () => (
   <svg
@@ -42,38 +41,60 @@ const CloseIcon = () => (
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
 
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "glass shadow-md py-2"
+          : "bg-transparent py-4 border-b border-transparent"
+      } dark:glass-dark`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="flex items-center gap-2 text-2xl font-bold text-green-600"
+              className="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-white group"
             >
-              <img src="/cplogo.png" alt="CareerPath.lk" className="h-10 w-7" />
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img
+                  src="/cplogo.png"
+                  alt="CareerPath.lk"
+                  className="h-10 w-7 relative z-10"
+                />
+              </div>
               <span>
                 CareerPath
-                <span className="text-gray-800 dark:text-gray-200">.lk</span>
+                <span className="text-primary">.lk</span>
               </span>
             </Link>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4">
+            <div className="ml-10 flex items-center space-x-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.name}
                   href={link.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     isActive(link.path)
-                      ? "bg-green-600 text-white"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
+                      ? "bg-primary text-white shadow-lg shadow-primary/30"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 hover:text-primary"
                   }`}
                 >
                   {link.name}
@@ -85,7 +106,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type="button"
-              className="bg-gray-100 dark:bg-gray-700 inline-flex items-center justify-center p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-green-500 ml-2"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800/50 focus:outline-none transition-colors"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -96,22 +117,25 @@ const Header: React.FC = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-lg transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        className={`md:hidden absolute top-full left-0 w-full glass dark:glass-dark shadow-xl transform transition-transform duration-300 ease-in-out ${
+          isMenuOpen
+            ? "translate-y-0 opacity-100 visible"
+            : "-translate-y-2 opacity-0 invisible"
         }`}
         id="mobile-menu"
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="px-4 py-6 space-y-2">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
               href={link.path}
               onClick={closeMenu}
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+              className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
                 isActive(link.path)
-                  ? "bg-green-600 text-white"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-green-500 hover:text-white"
+                  ? "bg-primary text-white shadow-md"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
               {link.name}

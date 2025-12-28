@@ -31,6 +31,13 @@ export interface UserProfile extends BaseDocument {
   };
 }
 
+// Alternative career model
+export interface AlternativeCareer {
+  careerName: string;
+  similarity: string;
+  skillsOverlap: string[];
+}
+
 // Career roadmap model
 export interface CareerRoadmap extends BaseDocument {
   name: string;
@@ -39,6 +46,7 @@ export interface CareerRoadmap extends BaseDocument {
   description: string;
   steps: RoadmapStep[];
   marketInsights?: MarketInsights;
+  alternativeCareers?: AlternativeCareer[];
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   estimatedDuration: string;
   tags: string[];
@@ -78,6 +86,10 @@ export interface MarketInsights {
   futureOutlook: string;
   jobGrowthRate?: string;
   topEmployers?: string[];
+  technicalSkills?: string[];
+  softSkills?: string[];
+  toolsAndSoftware?: string[];
+  certifications?: string[];
   lastUpdated?: Date;
 }
 
@@ -147,4 +159,28 @@ export interface UserFeedback extends BaseDocument {
   status: 'open' | 'in-progress' | 'resolved' | 'closed';
   relatedResource?: string;
   submittedAt: Date;
+}
+
+// Soft Skill Roadmap model
+export interface SoftSkillRoadmap extends BaseDocument {
+  name: string;
+  slug: string;
+  description: string;
+  levels: {
+    level: number;
+    title: string;
+    objective: string;
+    description: string;
+    practices: string[];
+    duration: string;
+  }[];
+  resources?: {
+    title: string;
+    url: string;
+    type: 'article' | 'video' | 'book' | 'course';
+  }[];
+  category?: string;
+  tags: string[];
+  isActive: boolean;
+  views?: number;
 }

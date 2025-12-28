@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { CareerRoadmapService } from '@/lib/models/CareerRoadmap';
-import { EXPLORE_CAREERS } from '@/constants/careers';
+import { EXPLORE_CAREERS, KEYWORD_MAPPINGS } from '@/constants/careers';
 import type { CareerCategory, Career } from '@/types';
 
 export async function GET() {
@@ -52,6 +52,31 @@ export async function GET() {
         else {
           categoryName = 'Community Generated';
         }
+      }
+
+      // Explicitly remap known invalid/legacy categories OR try to infer from name
+      if (
+        !categoryName ||
+        categoryName === 'Quiz Generated' || 
+        categoryName === 'Search Generated' || 
+        categoryName === 'Quiz genarated' ||
+        categoryName === 'Community Generated'
+      ) {
+         // Try to infer from name using keywords
+         let found = false;
+         const nameLower = roadmap.name.toLowerCase();
+         
+         for (const [catName, keywords] of Object.entries(KEYWORD_MAPPINGS)) {
+           if (keywords.some(k => nameLower.includes(k))) {
+             categoryName = catName;
+             found = true;
+             break;
+           }
+         }
+         
+         if (!found) {
+            categoryName = 'Community Generated';
+         }
       }
       
       // Ensure the target category exists (for Community Generated)

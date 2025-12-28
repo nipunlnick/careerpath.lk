@@ -1,15 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --animate-fadeInUp: fadeInUp 0.6s ease-out forwards;
-  --animate-fadeInLeft: fadeInLeft 0.6s ease-out forwards;
-  --animate-fadeInRight: fadeInRight 0.6s ease-out forwards;
-  --animate-scaleIn: scaleIn 0.5s ease-out forwards;
+  /* Animations */
+  --animate-fadeInUp: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fadeInLeft: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fadeInRight: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scaleIn: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 3s ease-in-out infinite;
+  --animate-gradient-x: gradient-x 15s ease infinite;
 
-  --animate-float: float 3s ease-in-out infinite;
-  --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  /* Colors */
+  --color-primary: #3b82f6; /* Blue-500 */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #22c55e; /* Green-500 */
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #0f172a; /* Slate-900 (High Contrast) or #f59e0b (Amber) - Let's use a dark contrast for accent since the gradient is the main visual */
+  /* Actually, let's keep accent distinct but cool */
+  --color-accent: #06b6d4; /* Cyan-500 */
+  --color-accent-foreground: #ffffff;
+  --color-background: #f8fafc; /* Slate-50 */
+  --color-foreground: #0f172a; /* Slate-900 */
 
+  /* Keyframes */
   @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -43,7 +57,7 @@
   @keyframes scaleIn {
     0% {
       opacity: 0;
-      transform: scale(0.9);
+      transform: scale(0.95);
     }
     100% {
       opacity: 1;
@@ -67,7 +81,18 @@
     }
     50% {
       opacity: 0.8;
-      transform: scale(1.05);
+      transform: scale(1.02);
+    }
+  }
+  @keyframes gradient-x {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
 }
@@ -88,15 +113,32 @@
 @utility animation-delay-500 {
   animation-delay: 500ms;
 }
-@utility animation-delay-600 {
-  animation-delay: 600ms;
+
+/* Glassmorphism Utilities */
+@utility glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
-@utility animation-delay-700 {
-  animation-delay: 700ms;
+
+@utility glass-dark {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Global Styles */
-
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: #0f172a; /* Slate-900 */
+  color: #f8fafc; /* Slate-50 */
 }

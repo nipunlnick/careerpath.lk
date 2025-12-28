@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import { generateRoadmap } from '../services/geminiService';
+import { EXPLORE_CAREERS } from '../constants/careers';
 
 dotenv.config({ path: '.env' });
 
@@ -114,7 +115,8 @@ async function generateRoadmaps() {
         await new Promise(resolve => setTimeout(resolve, 100)); // Simulate delay
       } else {
         // Call Gemini API
-        roadmapData = await generateRoadmap(careerName);
+        const categories = EXPLORE_CAREERS.map(c => c.name);
+        roadmapData = await generateRoadmap(careerName, categories);
         // Add delay to avoid rate limits
         await new Promise(resolve => setTimeout(resolve, 2000));
       }

@@ -30,6 +30,7 @@ const RoadmapDetailsPage: React.FC = () => {
   const [field, setField] = useState("");
   const [roadmap, setRoadmap] = useState<RoadmapStep[]>([]);
   const [insights, setInsights] = useState<MarketInsights | null>(null);
+  const [roadmapsDoc, setRoadmapsDoc] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [wasGenerated, setWasGenerated] = useState(false);
@@ -86,6 +87,7 @@ const RoadmapDetailsPage: React.FC = () => {
               setInsights(
                 (doc.marketInsights as MarketInsights) || doc.insights || null
               );
+              setRoadmapsDoc(doc);
               // Increment view count
               fetch("/api/roadmaps/view", {
                 method: "POST",
@@ -115,6 +117,7 @@ const RoadmapDetailsPage: React.FC = () => {
               setInsights(
                 (doc.marketInsights as MarketInsights) || doc.insights || null
               );
+              setRoadmapsDoc(doc);
               setWasGenerated(!json.cached);
               // Increment view count
               fetch("/api/roadmaps/view", {
@@ -246,10 +249,10 @@ const RoadmapDetailsPage: React.FC = () => {
     }
 
     return {
-      iconBg: "bg-green-600",
-      titleText: "text-green-800 dark:text-green-300",
-      borderColor: "border-green-500",
-      shadow: "shadow-green-200/50 dark:shadow-green-800/50",
+      iconBg: "bg-secondary",
+      titleText: "text-secondary dark:text-secondary-300",
+      borderColor: "border-secondary",
+      shadow: "shadow-secondary/50 dark:shadow-secondary/50",
     };
   };
 
@@ -279,7 +282,7 @@ const RoadmapDetailsPage: React.FC = () => {
   if (isLoading) {
     return (
       <div className="text-center mt-8">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
         <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
           Loading roadmap{field ? ` for ${field}` : ""}...
         </p>
@@ -320,8 +323,8 @@ const RoadmapDetailsPage: React.FC = () => {
                 Roadmap to a {field}
               </h1>
               {wasGenerated && (
-                <div className="mt-2 inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                <div className="mt-2 inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary">
+                  <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
                   Freshly generated roadmap
                 </div>
               )}
@@ -330,7 +333,7 @@ const RoadmapDetailsPage: React.FC = () => {
               <div className="relative download-options-container">
                 <button
                   onClick={() => setShowDownloadOptions(!showDownloadOptions)}
-                  className="flex items-center justify-center py-2 px-4 border border-green-600 rounded-md shadow-sm text-sm font-medium text-green-600 dark:text-green-400 hover:bg-green-600 hover:text-white dark:hover:bg-green-600 transition-colors"
+                  className="flex items-center justify-center py-2 px-4 border border-primary rounded-md shadow-sm text-sm font-medium text-primary dark:text-primary hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download
@@ -379,7 +382,7 @@ const RoadmapDetailsPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
                   <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
-                    <TrendingUp className="w-5 h-5 mr-2 text-green-500" />
+                    <TrendingUp className="w-5 h-5 mr-2 text-primary" />
                     Current Demand
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1">
@@ -388,7 +391,7 @@ const RoadmapDetailsPage: React.FC = () => {
                 </div>
                 <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow">
                   <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
-                    <DollarSign className="w-5 h-5 mr-2 text-green-500" />
+                    <DollarSign className="w-5 h-5 mr-2 text-primary" />
                     Salary Expectations
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1">
@@ -397,7 +400,7 @@ const RoadmapDetailsPage: React.FC = () => {
                 </div>
                 <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow md:col-span-2">
                   <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
-                    <ClipboardList className="w-5 h-5 mr-2 text-yellow-500" />
+                    <ClipboardList className="w-5 h-5 mr-2 text-secondary" />
                     Key Skills in Demand
                   </h4>
                   <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mt-1 space-y-1">
@@ -406,9 +409,94 @@ const RoadmapDetailsPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+
+                {/* Detailed Skills Section */}
+                {insights.technicalSkills &&
+                  insights.technicalSkills.length > 0 && (
+                    <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow md:col-span-2">
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center mb-3">
+                        <Lightbulb className="w-5 h-5 mr-2 text-secondary" />
+                        Detailed Skills Profile
+                      </h4>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {insights.technicalSkills && (
+                          <div>
+                            <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                              Technical Skills
+                            </h5>
+                            <div className="flex flex-wrap gap-2">
+                              {insights.technicalSkills.map((skill, i) => (
+                                <span
+                                  key={i}
+                                  className="px-2 py-1 bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-secondary-300 rounded text-xs"
+                                >
+                                  {skill}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {insights.softSkills && (
+                          <div>
+                            <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                              Soft Skills
+                            </h5>
+                            <div className="flex flex-wrap gap-2">
+                              {insights.softSkills.map((skill, i) => (
+                                <span
+                                  key={i}
+                                  className="px-2 py-1 bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded text-xs"
+                                >
+                                  {skill}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {insights.toolsAndSoftware && (
+                          <div>
+                            <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                              Tools & Software
+                            </h5>
+                            <div className="flex flex-wrap gap-2">
+                              {insights.toolsAndSoftware.map((tool, i) => (
+                                <span
+                                  key={i}
+                                  className="px-2 py-1 bg-orange-50 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300 rounded text-xs"
+                                >
+                                  {tool}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {insights.certifications && (
+                          <div>
+                            <h5 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                              Certifications
+                            </h5>
+                            <div className="flex flex-wrap gap-2">
+                              {insights.certifications.map((cert, i) => (
+                                <span
+                                  key={i}
+                                  className="px-2 py-1 bg-teal-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 rounded text-xs"
+                                >
+                                  {cert}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow md:col-span-2">
                   <h4 className="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
-                    <Target className="w-5 h-5 mr-2 text-green-500" />
+                    <Target className="w-5 h-5 mr-2 text-primary" />
                     Future Outlook
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mt-1">
@@ -419,12 +507,66 @@ const RoadmapDetailsPage: React.FC = () => {
             </div>
           )}
 
+          {/* Alternative Careers Section */}
+          {roadmap.length > 0 && (
+            <div className="mb-10 animate-fadeInUp animation-delay-300">
+              <h3 className="text-xl font-bold text-center text-gray-800 dark:text-white mb-6">
+                Explore Alternative Career Paths
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {(roadmapsDoc?.alternativeCareers || []).map(
+                  (alt: any, i: number) => (
+                    <Link
+                      key={i}
+                      href={`/roadmaps/${alt.careerName
+                        .toLowerCase()
+                        .replace(/ /g, "-")
+                        .replace(/[^\w-]+/g, "")}`}
+                      className="block group h-full"
+                    >
+                      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md h-full flex flex-col">
+                        <div className="flex items-center justify-between mb-3">
+                          <h4 className="font-bold text-lg text-gray-800 dark:text-white group-hover:text-primary dark:group-hover:text-primary transition-colors">
+                            {alt.careerName}
+                          </h4>
+                          <span className="text-gray-400 group-hover:text-primary transition-colors">
+                            <TrendingUp className="w-5 h-5" />
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                          {alt.similarity}
+                        </p>
+                        <div className="mt-auto">
+                          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
+                            Skills Overlap
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {alt.skillsOverlap
+                              .slice(0, 3)
+                              .map((skill: string, idx: number) => (
+                                <span
+                                  key={idx}
+                                  className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-secondary-300"
+                                >
+                                  {skill}
+                                </span>
+                              ))}
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+          )}
+
           <div
             id="roadmap-content"
             className="relative container mx-auto px-4 py-8"
           >
             {/* Timeline bar */}
-            <div className="absolute top-0 bottom-0 w-1 bg-yellow-200 dark:bg-gray-700 left-6 md:left-1/2 -translate-x-1/2"></div>
+            <div className="absolute top-0 bottom-0 w-1 bg-yellow-200/50 dark:bg-gray-700 left-6 md:left-1/2 -translate-x-1/2"></div>
 
             <div className="space-y-16">
               {roadmap.map((step, index) => {
@@ -536,7 +678,7 @@ const RoadmapDetailsPage: React.FC = () => {
                             </ul>
                           </div>
                           <div className="flex items-start">
-                            <Money className="w-5 h-5 text-green-600 dark:text-green-400 mr-2 mt-0.5" />
+                            <Money className="w-5 h-5 text-primary dark:text-primary mr-2 mt-0.5" />
                             <div>
                               <h4 className="font-semibold text-gray-800 dark:text-gray-200">
                                 Est. Salary (Monthly):

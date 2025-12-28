@@ -1,4 +1,5 @@
 export { default as Activity } from "./Activity";
+export { default as Video } from "./Video";
 export { default as Book } from "./Book";
 export { default as Bookmark } from "./Bookmark";
 export { default as Briefcase } from "./Briefcase";
