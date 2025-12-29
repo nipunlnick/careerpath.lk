@@ -51,7 +51,12 @@ async function seedRoadmapsFromJson() {
             marketInsights = {
               demand: insightsData.demand?.toLowerCase() || 'medium',
               salaryRange: parseSalaryRange(insightsData.salaryExpectations || ''),
+              salaryExpectations: insightsData.salaryExpectations || '',
               requiredSkills: insightsData.requiredSkills || [],
+              technicalSkills: insightsData.technicalSkills || [],
+              softSkills: insightsData.softSkills || [],
+              toolsAndSoftware: insightsData.toolsAndSoftware || [],
+              certifications: insightsData.certifications || [],
               futureOutlook: insightsData.futureOutlook || '',
               lastUpdated: new Date()
             };

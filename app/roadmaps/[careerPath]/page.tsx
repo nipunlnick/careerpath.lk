@@ -36,6 +36,49 @@ const RoadmapDetailsPage: React.FC = () => {
   const [wasGenerated, setWasGenerated] = useState(false);
   const [visibleStep, setVisibleStep] = useState<number | null>(0);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const fetchRoadmap = async () => {
+      console.log("🚀 [Frontend] Starting fetch for:", careerPath);
+      setIsLoading(true);
+      setError(null);
+      try {
+        const slug = careerPath;
+        const res = await fetch(`/api/roadmaps/slug/${slug}`);
+        console.log("📡 [Frontend] API Response Status:", res.status);
+
+        const json = await res.json();
+        console.log("📦 [Frontend] API Data:", json);
+
+        if (json.success && json.data) {
+          const doc = json.data;
+          setField(doc.name);
+          setRoadmap(doc.steps || []);
+          setInsights(doc.marketInsights || null);
+          setRoadmapsDoc(doc);
+          setWasGenerated(json.regenerated || false);
+          console.log(
+            "✅ [Frontend] State updated with roadmap steps:",
+            doc.steps?.length
+          );
+        } else {
+          console.error("❌ [Frontend] Failed to load or data missing");
+          setError("Failed to load roadmap data");
+        }
+      } catch (err) {
+        console.error("🔥 [Frontend] Fetch error:", err);
+        setError("An error occurred while loading the roadmap");
+      } finally {
+        setIsLoading(false);
+        console.log("🏁 [Frontend] Loading state set to false");
+      }
+    };
+
+    if (careerPath) {
+      fetchRoadmap();
+    }
+  }, [careerPath]);
+
   // Removed unused state and handlers for simpler download
   const handleDownloadPDF = async () => {
     try {

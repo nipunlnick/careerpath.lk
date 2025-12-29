@@ -59,7 +59,7 @@ const About: React.FC = () => {
   return (
     <div className="space-y-16 sm:space-y-24">
       {/* Hero Section */}
-      <section className="text-center pt-8 pb-4 animate-fadeInUp">
+      <section className="text-center pt-28 pb-4 animate-fadeInUp">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight">
           About CareerPath.lk
         </h1>

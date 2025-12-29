@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AdminNav from "../components/AdminNav";
+import Aurora from "@/components/Aurora";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +28,17 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-yellow-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300`}
       >
+        <div className="fixed inset-0 pointer-events-none">
+          <Aurora
+            colorStops={["#3b82f6", "#22c55e", "#06b6d4"]}
+            blend={0.5}
+            amplitude={1.0}
+            speed={0.5}
+          />
+        </div>
+
         <Providers>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen relative z-10">
             <AdminNav />
             <Header />
             <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">

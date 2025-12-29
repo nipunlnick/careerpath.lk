@@ -7,8 +7,10 @@ export async function GET(
 ) {
   try {
     const { slug } = await params;
+    console.log(`[API] Fetching roadmap for slug: ${slug}`);
 
     const existingRoadmap = await CareerRoadmapService.getBySlug(slug);
+    console.log(`[API] Found roadmap in DB:`, existingRoadmap ? 'YES' : 'NO');
 
     if (existingRoadmap) {
       // Check if marketInsights lacks newer fields (e.g. at least one of the detailed skill arrays)
@@ -20,6 +22,7 @@ export async function GET(
         !insights?.certifications;
 
       if (isMissingDetailedSkills) {
+        console.log(`[API] Missing detailed skills for ${slug}, attempting regeneration...`);
         try {
            // We need the categories for generation
            const { EXPLORE_CAREERS } = await import('@/constants/careers');

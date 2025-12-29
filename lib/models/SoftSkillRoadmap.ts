@@ -26,6 +26,14 @@ export class SoftSkillRoadmapService {
     return await db.collection<SoftSkillRoadmap>(this.COLLECTION_NAME).findOne({ slug });
   }
 
+  // Get roadmap by ID
+  static async getById(id: string | ObjectId): Promise<SoftSkillRoadmap | null> {
+    const { db } = await connectToDatabase();
+    return await db.collection<SoftSkillRoadmap>(this.COLLECTION_NAME).findOne({ 
+      _id: typeof id === 'string' ? new ObjectId(id) : id 
+    });
+  }
+
   // Search roadmaps
   static async search(query: string, limit: number = 10): Promise<SoftSkillRoadmap[]> {
     const { db } = await connectToDatabase();
@@ -82,5 +90,13 @@ export class SoftSkillRoadmapService {
       { _id: typeof id === 'string' ? new ObjectId(id) : id },
       { $inc: { views: 1 } }
     );
+  }
+  // Delete roadmap
+  static async delete(id: string | ObjectId): Promise<DeleteResult> {
+    const { db } = await connectToDatabase();
+    
+    return await db.collection<SoftSkillRoadmap>(this.COLLECTION_NAME).deleteOne({ 
+      _id: typeof id === 'string' ? new ObjectId(id) : id 
+    });
   }
 }
