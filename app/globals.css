@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -16,8 +15,6 @@
   --color-primary-foreground: #ffffff;
   --color-secondary: #22c55e; /* Green-500 */
   --color-secondary-foreground: #ffffff;
-  --color-accent: #0f172a; /* Slate-900 (High Contrast) or #f59e0b (Amber) - Let's use a dark contrast for accent since the gradient is the main visual */
-  /* Actually, let's keep accent distinct but cool */
   --color-accent: #06b6d4; /* Cyan-500 */
   --color-accent-foreground: #ffffff;
   --color-background: #f8fafc; /* Slate-50 */
@@ -131,7 +128,6 @@
 
 /* Global Styles */
 body {
-  font-family: "Inter", sans-serif;
   background-color: var(--color-background);
   color: var(--color-foreground);
   -webkit-font-smoothing: antialiased;

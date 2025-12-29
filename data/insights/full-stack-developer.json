@@ -1,0 +1,44 @@
+{
+  "demand": "High",
+  "salaryExpectations": "LKR 100,000 to LKR 500,000 per month",
+  "requiredSkills": [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Git",
+    "Tailwind CSS"
+  ],
+  "technicalSkills": [
+    "HTML/CSS",
+    "JavaScript (ES6+)",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "SQL (PostgreSQL)",
+    "RESTful APIs",
+    "Git/GitHub",
+    "Docker"
+  ],
+  "softSkills": [
+    "Problem Solving",
+    "Communication",
+    "Teamwork",
+    "Time Management",
+    "Adaptability"
+  ],
+  "toolsAndSoftware": [
+    "VS Code",
+    "Postman",
+    "Figma",
+    "Jira",
+    "AWS"
+  ],
+  "certifications": [
+    "AWS Certified Developer",
+    "Meta Front-End Developer",
+    "MongoDB Developer"
+  ],
+  "futureOutlook": "The demand for Full Stack Developers continues to grow as businesses increasingly rely on web and mobile applications."
+}

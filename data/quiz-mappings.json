@@ -270,6 +270,810 @@
             "roadmapPath": "business-analyst"
           }
         ]
+      },
+      {
+        "id": "generated_accountant",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "accountant"
+          }
+        ]
+      },
+      {
+        "id": "generated_agribusiness_entrepreneur",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "agribusiness-entrepreneur"
+          }
+        ]
+      },
+      {
+        "id": "generated_agricultural_officer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "agricultural-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_ai_researcher",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "ai-researcher"
+          }
+        ]
+      },
+      {
+        "id": "generated_airline_crew",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "airline-crew"
+          }
+        ]
+      },
+      {
+        "id": "generated_animator",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "animator"
+          }
+        ]
+      },
+      {
+        "id": "generated_ar_vr_developer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "ar-vr-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_beautician",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "beautician"
+          }
+        ]
+      },
+      {
+        "id": "generated_blockchain_developer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "blockchain-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_carpenter",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "carpenter"
+          }
+        ]
+      },
+      {
+        "id": "generated_chef",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "chef"
+          }
+        ]
+      },
+      {
+        "id": "generated_cloud_devops_engineer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "cloud-devops-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_curriculum_developer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "curriculum-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_cybersecurity_analyst",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "cybersecurity-analyst"
+          }
+        ]
+      },
+      {
+        "id": "generated_cybersecurity_specialist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "cybersecurity-specialist"
+          }
+        ]
+      },
+      {
+        "id": "generated_data_ethics_officer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "data-ethics-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_digital_marketer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "digital-marketer"
+          }
+        ]
+      },
+      {
+        "id": "generated_draughtsman",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "draughtsman"
+          }
+        ]
+      },
+      {
+        "id": "generated_drone_operator",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "drone-operator"
+          }
+        ]
+      },
+      {
+        "id": "generated_ecommerce_seller",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "ecommerce-seller"
+          }
+        ]
+      },
+      {
+        "id": "generated_education_consultant",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "education-consultant"
+          }
+        ]
+      },
+      {
+        "id": "generated_electrical_engineer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "electrical-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_electronic_telecom_engineer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "electronic-telecom-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_environmental_scientist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "environmental-scientist"
+          }
+        ]
+      },
+      {
+        "id": "generated_event_planner",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "event-planner"
+          }
+        ]
+      },
+      {
+        "id": "generated_fashion_designer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "fashion-designer"
+          }
+        ]
+      },
+      {
+        "id": "generated_forestry_wildlife_officer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "forestry-wildlife-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_freelancer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "freelancer"
+          }
+        ]
+      },
+      {
+        "id": "generated_game_developer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "game-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_government_officer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "government-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_hotel_manager",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "hotel-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_hr_manager",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "hr-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_it_project_manager",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "it-project-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_journalist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "journalist"
+          }
+        ]
+      },
+      {
+        "id": "generated_lawyer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "lawyer"
+          }
+        ]
+      },
+      {
+        "id": "generated_legal_advisor",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "legal-advisor"
+          }
+        ]
+      },
+      {
+        "id": "generated_mechanical_engineer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "mechanical-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_mechatronics_engineer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "mechatronics-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_medical_lab_technologist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "medical-lab-technologist"
+          }
+        ]
+      },
+      {
+        "id": "generated_network_engineer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "network-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_nutritionist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "nutritionist"
+          }
+        ]
+      },
+      {
+        "id": "generated_online_tutor",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "online-tutor"
+          }
+        ]
+      },
+      {
+        "id": "generated_pharmacist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "pharmacist"
+          }
+        ]
+      },
+      {
+        "id": "generated_photographer_videographer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "photographer-videographer"
+          }
+        ]
+      },
+      {
+        "id": "generated_physiotherapist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "physiotherapist"
+          }
+        ]
+      },
+      {
+        "id": "generated_plumber",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "plumber"
+          }
+        ]
+      },
+      {
+        "id": "generated_police_officer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "police-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_politician_policy_analyst",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "politician-policy-analyst"
+          }
+        ]
+      },
+      {
+        "id": "generated_project_coordinator",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "project-coordinator"
+          }
+        ]
+      },
+      {
+        "id": "generated_quantity_surveyor",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "quantity-surveyor"
+          }
+        ]
+      },
+      {
+        "id": "generated_renewable_energy_engineer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "renewable-energy-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_renewable_energy_specialist",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "renewable-energy-specialist"
+          }
+        ]
+      },
+      {
+        "id": "generated_school_administrator",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "school-administrator"
+          }
+        ]
+      },
+      {
+        "id": "generated_social_media_manager",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "social-media-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_supply_chain_manager",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "supply-chain-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_technician",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "technician"
+          }
+        ]
+      },
+      {
+        "id": "generated_tour_guide",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "tour-guide"
+          }
+        ]
+      },
+      {
+        "id": "generated_travel_consultant",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "travel-consultant"
+          }
+        ]
+      },
+      {
+        "id": "generated_vehicle_technician",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "vehicle-technician"
+          }
+        ]
+      },
+      {
+        "id": "generated_virtual_assistant",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "virtual-assistant"
+          }
+        ]
+      },
+      {
+        "id": "generated_web_mobile_developer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "web-mobile-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_welder_mechanic",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "welder-mechanic"
+          }
+        ]
+      },
+      {
+        "id": "generated_youtuber_podcaster",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "youtuber-podcaster"
+          }
+        ]
+      },
+      {
+        "id": "generated_customer_service_manager",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "customer-service-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_full_stack_developer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "full-stack-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_mobile_app_developer",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "mobile-app-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_product_manager",
+        "pattern": {
+          "priority": "Continuous learning and intellectual challenges."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Based on your interest in other and diverse fields, this career offers excellent growth.",
+            "roadmapPath": "product-manager"
+          }
+        ]
       }
     ],
     "fallback": [
@@ -472,6 +1276,1176 @@
             "description": "Use mathematical models and statistical analysis to evaluate financial instruments and market risks.",
             "reasoning": "Combines your analytical skills with precision requirements, working with complex data and theories to become a respected financial expert.",
             "roadmapPath": "quantitative-analyst"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_accountant",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "accountant"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_agribusiness_entrepreneur",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "agribusiness-entrepreneur"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_agricultural_officer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "agricultural-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_ai_ml_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "ai-ml-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_airline_crew",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "airline-crew"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_animator",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "animator"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_ar_vr_developer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "ar-vr-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_architect",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "architect"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_banker_financial_analyst",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "banker-financial-analyst"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_beautician",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "beautician"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_blockchain_developer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "blockchain-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_business_analyst",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "business-analyst"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_carpenter",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "carpenter"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_chef",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "chef"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_civil_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "civil-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_cloud_devops_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "cloud-devops-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_content_creator",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "content-creator"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_curriculum_developer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "curriculum-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_customer_service_manager",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "customer-service-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_cybersecurity_analyst",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "cybersecurity-analyst"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_data_ethics_officer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "data-ethics-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_digital_marketer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "digital-marketer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_doctor",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "doctor"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_draughtsman",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "draughtsman"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_drone_operator",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "drone-operator"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_ecommerce_seller",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "ecommerce-seller"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_electrical_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "electrical-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_electrician",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "electrician"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_electronic_telecom_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "electronic-telecom-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_environmental_scientist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "environmental-scientist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_event_planner",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "event-planner"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_fashion_designer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "fashion-designer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_film_director_editor",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "film-director-editor"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_forestry_wildlife_officer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "forestry-wildlife-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_full_stack_developer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "full-stack-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_game_developer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "game-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_government_officer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "government-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_graphic_designer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "graphic-designer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_hotel_manager",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "hotel-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_investment_banker",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "investment-banker"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_it_project_manager",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "it-project-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_journalist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "journalist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_lawyer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "lawyer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_legal_advisor",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "legal-advisor"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_marketing_manager",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "marketing-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_mechanical_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "mechanical-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_mechatronics_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "mechatronics-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_medical_lab_technologist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "medical-lab-technologist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_mobile_app_developer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "mobile-app-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_network_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "network-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_nurse",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "nurse"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_nutritionist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "nutritionist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_online_tutor",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "online-tutor"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_pharmacist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "pharmacist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_photographer_videographer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "photographer-videographer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_physiotherapist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "physiotherapist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_plumber",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "plumber"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_police_officer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "police-officer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_politician_policy_analyst",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "politician-policy-analyst"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_product_manager",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "product-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_psychologist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "psychologist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_quantity_surveyor",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "quantity-surveyor"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_renewable_energy_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "renewable-energy-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_renewable_energy_specialist",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "renewable-energy-specialist"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_school_administrator",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "school-administrator"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_social_media_manager",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "social-media-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_software_engineer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "software-engineer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_supply_chain_manager",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "supply-chain-manager"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_teacher",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "teacher"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_technician",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "technician"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_tour_guide",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "tour-guide"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_travel_consultant",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "travel-consultant"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_ui_ux_designer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "ui-ux-designer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_vehicle_technician",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "vehicle-technician"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_virtual_assistant",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "virtual-assistant"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_web_mobile_developer",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "web-mobile-developer"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_welder_mechanic",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "welder-mechanic"
+          }
+        ]
+      },
+      {
+        "id": "generated_long_youtuber_podcaster",
+        "pattern": {
+          "problemSolving": "Break it down logically and find a solution.",
+          "workStyle": "Flexible and adaptable.",
+          "ambition": "To become an expert in my field.",
+          "workWith": "Ideas and concepts."
+        },
+        "suggestions": [
+          {
+            "reasoning": "Your Flexible and adaptable. style and interest in working with Ideas and concepts. make this career a perfect match.",
+            "roadmapPath": "youtuber-podcaster"
           }
         ]
       }

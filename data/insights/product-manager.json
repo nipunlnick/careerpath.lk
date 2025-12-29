@@ -1,0 +1,40 @@
+{
+  "demand": "High",
+  "salaryExpectations": "LKR 120,000 to LKR 600,000+ per month",
+  "requiredSkills": [
+    "Product Strategy",
+    "Agile/Scrum",
+    "Data Analysis",
+    "User Research",
+    "Stakeholder Management"
+  ],
+  "technicalSkills": [
+    "Roadmapping",
+    "A/B Testing",
+    "SQL (Basic)",
+    "Wireframing/Prototyping",
+    "Market Research",
+    "Analytics"
+  ],
+  "softSkills": [
+    "Leadership",
+    "Empathy",
+    "Communication",
+    "Strategic Thinking",
+    "Prioritization"
+  ],
+  "toolsAndSoftware": [
+    "Jira",
+    "Confluence",
+    "Figma",
+    "Google Analytics",
+    "Mixpanel",
+    "Amplitude"
+  ],
+  "certifications": [
+    "CSPO (Certified Scrum Product Owner)",
+    "PSPO (Professional Scrum Product Owner)",
+    "Product School Certificates"
+  ],
+  "futureOutlook": "Rapidly growing role in Sri Lanka's tech ecosystem as companies move from service to product-based models."
+}

@@ -1,0 +1,40 @@
+{
+  "demand": "Medium",
+  "salaryExpectations": "LKR 100,000 to LKR 1,000,000+ per month",
+  "requiredSkills": [
+    "Financial Modeling",
+    "Valuation",
+    "Excel",
+    "Accounting",
+    "Communication"
+  ],
+  "technicalSkills": [
+    "Financial Analysis",
+    "M&A Modeling",
+    "LBO Modeling",
+    "Valuation Techniques",
+    "Quantitative Analysis",
+    "Data Analysis"
+  ],
+  "softSkills": [
+    "Negotiation",
+    "Presentation",
+    "Attention to Detail",
+    "Work Under Pressure",
+    "networking"
+  ],
+  "toolsAndSoftware": [
+    "Microsoft Excel (Advanced)",
+    "Bloomberg Terminal",
+    "PowerPoint",
+    "Capital IQ",
+    "FactSet"
+  ],
+  "certifications": [
+    "CFA (Chartered Financial Analyst)",
+    "CA (Chartered Accountant)",
+    "CIMA",
+    "MBA"
+  ],
+  "futureOutlook": "Stable demand driven by corporate growth, mergers, and capital market activities."
+}

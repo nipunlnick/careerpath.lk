@@ -1,0 +1,53 @@
+{
+  "name": "Emotional Intelligence (EQ)",
+  "slug": "emotional-intelligence",
+  "description": "Master the ability to understand and manage your own emotions, and those of the people around you.",
+  "category": "Interpersonal",
+  "tags": ["eq", "empathy", "soft-skills", "self-awareness"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Self-Awareness",
+      "objective": "Recognize and understand your own moods and emotions.",
+      "description": "Develop the habit of monitoring your emotional state and identifying triggers.",
+      "practices": [
+        "Keep a daily mood journal",
+        "Identify your top 3 emotional triggers",
+        "Pause for 5 seconds before reacting to stress"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Self-Regulation",
+      "objective": "Control impulsive feelings and behaviors.",
+      "description": "Learn techniques for managing stress, staying calm under pressure, and adapting to change.",
+      "practices": [
+        "Practice deep breathing exercises during stress",
+        "Reframe negative thoughts into constructive ones",
+        "Wait 24 hours before sending an angry email"
+      ],
+      "duration": "4 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Empathy & Social Skill",
+      "objective": "Understand the emotional makeup of other people.",
+      "description": "Focus on reading social cues, listening with empathy, and building rapport.",
+      "practices": [
+        "Practice 'perspective taking' in difficult conversations",
+        "Ask 'How are you feeling about this?' and really listen",
+        "Observe body language in meetings"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Emotional Intelligence 2.0",
+      "url": "https://www.amazon.com/Emotional-Intelligence-2-0-Travis-Bradberry/dp/0974320625",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}

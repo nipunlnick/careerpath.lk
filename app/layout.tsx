@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AdminNav from "../components/AdminNav";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CareerPath.lk - Your Journey to Success",
@@ -21,7 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="bg-yellow-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+      <body
+        className={`${inter.className} bg-yellow-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300`}
+      >
         <Providers>
           <div className="flex flex-col min-h-screen">
             <AdminNav />

@@ -1,0 +1,53 @@
+{
+  "name": "Effective Teamwork",
+  "slug": "teamwork",
+  "description": "Learn to collaborate effectively and contribute to high-performing teams.",
+  "category": "Interpersonal",
+  "tags": ["teamwork", "collaboration", "soft-skills", "cooperation"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Being a Team Player",
+      "objective": "Understand roles, responsibilities, and the value of cooperation.",
+      "description": "Focus on reliability, supporting colleagues, and common courtesy within a team structure.",
+      "practices": [
+        "Offer help to a teammate before they ask",
+        "Deliver on all promised tasks on time",
+        "Participate actively in team meetings"
+      ],
+      "duration": "2 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Collaborative Problem Solving",
+      "objective": "Work with others to solve complex problems collectively.",
+      "description": "Learn brainstorming techniques, consensus building, and how to value diverse perspectives.",
+      "practices": [
+        "Lead a brainstorming session",
+        "Practice building on others' ideas ('Yes, and...')",
+        "Seek input from quieter team members"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Navigating Conflict",
+      "objective": "Resolve interpersonal conflicts constructively.",
+      "description": "Learn to address disagreements openly and respectfully, focusing on solutions rather than blame.",
+      "practices": [
+        "Address a minor friction point directly but kindly",
+        "Meditate a disagreement between two peers (if appropriate)",
+        "Reflect on your own role in past conflicts"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "The Five Dysfunctions of a Team",
+      "url": "https://www.amazon.com/Five-Dysfunctions-Team-Leadership-Fable/dp/0787960756",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}

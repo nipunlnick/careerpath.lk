@@ -1,0 +1,53 @@
+{
+  "name": "Time Management",
+  "slug": "time-management",
+  "description": "Master the art of prioritizing tasks and maximizing productivity.",
+  "category": "Self-Management",
+  "tags": ["productivity", "planning", "efficiency", "soft-skills"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Prioritization Basics",
+      "objective": "Learn to distinguish between urgent and important tasks.",
+      "description": "Understand the Eisenhower Matrix and how to categorize your daily to-do list.",
+      "practices": [
+        "Use the Eisenhower Matrix for one week",
+        "Identify your peak productivity hours",
+        "Create a daily to-do list the night before"
+      ],
+      "duration": "2 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Deep Work & Focus",
+      "objective": "Develop the ability to focus without distraction.",
+      "description": "Learn techniques like Pomodoro and time blocking to achieve deep work states.",
+      "practices": [
+        "Practice 2 hours of deep work daily",
+        "Turn off notifications during work blocks",
+        "Use time blocking for your weekly schedule"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Goal Setting & Review",
+      "objective": "Align daily actions with long-term goals.",
+      "description": "Implement a system for weekly and monthly reviews to ensure you are on track.",
+      "practices": [
+        "Conduct a weekly review every Friday",
+        "Set SMART goals for the next quarter",
+        "Analyze where your time actually went vs. planned"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Deep Work by Cal Newport",
+      "url": "https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}

@@ -1,0 +1,36 @@
+{
+  "demand": "Medium",
+  "salaryExpectations": "LKR 80,000 to LKR 250,000 per month",
+  "requiredSkills": [
+    "Team Management",
+    "Communication",
+    "Conflict Resolution",
+    "CRM Software",
+    "Process Improvement"
+  ],
+  "technicalSkills": [
+    "CRM Management",
+    "Data Analysis (CSAT, NPS)",
+    "Reporting",
+    "Ticketing Systems"
+  ],
+  "softSkills": [
+    "Empathy",
+    "Patience",
+    "Leadership",
+    "Emotional Intelligence",
+    "Problem Solving"
+  ],
+  "toolsAndSoftware": [
+    "Salesforce",
+    "Zendesk",
+    "HubSpot",
+    "Microsoft Office",
+    "Intercom"
+  ],
+  "certifications": [
+    "Certified Customer Service Manager (CCSM)",
+    "Management Diplomas"
+  ],
+  "futureOutlook": "Evolving into Customer Experience (CX) roles with higher strategic value and pay."
+}

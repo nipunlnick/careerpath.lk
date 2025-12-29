@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Learn the Basics of Web Development",
+    "description": "Start with HTML, CSS, and basic JavaScript. Understand how the web works, DOM manipulation, and responsive design.",
+    "duration": "2-3 months",
+    "qualifications": ["Online Courses (FreeCodeCamp, Udemy)"],
+    "skills": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Git"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["FreeCodeCamp", "Codecademy", "W3Schools"]
+  },
+  {
+    "step": 2,
+    "title": "Frontend Frameworks",
+    "description": "Master a modern frontend framework. React is the industry standard, but Vue or Angular are also options. Learn about state management and API integration.",
+    "duration": "3-4 months",
+    "qualifications": ["Frontend Certification"],
+    "skills": ["React.js", "Redux/Context API", "Tailwind CSS", "REST APIs"],
+    "salaryRangeLKR": "LKR 45,000 - 80,000 (Intern/Junior)",
+    "institutes": ["Udemy", "Coursera", "YouTube"]
+  },
+  {
+    "step": 3,
+    "title": "Backend Development",
+    "description": "Learn server-side programming. Node.js is a great choice for JavaScript developers. Understand databases (SQL and NoSQL), authentication, and API design.",
+    "duration": "3-4 months",
+    "qualifications": ["Backend Certification"],
+    "skills": ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "JWT Auth"],
+    "salaryRangeLKR": "LKR 80,000 - 150,000",
+    "institutes": ["Bootcamps", "Self-study"]
+  },
+  {
+    "step": 4,
+    "title": "Full Stack Integration & DevOps Basics",
+    "description": "Connect frontend and backend. Learn about deployment, CI/CD pipelines, and basic cloud services (AWS/Firebase). Build full-stack projects.",
+    "duration": "2-3 months",
+    "qualifications": ["Full Stack Portfolio"],
+    "skills": ["Docker", "AWS/Vercel", "CI/CD", "Testing (Jest/Cypress)"],
+    "salaryRangeLKR": "LKR 150,000 - 300,000",
+    "institutes": ["N/A"]
+  },
+  {
+    "step": 5,
+    "title": "Senior Full Stack Dev / Tech Lead",
+    "description": "Master system architecture, scalability, and lead teams. contributions to open source or complex enterprise projects.",
+    "duration": "5+ years",
+    "qualifications": ["Experience"],
+    "skills": ["System Design", "Microservices", "Team Leadership", "Code Review"],
+    "salaryRangeLKR": "LKR 350,000 - 800,000+",
+    "institutes": ["Tech Companies"]
+  }
+]

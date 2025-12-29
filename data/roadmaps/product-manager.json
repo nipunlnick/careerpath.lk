@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Foundational Experience",
+    "description": "Gain experience in tech, design, or business. Understanding the software development lifecycle (SDLC) is key.",
+    "duration": "2-3 years",
+    "qualifications": ["Degree in CS/Business"],
+    "skills": ["Agile/Scrum", "User Research", "Data Analysis", "Communication"],
+    "salaryRangeLKR": "LKR 60,000 - 100,000",
+    "institutes": ["Tech Companies"]
+  },
+  {
+    "step": 2,
+    "title": "Associate Product Manager (APM)",
+    "description": "Entry-level PM role. Gather requirements, write user stories, and work closely with engineering and design teams.",
+    "duration": "1-2 years",
+    "qualifications": ["CSPO / PSPO (Optional)"],
+    "skills": ["Roadmapping", "Prioritization", "Jira/Confluence", "Stakeholder Mgmt"],
+    "salaryRangeLKR": "LKR 120,000 - 200,000",
+    "institutes": ["Startups", "Enterprises"]
+  },
+  {
+    "step": 3,
+    "title": "Product Manager",
+    "description": "Own a product feature or segment. Define strategy, metrics (KPIs), and drive product growth.",
+    "duration": "2-4 years",
+    "qualifications": ["Proven Portfolio"],
+    "skills": ["Strategy", "A/B Testing", "Market Research", "Go-to-Market"],
+    "salaryRangeLKR": "LKR 200,000 - 450,000",
+    "institutes": ["Product-Led Companies"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Product Manager",
+    "description": "Manage complex products or multiple product lines. Mentor junior PMs and influence company strategy.",
+    "duration": "3-5 years",
+    "qualifications": ["Leadership Experience"],
+    "skills": ["Strategic Vision", "Team Leadership", "Financial Acumen"],
+    "salaryRangeLKR": "LKR 450,000 - 800,000",
+    "institutes": ["Tech Giants"]
+  },
+  {
+    "step": 5,
+    "title": "Director of Product / CPO",
+    "description": "Lead the entire product organization. Align product strategy with business goals. Executive decision making.",
+    "duration": "5+ years",
+    "qualifications": ["Executive Track Record"],
+    "skills": ["Organizational Design", "Executive Leadership", "Vision"],
+    "salaryRangeLKR": "LKR 1,000,000+",
+    "institutes": ["Global Tech Firms"]
+  }
+]

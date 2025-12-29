@@ -1,0 +1,58 @@
+{
+  "name": "Communication Mastery",
+  "slug": "communication",
+  "description": "Master the art of effective communication in professional settings.",
+  "category": "Interpersonal",
+  "tags": ["communication", "soft-skills", "interpersonal", "speaking", "writing"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Foundations of Communication",
+      "objective": "Understand basic communication principles and active listening.",
+      "description": "Learn the core components of communication: sender, message, medium, receiver, and feedback. Focus heavily on active listening skills.",
+      "practices": [
+        "Practice active listening in daily conversations",
+        "Maintain eye contact during discussions",
+        "Summarize what others say to ensure understanding"
+      ],
+      "duration": "2 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Clear & Concise Messaging",
+      "objective": "Articulate ideas clearly in both written and verbal forms.",
+      "description": "Develop the ability to express complex ideas simply. Focus on email etiquette, structuring presentations, and eliminating jargon.",
+      "practices": [
+        "Write daily journal entries focusing on clarity",
+        "Practice the 'elevator pitch' for your current projects",
+        "Proofread emails for conciseness before sending"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Persuasion & Negotiation",
+      "objective": "Influence others and negotiate effectively.",
+      "description": "Learn techniques for persuasion, understanding audience needs, and finding win-win solutions in negotiations.",
+      "practices": [
+        "Role-play negotiation scenarios",
+        "Study successful speeches and analyze their structure",
+        "Practice advocating for a specific viewpoint in team meetings"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "How to Win Friends and Influence People",
+      "url": "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034",
+      "type": "book"
+    },
+    {
+      "title": "Effective Communication Skills for Leaders",
+      "url": "https://www.coursera.org/learn/communication-skills-for-leaders",
+      "type": "course"
+    }
+  ],
+  "isActive": true
+}

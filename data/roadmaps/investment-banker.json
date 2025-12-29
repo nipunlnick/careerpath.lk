@@ -1,0 +1,52 @@
+[
+  {
+    "step": 1,
+    "title": "Bachelor's Degree in Finance/Economics",
+    "description": "Obtain a high GPA degree from a reputable university. Focus on finance, economics, mathematics, or accounting.",
+    "duration": "3-4 years",
+    "qualifications": ["BSc Finance", "BBA", "Economics Degree"],
+    "skills": ["Financial Modeling", "Accounting", "Economics", "Excel"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["UOC", "USJ", "Private Universities"]
+  },
+  {
+    "step": 2,
+    "title": "Internships & Networking",
+    "description": "Gain experience through internships at banks or financial firms. Networking is crucial in this industry.",
+    "duration": "6-12 months",
+    "qualifications": ["Internship Experience"],
+    "skills": ["Financial Analysis", "Presentation Skills", "Industry Knowledge"],
+    "salaryRangeLKR": "LKR 30,000 - 60,000 (Intern)",
+    "institutes": ["Investment Banks", "Stock Brokers"]
+  },
+  {
+    "step": 3,
+    "title": "Analyst Role",
+    "description": "Start as an Investment Banking Analyst. Work on financial models, pitch decks, and valuations. Long hours are expected.",
+    "duration": "2-3 years",
+    "qualifications": ["CFA Level 1 (Recommended)"],
+    "skills": ["Valuation", "M&A Basics", "Financial Reporting", "Client Communication"],
+    "salaryRangeLKR": "LKR 100,000 - 250,000",
+    "institutes": ["Top Investment Banks"]
+  },
+  {
+    "step": 4,
+    "title": "Associate & MBA",
+    "description": "Get promoted to Associate. Leading deal execution. Many pursue an MBA at this stage to accelerate career growth.",
+    "duration": "3-4 years",
+    "qualifications": ["MBA", "CFA Charter"],
+    "skills": ["Deal Structuring", "Negotiation", "Team Management"],
+    "salaryRangeLKR": "LKR 300,000 - 600,000",
+    "institutes": ["Global Business Schools"]
+  },
+  {
+    "step": 5,
+    "title": "VP / Managing Director",
+    "description": "Focus on client relationships and bringing in new business (rainmaking). Oversee multiple deal teams.",
+    "duration": "5+ years",
+    "qualifications": ["Track Record"],
+    "skills": ["Client Acquisition", "Strategy", "Leadership"],
+    "salaryRangeLKR": "LKR 800,000 - 2,000,000+",
+    "institutes": ["Global Investment Banks"]
+  }
+]

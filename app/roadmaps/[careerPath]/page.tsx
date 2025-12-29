@@ -36,188 +36,16 @@ const RoadmapDetailsPage: React.FC = () => {
   const [wasGenerated, setWasGenerated] = useState(false);
   const [visibleStep, setVisibleStep] = useState<number | null>(0);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [showDownloadOptions, setShowDownloadOptions] = useState(false);
-
-  const { currentUser } = useAuth();
-
-  const pageTitle = field
-    ? `${field} Roadmap | CareerPath.lk`
-    : "Career Roadmap | CareerPath.lk";
-  const pageDescription = field
-    ? `A step-by-step career roadmap for becoming a ${field} in Sri Lanka, including salary, skills, and qualifications.`
-    : "Explore detailed career roadmaps for various fields in Sri Lanka.";
-  usePageMeta(pageTitle, pageDescription);
-
-  useEffect(() => {
-    const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
-
-    const loadData = async () => {
-      const careerSlug =
-        careerPath ||
-        fieldFromQuery
-          ?.toLowerCase()
-          .replace(/ /g, "-")
-          .replace(/[^\w-]+/g, "");
-      const careerDisplayName =
-        fieldFromQuery ||
-        careerPath?.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
-
-      if (!careerSlug || !careerDisplayName) {
-        setIsLoading(false);
-        setField("");
-        return;
-      }
-
-      setIsLoading(true);
-      setError(null);
-      setRoadmap([]);
-      setInsights(null);
-      setWasGenerated(false);
-      setField(decodeURIComponent(careerDisplayName));
-
-      try {
-        // 1) Try DB via API
-        try {
-          const res = await fetch(`/api/roadmaps/slug/${careerSlug}`);
-          if (res.ok) {
-            const json = await res.json();
-            if (json && json.success && json.data) {
-              const doc = json.data;
-              setRoadmap((doc.steps as RoadmapStep[]) || doc.roadmap || []);
-              setInsights(
-                (doc.marketInsights as MarketInsights) || doc.insights || null
-              );
-              setRoadmapsDoc(doc);
-              // Increment view count
-              fetch("/api/roadmaps/view", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ slug: careerSlug }),
-              }).catch(console.error);
-              return;
-            }
-          }
-        } catch (dbErr) {
-          console.warn("DB lookup failed, falling back to generation", dbErr);
-        }
-
-        // 2) Ask API to generate & persist
-        try {
-          const genRes = await fetch(`/api/roadmaps/generate`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name: careerDisplayName, slug: careerSlug }),
-          });
-
-          if (genRes.ok) {
-            const json = await genRes.json();
-            if (json && json.success && json.data) {
-              const doc = json.data;
-              setRoadmap((doc.steps as RoadmapStep[]) || doc.roadmap || []);
-              setInsights(
-                (doc.marketInsights as MarketInsights) || doc.insights || null
-              );
-              setRoadmapsDoc(doc);
-              setWasGenerated(!json.cached);
-              // Increment view count
-              fetch("/api/roadmaps/view", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ slug: careerSlug }),
-              }).catch(console.error);
-              return;
-            }
-          }
-        } catch (genErr) {
-          console.warn("Server generation failed", genErr);
-        }
-
-        throw new Error("Failed to load or generate roadmap.");
-      } catch (err: any) {
-        console.error("Failed to load or generate roadmap:", err);
-        setError(
-          err.message ||
-            `Sorry, we couldn't generate a roadmap for "${careerDisplayName}" at this time.`
-        );
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadData();
-  }, [careerPath, fieldFromQuery]);
-
-  useEffect(() => {
-    if (isLoading || roadmap.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = parseInt(
-              entry.target.getAttribute("data-step-index") || "0",
-              10
-            );
-            setVisibleStep(index);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "-40% 0px -40% 0px",
-        threshold: 0,
-      }
-    );
-
-    const currentRefs = stepRefs.current;
-    currentRefs.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      currentRefs.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, [isLoading, roadmap]);
-
+  // Removed unused state and handlers for simpler download
   const handleDownloadPDF = async () => {
     try {
       await RoadmapDownloadService.downloadAsPDF(field, roadmap, insights, {
         includeInsights: true,
         includeNotes: "",
       });
-      setShowDownloadOptions(false);
     } catch (error) {
       console.error("Error downloading PDF:", error);
       setError("Failed to download PDF. Please try again.");
-    }
-  };
-
-  const handleDownloadImage = async (format: "png" | "jpeg" = "png") => {
-    try {
-      await RoadmapDownloadService.downloadAsImage("roadmap-content", field, {
-        format,
-      });
-      setShowDownloadOptions(false);
-    } catch (error) {
-      console.error("Error downloading image:", error);
-      setError("Failed to download image. Please try again.");
-    }
-  };
-
-  const handleDownloadData = async () => {
-    try {
-      await RoadmapDownloadService.downloadRoadmapData(
-        field,
-        roadmap,
-        insights,
-        ""
-      );
-      setShowDownloadOptions(false);
-    } catch (error) {
-      console.error("Error downloading data:", error);
-      setError("Failed to download data. Please try again.");
     }
   };
 
@@ -281,7 +109,7 @@ const RoadmapDetailsPage: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="text-center mt-8">
+      <div className="text-center mt-28">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
         <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
           Loading roadmap{field ? ` for ${field}` : ""}...
@@ -316,7 +144,7 @@ const RoadmapDetailsPage: React.FC = () => {
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
       {roadmap.length > 0 && (
-        <div className="mt-0">
+        <div className="mt-16">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 animate-fadeInUp">
             <div className="text-center sm:text-left">
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white">
@@ -330,46 +158,13 @@ const RoadmapDetailsPage: React.FC = () => {
               )}
             </div>
             <div className="flex items-center gap-2 mt-4 sm:mt-0">
-              <div className="relative download-options-container">
-                <button
-                  onClick={() => setShowDownloadOptions(!showDownloadOptions)}
-                  className="flex items-center justify-center py-2 px-4 border border-primary rounded-md shadow-sm text-sm font-medium text-primary dark:text-primary hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download
-                </button>
-
-                {showDownloadOptions && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-[200]">
-                    <div className="py-1">
-                      <button
-                        onClick={handleDownloadPDF}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      >
-                        Download as PDF
-                      </button>
-                      <button
-                        onClick={() => handleDownloadImage("png")}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      >
-                        Download as PNG
-                      </button>
-                      <button
-                        onClick={() => handleDownloadImage("jpeg")}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      >
-                        Download as JPEG
-                      </button>
-                      <button
-                        onClick={handleDownloadData}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      >
-                        Download Data (JSON)
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
+              <button
+                onClick={handleDownloadPDF}
+                className="flex items-center justify-center py-2 px-4 border border-primary rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-colors"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download PDF
+              </button>
             </div>
           </div>
 

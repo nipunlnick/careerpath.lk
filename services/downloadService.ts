@@ -1,7 +1,7 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import html2canvas from 'html2canvas';
-import type { RoadmapStep, MarketInsights } from '../types';
+import type { RoadmapStep, MarketInsights, SoftSkillRoadmap } from '../types';
 
 export interface DownloadOptions {
   format: 'pdf' | 'png' | 'jpeg';
@@ -247,5 +247,132 @@ export class RoadmapDownloadService {
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+  }
+
+  static async downloadSoftSkillPDF(
+    skillRoadmap: SoftSkillRoadmap
+  ): Promise<void> {
+    const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.getWidth();
+    let startY = 20;
+
+    // --- Header ---
+    doc.setFontSize(22);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(124, 58, 237); // Purple color
+    const titleLines = doc.splitTextToSize(`Soft Skill Guide: ${skillRoadmap.name}`, pageWidth - 28);
+    doc.text(titleLines, 14, startY);
+    startY += titleLines.length * 8 + 5;
+
+    // Description
+    doc.setFontSize(11);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(80);
+    const descLines = doc.splitTextToSize(skillRoadmap.description, pageWidth - 28);
+    doc.text(descLines, 14, startY);
+    startY += descLines.length * 5 + 10;
+
+    // Date
+    doc.setFontSize(10);
+    doc.setTextColor(150);
+    doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 14, startY);
+    startY += 15;
+
+    // --- Levels ---
+    skillRoadmap.levels.forEach((level) => {
+      // Check page break
+      if (startY > 230) {
+        doc.addPage();
+        startY = 20;
+      }
+
+      // Level Header
+      doc.setFillColor(243, 232, 255); // Light purple bg
+      doc.rect(14, startY, pageWidth - 28, 10, 'F');
+      
+      doc.setFontSize(12);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(124, 58, 237); // Purple text
+      doc.text(`Level ${level.level}: ${level.title}`, 18, startY + 7);
+      
+      // Duration badge mock (text)
+      doc.setFontSize(10);
+      doc.setTextColor(100);
+      const durationText = level.duration;
+      const durationWidth = doc.getTextWidth(durationText);
+      doc.text(durationText, pageWidth - 14 - durationWidth - 4, startY + 7);
+      
+      startY += 16;
+
+      // Objective
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'italic');
+      doc.setTextColor(60);
+      const objLines = doc.splitTextToSize(`"${level.objective}"`, pageWidth - 28);
+      doc.text(objLines, 14, startY);
+      startY += objLines.length * 5 + 5;
+
+      // Focus Area
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(40);
+      doc.text('Focus Area:', 14, startY);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(60);
+      const focusLines = doc.splitTextToSize(level.description, pageWidth - 50);
+      doc.text(focusLines, 40, startY);
+      startY += Math.max(focusLines.length * 5, 5) + 5;
+
+      // Practices
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(40);
+      doc.text('Practices:', 14, startY);
+      startY += 5;
+      
+      level.practices.forEach(practice => {
+         doc.setFont('helvetica', 'normal');
+         doc.setTextColor(60);
+         doc.text(`• ${practice}`, 20, startY);
+         startY += 6;
+      });
+
+      startY += 10;
+    });
+
+    // --- Resources ---
+    if (skillRoadmap.resources && skillRoadmap.resources.length > 0) {
+        if (startY > 240) {
+            doc.addPage();
+            startY = 20;
+        }
+
+        doc.setFontSize(14);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(40);
+        doc.text('Recommended Resources', 14, startY);
+        startY += 10;
+
+        skillRoadmap.resources.forEach(resource => {
+            doc.setFontSize(10);
+            doc.setTextColor(124, 58, 237); // Purple link color
+            doc.textWithLink(resource.title, 14, startY, { url: resource.url });
+            doc.setTextColor(100);
+            doc.text(` (${resource.type})`, 14 + doc.getTextWidth(resource.title), startY);
+            startY += 7;
+        });
+    }
+
+    // --- Footer ---
+    const pageCount = (doc as any).internal.getNumberOfPages();
+    for (let i = 1; i <= pageCount; i++) {
+        doc.setPage(i);
+        doc.setFontSize(8);
+        doc.setTextColor(150);
+        const footerText = `Page ${i} of ${pageCount} | CareerPath.lk Soft Skills Guide`;
+        const footerX = (pageWidth - doc.getTextWidth(footerText)) / 2;
+        doc.text(footerText, footerX, doc.internal.pageSize.getHeight() - 10);
+    }
+
+    const fileName = `SoftSkill_${skillRoadmap.slug.replace(/-/g, '_')}_Guide.pdf`;
+    doc.save(fileName);
   }
 }

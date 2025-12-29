@@ -1,0 +1,42 @@
+[
+  {
+    "step": 1,
+    "title": "Pick a Platform (iOS or Android)",
+    "description": "Start with native development. Learn Swift for iOS or Kotlin for Android. Understand the ecosystem and tools (Xcode/Android Studio).",
+    "duration": "3-4 months",
+    "qualifications": ["Online Courses"],
+    "skills": ["Swift/Kotlin", "OOP", "UI Design Basics", "Git"],
+    "salaryRangeLKR": "N/A",
+    "institutes": ["Udacity", "RayWenderlich", "Official Docs"]
+  },
+  {
+    "step": 2,
+    "title": "Cross-Platform Development",
+    "description": "Learn a cross-platform framework like Flutter (Dart) or React Native (JS). This is highly valuable in the job market.",
+    "duration": "3-4 months",
+    "qualifications": ["Portfolio Apps"],
+    "skills": ["Flutter/React Native", "State Management", "API Usage", "Firebase"],
+    "salaryRangeLKR": "LKR 50,000 - 100,000 (Junior)",
+    "institutes": ["Udemy", "YouTube"]
+  },
+  {
+    "step": 3,
+    "title": "Intermediate Mobile Dev",
+    "description": "Build complex apps with local storage, push notifications, animations, and third-party libraries. Publish apps to stores.",
+    "duration": "2-3 years",
+    "qualifications": ["Published Apps"],
+    "skills": ["App Store Deployment", "CI/CD for Mobile", "Testing", "Performance Opt"],
+    "salaryRangeLKR": "LKR 120,000 - 250,000",
+    "institutes": ["Software Companies"]
+  },
+  {
+    "step": 4,
+    "title": "Senior Mobile Engineer",
+    "description": "Architect scalable apps, handle security, offline-first capabilities, and lead mobile teams.",
+    "duration": "4+ years",
+    "qualifications": ["Expertise"],
+    "skills": ["Mobile Architecture", "Native Modules", "System Design", "Mentoring"],
+    "salaryRangeLKR": "LKR 300,000 - 600,000+",
+    "institutes": ["Tech/Product Companies"]
+  }
+]

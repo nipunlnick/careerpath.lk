@@ -1,0 +1,53 @@
+{
+  "name": "Professional Networking",
+  "slug": "networking",
+  "description": "Build and maintain a powerful professional network.",
+  "category": "Interpersonal",
+  "tags": ["relationships", "career-growth", "communication"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Networking Basics",
+      "objective": "Start building connections naturally.",
+      "description": "Learn the value of networking and how to introduce yourself.",
+      "practices": [
+        "Update your LinkedIn profile",
+        "Connect with 5 new people in your field online",
+        "Prepare a 30-second introduction"
+      ],
+      "duration": "2 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Building Relationships",
+      "objective": "Deepen connections and add value.",
+      "description": "Focus on quality over quantity. Learn to conduct informational interviews.",
+      "practices": [
+        "Conduct 2 informational interviews",
+        "Share a helpful resource with your network",
+        "Follow up with new contacts within 24 hours"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Leveraging Your Network",
+      "objective": "Create opportunities for yourself and others.",
+      "description": "Learn to ask for referrals, find mentors, and be a connector for others.",
+      "practices": [
+        "Connect two people who should know each other",
+        "Ask a contact for specific advice or a referral",
+        "Attend an industry event and follow up"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Never Eat Alone",
+      "url": "https://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}

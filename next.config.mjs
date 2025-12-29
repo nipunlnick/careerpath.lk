@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+    // GEMINI_API_KEY should be server-side only
   },
 };
 

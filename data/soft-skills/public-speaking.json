@@ -1,0 +1,53 @@
+{
+  "name": "Public Speaking",
+  "slug": "public-speaking",
+  "description": "Deliver powerful presentations and speak with confidence.",
+  "category": "Communication",
+  "tags": ["presentation", "speaking", "confidence", "communication"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Overcoming Fear",
+      "objective": "Manage anxiety and speak clearly.",
+      "description": "Learn breathing techniques and basics of voice projection. Start small.",
+      "practices": [
+        "Record yourself speaking for 1 minute and listen",
+        "Speak up in a meeting at least once",
+        "Practice deep breathing before speaking"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Structuring Your Message",
+      "objective": "Create clear and engaging content.",
+      "description": "Learn storytelling structures and how to design effective slides.",
+      "practices": [
+        "Create an outline for a 5-minute talk",
+        "Practice telling a personal story with a clear point",
+        "Simplify a complex idea for a non-expert"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Engaging the Audience",
+      "objective": "Connect with listeners and handle Q&A.",
+      "description": "Master body language, eye contact, and audience interaction.",
+      "practices": [
+        "Give a presentation to a group (friends or colleagues)",
+        "Handle a Q&A session after a talk",
+        "Incorporate humor or audience questions"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "TED Talks: The Official TED Guide to Public Speaking",
+      "url": "https://www.amazon.com/TED-Talks-Official-Public-Speaking/dp/0544634497",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}

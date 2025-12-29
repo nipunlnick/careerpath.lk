@@ -3,6 +3,7 @@ import path from 'path';
 import { connectToDatabase } from '../lib/mongodb';
 import { CareerRoadmapService } from '../lib/models';
 import { QuizPatternService } from '../lib/models/QuizPattern';
+import { SoftSkillRoadmapService } from '../lib/models/SoftSkillRoadmap';
 import dotenv from 'dotenv';
 
 // Load environment variables
@@ -230,11 +231,94 @@ async function seedQuizPatternsFromJson() {
   }
 }
 
+async function seedSoftSkillsFromJson() {
+  try {
+    console.log('🗣️  Starting soft skills data seeding...');
+
+    const { db } = await connectToDatabase();
+    
+    // Path to soft skills data directory
+    const softSkillsDir = path.join(process.cwd(), 'data', 'soft-skills');
+    
+    if (!fs.existsSync(softSkillsDir)) {
+      console.error('❌ Soft skills data directory not found:', softSkillsDir);
+      return;
+    }
+
+    const files = fs.readdirSync(softSkillsDir).filter(file => file.endsWith('.json'));
+    console.log(`📁 Found ${files.length} soft skill files`);
+
+    let seedCount = 0;
+    let updateCount = 0;
+
+    for (const file of files) {
+      const filePath = path.join(softSkillsDir, file);
+      
+      try {
+        const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        
+        // Prepare roadmap data with timestamps
+        const roadmapData = {
+          ...jsonData,
+          updatedAt: new Date()
+        };
+
+        if (!roadmapData.createdAt) {
+          roadmapData.createdAt = new Date();
+        }
+
+        // Check if roadmap already exists
+        const existingRoadmap = await db.collection('softSkillRoadmaps').findOne({ slug: roadmapData.slug });
+        
+        if (existingRoadmap) {
+          // Update existing roadmap
+          await db.collection('softSkillRoadmaps').updateOne(
+            { slug: roadmapData.slug },
+            { 
+              $set: {
+                ...roadmapData,
+                _id: existingRoadmap._id,
+                createdAt: existingRoadmap.createdAt,
+                updatedAt: new Date()
+              }
+            }
+          );
+          updateCount++;
+          console.log(`🔄 Updated soft skill: ${roadmapData.name}`);
+        } else {
+          // Insert new roadmap
+          await db.collection('softSkillRoadmaps').insertOne({
+            ...roadmapData,
+            createdAt: new Date(),
+            views: 0
+          });
+          seedCount++;
+          console.log(`✅ Seeded soft skill: ${roadmapData.name}`);
+        }
+
+      } catch (error) {
+        console.error(`❌ Error processing ${file}:`, error);
+      }
+    }
+
+    console.log(`🎉 Soft skills seeding completed!`);
+    console.log(`📊 Statistics:`);
+    console.log(`   - New soft skills: ${seedCount}`);
+    console.log(`   - Updated soft skills: ${updateCount}`);
+    console.log(`   - Total processed: ${seedCount + updateCount}`);
+
+  } catch (error) {
+    console.error('❌ Soft skills seeding failed:', error);
+    process.exit(1);
+  }
+}
+
 async function seedAll() {
   console.log('🌱 Starting complete data seeding...');
   
   try {
     await seedRoadmapsFromJson();
+    await seedSoftSkillsFromJson();
     await seedQuizPatternsFromJson();
     console.log('✅ All seeding completed successfully!');
   } catch (error) {
@@ -249,4 +333,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default seedAll;
-export { seedRoadmapsFromJson, seedQuizPatternsFromJson };
+export { seedRoadmapsFromJson, seedQuizPatternsFromJson, seedSoftSkillsFromJson };

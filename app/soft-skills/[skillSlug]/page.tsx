@@ -11,7 +11,9 @@ import {
   Target,
   TrendingUp,
   Video,
+  Download,
 } from "../../../components/icons";
+import { RoadmapDownloadService } from "../../../services/downloadService";
 
 const SoftSkillRoadmapPage: React.FC = () => {
   const params = useParams();
@@ -104,19 +106,28 @@ const SoftSkillRoadmapPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 animate-fadeInUp">
-          <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-800 text-sm font-semibold mb-4">
-            Soft Skill Mastery
-          </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white capitalize mb-4">
-            {roadmap.name}
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            {roadmap.description}
-          </p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
+          <div className="text-center md:text-left">
+            <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-800 text-sm font-semibold mb-4">
+              Soft Skill Mastery
+            </span>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white capitalize mb-4">
+              {roadmap.name}
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto md:mx-0">
+              {roadmap.description}
+            </p>
+          </div>
+          <button
+            onClick={() => RoadmapDownloadService.downloadSoftSkillPDF(roadmap)}
+            className="flex items-center justify-center py-2 px-6 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-transform hover:scale-105 font-medium whitespace-nowrap"
+          >
+            <Download className="w-5 h-5 mr-2" />
+            Download Guide
+          </button>
         </div>
 
         {/* Levels */}

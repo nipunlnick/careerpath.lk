@@ -1,0 +1,53 @@
+{
+  "name": "Adaptability & Resilience",
+  "slug": "adaptability",
+  "description": "Thrive in changing environments and bounce back from setbacks.",
+  "category": "Interpersonal",
+  "tags": ["resilience", "flexibility", "change-management", "soft-skills"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Embracing Change",
+      "objective": "Develop a positive mindset towards change.",
+      "description": "Learn to view change as an opportunity rather than a threat.",
+      "practices": [
+        "Accept a small change in your routine willingly",
+        "List 3 potential benefits of a recent unexpected event",
+        "Practice saying 'yes' to new suggestions"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Learning Agility",
+      "objective": "Quickly learn new skills and unlearn old habits.",
+      "description": "Focus on being a lifelong learner and comfortable with being a beginner again.",
+      "practices": [
+        "Learn the basics of a completely new subject in 1 week",
+        "Ask for feedback on what you need to improve",
+        "Reflect on a past failure and what it taught you"
+      ],
+      "duration": "4 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Resilience Under Pressure",
+      "objective": "Maintain performance and well-being during stressful times.",
+      "description": "Build mental toughness and coping strategies for high-pressure situations.",
+      "practices": [
+        "Practice mindfulness meditation daily",
+        "Develop a personal 'stress protocol'",
+        "Support a colleague going through a tough time"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Mindset: The New Psychology of Success",
+      "url": "https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}

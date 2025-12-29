@@ -3,7 +3,7 @@ dotenv.config();
 import { GoogleGenAI } from "@google/genai";
 
 async function listModels() {
-  const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     console.error('API Key not found');
     return;

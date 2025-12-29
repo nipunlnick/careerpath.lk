@@ -7,7 +7,7 @@ let ai: GoogleGenAI | null = null;
 function initializeAI() {
   if (ai !== null) return ai;
   
-  const API_KEY = process.env.GEMINI_API_KEY || process.env.API_KEY;
+  const API_KEY = process.env.GEMINI_API_KEY;
   
   if (!API_KEY) {
     console.warn("GEMINI_API_KEY environment variable is not set. Gemini API features will be disabled.");

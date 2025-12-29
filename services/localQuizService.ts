@@ -32,7 +32,6 @@ class LocalQuizService {
       const mappingsPath = path.join(process.cwd(), 'data', 'quiz-mappings.json');
       const mappingsData = fs.readFileSync(mappingsPath, 'utf8');
       this.mappings = JSON.parse(mappingsData);
-      console.log('✅ Quiz mappings loaded successfully');
     } catch (error) {
       console.error('❌ Failed to load quiz mappings:', error);
       this.mappings = null;
@@ -67,7 +66,6 @@ class LocalQuizService {
     quizType: 'standard' | 'long'
   ): QuizPattern | null {
     if (!this.mappings) {
-      console.warn('Quiz mappings not loaded');
       return null;
     }
 
@@ -86,11 +84,9 @@ class LocalQuizService {
 
     // Only return a match if it's reasonably good (at least 60% similarity)
     if (bestScore >= 0.6) {
-      console.log(`Found pattern match: ${bestMatch?.id} with ${(bestScore * 100).toFixed(1)}% similarity`);
       return bestMatch;
     }
 
-    console.log(`No good pattern match found. Best score: ${(bestScore * 100).toFixed(1)}%`);
     return null;
   }
 
@@ -106,18 +102,16 @@ class LocalQuizService {
       const dbMatches = await QuizPatternService.findByPattern(answers, quizType, 0.6);
       
       if (dbMatches.length > 0) {
-        console.log(`Using database pattern: ${dbMatches[0].pattern.id} with ${(dbMatches[0].similarity * 100).toFixed(1)}% similarity`);
         return dbMatches[0].pattern.suggestions;
       }
       
-      console.log('No database matches found, falling back to JSON mappings');
+
     } catch (error) {
       console.warn('Database query failed, falling back to JSON mappings:', error);
     }
 
     // Fallback to JSON-based patterns
     if (!this.mappings) {
-      console.error('Quiz mappings not available, using empty fallback');
       return [];
     }
 
@@ -125,12 +119,10 @@ class LocalQuizService {
     const bestPattern = this.findBestPattern(answers, quizType);
     
     if (bestPattern) {
-      console.log(`Using JSON pattern-based suggestions for: ${bestPattern.id}`);
       return bestPattern.suggestions;
     }
 
     // Fall back to default suggestions if no good pattern match
-    console.log(`Using fallback suggestions for ${quizType} quiz`);
     return this.mappings[quizType]?.fallback || [];
   }
 
@@ -147,7 +139,6 @@ class LocalQuizService {
       const dbMatches = await QuizPatternService.findByPattern(answers, quizType, minSimilarity);
       
       if (dbMatches.length > 0) {
-        console.log(`Using database patterns: ${dbMatches.length} matches found`);
         
         // Sort by similarity score (best first)
         dbMatches.sort((a, b) => b.similarity - a.similarity);
@@ -157,12 +148,10 @@ class LocalQuizService {
         const topMatches = dbMatches.filter(match => match.similarity >= bestScore - 0.1);
 
         if (topMatches.length === 1) {
-          console.log(`Using single database pattern: ${topMatches[0].pattern.id} (${(bestScore * 100).toFixed(1)}%)`);
           return topMatches[0].pattern.suggestions;
         }
 
         // Combine suggestions from multiple similar patterns
-        console.log(`Combining suggestions from ${topMatches.length} similar database patterns`);
         const combinedSuggestions: CareerSuggestion[] = [];
         const seenCareers = new Set<string>();
 
@@ -178,7 +167,7 @@ class LocalQuizService {
         return combinedSuggestions.slice(0, 3);
       }
       
-      console.log('No database matches found, falling back to JSON mappings');
+
     } catch (error) {
       console.warn('Database query failed, falling back to JSON mappings:', error);
     }
@@ -201,7 +190,6 @@ class LocalQuizService {
     }
 
     if (matchedPatterns.length === 0) {
-      console.log('No patterns meet minimum similarity, using fallback');
       return this.mappings[quizType]?.fallback || [];
     }
 
@@ -213,12 +201,10 @@ class LocalQuizService {
     const topMatches = matchedPatterns.filter(match => match.score >= bestScore - 0.1);
 
     if (topMatches.length === 1) {
-      console.log(`Using single JSON pattern: ${topMatches[0].pattern.id} (${(bestScore * 100).toFixed(1)}%)`);
       return topMatches[0].pattern.suggestions;
     }
 
     // Combine suggestions from multiple similar patterns
-    console.log(`Combining suggestions from ${topMatches.length} similar JSON patterns`);
     const combinedSuggestions: CareerSuggestion[] = [];
     const seenCareers = new Set<string>();
 
@@ -252,7 +238,6 @@ class LocalQuizService {
     try {
       const mappingsPath = path.join(process.cwd(), 'data', 'quiz-mappings.json');
       fs.writeFileSync(mappingsPath, JSON.stringify(this.mappings, null, 2));
-      console.log(`✅ Added new pattern: ${pattern.id}`);
       return true;
     } catch (error) {
       console.error('❌ Failed to save new pattern:', error);

@@ -1,0 +1,37 @@
+{
+  "demand": "High",
+  "salaryExpectations": "LKR 80,000 to LKR 450,000 per month",
+  "requiredSkills": [
+    "React Native",
+    "Flutter",
+    "iOS (Swift)",
+    "Android (Kotlin)",
+    "API Integration"
+  ],
+  "technicalSkills": [
+    "Mobile UI Design",
+    "State Management",
+    "REST/GraphQL APIs",
+    "Firebase",
+    "Git",
+    "App Store Deployment"
+  ],
+  "softSkills": [
+    "Problem Solving",
+    "Attention to Detail",
+    "Creativity",
+    "Adaptability"
+  ],
+  "toolsAndSoftware": [
+    "VS Code",
+    "Xcode",
+    "Android Studio",
+    "Figma",
+    "Postman"
+  ],
+  "certifications": [
+    "Google Associate Android Developer",
+    "Meta React Native Specialization"
+  ],
+  "futureOutlook": "Strong demand for both native and cross-platform developers as mobile adoption continues to rise."
+}

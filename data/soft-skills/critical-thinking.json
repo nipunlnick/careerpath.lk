@@ -1,0 +1,53 @@
+{
+  "name": "Critical Thinking",
+  "slug": "critical-thinking",
+  "description": "Analyze information objectively and make reasoned judgments.",
+  "category": "Cognitive",
+  "tags": ["analysis", "logic", "reasoning", "decision-making"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Questioning Assumptions",
+      "objective": "Identify and challenge your own biases.",
+      "description": "Learn to spot cognitive biases and ask probing questions.",
+      "practices": [
+        "Identify one assumption you made today and question it",
+        "Play 'Devil's Advocate' with your own ideas",
+        "List facts vs. opinions in a news article"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Analyzing Arguments",
+      "objective": "Evaluate the strength and validity of arguments.",
+      "description": "Learn logical fallacies and how to construct sound arguments.",
+      "practices": [
+        "Identify logical fallacies in a debate or discussion",
+        "Structure a written argument with premises and conclusion",
+        "Critique a proposal objectively"
+      ],
+      "duration": "4 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Strategic Decision Making",
+      "objective": "Make high-quality decisions based on analysis.",
+      "description": "Use decision-making frameworks to solve complex problems.",
+      "practices": [
+        "Use a decision matrix for a personal choice",
+        "Conduct a cost-benefit analysis",
+        "Review a past decision to improve your process"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Thinking, Fast and Slow",
+      "url": "https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374275637",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}

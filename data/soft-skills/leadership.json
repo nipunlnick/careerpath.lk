@@ -1,0 +1,58 @@
+{
+  "name": "Leadership Essentials",
+  "slug": "leadership",
+  "description": "Develop the essential skills to lead teams and inspire others.",
+  "category": "Management",
+  "tags": ["leadership", "management", "soft-skills", "team-building"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Self-Leadership",
+      "objective": "Master self-discipline and personal accountability.",
+      "description": "Before leading others, you must lead yourself. Focus on time management, emotional regulation, and integrity.",
+      "practices": [
+        "Set personal goals and track progress weekly",
+        "Practice accountability by owning mistakes",
+        "Develop a personal mission statement"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Team Motivation",
+      "objective": "Inspire and motivate team members to achieve common goals.",
+      "description": "Learn understand what drives different individuals. Practice recognition, constructive feedback, and delegation.",
+      "practices": [
+        "Give specific, positive feedback to a colleague daily",
+        "Practice delegating tasks with clear instructions",
+        "Hold 1-on-1 meetings focused on career development"
+      ],
+      "duration": "4 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Strategic Vision",
+      "objective": "Set a clear vision and guide the team towards long-term success.",
+      "description": "Develop strategic thinking skills. Learn to communicate a compelling vision and align team efforts with organizational goals.",
+      "practices": [
+        "Create a 1-year roadmap for a personal or work project",
+        "Communicate the 'why' behind major decisions",
+        "Analyze industry trends and share insights with the team"
+      ],
+      "duration": "5 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Start with Why",
+      "url": "https://www.amazon.com/Start-Why-Leaders-Inspire-Everyone/dp/1591846447",
+      "type": "book"
+    },
+    {
+      "title": "Leadership: Practical Leadership Skills",
+      "url": "https://www.udemy.com/course/leadership-practical-leadership-skills/",
+      "type": "course"
+    }
+  ],
+  "isActive": true
+}

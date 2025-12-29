@@ -1,0 +1,53 @@
+{
+  "name": "Creative Problem Solving",
+  "slug": "problem-solving",
+  "description": "Develop an analytical and creative approach to solving complex challenges.",
+  "category": "Cognitive",
+  "tags": ["problem-solving", "critical-thinking", "soft-skills", "innovation"],
+  "levels": [
+    {
+      "level": 1,
+      "title": "Defining the Problem",
+      "objective": "Accurately identify and articulate the root cause of a problem.",
+      "description": "Learn to look past symptoms to find underlying causes using techniques like the '5 Whys'.",
+      "practices": [
+        "Apply the '5 Whys' technique to a current issue",
+        "Write a clear, one-sentence problem statement",
+        "Gather data before jumping to solutions"
+      ],
+      "duration": "2 weeks"
+    },
+    {
+      "level": 2,
+      "title": "Generating Solutions",
+      "objective": "Brainstorm and evaluate multiple potential solutions.",
+      "description": "Practice divergent thinking to generate options, then convergent thinking to select the best one.",
+      "practices": [
+        "Force yourself to come up with at least 5 solutions for a problem",
+        "Use mind mapping to explore connections",
+        "Evaluate solutions based on feasibility and impact"
+      ],
+      "duration": "3 weeks"
+    },
+    {
+      "level": 3,
+      "title": "Implementation & Iteration",
+      "objective": "Execute a solution and adapt based on feedback.",
+      "description": "Learn to plan an implementation, monitor results, and pivot if necessary.",
+      "practices": [
+        "Create an action plan for a solution",
+        "Define metrics for success before starting",
+        "Conduct a post-mortem review after a project"
+      ],
+      "duration": "4 weeks"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Problem Solving 101",
+      "url": "https://www.amazon.com/Problem-Solving-101-Simple-Smart-People/dp/1591842425",
+      "type": "book"
+    }
+  ],
+  "isActive": true
+}
