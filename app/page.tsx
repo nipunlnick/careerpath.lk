@@ -55,7 +55,7 @@ const Home: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
             </span>
-            <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+            <span className="text-sm font-medium text-blue-600 dark:text-blue-900">
               #1 Career Guidance Platform in Sri Lanka 🇱🇰
             </span>
           </div>

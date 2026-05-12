@@ -46,13 +46,19 @@ const About: React.FC = () => {
       name: "Nipun Lakshitha",
       role: "Creator & Lead Developer",
       imageUrl: "/me.jpeg",
-      bio: "Passionate about empowering Sri Lankan youth, Nipun built CareerPath.lk to bridge the gap between education and employment using technology.",
+      bio: "The visionary behind CareerPath.lk (GovPrep), Nipun built this platform to empower Sri Lankan youth through technology.",
+    },
+    {
+      name: "Voxicore",
+      role: "Maintenance & Development Partner",
+      icon: Code,
+      bio: "Voxicore ensures the platform remains cutting-edge, secure, and reliable for thousands of students across the island.",
     },
     {
       name: "Gemini AI",
       role: "AI Intelligence Core",
       icon: Google,
-      bio: "The advanced AI engine powering our personalized roadmaps, market insights, and career guidance, ensuring you get the best advice.",
+      bio: "The advanced AI engine powering our personalized roadmaps, market insights, and career guidance.",
     },
   ];
 
@@ -237,6 +243,13 @@ const About: React.FC = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Maintenance Info */}
+      <section className="text-center animate-fadeInUp animation-delay-600">
+        <p className="text-gray-500 dark:text-gray-400 text-sm italic">
+          GovPrep is created by <span className="text-gray-900 dark:text-white font-medium">Nipun Lakshitha</span> & maintained by <span className="text-primary font-medium">Voxicore</span>
+        </p>
       </section>
 
       {/* Call to Action Section */}

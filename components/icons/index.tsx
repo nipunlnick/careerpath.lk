@@ -28,3 +28,5 @@ export { default as Star } from "./Star";
 export { default as Target } from "./Target";
 export { default as TrendingUp } from "./TrendingUp";
 export { default as User } from "./User";
+export { default as Mail } from "./Mail";
+export { default as Globe } from "./Globe";
