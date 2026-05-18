@@ -58,13 +58,13 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed z-50 transition-all duration-500 ease-out ${
         scrolled
-          ? "glass shadow-md py-2"
-          : "bg-transparent py-4 border-b border-transparent"
-      } dark:glass-dark`}
+          ? "top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl glass dark:glass-dark shadow-2xl py-1.5 rounded-full border border-white/20 dark:border-white/10"
+          : "top-0 left-0 w-full bg-transparent py-4 border-b border-transparent"
+      }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link

@@ -1,0 +1,6 @@
+# AI Agent Workspace Rules & Guidelines
+
+## 🛡️ Quality Assurance & Auditing Policy
+- **NO Automatic Auditing**: DO NOT run or generate quality, security, or pre-deployment audits, nor query database security advisors (`get_advisors`), automatically with every code change or after small tasks.
+- **On-Demand Only**: Audits and security reviews must ONLY be performed when the user explicitly requests one (e.g., "run audit", "perform security check", "audit before deployment").
+- **Concise Reporting**: Keep reports focused on actionable findings, using structured markdown artifacts (`walkthrough.md` or `pre_deployment_audit.md`) only when requested.

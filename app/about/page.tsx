@@ -17,7 +17,7 @@ import { usePageMeta } from "../../hooks/usePageMeta";
 const About: React.FC = () => {
   usePageMeta(
     "About CareerPath.lk | Our Mission",
-    "Learn about CareerPath.lk's mission to empower Sri Lankan students with free, AI-powered, and locally-tailored career guidance to help them plan their future."
+    "Learn about CareerPath.lk's mission to empower Sri Lankan students with free, AI-powered, and locally-tailored career guidance to help them plan their future.",
   );
 
   const [insights, setInsights] = useState<MarketInsights | null>(null);
@@ -27,9 +27,8 @@ const About: React.FC = () => {
     const fetchExampleInsights = async () => {
       setIsLoading(true);
       try {
-        const result = await import(
-          "../../data/insights/software-engineer.json"
-        );
+        const result =
+          await import("../../data/insights/software-engineer.json");
         setInsights(result.default);
       } catch (error) {
         console.error("Failed to load example insights:", error);
@@ -43,15 +42,15 @@ const About: React.FC = () => {
 
   const teamMembers = [
     {
-      name: "Nipun Lakshitha",
+      name: "Nipun Lakshitha (Nick)",
       role: "Creator & Lead Developer",
       imageUrl: "/me.jpeg",
-      bio: "The visionary behind CareerPath.lk (GovPrep), Nipun built this platform to empower Sri Lankan youth through technology.",
+      bio: "The visionary behind CareerPath.lk, Nipun built this platform to empower Sri Lankan youth through technology.",
     },
     {
       name: "Voxicore",
       role: "Maintenance & Development Partner",
-      icon: Code,
+      imageUrl: "/voxicore.png",
       bio: "Voxicore ensures the platform remains cutting-edge, secure, and reliable for thousands of students across the island.",
     },
     {
@@ -222,13 +221,17 @@ const About: React.FC = () => {
             >
               {member.icon ? (
                 <div className="w-32 h-32 mx-auto flex items-center justify-center bg-white rounded-full">
-                  <member.icon className="w-20 h-20" />
+                  <member.icon className="w-20 h-20 text-gray-700" />
                 </div>
               ) : (
                 <img
                   src={member.imageUrl}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto object-cover"
+                  className={`w-32 h-32 rounded-full mx-auto ${
+                    member.imageUrl?.includes("voxicore.png")
+                      ? "object-contain bg-white p-4 border border-gray-200 dark:border-gray-700 shadow-sm"
+                      : "object-cover"
+                  }`}
                 />
               )}
               <h3 className="mt-4 text-xl font-bold text-gray-900 dark:text-white">
@@ -243,13 +246,6 @@ const About: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* Maintenance Info */}
-      <section className="text-center animate-fadeInUp animation-delay-600">
-        <p className="text-gray-500 dark:text-gray-400 text-sm italic">
-          GovPrep is created by <span className="text-gray-900 dark:text-white font-medium">Nipun Lakshitha</span> & maintained by <span className="text-primary font-medium">Voxicore</span>
-        </p>
       </section>
 
       {/* Call to Action Section */}

@@ -9,6 +9,9 @@ import { useAuth } from "../../contexts/AuthContext";
 import type { CareerSuggestion } from "../../types";
 import { usePageMeta } from "../../hooks/usePageMeta";
 import * as Icons from "../../components/icons";
+import RadarChart from "../../components/RadarChart";
+import { getDemandBadge } from "../../utils/demand";
+import { QuizResultsSkeleton } from "../../components/Skeleton";
 
 const CareerQuiz: React.FC = () => {
   usePageMeta(
@@ -79,20 +82,27 @@ const CareerQuiz: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-4">
-        <div className="glass dark:glass-dark p-12 rounded-3xl shadow-2xl text-center max-w-md w-full animate-fadeInUp">
-          <div className="relative w-20 h-20 mx-auto mb-6">
-            <div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-700 rounded-full"></div>
-            <div className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            Analyzing Profile
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300">
-            Our AI is matching your answers with over 50+ career paths...
-          </p>
-          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-primary font-medium bg-primary/10 py-2 px-4 rounded-full inline-flex">
-            <span>⚡ Powered by Gem-Flash AI</span>
+      <div className="relative min-h-screen pt-24 pb-12 overflow-hidden">
+        {/* Background pulsing skeleton */}
+        <div className="opacity-40 select-none pointer-events-none">
+          <QuizResultsSkeleton />
+        </div>
+        {/* Glass floating loading modal */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/10 dark:bg-black/20 backdrop-blur-[2px]">
+          <div className="glass dark:glass-dark p-8 sm:p-12 rounded-3xl shadow-2xl text-center max-w-md w-full animate-fadeInScale border border-white/20 dark:border-white/10">
+            <div className="relative w-16 h-16 mx-auto mb-6">
+              <div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-700 rounded-full"></div>
+              <div className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              Analyzing Profile
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              Our AI is matching your answers with over 50+ career paths...
+            </p>
+            <div className="mt-6 flex items-center justify-center gap-2 text-xs text-primary font-medium bg-primary/10 py-2 px-4 rounded-full inline-flex">
+              <span>⚡ Powered by Gem-Flash AI</span>
+            </div>
           </div>
         </div>
       </div>
@@ -147,6 +157,10 @@ const CareerQuiz: React.FC = () => {
           </p>
         </div>
 
+        <div className="mb-12">
+          <RadarChart suggestions={suggestions} />
+        </div>
+
         <div className="grid gap-8">
           {suggestions.map((suggestion, index) => (
             <div
@@ -158,13 +172,22 @@ const CareerQuiz: React.FC = () => {
 
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-3">
-                    {suggestion.career}
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex flex-wrap items-center gap-3">
+                    <span>{suggestion.career}</span>
                     {index === 0 && (
                       <span className="bg-gradient-to-r from-primary to-secondary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
                         Top Match
                       </span>
                     )}
+                    {(() => {
+                      const badge = getDemandBadge(suggestion.career);
+                      return badge ? (
+                        <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1 ${badge.className}`}>
+                          <span>{badge.icon}</span>
+                          <span>{badge.text}</span>
+                        </span>
+                      ) : null;
+                    })()}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     {suggestion.description}

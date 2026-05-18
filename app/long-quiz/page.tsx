@@ -7,6 +7,7 @@ import { useLocalQuizApi } from "../../hooks/api/useLocalQuizApi";
 import { useAuth } from "../../contexts/AuthContext";
 import type { CareerSuggestion } from "../../types";
 import { usePageMeta } from "../../hooks/usePageMeta";
+import { QuizResultsSkeleton } from "../../components/Skeleton";
 
 const LongCareerQuiz: React.FC = () => {
   usePageMeta(
@@ -69,17 +70,29 @@ const LongCareerQuiz: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="text-center mt-8 bg-white dark:bg-gray-800 p-12 rounded-xl shadow-lg">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg">
-          Performing deep analysis on your answers...
-        </p>
-        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-          This will give you highly personalized results!
-        </p>
-        <p className="mt-2 text-sm text-green-600 dark:text-green-400">
-          ⚡ Powered by our new lightning-fast local matching system
-        </p>
+      <div className="relative min-h-screen pt-24 pb-12 overflow-hidden">
+        {/* Background pulsing skeleton */}
+        <div className="opacity-40 select-none pointer-events-none">
+          <QuizResultsSkeleton />
+        </div>
+        {/* Glass floating loading modal */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/10 dark:bg-black/20 backdrop-blur-[2px]">
+          <div className="glass dark:glass-dark p-8 sm:p-12 rounded-3xl shadow-2xl text-center max-w-md w-full animate-fadeInScale border border-white/20 dark:border-white/10">
+            <div className="relative w-16 h-16 mx-auto mb-6">
+              <div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-700 rounded-full"></div>
+              <div className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              Deep Profile Analysis
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              Performing deep matches on your answers with our database...
+            </p>
+            <div className="mt-6 flex items-center justify-center gap-2 text-xs text-primary font-medium bg-primary/10 py-2 px-4 rounded-full inline-flex">
+              <span>⚡ Local Match Engine Active</span>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

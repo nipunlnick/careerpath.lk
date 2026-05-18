@@ -6,6 +6,7 @@ import Link from "next/link";
 import { EXPLORE_CAREERS } from "../constants/careers";
 import * as Icons from "../components/icons";
 import type { Career } from "../types";
+import { getDemandBadge } from "../utils/demand";
 
 const Home: React.FC = () => {
   const navigate = useRouter();
@@ -197,18 +198,26 @@ const Home: React.FC = () => {
                 >
                   <div className="overflow-hidden">
                     <div className="p-6 pt-0 grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                      {category.careers.map((career) => (
-                        <button
-                          key={career.name}
-                          onClick={() => handleCareerClick(career)}
-                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-left group"
-                        >
-                          <div className="w-1 h-1 bg-gray-300 rounded-full group-hover:bg-primary transition-colors"></div>
-                          <span className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-primary transition-colors">
-                            {career.name}
-                          </span>
-                        </button>
-                      ))}
+                      {category.careers.map((career) => {
+                        const badge = getDemandBadge(career.name);
+                        return (
+                          <button
+                            key={career.name}
+                            onClick={() => handleCareerClick(career)}
+                            className="flex flex-col p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-all text-left group border border-transparent hover:border-gray-200 dark:hover:border-white/10"
+                          >
+                            <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors mb-1.5">
+                              {career.name}
+                            </span>
+                            {badge && (
+                              <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 self-start ${badge.className}`}>
+                                <span>{badge.icon}</span>
+                                <span>{badge.text}</span>
+                              </span>
+                            )}
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

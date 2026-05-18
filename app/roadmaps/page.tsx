@@ -8,6 +8,8 @@ import * as Icons from "../../components/icons";
 import { useRoadmapSearch } from "../../hooks/api/useRoadmapSearch";
 import { useAuth } from "../../contexts/AuthContext";
 import { usePageMeta } from "../../hooks/usePageMeta";
+import { getDemandBadge } from "../../utils/demand";
+import { RoadmapsListSkeleton } from "../../components/Skeleton";
 
 const RoadmapsPage: React.FC = () => {
   usePageMeta(
@@ -66,11 +68,33 @@ const RoadmapsPage: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
-        <p className="mt-6 text-xl font-medium text-gray-600 dark:text-gray-300 animate-pulse">
-          Generating your personalized roadmap...
-        </p>
+      <div className="relative min-h-screen pt-24 pb-12 overflow-hidden">
+        {/* Background pulsing skeleton */}
+        <div className="opacity-40 select-none pointer-events-none max-w-7xl mx-auto px-4">
+          <div className="space-y-6 mb-8 text-center">
+            <div className="h-10 w-2/3 mx-auto max-w-lg bg-gray-200 dark:bg-gray-700 animate-pulse rounded-xl" />
+            <div className="h-5 w-1/2 mx-auto max-w-md bg-gray-200 dark:bg-gray-700 animate-pulse rounded" />
+          </div>
+          <RoadmapsListSkeleton />
+        </div>
+        {/* Glass floating loading modal */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/10 dark:bg-black/20 backdrop-blur-[2px]">
+          <div className="glass dark:glass-dark p-8 sm:p-12 rounded-3xl shadow-2xl text-center max-w-md w-full animate-fadeInScale border border-white/20 dark:border-white/10">
+            <div className="relative w-16 h-16 mx-auto mb-6">
+              <div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-700 rounded-full"></div>
+              <div className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              Generating Roadmap
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              Our AI is charting a path with qualifications, tools, and salary milestones...
+            </p>
+            <div className="mt-6 flex items-center justify-center gap-2 text-xs text-primary font-medium bg-primary/10 py-2 px-4 rounded-full inline-flex">
+              <span>⚡ Generating fresh data for you</span>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -198,7 +222,7 @@ const RoadmapsPage: React.FC = () => {
                   <div className="overflow-hidden">
                     <div className="p-8 pt-0 border-t border-gray-100 dark:border-white/5 mt-2">
                       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-6">
-                        {category.careers.map((career) => (
+                         {category.careers.map((career) => (
                           <Link
                             key={career.name}
                             href={
@@ -208,14 +232,25 @@ const RoadmapsPage: React.FC = () => {
                                     career.name
                                   )}`
                             }
-                            className="flex items-center p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all group border border-transparent hover:border-gray-200 dark:hover:border-white/10"
+                            className="flex items-start p-3.5 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all group border border-transparent hover:border-gray-200 dark:hover:border-white/10"
                           >
-                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform flex-shrink-0 mt-0.5">
                               <Icons.ChevronRight className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-gray-700 dark:text-gray-200 group-hover:text-primary transition-colors">
-                              {career.name}
-                            </span>
+                            <div className="flex flex-col">
+                              <span className="font-semibold text-gray-700 dark:text-gray-200 group-hover:text-primary transition-colors mb-1">
+                                {career.name}
+                              </span>
+                              {(() => {
+                                const badge = getDemandBadge(career.name);
+                                return badge ? (
+                                  <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 self-start ${badge.className}`}>
+                                    <span>{badge.icon}</span>
+                                    <span>{badge.text}</span>
+                                  </span>
+                                ) : null;
+                              })()}
+                            </div>
                           </Link>
                         ))}
                       </div>
