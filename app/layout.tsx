@@ -6,6 +6,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AdminNav from "../components/AdminNav";
 import AuroraWrapper from "@/components/AuroraWrapper";
+import { PwaRegistry } from "@/components/PwaRegistry";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -96,6 +98,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-yellow-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300`}
       >
+        <Toaster theme="dark" position="bottom-right" richColors />
+        <PwaRegistry />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

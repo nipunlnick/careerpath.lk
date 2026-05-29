@@ -20,7 +20,8 @@ const PrivacyPolicy: React.FC = () => {
           CareerPath.lk ("we," "our," or "us") respects your privacy and is
           committed to protecting the personal information you may provide us
           through our website. This Privacy Policy explains what information we
-          collect, how we use it, and the choices you have.
+          collect, how we use it, and the choices you have, in compliance with 
+          applicable laws including the Sri Lanka Personal Data Protection Act, No. 9 of 2022.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -56,7 +57,20 @@ const PrivacyPolicy: React.FC = () => {
         </ul>
 
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          3. Information Sharing
+          3. Your Data Protection Rights
+        </h2>
+        <p>
+          Depending on your location and in accordance with Sri Lankan law, you have the right to:
+        </p>
+        <ul className="list-disc list-inside ml-4 space-y-2">
+          <li>Request access to your personal data.</li>
+          <li>Request correction or deletion of your personal data.</li>
+          <li>Object to or restrict the processing of your data.</li>
+          <li>Withdraw consent for data processing at any time.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          4. Information Sharing
         </h2>
         <p>
           We do not sell, trade, or otherwise transfer your personal information
@@ -68,27 +82,25 @@ const PrivacyPolicy: React.FC = () => {
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          4. Cookies
+          5. Cookies
         </h2>
         <p>
-          We use cookies to enhance your experience. You can choose to have your
-          computer warn you each time a cookie is being sent, or you can choose
-          to turn off all cookies. If you turn cookies off, some features will
-          be disabled.
+          We use cookies to enhance your experience. For detailed information on the 
+          cookies we use and the purposes for which we use them, please refer to our 
+          <a href="/cookie-policy" className="text-blue-600 hover:underline ml-1">Cookie Policy</a>.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          5. Security
+          6. Security
         </h2>
         <p>
           We implement a variety of security measures to maintain the safety of
-          your personal information when you enter, submit, or access your
-          personal information. However, no method of transmission over the
+          your personal information. However, no method of transmission over the
           Internet is 100% secure.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          6. Changes to This Policy
+          7. Changes to This Policy
         </h2>
         <p>
           We may update our Privacy Policy from time to time. We will notify you
@@ -96,11 +108,11 @@ const PrivacyPolicy: React.FC = () => {
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-          7. Contact Us
+          8. Contact Us
         </h2>
         <p>
-          If there are any questions regarding this privacy policy, you may
-          contact us using the information on our website.
+          If there are any questions regarding this privacy policy or your data rights, you may
+          contact us at <a href="mailto:support@careerpath.lk" className="text-blue-600 hover:underline">support@careerpath.lk</a>.
         </p>
       </div>
     </div>

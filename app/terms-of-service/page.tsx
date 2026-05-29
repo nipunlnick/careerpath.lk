@@ -98,6 +98,13 @@ const TermsOfService: React.FC = () => {
           These Terms shall be governed by and construed in accordance with the
           laws of Sri Lanka, without regard to its conflict of law provisions.
         </p>
+
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-6">
+          8. Contact Us
+        </h2>
+        <p>
+          If you have any questions about these Terms, please contact us at <a href="mailto:support@careerpath.lk" className="text-blue-600 hover:underline">support@careerpath.lk</a>.
+        </p>
       </div>
     </div>
   );

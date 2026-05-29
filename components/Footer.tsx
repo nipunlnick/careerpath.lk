@@ -117,18 +117,24 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex gap-6">
+          <div className="flex gap-4 sm:gap-6 flex-wrap justify-center md:justify-end">
             <Link
               href="/privacy-policy"
-              className="text-xs text-gray-500 hover:text-primary transition-colors"
+              className="text-xs text-gray-500 hover:text-primary transition-colors whitespace-nowrap"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms-of-service"
-              className="text-xs text-gray-500 hover:text-primary transition-colors"
+              className="text-xs text-gray-500 hover:text-primary transition-colors whitespace-nowrap"
             >
               Terms of Service
+            </Link>
+            <Link
+              href="/cookie-policy"
+              className="text-xs text-gray-500 hover:text-primary transition-colors whitespace-nowrap"
+            >
+              Cookie Policy
             </Link>
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "../constants/navigation";
 
@@ -73,10 +74,13 @@ const Header: React.FC = () => {
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <img
+                <Image
                   src="/cplogo.png"
                   alt="CareerPath.lk"
+                  width={28}
+                  height={40}
                   className="h-10 w-7 relative z-10"
+                  priority
                 />
               </div>
               <span>
