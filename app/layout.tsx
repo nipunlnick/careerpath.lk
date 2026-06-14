@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import { Providers } from "./providers";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AdminNav from "../components/AdminNav";
-import AuroraWrapper from "@/components/AuroraWrapper";
 import { PwaRegistry } from "@/components/PwaRegistry";
 import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const AuroraWrapper = dynamic(() => import("@/components/AuroraWrapper"), { ssr: false });
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "CareerPath.lk | Dynamic Career Guidance & Roadmap Explorer",
@@ -54,6 +56,8 @@ export const metadata: Metadata = {
     title: "CareerPath.lk | Dynamic Career Guidance & Roadmap Explorer",
     description: "Personalized step-by-step career paths and real-time market insights for Sri Lankan students. Free AI-powered assessments.",
     images: ["https://careerpath.lk/cplogo.png"],
+    creator: "@CareerPathLK",
+    site: "@CareerPathLK",
   },
   robots: {
     index: true,
@@ -78,19 +82,34 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "CareerPath.lk",
-    "url": "https://careerpath.lk",
-    "logo": "https://careerpath.lk/cplogo.png",
-    "description": "Sri Lanka's leading career guidance and mock exam platform, offering step-by-step roadmaps, AI-driven skills analysis, and real-time market insights.",
-    "inLanguage": "en-LK",
-    "offers": {
-      "@type": "Offer",
-      "name": "Quick Career Quiz & In-Depth Assessments",
-      "price": "0",
-      "priceCurrency": "LKR",
-      "category": "Educational Assessment"
-    }
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "CareerPath.lk",
+        "url": "https://careerpath.lk",
+        "logo": "https://careerpath.lk/cplogo.png",
+        "description": "Sri Lanka's leading career guidance and mock exam platform, offering step-by-step roadmaps, AI-driven skills analysis, and real-time market insights.",
+        "inLanguage": "en-LK",
+        "offers": {
+          "@type": "Offer",
+          "name": "Quick Career Quiz & In-Depth Assessments",
+          "price": "0",
+          "priceCurrency": "LKR",
+          "category": "Educational Assessment"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "CareerPath.lk",
+        "url": "https://careerpath.lk",
+        "description": "Dynamic Career Guidance & Roadmap Explorer",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://careerpath.lk/roadmaps?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
   };
 
   return (
