@@ -1,9 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { AlertCircle, RefreshCw, Home } from "lucide-react";
-import Link from "next/link";
-import { toast } from "sonner";
+import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Error({
   error,
@@ -14,53 +12,33 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error("Global App Error [CareerPath]:", error);
-    toast.error("An error occurred", {
-      description: error.message || "Failed to load the page."
-    });
+    console.error('Caught by error.tsx boundary:', error);
   }, [error]);
 
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center">
-      <div className="p-10 rounded-[2rem] bg-white dark:bg-gray-800 border border-yellow-200 dark:border-gray-700 shadow-xl max-w-lg w-full relative overflow-hidden">
-        {/* Abstract Background Element */}
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-red-500/10 blur-[80px] rounded-full pointer-events-none" />
-        
-        <div className="relative z-10 flex flex-col items-center">
-          <div className="h-20 w-20 rounded-2xl bg-red-50 dark:bg-red-900/20 text-red-500 flex items-center justify-center mb-8">
-            <AlertCircle className="h-10 w-10" />
-          </div>
-
-          <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-4">
-            System Roadblock
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed mb-10">
-            Something went wrong while navigating your career path. Our technical team has been notified of the issue.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center gap-4 w-full">
-            <button
-              onClick={() => reset()}
-              className="bg-primary hover:bg-primary/90 text-white w-full py-4 rounded-xl flex items-center justify-center gap-2 group font-bold transition-all"
-            >
-              <RefreshCw className="h-5 w-5 group-active:rotate-180 transition-transform" /> 
-              Try Again
-            </button>
-            <Link
-              href="/"
-              className="bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 w-full py-4 rounded-xl flex items-center justify-center gap-2 font-bold transition-all"
-            >
-              <Home className="h-5 w-5" /> 
-              Return Home
-            </Link>
-          </div>
-
-          {error.digest && (
-            <p className="mt-8 text-[10px] text-gray-400 font-mono uppercase tracking-widest opacity-50">
-              Error ID: {error.digest}
-            </p>
-          )}
-        </div>
+    <div className="flex flex-col items-center justify-center min-h-[50vh] px-4 text-center">
+      <div className="bg-red-50 text-red-600 p-4 rounded-full mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong!</h2>
+      <p className="text-gray-500 mb-8 max-w-md">
+        We apologize for the inconvenience. An unexpected error has occurred on this page.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <button
+          onClick={() => reset()}
+          className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
+        >
+          Try again
+        </button>
+        <Link 
+          href="/"
+          className="px-6 py-2 bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+        >
+          Return Home
+        </Link>
       </div>
     </div>
   );

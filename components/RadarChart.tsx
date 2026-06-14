@@ -235,7 +235,7 @@ const RadarChart: React.FC<RadarChartProps> = ({ suggestions }) => {
             const p = getCoordinates(i, 100, offsetDist);
             
             // Adjust alignments depending on placement to avoid cutting off
-            let anchor = "middle";
+            let anchor: "middle" | "start" | "end" = "middle";
             if (p.x < cx - 40) anchor = "end";
             if (p.x > cx + 40) anchor = "start";
 

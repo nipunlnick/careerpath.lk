@@ -50,17 +50,20 @@ export class CareerRoadmapService {
   static async search(query: string, limit: number = 10): Promise<CareerRoadmap[]> {
     const { db } = await connectToDatabase();
     
+    // Escape regex characters to prevent ReDoS
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    
     return await db.collection<CareerRoadmap>(this.COLLECTION_NAME)
       .find({
         $and: [
           { isActive: true },
           {
             $or: [
-              { name: { $regex: query, $options: 'i' } },
-              { description: { $regex: query, $options: 'i' } },
-              { tags: { $in: [new RegExp(query, 'i')] } },
-              { 'steps.title': { $regex: query, $options: 'i' } },
-              { 'steps.skills': { $in: [new RegExp(query, 'i')] } }
+              { name: { $regex: escapedQuery, $options: 'i' } },
+              { description: { $regex: escapedQuery, $options: 'i' } },
+              { tags: { $in: [new RegExp(escapedQuery, 'i')] } },
+              { 'steps.title': { $regex: escapedQuery, $options: 'i' } },
+              { 'steps.skills': { $in: [new RegExp(escapedQuery, 'i')] } }
             ]
           }
         ]

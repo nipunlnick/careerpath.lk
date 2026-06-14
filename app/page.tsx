@@ -50,42 +50,71 @@ const Home: React.FC = () => {
           <div className="absolute -bottom-20 left-1/3 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-float animation-delay-1000"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fadeInUp">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
-            </span>
-            <span className="text-sm font-medium text-blue-600 dark:text-blue-900">
-              #1 Career Guidance Platform in Sri Lanka 🇱🇰
-            </span>
-          </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fadeInUp">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-accent"></span>
+                </span>
+                <span className="text-sm font-medium text-blue-600 dark:text-blue-900">
+                  #1 Career Guidance Platform in Sri Lanka 🇱🇰
+                </span>
+              </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 animate-fadeInUp animation-delay-200">
-            Find Your Path <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-500 to-secondary animate-gradient-x">
-              Shape Your Future
-            </span>
-          </h1>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 animate-fadeInUp animation-delay-200 leading-[1.05]">
+                Find Your Path <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-500 to-secondary animate-gradient-x">
+                  Shape Your Future
+                </span>
+              </h1>
 
-          <p className="max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300 mb-10 animate-fadeInUp animation-delay-300 leading-relaxed">
-            Personalized career roadmaps, AI-driven skills analysis, and
-            real-time market insights tailored for Sri Lankan students.
-          </p>
+              <p className="max-w-xl text-xl text-gray-600 dark:text-gray-300 mb-10 animate-fadeInUp animation-delay-300 leading-relaxed">
+                Personalized career roadmaps, AI-driven skills analysis, and
+                real-time market insights tailored for Sri Lankan students.
+              </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeInUp animation-delay-400">
-            <button
-              onClick={() => navigate.push("/quiz")}
-              className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-full font-semibold shadow-lg shadow-primary/30 transition-all hover:scale-105"
-            >
-              Take Career Quiz
-            </button>
-            <button
-              onClick={() => navigate.push("/roadmaps")}
-              className="w-full sm:w-auto px-8 py-4 bg-white dark:bg-white/10 text-gray-900 dark:text-white rounded-full font-semibold border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/20 transition-all hover:scale-105"
-            >
-              Explore Roadmaps
-            </button>
+              <div className="flex flex-col sm:flex-row items-center gap-6 animate-fadeInUp animation-delay-400">
+                <button
+                  onClick={() => navigate.push("/quiz")}
+                  className="w-full sm:w-auto px-10 py-5 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold shadow-xl shadow-primary/30 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-95 text-lg"
+                >
+                  Take Career Quiz
+                </button>
+                <button
+                  onClick={() => navigate.push("/roadmaps")}
+                  className="w-full sm:w-auto text-gray-600 dark:text-gray-300 font-semibold hover:text-primary dark:hover:text-primary flex items-center gap-2 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-95"
+                >
+                  Explore Roadmaps <Icons.ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            <div className="hidden md:block relative animate-fadeInRight animation-delay-500">
+              <div className="relative w-full aspect-square max-w-lg mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-accent/20 to-secondary/20 rounded-[3rem] blur-2xl"></div>
+                <div className="relative w-full h-full glass dark:glass-dark rounded-[3rem] border border-white/40 p-8 flex flex-col justify-between">
+                  <div className="flex justify-between items-start">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+                      <span className="text-4xl">🚀</span>
+                    </div>
+                    <div className="px-4 py-2 rounded-full bg-success/10 text-success text-sm font-bold">
+                      98% Match Rate
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                    <div className="h-4 w-1/2 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                    <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                  </div>
+                  <div className="p-4 bg-white/50 dark:bg-black/20 rounded-2xl border border-white/20 backdrop-blur-md">
+                    <p className="font-semibold text-gray-900 dark:text-white">AI Analysis Complete</p>
+                    <p className="text-sm text-gray-500">Path perfectly aligned with strengths.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -93,8 +122,8 @@ const Home: React.FC = () => {
       {/* Features Grid */}
       <section className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-primary/50 transition-all duration-500 animate-fadeInLeft">
-            <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-primary/50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md animate-fadeInLeft">
+            <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <span className="text-3xl">⚡</span>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
@@ -112,8 +141,8 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-secondary/50 transition-all duration-500 animate-fadeInRight">
-            <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-secondary/50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md animate-fadeInRight">
+            <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <span className="text-3xl">🎯</span>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
@@ -262,7 +291,7 @@ const Home: React.FC = () => {
             ].map((testimonial, i) => (
               <div
                 key={i}
-                className="bg-white/50 dark:bg-black/20 p-6 rounded-2xl border border-white/20 hover:-translate-y-1 transition-transform duration-300"
+                className="bg-white/50 dark:bg-black/20 p-6 rounded-2xl border border-white/20 hover:border-primary/30 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-lg active:scale-[0.98] cursor-default"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -276,7 +305,7 @@ const Home: React.FC = () => {
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <img
+                  <img loading="lazy"
                     src={testimonial.img}
                     alt={testimonial.name}
                     className="w-10 h-10 rounded-full"

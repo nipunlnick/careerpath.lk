@@ -224,7 +224,7 @@ const About: React.FC = () => {
                   <member.icon className="w-20 h-20 text-gray-700" />
                 </div>
               ) : (
-                <img
+                <img loading="lazy"
                   src={member.imageUrl}
                   alt={member.name}
                   className={`w-32 h-32 rounded-full mx-auto ${

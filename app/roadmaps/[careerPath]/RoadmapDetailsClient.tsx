@@ -168,7 +168,7 @@ export function RoadmapDetailsClient() {
           className="text-green-600 hover:underline dark:text-green-400 mt-2 inline-block"
         >
           Go back to Roadmaps
-        </p>
+        </Link>
       </div>
     );
   }

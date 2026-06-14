@@ -3,6 +3,7 @@ import { QuizResultService } from '@/lib/models/QuizResult';
 import { CareerRoadmapService } from '@/lib/models/CareerRoadmap';
 import { localQuizService } from '@/services/localQuizService';
 import crypto from 'crypto';
+import { logger } from '@/lib/logger';
 
 function generateAnswersHash(answers: any): string {
   const normalizedAnswers = Array.isArray(answers)
@@ -89,7 +90,7 @@ export async function POST(request: NextRequest) {
             roadmapSlug: slug
           };
         } catch (error) {
-          console.error(`Error processing suggestion ${suggestion.career}:`, error);
+          logger.error(`Error processing suggestion ${suggestion.career}`, error, '/api/quiz/generate');
           return {
             career: suggestion.career,
             description: suggestion.description,
@@ -120,7 +121,7 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error) {
-    console.error('Error generating quiz result:', JSON.stringify(error, Object.getOwnPropertyNames(error)));
+    logger.error('Error generating quiz result', error, '/api/quiz/generate');
     return NextResponse.json({
       success: false,
       error: error instanceof Error ? error.message : 'Failed to generate quiz result'

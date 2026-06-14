@@ -1,0 +1,35 @@
+name: QA Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci || npm install
+      
+    - name: Run ESLint
+      run: npm run lint --if-present
+      
+    - name: Security Audit
+      run: npm audit --audit-level=critical
+      
+    - name: Build Application
+      run: npm run build
+      env:
+        # Provide dummy keys if needed for build steps
+        NEXT_PUBLIC_API_URL: http://localhost:3000
