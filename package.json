@@ -27,6 +27,7 @@
     "express-rate-limit": "^8.2.0",
     "express-validator": "^7.3.0",
     "helmet": "^8.1.0",
+    "jose": "^6.2.3",
     "jsonwebtoken": "^9.0.2",
     "jspdf": "latest",
     "jspdf-autotable": "^5.0.8",

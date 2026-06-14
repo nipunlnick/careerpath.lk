@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { jwtVerify } from 'jose';
 
-export function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
 
   // Protect /admin and /api/admin routes
@@ -23,10 +24,16 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL('/admin/login', request.url));
     }
     
-    // NOTE: In a real production environment with Edge middleware, 
-    // you should verify the JWT token signature using the 'jose' library here.
-    // For this audit, we rely on the token existence in middleware, and 
-    // strict verification can be added in individual Node API routes if needed.
+    try {
+      const secret = new TextEncoder().encode(process.env.JWT_SECRET || 'fallback_secret');
+      await jwtVerify(token, secret);
+    } catch (error) {
+      // Token is invalid or expired
+      if (path.startsWith('/api/admin')) {
+        return NextResponse.json({ success: false, error: 'Invalid or expired token' }, { status: 401 });
+      }
+      return NextResponse.redirect(new URL('/admin/login', request.url));
+    }
   }
 
   return NextResponse.next();
