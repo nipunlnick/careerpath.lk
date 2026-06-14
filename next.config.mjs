@@ -10,14 +10,12 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async headers() {
-    return [{ source: "/(.*)", headers: securityHeaders }];
-  },
+
   reactStrictMode: true,
   env: {
     // GEMINI_API_KEY should be server-side only
   },
-  optimizeFonts: false,
+
   async headers() {
     return [
       {
