@@ -94,12 +94,10 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
             Admin Dashboard
           </h1>
-          <button
-            onClick={handleLogout}
-            className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+          <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
           >
             Logout
           </button>
@@ -108,7 +106,7 @@ export default function AdminDashboard() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-            <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase">
+            <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-tight">
               Total Roadmaps
             </h2>
             <p className="text-3xl font-bold text-gray-900 dark:text-white mt-2">
@@ -116,7 +114,7 @@ export default function AdminDashboard() {
             </p>
           </div>
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-            <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase">
+            <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-tight">
               Categories
             </h2>
             <p className="text-3xl font-bold text-gray-900 dark:text-white mt-2">
@@ -124,7 +122,7 @@ export default function AdminDashboard() {
             </p>
           </div>
           <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
-            <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase">
+            <h2 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-tight">
               Total Views
             </h2>
             <p className="text-3xl font-bold text-gray-900 dark:text-white mt-2">
@@ -136,7 +134,7 @@ export default function AdminDashboard() {
         {/* Roadmaps Table */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
-            <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-white tracking-tight">
               Recent Roadmaps
             </h2>
           </div>

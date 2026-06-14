@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextResponse } from 'next/server';
 import { CareerRoadmapService } from '@/lib/models/CareerRoadmap';
 import { EXPLORE_CAREERS, KEYWORD_MAPPINGS } from '@/constants/careers';

@@ -123,7 +123,7 @@ const AnalyticsDashboard: React.FC = () => {
   if (!isAdmin) {
     return (
       <div className="text-center py-8 bg-red-50 dark:bg-red-900/20 rounded-lg">
-        <h2 className="text-2xl font-bold text-red-800 dark:text-red-300 mb-4">
+        <h2 className="text-2xl font-bold text-red-800 dark:text-red-300 mb-4 tracking-tight">
           Access Denied
         </h2>
         <p className="text-red-600 dark:text-red-400">
@@ -151,9 +151,7 @@ const AnalyticsDashboard: React.FC = () => {
           Error Loading Analytics
         </h3>
         <p className="text-red-600 dark:text-red-400">{error}</p>
-        <button
-          onClick={fetchAnalytics}
-          className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+        <button className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
         >
           Retry
         </button>
@@ -164,10 +162,10 @@ const AnalyticsDashboard: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/5 p-6">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
+            <h1 className="text-3xl font-bold text-gray-800 dark:text-white tracking-tight">
               Analytics Dashboard
             </h1>
             <p className="text-gray-600 dark:text-gray-300 mt-1">
@@ -185,9 +183,7 @@ const AnalyticsDashboard: React.FC = () => {
               <option value="30d">Last 30 Days</option>
               <option value="90d">Last 90 Days</option>
             </select>
-            <button
-              onClick={fetchAnalytics}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
             >
               Refresh
             </button>
@@ -236,7 +232,7 @@ const AnalyticsDashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Popular Careers */}
         {quizStats?.popularCareers && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/5 p-6">
             <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
               Popular Career Suggestions
             </h3>
@@ -273,7 +269,7 @@ const AnalyticsDashboard: React.FC = () => {
 
         {/* Pattern Usage */}
         {quizStats?.patternUsage && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/5 p-6">
             <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
               Quiz Pattern Performance
             </h3>
@@ -313,7 +309,7 @@ const AnalyticsDashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Source Breakdown */}
         {quizStats?.sourceBreakdown && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/5 p-6">
             <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
               Suggestion Sources
             </h3>
@@ -390,7 +386,7 @@ const AnalyticsDashboard: React.FC = () => {
 
         {/* System Status */}
         {systemMetrics && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/5 p-6">
             <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
               System Status
             </h3>
@@ -435,7 +431,7 @@ const AnalyticsDashboard: React.FC = () => {
 
       {/* Daily Stats Chart Placeholder */}
       {quizStats?.dailyStats && quizStats.dailyStats.length > 0 && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl shadow-black/5 p-6">
           <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
             Daily Quiz Activity
           </h3>

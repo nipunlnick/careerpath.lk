@@ -59,7 +59,7 @@ const SoftSkillsLandingPage: React.FC = () => {
             onSubmit={handleSearch}
             className="max-w-2xl mx-auto relative animate-fadeInUp animation-delay-300"
           >
-            <div className="glass dark:glass-dark rounded-full p-2 flex items-center shadow-2xl transition-all focus-within:ring-2 focus-within:ring-secondary/50">
+            <div className="glass dark:glass-dark rounded-full p-2 flex items-center shadow-2xl transition-all focus-within:ring-2 focus-within:ring-secondary/50 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <Search className="w-6 h-6 text-gray-400 ml-4" />
               <input
                 type="text"
@@ -68,9 +68,7 @@ const SoftSkillsLandingPage: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <button
-                type="submit"
-                className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-md"
+              <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-xl shadow-black/5 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
               >
                 Explore
               </button>
@@ -82,7 +80,7 @@ const SoftSkillsLandingPage: React.FC = () => {
       {/* Popular Skills Section */}
       <div className="container mx-auto px-4 max-w-7xl animate-fadeInUp animation-delay-400">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center justify-center gap-3">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center justify-center gap-3 tracking-tight">
             <TrendingUp className="w-8 h-8 text-secondary" />
             Popular Skills to Master
           </h2>
@@ -99,7 +97,7 @@ const SoftSkillsLandingPage: React.FC = () => {
               <Link
                 key={index}
                 href={`/soft-skills/${slug}`}
-                className="group glass dark:glass-dark p-6 rounded-2xl border border-white/20 hover:border-secondary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="group glass dark:glass-dark p-6 rounded-2xl border border-white/20 hover:border-secondary/50 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] ease-[cubic-bezier(0.16,1,0.3,1)]"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -112,7 +110,7 @@ const SoftSkillsLandingPage: React.FC = () => {
                   {skill}
                 </h3>
 
-                <div className="flex items-center text-secondary font-medium mt-4 group-hover:translate-x-2 transition-transform duration-300">
+                <div className="flex items-center text-secondary font-medium mt-4 group-hover:translate-x-2 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
                   <span className="text-sm">View Roadmap</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

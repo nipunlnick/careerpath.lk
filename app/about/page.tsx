@@ -65,7 +65,7 @@ const About: React.FC = () => {
     <div className="space-y-16 sm:space-y-24">
       {/* Hero Section */}
       <section className="text-center pt-28 pb-4 animate-fadeInUp">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight">
           About CareerPath.lk
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300 animation-delay-200 animate-fadeInUp">
@@ -75,8 +75,8 @@ const About: React.FC = () => {
       </section>
 
       {/* Our Mission Section */}
-      <section className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 animate-fadeInUp animation-delay-200">
-        <h2 className="text-3xl font-bold text-center text-green-600 dark:text-green-400">
+      <section className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl shadow-black/5 border border-gray-200 dark:border-gray-700 animate-fadeInUp animation-delay-200">
+        <h2 className="text-3xl font-bold text-center text-green-600 dark:text-green-400 tracking-tight">
           Our Mission
         </h2>
         <p className="mt-4 max-w-3xl mx-auto text-center text-gray-700 dark:text-gray-300">
@@ -91,12 +91,12 @@ const About: React.FC = () => {
 
       {/* Why Choose Us Section */}
       <section className="animate-fadeInUp animation-delay-300">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 tracking-tight">
           Why Choose Us?
         </h2>
         <div className="mt-8 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-6 animate-fadeInUp animation-delay-400">
-            <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto transform transition-transform duration-300 hover:scale-110">
+            <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto transform transition-transform duration-300 hover:scale-110 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <Target className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
             </div>
             <h3 className="mt-5 font-semibold text-xl text-gray-800 dark:text-gray-200">
@@ -109,7 +109,7 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="text-center p-6 animate-fadeInUp animation-delay-500">
-            <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto transform transition-transform duration-300 hover:scale-110">
+            <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto transform transition-transform duration-300 hover:scale-110 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <Lightbulb className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
             </div>
             <h3 className="mt-5 font-semibold text-xl text-gray-800 dark:text-gray-200">
@@ -122,7 +122,7 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="text-center p-6 animate-fadeInUp animation-delay-600">
-            <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto transform transition-transform duration-300 hover:scale-110">
+            <div className="bg-yellow-100 dark:bg-yellow-900/30 rounded-full w-20 h-20 flex items-center justify-center mx-auto transform transition-transform duration-300 hover:scale-110 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <Code className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
             </div>
             <h3 className="mt-5 font-semibold text-xl text-gray-800 dark:text-gray-200">
@@ -139,7 +139,7 @@ const About: React.FC = () => {
 
       {/* Market Insights Section */}
       <section className="animate-fadeInUp animation-delay-400">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 tracking-tight">
           Backed by Real-World Data
         </h2>
         <p className="text-center mt-2 max-w-3xl mx-auto text-gray-600 dark:text-gray-400">
@@ -206,7 +206,7 @@ const About: React.FC = () => {
 
       {/* Meet the Team Section */}
       <section className="animate-fadeInUp animation-delay-500">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 tracking-tight">
           Meet the Team
         </h2>
         <p className="text-center mt-2 text-gray-600 dark:text-gray-400">
@@ -216,7 +216,7 @@ const About: React.FC = () => {
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 text-center transform transition-transform duration-300 hover:-translate-y-2 animate-fadeInUp"
+              className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl shadow-black/5 border border-gray-200 dark:border-gray-700 text-center transform transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] animate-fadeInUp ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{ animationDelay: `${500 + index * 100}ms` }}
             >
               {member.icon ? (
@@ -250,7 +250,7 @@ const About: React.FC = () => {
 
       {/* Call to Action Section */}
       <section className="bg-green-600 dark:bg-green-800 py-16 rounded-xl text-center animate-fadeInUp animation-delay-600">
-        <h2 className="text-3xl font-bold text-white">
+        <h2 className="text-3xl font-bold text-white tracking-tight">
           Ready to Plan Your Future?
         </h2>
         <p className="mt-4 text-green-100 max-w-2xl mx-auto">
@@ -260,7 +260,7 @@ const About: React.FC = () => {
         <div className="mt-8 flex justify-center gap-4">
           <Link
             href="/quiz"
-            className="bg-yellow-400 text-green-800 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-300 transform hover:-translate-y-1 transition-all duration-300"
+            className="bg-yellow-400 text-green-800 font-semibold py-3 px-8 rounded-lg shadow-xl shadow-black/5 hover:bg-yellow-300 transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
             Take the Quick Quiz
           </Link>

@@ -82,7 +82,7 @@ const LongCareerQuiz: React.FC = () => {
               <div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-700 rounded-full"></div>
               <div className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
               Deep Profile Analysis
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -104,9 +104,7 @@ const LongCareerQuiz: React.FC = () => {
         role="alert"
       >
         <p>{error}</p>
-        <button
-          onClick={handleReset}
-          className="mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600"
+        <button className="mt-4 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
         >
           Try Again
         </button>
@@ -116,8 +114,8 @@ const LongCareerQuiz: React.FC = () => {
 
   if (suggestions.length > 0) {
     return (
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg animate-fadeInUp">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl shadow-black/5 animate-fadeInUp">
+        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white tracking-tight">
           Your In-Depth Career Suggestions
         </h2>
         <div className="mt-8 space-y-6">
@@ -149,9 +147,7 @@ const LongCareerQuiz: React.FC = () => {
           ))}
         </div>
         <div className="text-center mt-8">
-          <button
-            onClick={handleReset}
-            className="text-green-600 dark:text-green-400 font-semibold hover:underline"
+          <button className="text-green-600 dark:text-green-400 font-semibold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
           >
             Take the assessment again
           </button>
@@ -164,8 +160,8 @@ const LongCareerQuiz: React.FC = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white text-center animate-fadeInUp">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl shadow-black/5">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white text-center animate-fadeInUp tracking-tight">
           In-Depth Career Assessment
         </h1>
         <p className="text-center mt-2 text-gray-600 dark:text-gray-300 animate-fadeInUp animation-delay-100">
@@ -195,7 +191,7 @@ const LongCareerQuiz: React.FC = () => {
                 <button
                   key={index}
                   onClick={() => handleAnswerSelect(option)}
-                  className="w-full text-left p-4 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 rounded-lg border-2 border-transparent hover:bg-green-100 hover:border-green-500 dark:hover:bg-green-900/50 dark:hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105"
+                  className="w-full text-left p-4 bg-gray-100 dark:bg-gray-700 dark:text-gray-200 rounded-lg border-2 border-transparent hover:bg-green-100 hover:border-green-500 dark:hover:bg-green-900/50 dark:hover:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition-all duration-200 transform hover:scale-105 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 >
                   {option}
                 </button>

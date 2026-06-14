@@ -73,7 +73,7 @@ const SoftSkillRoadmapPage: React.FC = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
         <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-purple-600 mb-4"></div>
-        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200 tracking-tight">
           {isGenerating
             ? "Crafting your personalized roadmap..."
             : "Loading..."}
@@ -114,7 +114,7 @@ const SoftSkillRoadmapPage: React.FC = () => {
             <span className="inline-block py-1 px-3 rounded-full bg-purple-100 text-purple-800 text-sm font-semibold mb-4">
               Soft Skill Mastery
             </span>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white capitalize mb-4">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white capitalize mb-4 tracking-tight">
               {roadmap.name}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto md:mx-0">
@@ -123,7 +123,7 @@ const SoftSkillRoadmapPage: React.FC = () => {
           </div>
           <button
             onClick={() => RoadmapDownloadService.downloadSoftSkillPDF(roadmap)}
-            className="flex items-center justify-center py-2 px-6 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-transform hover:scale-105 font-medium whitespace-nowrap"
+            className="flex items-center justify-center py-2 px-6 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-xl shadow-black/5 transition-transform hover:scale-105 font-medium whitespace-nowrap ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
             <Download className="w-5 h-5 mr-2" />
             Download Guide
@@ -150,7 +150,7 @@ const SoftSkillRoadmapPage: React.FC = () => {
               {/* Content Card */}
               <div className="w-full md:w-1/2">
                 <div
-                  className={`bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow ${
+                  className={`bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl shadow-black/5 transition-shadow ${
                     index % 2 === 0 ? "md:mr-12" : "md:ml-12"
                   }`}
                 >
@@ -208,20 +208,15 @@ const SoftSkillRoadmapPage: React.FC = () => {
         {/* Resources Section */}
         {roadmap.resources && roadmap.resources.length > 0 && (
           <div className="mt-16 bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-100 dark:border-gray-700">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center tracking-tight">
               <Book className="w-6 h-6 mr-3 text-purple-600" />
               Recommended Resources
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {roadmap.resources.map((resource, i) => (
-                <a
-                  key={i}
-                  href={resource.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/30 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors group"
+                <a className="flex items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-700/30 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
-                  <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center text-purple-600 shadow-sm mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-700 flex items-center justify-center text-purple-600 shadow-sm mr-4 group-hover:scale-110 transition-transform ease-[cubic-bezier(0.16,1,0.3,1)]">
                     {resource.type === "video" ? (
                       <Video className="w-5 h-5" />
                     ) : (

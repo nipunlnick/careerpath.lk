@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server';
 import { QuizResultService } from '@/lib/models/QuizResult';
 import { CareerRoadmapService } from '@/lib/models/CareerRoadmap';

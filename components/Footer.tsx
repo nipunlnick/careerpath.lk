@@ -43,9 +43,7 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="mailto:info.voxicore@gmail.com"
-                  className="group flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                <a className="group flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   <div className="p-2 rounded-lg bg-gray-100 dark:bg-white/5 group-hover:bg-primary/10 transition-colors">
                     <Mail className="w-4 h-4" />
@@ -54,11 +52,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.voxicore.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                <a className="group flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   <div className="p-2 rounded-lg bg-gray-100 dark:bg-white/5 group-hover:bg-primary/10 transition-colors">
                     <Globe className="w-4 h-4" />
@@ -84,15 +78,11 @@ const Footer: React.FC = () => {
 
               {/* Voxicore inline link with tooltip */}
               <span className="relative group inline-flex items-center">
-                <a
-                  href="https://www.voxicore.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
+                <a className="font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   Voxicore
                 </a>
-                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 bg-gray-900 dark:bg-gray-800 text-white text-[10px] font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-md border border-gray-800 dark:border-gray-700 whitespace-nowrap z-50">
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 bg-gray-900 dark:bg-gray-800 text-white text-[10px] font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl shadow-black/5 border border-gray-800 dark:border-gray-700 whitespace-nowrap z-50">
                   Need a website or system?
                 </span>
               </span>
@@ -102,15 +92,11 @@ const Footer: React.FC = () => {
 
               {/* Nick inline link with tooltip */}
               <span className="relative group inline-flex items-center">
-                <a
-                  href="https://nipunlakshitha.netlify.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
+                <a className="font-semibold text-gray-700 dark:text-gray-300 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   Nick (Nipun Lakshitha)
                 </a>
-                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 bg-gray-900 dark:bg-gray-800 text-white text-[10px] font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-md border border-gray-800 dark:border-gray-700 whitespace-nowrap z-50">
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 bg-gray-900 dark:bg-gray-800 text-white text-[10px] font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl shadow-black/5 border border-gray-800 dark:border-gray-700 whitespace-nowrap z-50">
                   Need a website or system?
                 </span>
               </span>

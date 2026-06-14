@@ -122,7 +122,7 @@ const Home: React.FC = () => {
       {/* Features Grid */}
       <section className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-primary/50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md animate-fadeInLeft">
+          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-primary/50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-xl shadow-black/5 animate-fadeInLeft">
             <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <span className="text-3xl">⚡</span>
             </div>
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-secondary/50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md animate-fadeInRight">
+          <div className="group glass dark:glass-dark p-8 rounded-3xl hover:border-secondary/50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-xl shadow-black/5 animate-fadeInRight">
             <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <span className="text-3xl">🎯</span>
             </div>
@@ -165,7 +165,7 @@ const Home: React.FC = () => {
       {/* Career Categories */}
       <section className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
             Explore Capabilities
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -187,8 +187,8 @@ const Home: React.FC = () => {
                   glass dark:glass-dark rounded-2xl overflow-hidden transition-all duration-500
                   ${
                     isOpen
-                      ? "ring-2 ring-primary/20 shadow-lg"
-                      : "hover:shadow-md"
+                      ? "ring-2 ring-primary/20 shadow-xl shadow-black/5"
+                      : "hover:shadow-xl shadow-black/5"
                   }
                 `}
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -233,7 +233,7 @@ const Home: React.FC = () => {
                           <button
                             key={career.name}
                             onClick={() => handleCareerClick(career)}
-                            className="flex flex-col p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-all text-left group border border-transparent hover:border-gray-200 dark:hover:border-white/10"
+                            className="flex flex-col p-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-all text-left group border border-transparent hover:border-gray-200 dark:hover:border-white/10 ease-[cubic-bezier(0.16,1,0.3,1)]"
                           >
                             <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors mb-1.5">
                               {career.name}
@@ -261,7 +261,7 @@ const Home: React.FC = () => {
         <div className="relative glass dark:glass-dark rounded-[2.5rem] p-10 md:p-16 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12 relative z-10">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12 relative z-10 tracking-tight">
             Success Stories
           </h2>
 
@@ -291,7 +291,7 @@ const Home: React.FC = () => {
             ].map((testimonial, i) => (
               <div
                 key={i}
-                className="bg-white/50 dark:bg-black/20 p-6 rounded-2xl border border-white/20 hover:border-primary/30 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-lg active:scale-[0.98] cursor-default"
+                className="bg-white/50 dark:bg-black/20 p-6 rounded-2xl border border-white/20 hover:border-primary/30 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-xl shadow-black/5 active:scale-[0.98] cursor-default"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (

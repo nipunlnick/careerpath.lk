@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server';
 import { CareerRoadmapService } from '@/lib/models/CareerRoadmap';
 import { generateRoadmap } from '@/services/geminiService';

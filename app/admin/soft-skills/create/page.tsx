@@ -46,7 +46,7 @@ export default function CreateSoftSkill() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
       <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-        <h1 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+        <h1 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">
           Create Soft Skill
         </h1>
 
@@ -114,10 +114,7 @@ export default function CreateSoftSkill() {
             >
               Cancel
             </button>
-            <button
-              type="submit"
-              disabled={loading}
-              className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark disabled:opacity-50"
+            <button className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
             >
               {loading ? "Creating..." : "Create Skill"}
             </button>

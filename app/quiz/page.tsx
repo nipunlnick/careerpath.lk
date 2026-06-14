@@ -94,7 +94,7 @@ const CareerQuiz: React.FC = () => {
               <div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-700 rounded-full"></div>
               <div className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
               Analyzing Profile
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -133,9 +133,7 @@ const CareerQuiz: React.FC = () => {
             Oops! Something went wrong
           </h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6">{error}</p>
-          <button
-            onClick={handleReset}
-            className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-xl transition-all"
+          <button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-xl transition-all ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
           >
             Try Again
           </button>
@@ -148,7 +146,7 @@ const CareerQuiz: React.FC = () => {
     return (
       <div className="container mx-auto px-4 py-20 max-w-4xl">
         <div className="text-center mb-12 animate-fadeInUp">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
             Your Perfect Career Matches
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
@@ -165,7 +163,7 @@ const CareerQuiz: React.FC = () => {
           {suggestions.map((suggestion, index) => (
             <div
               key={index}
-              className="glass dark:glass-dark p-8 rounded-3xl relative overflow-hidden group hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
+              className="glass dark:glass-dark p-8 rounded-3xl relative overflow-hidden group hover:shadow-2xl transition-all duration-300 animate-fadeInUp ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary to-secondary"></div>
@@ -204,7 +202,7 @@ const CareerQuiz: React.FC = () => {
 
                   <button
                     onClick={() => handleExploreRoadmap(suggestion)}
-                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-xl transition-all hover:translate-x-1"
+                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-xl transition-all hover:translate-x-1 ease-[cubic-bezier(0.16,1,0.3,1)]"
                   >
                     View Full Roadmap <Icons.ChevronRight className="w-4 h-4" />
                   </button>
@@ -226,13 +224,11 @@ const CareerQuiz: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/long-quiz"
-                className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-secondary/20"
+                className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-xl shadow-black/5 shadow-secondary/20 ease-[cubic-bezier(0.16,1,0.3,1)]"
               >
                 Start In-Depth Assessment
               </Link>
-              <button
-                onClick={handleReset}
-                className="px-8 py-3 rounded-xl font-semibold text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition-all"
+              <button className="px-8 py-3 rounded-xl font-semibold text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition-all ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
               >
                 Retake Quick Quiz
               </button>
@@ -255,7 +251,7 @@ const CareerQuiz: React.FC = () => {
 
       <div className="w-full max-w-2xl mx-auto relative z-10">
         <div className="mb-8 text-center animate-fadeInUp">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
             Lets find your calling
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
@@ -272,7 +268,7 @@ const CareerQuiz: React.FC = () => {
         </div>
 
         <div className="glass dark:glass-dark p-8 md:p-10 rounded-3xl shadow-xl animate-scaleIn">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 leading-snug">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 leading-snug tracking-tight">
             {currentQuestion.question}
           </h2>
 
@@ -281,7 +277,7 @@ const CareerQuiz: React.FC = () => {
               <button
                 key={index}
                 onClick={() => handleAnswerSelect(option)}
-                className="w-full group text-left p-5 rounded-2xl border border-gray-200 dark:border-white/10 hover:border-primary/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-200 flex items-center justify-between"
+                className="w-full group text-left p-5 rounded-2xl border border-gray-200 dark:border-white/10 hover:border-primary/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-200 flex items-center justify-between ease-[cubic-bezier(0.16,1,0.3,1)]"
               >
                 <span className="text-lg text-gray-700 dark:text-gray-200 font-medium group-hover:text-primary transition-colors">
                   {option}

@@ -97,7 +97,7 @@ const Header: React.FC = () => {
                   href={link.path}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     isActive(link.path)
-                      ? "bg-primary text-white shadow-lg shadow-primary/30"
+                      ? "bg-primary text-white shadow-xl shadow-black/5 shadow-primary/30"
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 hover:text-primary"
                   }`}
                 >
@@ -138,7 +138,7 @@ const Header: React.FC = () => {
               onClick={closeMenu}
               className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
                 isActive(link.path)
-                  ? "bg-primary text-white shadow-md"
+                  ? "bg-primary text-white shadow-xl shadow-black/5"
                   : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >

@@ -50,7 +50,7 @@ export default function SoftSkillsList() {
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
             Soft Skills Management
           </h1>
           <Link

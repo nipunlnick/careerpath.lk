@@ -11,7 +11,7 @@ const TermsOfService: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 sm:py-12 max-w-4xl">
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
         Terms of Service
       </h1>
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 sm:p-8 space-y-6 text-gray-700 dark:text-gray-300">
@@ -22,7 +22,7 @@ const TermsOfService: React.FC = () => {
           to these Terms, please do not use our website.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           1. Use of Our Service
         </h2>
         <p>
@@ -42,7 +42,7 @@ const TermsOfService: React.FC = () => {
           </li>
         </ul>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           2. Intellectual Property
         </h2>
         <p>
@@ -52,7 +52,7 @@ const TermsOfService: React.FC = () => {
           property laws.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           3. User Content
         </h2>
         <p>
@@ -62,7 +62,7 @@ const TermsOfService: React.FC = () => {
           that you own or have the necessary rights to the content you post.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           4. Disclaimer of Warranties
         </h2>
         <p>
@@ -72,7 +72,7 @@ const TermsOfService: React.FC = () => {
           use of the website is at your own risk.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           5. Limitation of Liability
         </h2>
         <p>
@@ -81,7 +81,7 @@ const TermsOfService: React.FC = () => {
           arising out of or related to your use of the website.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           6. Changes to Terms
         </h2>
         <p>
@@ -91,7 +91,7 @@ const TermsOfService: React.FC = () => {
           constitutes your acceptance of the new Terms.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           7. Governing Law
         </h2>
         <p>
@@ -99,11 +99,11 @@ const TermsOfService: React.FC = () => {
           laws of Sri Lanka, without regard to its conflict of law provisions.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-6">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mt-6 tracking-tight">
           8. Contact Us
         </h2>
         <p>
-          If you have any questions about these Terms, please contact us at <a href="mailto:support@careerpath.lk" className="text-blue-600 hover:underline">support@careerpath.lk</a>.
+          If you have any questions about these Terms, please contact us at <a className="text-blue-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2">support@careerpath.lk</a>.
         </p>
       </div>
     </div>

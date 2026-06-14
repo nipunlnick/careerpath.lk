@@ -100,7 +100,7 @@ export default function EditRoadmap() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
       <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow p-6">
-        <h1 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+        <h1 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">
           Edit Roadmap
         </h1>
 
@@ -225,10 +225,7 @@ export default function EditRoadmap() {
             >
               Cancel
             </button>
-            <button
-              type="submit"
-              disabled={saving}
-              className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark disabled:opacity-50"
+            <button className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
             >
               {saving ? "Saving..." : "Save Changes"}
             </button>

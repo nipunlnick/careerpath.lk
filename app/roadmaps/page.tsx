@@ -84,7 +84,7 @@ const RoadmapsPage: React.FC = () => {
               <div className="absolute inset-0 border-4 border-gray-200 dark:border-gray-700 rounded-full"></div>
               <div className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
               Generating Roadmap
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -125,7 +125,7 @@ const RoadmapsPage: React.FC = () => {
             onSubmit={handleSearch}
             className="max-w-2xl mx-auto relative animate-fadeInUp animation-delay-300"
           >
-            <div className="glass dark:glass-dark rounded-full p-2 flex items-center shadow-2xl transition-all focus-within:ring-2 focus-within:ring-primary/50">
+            <div className="glass dark:glass-dark rounded-full p-2 flex items-center shadow-2xl transition-all focus-within:ring-2 focus-within:ring-primary/50 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <Icons.Search className="w-6 h-6 text-gray-400 ml-4" />
               <input
                 type="text"
@@ -134,9 +134,7 @@ const RoadmapsPage: React.FC = () => {
                 placeholder="Search for a career (e.g., 'Data Scientist')"
                 className="flex-grow bg-transparent border-none focus:ring-0 text-lg px-4 text-gray-800 dark:text-white placeholder-gray-400"
               />
-              <button
-                type="submit"
-                className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-md"
+              <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all hover:scale-105 shadow-xl shadow-black/5 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
               >
                 Search
               </button>
@@ -154,7 +152,7 @@ const RoadmapsPage: React.FC = () => {
 
         {/* Categories Grid */}
         <div className="space-y-6 animate-fadeInUp animation-delay-400">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
             Browse by Category
           </h2>
 
@@ -171,7 +169,7 @@ const RoadmapsPage: React.FC = () => {
                   ${
                     isOpen
                       ? "ring-2 ring-primary/30 shadow-xl scale-[1.01]"
-                      : "hover:shadow-lg hover:border-primary/20"
+                      : "hover:shadow-xl shadow-black/5 hover:border-primary/20"
                   }
                 `}
                 style={{ animationDelay: `${index * 50}ms` }}
@@ -187,7 +185,7 @@ const RoadmapsPage: React.FC = () => {
                       w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300
                       ${
                         isOpen
-                          ? "bg-gradient-to-br from-primary to-primary/80 text-white shadow-lg"
+                          ? "bg-gradient-to-br from-primary to-primary/80 text-white shadow-xl shadow-black/5"
                           : "bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 group-hover:text-primary"
                       }
                     `}
@@ -232,9 +230,9 @@ const RoadmapsPage: React.FC = () => {
                                     career.name
                                   )}`
                             }
-                            className="flex items-start p-3.5 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all group border border-transparent hover:border-gray-200 dark:hover:border-white/10"
+                            className="flex items-start p-3.5 rounded-xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all group border border-transparent hover:border-gray-200 dark:hover:border-white/10 ease-[cubic-bezier(0.16,1,0.3,1)]"
                           >
-                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform flex-shrink-0 mt-0.5">
+                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform flex-shrink-0 mt-0.5 ease-[cubic-bezier(0.16,1,0.3,1)]">
                               <Icons.ChevronRight className="w-4 h-4 text-primary" />
                             </div>
                             <div className="flex flex-col">

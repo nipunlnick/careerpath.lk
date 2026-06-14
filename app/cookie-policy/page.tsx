@@ -11,7 +11,7 @@ const CookiePolicy: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 sm:py-12 max-w-4xl">
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
         Cookie Policy
       </h1>
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 sm:p-8 space-y-6 text-gray-700 dark:text-gray-300">
@@ -23,7 +23,7 @@ const CookiePolicy: React.FC = () => {
           information about our user base as a whole.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           1. What Are Cookies?
         </h2>
         <p>
@@ -33,7 +33,7 @@ const CookiePolicy: React.FC = () => {
           the owners of the site.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           2. How We Use Cookies
         </h2>
         <p>We use cookies for the following purposes:</p>
@@ -43,7 +43,7 @@ const CookiePolicy: React.FC = () => {
           <li><strong>Functionality Cookies:</strong> These cookies are used to recognize you when you return to our website. This enables us to personalize our content for you, greet you by name, and remember your preferences.</li>
         </ul>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           3. Your Choices Regarding Cookies
         </h2>
         <p>
@@ -54,11 +54,11 @@ const CookiePolicy: React.FC = () => {
           help menu for more information.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           4. Contact Us
         </h2>
         <p>
-          If you have any questions about our use of cookies or other technologies, please contact us at <a href="mailto:support@careerpath.lk" className="text-blue-600 hover:underline">support@careerpath.lk</a>.
+          If you have any questions about our use of cookies or other technologies, please contact us at <a className="text-blue-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2">support@careerpath.lk</a>.
         </p>
       </div>
     </div>

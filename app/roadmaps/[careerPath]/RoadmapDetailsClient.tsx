@@ -179,7 +179,7 @@ export function RoadmapDetailsClient() {
         <div className="mt-16">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-4 animate-fadeInUp">
             <div className="text-center sm:text-left">
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white">
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white tracking-tight">
                 Roadmap to a {field}
               </h1>
               {wasGenerated && (
@@ -190,9 +190,7 @@ export function RoadmapDetailsClient() {
               )}
             </div>
             <div className="flex items-center gap-2 mt-4 sm:mt-0">
-              <button
-                onClick={handleDownloadPDF}
-                className="flex items-center justify-center py-2 px-4 border border-primary rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-colors"
+              <button className="flex items-center justify-center py-2 px-4 border border-primary rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download PDF
@@ -351,7 +349,7 @@ export function RoadmapDetailsClient() {
                         .replace(/[^\w-]+/g, "")}`}
                       className="block group h-full"
                     >
-                      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md h-full flex flex-col">
+                      <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300 shadow-sm hover:shadow-xl shadow-black/5 h-full flex flex-col ease-[cubic-bezier(0.16,1,0.3,1)]">
                         <div className="flex items-center justify-between mb-3">
                           <h4 className="font-bold text-lg text-gray-800 dark:text-white group-hover:text-primary dark:group-hover:text-primary transition-colors">
                             {alt.careerName}
@@ -455,7 +453,7 @@ export function RoadmapDetailsClient() {
                                 ${
                                   isVisible
                                     ? `${theme.shadow} shadow-2xl scale-[1.02] -translate-y-1`
-                                    : "shadow-lg group-hover:shadow-2xl group-hover:-translate-y-1"
+                                    : "shadow-xl shadow-black/5 group-hover:shadow-2xl group-hover:scale-[1.02] active:scale-[0.98]"
                                 }
                               `}
                       >

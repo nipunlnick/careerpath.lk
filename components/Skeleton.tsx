@@ -48,7 +48,7 @@ export const SkeletonText: React.FC<SkeletonTextProps> = ({
 
 export const SkeletonCard: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700/50 shadow-lg space-y-4">
+    <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700/50 shadow-xl shadow-black/5 space-y-4">
       <div className="flex items-center gap-3">
         <SkeletonCircle size="w-10 h-10" />
         <div className="flex-1 space-y-2">

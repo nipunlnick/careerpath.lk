@@ -11,7 +11,7 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 sm:py-12 max-w-4xl">
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
         Privacy Policy
       </h1>
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 sm:p-8 space-y-6 text-gray-700 dark:text-gray-300">
@@ -24,7 +24,7 @@ const PrivacyPolicy: React.FC = () => {
           applicable laws including the Sri Lanka Personal Data Protection Act, No. 9 of 2022.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           1. Information We Collect
         </h2>
         <p>
@@ -41,7 +41,7 @@ const PrivacyPolicy: React.FC = () => {
           background, and career interests.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           2. How We Use Your Information
         </h2>
         <p>We use the information we collect to:</p>
@@ -56,7 +56,7 @@ const PrivacyPolicy: React.FC = () => {
           </li>
         </ul>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           3. Your Data Protection Rights
         </h2>
         <p>
@@ -69,7 +69,7 @@ const PrivacyPolicy: React.FC = () => {
           <li>Withdraw consent for data processing at any time.</li>
         </ul>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           4. Information Sharing
         </h2>
         <p>
@@ -81,16 +81,16 @@ const PrivacyPolicy: React.FC = () => {
           confidential.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           5. Cookies
         </h2>
         <p>
           We use cookies to enhance your experience. For detailed information on the 
           cookies we use and the purposes for which we use them, please refer to our 
-          <a href="/cookie-policy" className="text-blue-600 hover:underline ml-1">Cookie Policy</a>.
+          <a className="text-blue-600 hover:underline ml-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2">Cookie Policy</a>.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           6. Security
         </h2>
         <p>
@@ -99,7 +99,7 @@ const PrivacyPolicy: React.FC = () => {
           Internet is 100% secure.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           7. Changes to This Policy
         </h2>
         <p>
@@ -107,12 +107,12 @@ const PrivacyPolicy: React.FC = () => {
           of any changes by posting the new Privacy Policy on this page.
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
           8. Contact Us
         </h2>
         <p>
           If there are any questions regarding this privacy policy or your data rights, you may
-          contact us at <a href="mailto:support@careerpath.lk" className="text-blue-600 hover:underline">support@careerpath.lk</a>.
+          contact us at <a className="text-blue-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2">support@careerpath.lk</a>.
         </p>
       </div>
     </div>
