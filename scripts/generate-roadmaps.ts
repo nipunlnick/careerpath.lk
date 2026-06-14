@@ -98,7 +98,7 @@ async function generateRoadmaps() {
       .replace(/(^-|-$)/g, '');
 
     // Check if exists
-    const existing = await collection.findOne({ slug }).lean();
+    const existing = await collection.findOne({ slug });
     if (existing) {
       console.log(`⏭️  Skipping ${careerName} (already exists)`);
       skippedCount++;
