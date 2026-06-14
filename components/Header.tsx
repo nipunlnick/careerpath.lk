@@ -112,7 +112,7 @@ const Header: React.FC = () => {
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800/50 focus:outline-none transition-colors"
               aria-controls="mobile-menu"
-              aria-expanded="false"
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
